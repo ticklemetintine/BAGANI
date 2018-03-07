@@ -1,0 +1,40 @@
+{
+	"latestUpdates" : [
+		{
+			"tribe": "trade",
+			"emblem": "assets/images/unregistered/sansinukob-chronicles/emblem-trade.png",
+			"thumbnail": "assets/images/unregistered/sansinukob-chronicles/tribe-banner-hover.png",
+			"chapterTitle": "Mythical Creatures - ",
+			"desc": "The Titans of the North"
+		},
+		{
+			"tribe": "forest",
+			"emblem": "assets/images/unregistered/sansinukob-chronicles/emblem-forest.png",
+			"thumbnail": "assets/images/unregistered/sansinukob-chronicles/tribe-banner-hover.png",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing"
+		},
+		{
+			"tribe": "fishing",
+			"emblem": "assets/images/unregistered/sansinukob-chronicles/emblem-fishing.png",
+			"thumbnail": "assets/images/unregistered/sansinukob-chronicles/tribe-banner-hover.png",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing"
+		},
+		{
+			"tribe": "farm",
+			"emblem": "assets/images/unregistered/sansinukob-chronicles/emblem-farm.png",
+			"thumbnail": "assets/images/unregistered/sansinukob-chronicles/tribe-banner-hover.png",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing"
+		},
+		{
+			"tribe": "desert",
+			"emblem": "assets/images/unregistered/sansinukob-chronicles/emblem-desert.png",
+			"thumbnail": "assets/images/unregistered/sansinukob-chronicles/tribe-banner-hover.png",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing"
+		}
+
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"artworks" : [
+		{
+			"name": "Juan dela Cruz",
+			"image": "assets/images/unregistered/sansinukob-chronicles/artwork1.png"
+		},
+		{
+			"name": "Juan dela Cruz",
+			"image": "assets/images/unregistered/sansinukob-chronicles/artwork2.png"
+		},{
+			"name": "Juan dela Cruz",
+			"image": "assets/images/unregistered/sansinukob-chronicles/artwork1.png"
+		},
+		{
+			"name": "Juan dela Cruz",
+			"image": "assets/images/unregistered/sansinukob-chronicles/artwork2.png"
+		},{
+			"name": "Juan dela Cruz",
+			"image": "assets/images/unregistered/sansinukob-chronicles/artwork1.png"
+		},
+		{
+			"name": "Juan dela Cruz",
+			"image": "assets/images/unregistered/sansinukob-chronicles/artwork2.png"
+		}
+
+	]
+}
