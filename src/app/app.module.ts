@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {HttpModule} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UnregisteredComponent } from './components/unregistered/unregistered.component';
@@ -16,12 +16,14 @@ import { AngAlamatService } from './services/ang-alamat.service';
 import { MythicalCreaturesService } from './services/mythical-creatures.service';
 import { RecapService } from './services/recap.service';
 import { FooterComponent } from './components/footer/footer.component';
+import { SansinukobMapComponent } from './components/sansinukob-map/sansinukob-map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UnregisteredComponent,
     FooterComponent,
+    SansinukobMapComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -29,7 +31,7 @@ import { FooterComponent } from './components/footer/footer.component';
       { path: '', component: UnregisteredComponent, pathMatch: 'full'},
     ]),
     TransferHttpCacheModule,
-    HttpModule,
+    HttpClientModule,
     SlickModule
   ],
   providers: [MapsService, LatestUpdatesService, ArtworksService, ArticlesService, AngAlamatService, MythicalCreaturesService, RecapService],

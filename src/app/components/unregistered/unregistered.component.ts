@@ -11,8 +11,7 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-unregistered',
-    templateUrl: './unregistered.component.html',
-    providers: [MapsService, LatestUpdatesService, ArtworksService, ArticlesService, AngAlamatService, MythicalCreaturesService, RecapService]
+    templateUrl: './unregistered.component.html'
 })
 export class UnregisteredComponent implements OnInit {
     showAd = true;
@@ -39,8 +38,6 @@ export class UnregisteredComponent implements OnInit {
         this.GetAlamat();
         this.GetCreatures();
         this.GetRecap();
-
-
     }
 
     closeAd() {
@@ -122,10 +119,10 @@ export class UnregisteredComponent implements OnInit {
     ];
 
     alamatSlideConfig = { 'slidesToShow': 1, 'slidesToScroll': 1, 'dots': true, 'arrows': false };
-    mythicalSlideConfig = { 
-        'slidesToShow': 4, 
-        'slidesToScroll': 1, 
-        'dots': true, 
+    mythicalSlideConfig = {
+        'slidesToShow': 4,
+        'slidesToScroll': 1,
+        'dots': true,
         'arrows': false,
         responsive: [
             {

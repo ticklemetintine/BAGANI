@@ -1,18 +1,15 @@
 import { Injectable } from '@angular/core';
-import {Http, Response} from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
 @Injectable()
 export class MythicalCreaturesService {
 
-	constructor(private http: Http) { }
+	constructor(private http: HttpClient) { }
 
 	GetMythicalCreatures(): Observable<any> {
-		return this.http.get('assets/data/mythical-creatures.json')
-		.map(
-			(res) => res.json()
-		);
+		return this.http.get('assets/data/mythical-creatures.json');
 	}
 
 }
