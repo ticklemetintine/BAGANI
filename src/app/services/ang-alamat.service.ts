@@ -1,17 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/Rx';
 
 @Injectable()
-
 export class AngAlamatService {
-	constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
-	GetAlamat(): Observable<any> {
-		return this.http.get('assets/data/ang-alamat.json');
-	}
-
-
-
+    GetAlamat(): Observable<any> {
+        return this.http.get('assets/data/ang-alamat.json');
+    }
 }

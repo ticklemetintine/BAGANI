@@ -26,8 +26,85 @@ export class UnregisteredComponent implements OnInit {
     videoRecap: SafeResourceUrl;
     videoRecapDetails: string;
 
-    constructor(private _mapService: MapsService, private _getUpdatesService: LatestUpdatesService, private _getArtworksService: ArtworksService, private _getArticlesService: ArticlesService, private _getAngAlamatService: AngAlamatService, private _getMythicalCreaturesService: MythicalCreaturesService, private _getRecapService: RecapService, private sanitizer: DomSanitizer) {
+    slides = [
+        { img: 'http://placehold.it/300x300/000000' },
+        { img: 'http://placehold.it/300x300/111111' },
+        { img: 'http://placehold.it/300x300/333333' },
+        { img: 'http://placehold.it/300x300/000000' },
+        { img: 'http://placehold.it/300x300/111111' },
+        { img: 'http://placehold.it/300x300/333333' },
+        { img: 'http://placehold.it/300x300/666666' }
+    ];
 
+    alamatSlideConfig = { 'slidesToShow': 1, 'slidesToScroll': 1, 'dots': true, 'arrows': false };
+    mythicalSlideConfig = {
+        'slidesToShow': 4,
+        'slidesToScroll': 1,
+        'dots': true,
+        'arrows': false,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    };
+    artworkSlideConfig = { 'slidesToShow': 4, 'slidesToScroll': 2, 'dots': false, 'arrows': true,
+responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    };
+
+    constructor(
+        private _mapService: MapsService,
+        private _getUpdatesService: LatestUpdatesService,
+        private _getArtworksService: ArtworksService,
+        private _getArticlesService: ArticlesService,
+        private _getAngAlamatService: AngAlamatService,
+        private _getMythicalCreaturesService: MythicalCreaturesService,
+        private _getRecapService: RecapService,
+        private sanitizer: DomSanitizer
+    ) {
     }
 
     ngOnInit() {
@@ -108,73 +185,6 @@ export class UnregisteredComponent implements OnInit {
         );
     }
 
-    slides = [
-        { img: 'http://placehold.it/300x300/000000' },
-        { img: 'http://placehold.it/300x300/111111' },
-        { img: 'http://placehold.it/300x300/333333' },
-        { img: 'http://placehold.it/300x300/000000' },
-        { img: 'http://placehold.it/300x300/111111' },
-        { img: 'http://placehold.it/300x300/333333' },
-        { img: 'http://placehold.it/300x300/666666' }
-    ];
 
-    alamatSlideConfig = { 'slidesToShow': 1, 'slidesToScroll': 1, 'dots': true, 'arrows': false };
-    mythicalSlideConfig = {
-        'slidesToShow': 4,
-        'slidesToScroll': 1,
-        'dots': true,
-        'arrows': false,
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-        ]
-    };
-    artworkSlideConfig = { 'slidesToShow': 4, 'slidesToScroll': 2, 'dots': false, 'arrows': true,
-responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-        ]
-    };
 
 }

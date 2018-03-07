@@ -34,7 +34,15 @@ import { SansinukobMapComponent } from './components/sansinukob-map/sansinukob-m
     HttpClientModule,
     SlickModule
   ],
-  providers: [MapsService, LatestUpdatesService, ArtworksService, ArticlesService, AngAlamatService, MythicalCreaturesService, RecapService],
+  providers: [
+    MapsService,
+    LatestUpdatesService,
+    ArtworksService,
+    ArticlesService,
+    AngAlamatService,
+    MythicalCreaturesService,
+    RecapService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
