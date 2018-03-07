@@ -101,80 +101,82 @@
         position: relative;
         min-height: 100vh;
 
-        >.container {
-            display: flex;
-            width: 100%;
+        app-sansinukob-map {
+            >.container {
+                display: flex;
+                width: 100%;
 
-            .left {
-                width: percentage(400px/1240px);
+                .left {
+                    width: percentage(400px/1240px);
 
-                p {
-                    margin: 0;
-                    text-align: center;
+                    p {
+                        margin: 0;
+                        text-align: center;
 
-                    &.title {
-                        font-size: 3em;
-                        text-transform: uppercase;
-                        margin-bottom: 40px;
+                        &.title {
+                            font-size: 3em;
+                            text-transform: uppercase;
+                            margin-bottom: 40px;
+                        }
+                        &.sub {
+                            font-size: 1.125em;
+                            margin: 25px 0;
+                        }
+                        &.small {
+                            font-size: 0.875em;
+                            margin-top: 35px;
+                            font-family: "Lato", sans-serif;
+                        }
                     }
-                    &.sub {
-                        font-size: 1.125em;
-                        margin: 25px 0;
-                    }
-                    &.small {
-                        font-size: 0.875em;
-                        margin-top: 35px;
-                        font-family: "Lato", sans-serif;
-                    }
-                }
-                hr {
-                    border-color: #d9c8b6;
-                    width: 75%;
-                }
-            }
-            .right {
-                width: percentage(840px/1240px);
-                position: relative;
-                >img {
-                    width: 100%;
-                }
-                .sansinukob-map {
-                    width: 100%;
-
-                    &:hover {
-                        background: #000;
+                    hr {
+                        border-color: #d9c8b6;
+                        width: 75%;
                     }
                 }
-                .focus {
-                    position: absolute;
-                    top: 0;
-                    width: 100%;
+                .right {
+                    width: percentage(840px/1240px);
+                    position: relative;
+                    >img {
+                        width: 100%;
+                    }
+                    .sansinukob-map {
+                        width: 100%;
 
-                    img {
+                        &:hover {
+                            background: #000;
+                        }
+                    }
+                    .focus {
                         position: absolute;
-                        cursor: pointer;
+                        top: 0;
+                        width: 100%;
 
-                        &.map-trade {
-                            left: percentage(132px/737px);
-                            top: 50px;
-                            width: percentage(319px/737px);
-                        }
-                        &.map-farm {
-                            left: 403px;
-                            top: 200px;
-                        }
-                        &.map-desert {
-                            left: 327px;
-                            top: 20px;
-                        }
-                        &.map-forest {
-                            left: 298px;
-                            top: 278px
-                        }
-                        &.map-fishing {
-                            top: 421px;
-                            left: 159px;
-                            width: 500px;
+                        img {
+                            position: absolute;
+                            cursor: pointer;
+
+                            &.map-trade {
+                                left: percentage(132px/737px);
+                                top: 50px;
+                                width: percentage(319px/737px);
+                            }
+                            &.map-farm {
+                                left: 403px;
+                                top: 200px;
+                            }
+                            &.map-desert {
+                                left: 327px;
+                                top: 20px;
+                            }
+                            &.map-forest {
+                                left: 298px;
+                                top: 278px
+                            }
+                            &.map-fishing {
+                                top: 421px;
+                                left: 159px;
+                                width: 500px;
+                            }
                         }
                     }
                 }

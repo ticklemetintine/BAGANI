@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 
 @Component({
-    selector: '[app-sansinukob-map]',
+    selector: 'app-sansinukob-map',
     templateUrl: './sansinukob-map.component.html'
 })
 export class SansinukobMapComponent implements OnInit {

@@ -34,7 +34,7 @@
         </div>
     </section>
     <section class="map-fold">
-        <div class="container" app-sansinukob-map (mapClick)="showModal($event)"></div>
+        <app-sansinukob-map (mapClick)="showModal($event)"></app-sansinukob-map>
         <div class="pop-up" *ngFor="let map of maps; let i=index" ngClass="{{map.name}}" [hidden]="showPopUp != map.name">
             <div class="container">
                 <div class="close">
