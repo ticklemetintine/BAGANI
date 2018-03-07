@@ -1,5 +1,6 @@
 .unregistered {
     background-color: #0d2f40;
+
     .first-fold {
         background: url('assets/images/unregistered/first-fold/bg-register.png') center bottom no-repeat;
         padding-bottom: 100px;
@@ -137,17 +138,26 @@
                 >img {
                     width: 100%;
                 }
+                .sansinukob-map {
+                    width: 100%;
+
+                    &:hover {
+                        background: #000;
+                    }
+                }
                 .focus {
                     position: absolute;
                     top: 0;
+                    width: 100%;
 
                     img {
                         position: absolute;
                         cursor: pointer;
 
                         &.map-trade {
-                            left: 132px;
+                            left: percentage(132px/737px);
                             top: 50px;
+                            width: percentage(319px/737px);
                         }
                         &.map-farm {
                             left: 403px;
@@ -328,7 +338,7 @@
         }
     }
     .sansinukob-chronicles {
-        padding: 40px 0;
+        padding: 0px 0;
         .container {
             background: url('assets/images/unregistered/sansinukob-chronicles/bg-bottom-paper.png') center bottom no-repeat;
             padding-bottom: 40px;
@@ -336,6 +346,7 @@
             .title-img {
                 display: block;
                 margin: 40px auto;
+                width: percentage(770px/1124px);
             }
 
             .video-recap {

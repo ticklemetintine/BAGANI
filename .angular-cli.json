@@ -21,7 +21,11 @@
         "styles": [
           "styles.scss"
         ],
-        "scripts": [],
+        "scripts": [
+          "assets/scripts/jquery.rwdImageMaps.min.js",
+          "assets/scripts/jquery.maphilight.js",
+          "assets/scripts/master.js"
+        ],
         "environmentSource": "environments/environment.ts",
         "environments": {
           "dev": "environments/environment.ts",

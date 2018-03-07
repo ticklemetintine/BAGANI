@@ -15,11 +15,13 @@ import { ArticlesService } from './services/articles.service';
 import { AngAlamatService } from './services/ang-alamat.service';
 import { MythicalCreaturesService } from './services/mythical-creatures.service';
 import { RecapService } from './services/recap.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UnregisteredComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),

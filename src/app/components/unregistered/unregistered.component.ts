@@ -39,6 +39,8 @@ export class UnregisteredComponent implements OnInit {
         this.GetAlamat();
         this.GetCreatures();
         this.GetRecap();
+
+
     }
 
     closeAd() {
@@ -120,7 +122,62 @@ export class UnregisteredComponent implements OnInit {
     ];
 
     alamatSlideConfig = { 'slidesToShow': 1, 'slidesToScroll': 1, 'dots': true, 'arrows': false };
-    mythicalSlideConfig = { 'slidesToShow': 4, 'slidesToScroll': 1, 'dots': true, 'arrows': false };
-    artworkSlideConfig = { 'slidesToShow': 4, 'slidesToScroll': 2, 'dots': false, 'arrows': true };
+    mythicalSlideConfig = { 
+        'slidesToShow': 4, 
+        'slidesToScroll': 1, 
+        'dots': true, 
+        'arrows': false,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    };
+    artworkSlideConfig = { 'slidesToShow': 4, 'slidesToScroll': 2, 'dots': false, 'arrows': true,
+responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    };
 
 }

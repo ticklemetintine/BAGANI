@@ -1,2 +1,62 @@
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
+
+    .unregistered {
+        .alamat {
+            .container {
+                width: percentage(790px/1024px);
+            }
+        }
+        .sansinukob-chronicles {
+            .container {
+                .video-recap {
+                    .content {
+                        width: percentage(790px/1024px);
+                    }
+                }
+                .breaker {
+                    &.latest-updates {
+                        .banners {
+                            .banner {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .map-fold {
+        	.focus {
+        		display: none;
+        	}
+        	.pop-up {
+        		.container {
+        			.row > *.map {
+        				padding: 0;
+        			}
+        		}
+        		&.trade {
+        			.map {
+        				img {
+        					margin-top: -50px;
+        				}
+        			}
+        		}
+        		&.desert,
+        		&.farm {
+        			.map {
+        				img {
+        					margin-top: 0;
+        				}
+        			}
+        		}
+        		&.fishing {
+        			.map {
+        				img {
+        					margin-top: 60px;
+        				}
+        			}
+        		}
+        	}
+        }
+    }
 }
