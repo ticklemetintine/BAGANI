@@ -15,13 +15,7 @@ import { ArticlesService } from './services/articles.service';
 import { AngAlamatService } from './services/ang-alamat.service';
 import { MythicalCreaturesService } from './services/mythical-creatures.service';
 import { RecapService } from './services/recap.service';
-import { Routes } from '@angular/router';
-const routes: Routes = [
-  {
-    path: '',
-    component: UnregisteredComponent
-  }
-];
+
 @NgModule({
   declarations: [
     AppComponent,
