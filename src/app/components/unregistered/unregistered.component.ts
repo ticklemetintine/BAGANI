@@ -26,17 +26,13 @@ export class UnregisteredComponent implements OnInit {
     videoRecap: SafeResourceUrl;
     videoRecapDetails: string;
 
-    slides = [
-        { img: 'http://placehold.it/300x300/000000' },
-        { img: 'http://placehold.it/300x300/111111' },
-        { img: 'http://placehold.it/300x300/333333' },
-        { img: 'http://placehold.it/300x300/000000' },
-        { img: 'http://placehold.it/300x300/111111' },
-        { img: 'http://placehold.it/300x300/333333' },
-        { img: 'http://placehold.it/300x300/666666' }
-    ];
-
-    alamatSlideConfig = { 'slidesToShow': 1, 'slidesToScroll': 1, 'dots': true, 'arrows': false };
+    alamatSlideConfig = { 
+        'slidesToShow': 1, 
+        'slidesToScroll': 1, 
+        'dots': true, 
+        'arrows': false 
+    };
+    
     mythicalSlideConfig = {
         'slidesToShow': 4,
         'slidesToScroll': 1,

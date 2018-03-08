@@ -20,79 +20,81 @@
             min-height: auto;
             padding: 150px 0;
             position: relative;
-            >.container {
-                .left {
-                    width: percentage(320px/690px);
-                    position: relative;
-                    z-index: 1;
-                }
-                .right {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    z-index: 0;
-                    margin: auto;
-                    height: auto;
-                    max-height: 500px;
+            app-sansinukob-map {
+                >.container {
+                    .left {
+                        width: percentage(320px/690px);
+                        position: relative;
+                        z-index: 1;
+                    }
+                    .right {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        z-index: 0;
+                        margin: auto;
+                        height: auto;
+                        max-height: 500px;
 
-                    .desktop {
-                        display: none;
-                    }
-                    .mobile {
-                        display: block;
-                        width: 90%;
-                        margin: auto 0 auto auto;
+                        .desktop {
+                            display: none;
+                        }
+                        .mobile {
+                            display: block;
+                            width: 90%;
+                            margin: auto 0 auto auto;
+                        }
                     }
                 }
-            }
-            .pop-up {
-            	min-height: 100vh;
+                .pop-up {
+                    min-height: 100vh;
+                }
             }
         }
         .alamat {
-        	background-size: cover;
+            background-size: cover;
         }
         .mythical-creatures {
-        	.title {
-        		font-size: 2.5em;
-        	}
+            .title {
+                font-size: 2.5em;
+            }
         }
         .sansinukob-chronicles {
-        	.container {
-        		max-width: 100%;
+            .container {
+                max-width: 100%;
 
-        		.breaker {
-        			&.beyond-sansinukob {
-        				.content {
-        					width: 95%;
+                .breaker {
+                    &.beyond-sansinukob {
+                        .content {
+                            width: 95%;
 
-        					.articles {
-        						justify-content: center;
+                            .articles {
+                                justify-content: center;
 
-        						.article {
-        							margin: 10px;
-        							width: unset;
-        						}
-        					}
-        				}
-        			}
-        			&.featured-artwork {
-        				.content {
-        					.slide {
-        						.name {
-        							padding: 10px 0;
-        							width: 95%;
+                                .article {
+                                    margin: 10px;
+                                    width: unset;
+                                }
+                            }
+                        }
+                    }
+                    &.featured-artwork {
+                        .content {
+                            .slide {
+                                .name {
+                                    padding: 10px 0;
+                                    width: 95%;
 
-        							p {
-        								font-size: 0.875em;
-        							}
-        						}
-        					}
-        				}
-        			}
-        		}
-        	}
+                                    p {
+                                        font-size: 0.875em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

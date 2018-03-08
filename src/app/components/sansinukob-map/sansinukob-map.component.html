@@ -1,27 +1,28 @@
 <div class="container">
-<div class="left">
-    <p class="title">Explore
-        <br> Sansinukob</p>
-    <hr>
-    <p class="sub">A land rich of Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-    <hr>
-    <p class="small">Click on each of the regions to read about its stories, history, people, and culture.</p>
-</div>
-<div class="right">
-    <img #sansinukobMap src="assets/images/unregistered/map/map-default.png" alt="sansinukob" usemap="#sansinukob" (window:resize)="onResize($event)" />
-    <map name="sansinukob">
-        <area #mapTrade target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('trade')" (click)="showModal('trade')">
-        <area #mapDesert target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('desert')" (click)="showModal('desert')">
-        <area #mapFarm target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('farm')" (click)="showModal('farm')">
-        <area #mapForest target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('forest')" (click)="showModal('forest')"> 
-        <area #mapFishing target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('fishing')" (click)="showModal('fishing')">
-    </map>
-    <div class="focus" style="width: 100%;">
-        <img #mapFocusTrade src="assets/images/unregistered/map/map-trade.png" alt="map-trade" (click)="showModal('trade')" class="map-trade" [hidden]="highlightClan != 'trade'">
-        <img #mapFocusDesert src="assets/images/unregistered/map/map-desert.png" alt="map-desert" (click)="showModal('desert')" class="map-desert" [hidden]="highlightClan != 'desert'">
-        <img #mapFocusFarm src="assets/images/unregistered/map/map-farm.png" alt="map-farm" (click)="showModal('farm')" class="map-farm" [hidden]="highlightClan != 'farm'">
-        <img #mapFocusForest src="assets/images/unregistered/map/map-forest.png" alt="map-forest" (click)="showModal('forest')" class="map-forest" [hidden]="highlightClan != 'forest'">
-        <img #mapFocusFishing src="assets/images/unregistered/map/map-fishing.png" alt="map-fishing" (click)="showModal('fishing')" class="map-fishing" [hidden]="highlightClan != 'fishing'">
+    <div class="left">
+        <p class="title">Explore
+            <br> Sansinukob</p>
+        <hr>
+        <p class="sub">A land rich of Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        <hr>
+        <p class="small">Click on each of the regions to read about its stories, history, people, and culture.</p>
     </div>
-</div>
+    <div class="right">
+        <img #sansinukobMap src="assets/images/unregistered/map/map-default.png" alt="sansinukob" usemap="#sansinukob" (window:resize)="onResize($event)" class="desktop" />
+        <img #sansinukobMap src="assets/images/unregistered/map/map-default-mobile.png" alt="sansinukob" usemap="#sansinukob" (window:resize)="onResize($event)" class="mobile" />
+        <map name="sansinukob">
+            <area #mapTrade target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('trade')" (click)="showModal('trade')">
+            <area #mapDesert target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('desert')" (click)="showModal('desert')">
+            <area #mapFarm target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('farm')" (click)="showModal('farm')">
+            <area #mapForest target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('forest')" (click)="showModal('forest')">
+            <area #mapFishing target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('fishing')" (click)="showModal('fishing')">
+        </map>
+        <div class="focus" style="width: 100%;">
+            <img #mapFocusTrade src="assets/images/unregistered/map/map-trade.png" alt="map-trade" (click)="showModal('trade')" class="map-trade" [hidden]="highlightClan != 'trade'">
+            <img #mapFocusDesert src="assets/images/unregistered/map/map-desert.png" alt="map-desert" (click)="showModal('desert')" class="map-desert" [hidden]="highlightClan != 'desert'">
+            <img #mapFocusFarm src="assets/images/unregistered/map/map-farm.png" alt="map-farm" (click)="showModal('farm')" class="map-farm" [hidden]="highlightClan != 'farm'">
+            <img #mapFocusForest src="assets/images/unregistered/map/map-forest.png" alt="map-forest" (click)="showModal('forest')" class="map-forest" [hidden]="highlightClan != 'forest'">
+            <img #mapFocusFishing src="assets/images/unregistered/map/map-fishing.png" alt="map-fishing" (click)="showModal('fishing')" class="map-fishing" [hidden]="highlightClan != 'fishing'">
+        </div>
+    </div>
 </div>

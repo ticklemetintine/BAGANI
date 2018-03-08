@@ -5,39 +5,41 @@
             min-height: auto;
             padding: 20px 0;
             position: relative;
-            >.container {
-            	display: block;
-                .left, .right {
-                    width: 100%;
-                    display: block;
-                    margin: auto auto;
-                }
-                .left {
-                	p {
-                		&.title {
-                			margin-bottom: 0;
-                		}
-                		&.sub, &.small {
-                			width: percentage(500px/730px);
-                			margin: 20px auto;
-                		}
-                	}
-                	hr {
-                		width: 60%;
-                	}
-                }
-                .right {
-                    position: static;
-                    max-height: unset;
+            app-sansinukob-map {
+                >.container {
+                	display: block;
+                    .left, .right {
+                        width: 100%;
+                        display: block;
+                        margin: auto auto;
+                    }
+                    .left {
+                    	p {
+                    		&.title {
+                    			margin-bottom: 0;
+                    		}
+                    		&.sub, &.small {
+                    			width: percentage(500px/730px);
+                    			margin: 20px auto;
+                    		}
+                    	}
+                    	hr {
+                    		width: 60%;
+                    	}
+                    }
+                    .right {
+                        position: static;
+                        max-height: unset;
 
-                    .mobile {
-                    	width: 60%;
-                    	margin: auto auto;
+                        .mobile {
+                        	width: 60%;
+                        	margin: auto auto;
+                        }
                     }
                 }
-            }
-            .pop-up {
-            	min-height: 100vh;
+                .pop-up {
+                	min-height: 100vh;
+                }
             }
         }
         .alamat {
