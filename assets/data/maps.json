@@ -4,13 +4,13 @@
 			"name": "fishing",
 			"emblem": "assets/images/unregistered/map/emblem-fishing.png",
 			"mapSrc": "assets/images/unregistered/map/map-fishing-lg.png",
-			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region. Despite this, it’s the only one that employs a slavery system. This way of life has persisted since its people are known to be sticklers for tradition.",
+			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region. Despite this, it’s the only one that employs a slavery system.",
 			"sub": "Dive into the Fishing Region by becoming a member of one of the tribes!"
 		},{
 			"name": "farm",
 			"emblem": "assets/images/unregistered/map/emblem-farm.png",
 			"mapSrc": "assets/images/unregistered/map/map-farm-lg.png",
-			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region. Despite this, it’s the only one that employs a slavery system. This way of life has persisted since its people are known to be sticklers for tradition.",
+			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region.",
 			"sub": "Dive into the Fishing Region by becoming a member of one of the tribes!"
 		},{
 			"name": "trade",
@@ -22,13 +22,13 @@
 			"name": "desert",
 			"emblem": "assets/images/unregistered/map/emblem-desert.png",
 			"mapSrc": "assets/images/unregistered/map/map-desert-lg.png",
-			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region. Despite this, it’s the only one that employs a slavery system. This way of life has persisted since its people are known to be sticklers for tradition.",
+			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region.",
 			"sub": "Dive into the Fishing Region by becoming a member of one of the tribes!"
 		},{
 			"name": "forest",
 			"emblem": "assets/images/unregistered/map/emblem-forest.png",
 			"mapSrc": "assets/images/unregistered/map/map-forest-lg.png",
-			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region. Despite this, it’s the only one that employs a slavery system. This way of life has persisted since its people are known to be sticklers for tradition.",
+			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region. Despite this, it’s the only one that employs a slavery system. ",
 			"sub": "Dive into the Fishing Region by becoming a member of one of the tribes!"
 		}
 

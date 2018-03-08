@@ -1,5 +1,6 @@
 .unregistered {
     background-color: #0d2f40;
+
     .first-fold {
         background: url('assets/images/unregistered/first-fold/bg-register.png') center bottom no-repeat;
         padding-bottom: 100px;
@@ -9,10 +10,16 @@
         .ad {
             background: rgba(0, 0, 0, .5);
             padding: 10px;
-            >* {
+            >*:not(.close) {
                 display: block;
                 margin: auto;
-                text-align: center;
+                width: 100%;
+                max-width: percentage(728px/1273px);
+
+                img {
+                    width: 100%;
+                    margin: block;
+                }
             }
 
             .close {
@@ -20,6 +27,8 @@
                 font-family: "Lato", sans-serif;
                 font-size: 0.625em;
                 float: right;
+                text-align: right;
+                margin-bottom: 10px;
                 a {
                     color: #fff;
                 }
@@ -100,7 +109,7 @@
         position: relative;
         min-height: 100vh;
 
-        >.container {
+        .container {
             display: flex;
             width: 100%;
 
@@ -137,17 +146,26 @@
                 >img {
                     width: 100%;
                 }
+                .sansinukob-map {
+                    width: 100%;
+
+                    &:hover {
+                        background: #000;
+                    }
+                }
                 .focus {
                     position: absolute;
                     top: 0;
+                    width: 100%;
 
                     img {
                         position: absolute;
                         cursor: pointer;
 
                         &.map-trade {
-                            left: 132px;
+                            left: percentage(132px/737px);
                             top: 50px;
+                            width: percentage(319px/737px);
                         }
                         &.map-farm {
                             left: 403px;
@@ -328,7 +346,7 @@
         }
     }
     .sansinukob-chronicles {
-        padding: 40px 0;
+        padding: 0px 0;
         .container {
             background: url('assets/images/unregistered/sansinukob-chronicles/bg-bottom-paper.png') center bottom no-repeat;
             padding-bottom: 40px;
@@ -336,6 +354,7 @@
             .title-img {
                 display: block;
                 margin: 40px auto;
+                width: percentage(770px/1124px);
             }
 
             .video-recap {
@@ -395,15 +414,16 @@
                     padding-bottom: 80px;
 
                     .banners {
-                        display: flex;
-                        justify-content: space-between;
-                        flex-wrap: wrap;
+                        // display: flex;
+                        // justify-content: space-between;
+                        // flex-wrap: wrap;
                         padding: 0 10px;
 
                         .banner {
                             margin-right: 20px;
                             width: percentage(208px/1124px);
                             position: relative;
+                            padding-bottom: 40px;
 
                             &:last-child {
                                 margin-right: 0;

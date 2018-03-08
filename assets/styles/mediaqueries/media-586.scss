@@ -1,2 +1,244 @@
-@media (max-width: 568px){
+@media (max-width: 568px) {
+    body {
+        font-size: 14px;
+    }
+    footer {
+        .container {
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+    .slick-dots {
+        width: 100%;
+
+        li {
+            margin: 13px 10px;
+        }
+    }
+    .unregistered {
+        .first-fold {
+            padding-bottom: 40px;
+            background-size: auto;
+            .container {
+                .welcome {
+                    .logo {
+                        margin: 40px auto;
+                    }
+                    .writeup {
+                        background: url('assets/images/unregistered/first-fold/welcome-border-left.png') no-repeat, url('assets/images/unregistered/first-fold/welcome-border-right.png') no-repeat;
+                        background-position: left center, right center;
+                        padding: 20px 10px;
+                        background-size: contain;
+
+                        .content {
+                            background-color: rgba(0, 0, 0, .6);
+                            padding: 60px 25px;
+                            border-top: solid 6px #000;
+                            border-bottom: solid 6px #000;
+                            position: relative;
+
+
+                            .mobile {
+                                display: block;
+                                width: 100%;
+                                position: absolute;
+                                top: -55px;
+                                left: 0;
+                                right: 0;
+                            }
+                            .sub {
+                                br {
+                                    display: none;
+                                }
+                                span {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .map-fold {
+            background-size: auto;
+            background-position: top center;
+
+            .container {
+                .left {
+                    p {
+                        &.sub {
+                            width: 100%;
+                        }
+                    }
+                }
+                .right {
+                    .mobile {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .pop-up {
+                .container {
+                    padding: 40px 20px;
+
+                    .emblem {
+                        width: 100%;
+                    }
+                    .row {
+                        display: block;
+
+                        >.map,
+                        .writeup {
+                            width: 100%;
+                            position: static;
+                            display: block;
+                        }
+
+                        .writeup {
+                            margin-top: 0;
+                            p {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .alamat {
+            .container {
+                .title {
+                    background-size: contain;
+                }
+            }
+        }
+        .mythical-creatures {
+            padding: 20px 0 40px;
+            .title {
+                font-size: 2.3em;
+            }
+            .slide {
+                img {
+                    width: 100%;
+                }
+                .name {
+                    background-size: contain;
+                    padding: 20px 0 40px;
+                    margin-top: -32px;
+
+                    p {
+                        font-size: 1.125em;
+                    }
+                }
+            }
+        }
+        .sansinukob-chronicles {
+            .container {
+                .title-img {
+                    width: 95%;
+                }
+                .video-recap {
+                    padding-bottom: 40px;
+
+                    .content {
+                        width: 100%;
+
+                        .video {
+                            .media {
+                                padding: 0;
+                            }
+                            .social {
+                                position: static;
+                                padding: 10px;
+
+                                >* {
+                                    display: inline;
+                                }
+                            }
+                        }
+                        .writeup {
+                            padding: 0 10px;
+
+                            p {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+                .breaker {
+                    &.latest-updates {
+                        .banners {
+                            padding: 0;
+                            .banner {
+                                margin-right: 0;
+                                padding: 20px 5px 40px;
+                                .inner {
+                                    height: 520px;
+                                    background-size: cover;
+
+                                    &:before,
+                                    &:after {
+                                        background-repeat: repeat !important;
+                                    }
+
+                                    .emblem {
+                                        height: 120px;
+                                    }
+                                    .writeup {
+                                        width: 100%;
+                                        padding: 40px 20px;
+                                        bottom: 50px;
+                                        p {
+                                            font-size: 2.125em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.featured-artwork {
+                        .content {
+                            padding: 0 40px;
+
+                            .slick-list {
+                                padding: 20px;
+                            }
+                            .slick-arrow {
+                                &.slick-prev {
+                                    z-index: 1;
+                                    left: -42px;
+                                }
+                                &.slick-next {
+                                    right: -42px;
+                                }
+                            }
+                            .slide {
+                                .name {
+                                    padding: 20px;
+                                    width: 80%;
+                                    p {
+                                        font-size: 1.2em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.beyond-sansinukob {
+                        .content {
+                            .articles {
+                                display: block;
+
+                                .article {
+                                    .article-title {
+                                        font-size: 1.7em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
