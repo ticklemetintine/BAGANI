@@ -1,83 +1,111 @@
-@media (max-width: 768px){
-	.unregistered {
+@media (max-width: 768px) {
+    .unregistered {
 
         .map-fold {
             min-height: auto;
             padding: 20px 0;
             position: relative;
-            app-sansinukob-map {
-                >.container {
-                	display: block;
-                    .left, .right {
-                        width: 100%;
-                        display: block;
+            
+            .container {
+                display: block;
+                .left,
+                .right {
+                    width: 100%;
+                    display: block;
+                    margin: auto auto;
+                }
+                .left {
+                    p {
+                        &.title {
+                            margin-bottom: 0;
+                        }
+                        &.sub,
+                        &.small {
+                            width: percentage(500px/730px);
+                            margin: 20px auto;
+                        }
+                    }
+                    hr {
+                        width: 60%;
+                    }
+                }
+                .right {
+                    position: static;
+                    max-height: unset;
+
+                    .mobile {
+                        width: 60%;
                         margin: auto auto;
                     }
-                    .left {
-                    	p {
-                    		&.title {
-                    			margin-bottom: 0;
-                    		}
-                    		&.sub, &.small {
-                    			width: percentage(500px/730px);
-                    			margin: 20px auto;
-                    		}
-                    	}
-                    	hr {
-                    		width: 60%;
-                    	}
-                    }
-                    .right {
-                        position: static;
-                        max-height: unset;
-
-                        .mobile {
-                        	width: 60%;
-                        	margin: auto auto;
+                }
+            }
+            .pop-up {
+                min-height: 100vh;
+                
+                &.trade {
+                    .map {
+                        img {
+                            margin-top: 20px;
                         }
                     }
                 }
-                .pop-up {
-                	min-height: 100vh;
+                .container {
+                    padding: 30% 20px 0;
+                    .emblem {
+                        width: 40%;
+                        margin-bottom: 20px
+                    }
+                    .row {
+                        >.map {
+                            width: 40%;
+                        }
+                        .writeup {
+                            width: 60%;
+                            margin-top: -25%;
+                            p {
+                                margin-bottom: 40px;
+                            }
+                        }
+                    }
                 }
             }
         }
         .alamat {
-        	.container {
-        		width: 85%;
-        	}
+            .container {
+                width: 85%;
+            }
         }
         .sansinukob-chronicles {
-        	.container {
-        		.breaker {
-        			&.featured-artwork {
-						.content {
-							.slick-arrow {
-								&.slick-prev {
-									left: -39px;
-								}
-							}
-						}
-        			}
-        			&.latest-updates {
-        				.banners {
-        					.banner {
-        						.inner {
-        							height: 250px;
-        							.emblem {
-        								margin: 0 auto;
-        							}
-        							.writeup {
-        								p {
-        									font-size: 0.875em;
-        								}
-        							}
-        						}
-        					}
-        				}
-        			}
-        		}
-        	}
+            .container {
+                .breaker {
+                    &.featured-artwork {
+                        .content {
+                            .slick-arrow {
+                                &.slick-prev {
+                                    left: -39px;
+                                }
+                            }
+                        }
+                    }
+                    &.latest-updates {
+                        .banners {
+                            .banner {
+                                .inner {
+                                    height: 250px;
+                                    .emblem {
+                                        margin: 0 auto;
+                                    }
+                                    .writeup {
+                                        p {
+                                            font-size: 0.875em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-	}
+    }
 }

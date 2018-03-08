@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 import { MapsService } from '../../services/maps.service';
 import { LatestUpdatesService } from '../../services/latest-updates.service';
 import { ArtworksService } from '../../services/artworks.service';
@@ -11,7 +12,18 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-unregistered',
-    templateUrl: './unregistered.component.html'
+    templateUrl: './unregistered.component.html',
+    animations: [
+        trigger('fadeInOut', [
+            transition('void => *', [
+            style({opacity:0}), //style only for transition transition (after transiton it removes)
+            animate(500, style({opacity:1})) // the new state of the transition(after transiton it removes)
+          ]),
+          transition('* => void', [
+            animate(500, style({opacity:0})) // the new state of the transition(after transiton it removes)
+          ])
+        ])
+    ]
 })
 export class UnregisteredComponent implements OnInit {
     showAd = true;
@@ -32,61 +44,89 @@ export class UnregisteredComponent implements OnInit {
         'dots': true, 
         'arrows': false 
     };
-    
+
     mythicalSlideConfig = {
         'slidesToShow': 4,
         'slidesToScroll': 1,
         'dots': true,
         'arrows': false,
-        responsive: [
+        'responsive': [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
+                'breakpoint': 1024,
+                'settings': {
+                    'slidesToShow': 3,
+                    'slidesToScroll': 3,
+                    'infinite': true,
+                    'dots': true
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
+                'breakpoint': 600,
+                'settings': {
+                    'slidesToShow': 2,
+                    'slidesToScroll': 2
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
+                'breakpoint': 480,
+                'settings': {
+                    'slidesToShow': 1,
+                    'slidesToScroll': 1
+                }
             }
         ]
     };
-    artworkSlideConfig = { 'slidesToShow': 4, 'slidesToScroll': 2, 'dots': false, 'arrows': true,
-responsive: [
+    artworkSlideConfig = { 
+        'slidesToShow': 4, 
+        'slidesToScroll': 2, 
+        'dots': false, 
+        'arrows': true,
+        'responsive': [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-              }
+                'breakpoint': 1024,
+                'settings': {
+                    'slidesToShow': 3,
+                    'slidesToScroll': 3,
+                    'infinite': true,
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
+                'breakpoint': 600,
+                'settings': {
+                    'slidesToShow': 2,
+                    'slidesToScroll': 2
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
+                'breakpoint': 480,
+                'settings': {
+                    'slidesToShow': 1,
+                    'slidesToScroll': 1
+                }
+            }
+        ]
+    };
+    updatesSlideConfig = { 
+        'slidesToShow': 5, 
+        'dots': false, 
+        'arrows': false,
+        'infinite': false,
+        'responsive': [
+            {
+                'breakpoint': 600,
+                'settings': {
+                    'slidesToShow': 2,
+                    'slidesToScroll': 2
+                }
+            },
+            {
+                'breakpoint': 480,
+                'settings': {
+                    'slidesToShow': 1,
+                    'slidesToScroll': 1,
+                    'centerMode': true,
+                    'infinite': true
+                }
             }
         ]
     };

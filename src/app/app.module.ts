@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { UnregisteredComponent } from './components/unregistered/unregistered.component';
@@ -32,7 +33,8 @@ import { SansinukobMapComponent } from './components/sansinukob-map/sansinukob-m
     ]),
     TransferHttpCacheModule,
     HttpClientModule,
-    SlickModule
+    SlickModule,
+    BrowserAnimationsModule
   ],
   providers: [
     MapsService,

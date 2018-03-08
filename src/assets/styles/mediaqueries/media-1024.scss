@@ -25,36 +25,34 @@
             }
         }
         .map-fold {
-            app-sansinukob-map {
-                .focus {
-                    display: none;
+            .focus {
+                display: none;
+            }
+            .pop-up {
+                .container {
+                    .row>*.map {
+                        padding: 0;
+                    }
                 }
-                .pop-up {
-                    .container {
-                        .row>*.map {
-                            padding: 0;
+                &.trade {
+                    .map {
+                        img {
+                            margin-top: -50px;
                         }
                     }
-                    &.trade {
-                        .map {
-                            img {
-                                margin-top: -50px;
-                            }
+                }
+                &.desert,
+                &.farm {
+                    .map {
+                        img {
+                            margin-top: 0;
                         }
                     }
-                    &.desert,
-                    &.farm {
-                        .map {
-                            img {
-                                margin-top: 0;
-                            }
-                        }
-                    }
-                    &.fishing {
-                        .map {
-                            img {
-                                margin-top: 60px;
-                            }
+                }
+                &.fishing {
+                    .map {
+                        img {
+                            margin-top: 60px;
                         }
                     }
                 }

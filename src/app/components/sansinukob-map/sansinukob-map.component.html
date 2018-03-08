@@ -11,11 +11,11 @@
         <img #sansinukobMap src="assets/images/unregistered/map/map-default.png" alt="sansinukob" usemap="#sansinukob" (window:resize)="onResize($event)" class="desktop" />
         <img #sansinukobMap src="assets/images/unregistered/map/map-default-mobile.png" alt="sansinukob" usemap="#sansinukob" (window:resize)="onResize($event)" class="mobile" />
         <map name="sansinukob">
-            <area #mapTrade target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('trade')" (click)="showModal('trade')">
-            <area #mapDesert target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('desert')" (click)="showModal('desert')">
-            <area #mapFarm target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('farm')" (click)="showModal('farm')">
-            <area #mapForest target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('forest')" (click)="showModal('forest')">
-            <area #mapFishing target="" alt="" title="" href="" coords="" shape="poly" (mouseenter)="focusMap('fishing')" (click)="showModal('fishing')">
+            <area #mapTrade target="" alt="" title=""  coords="" shape="poly" (mouseenter)="focusMap('trade')" (click)="showModal('trade')">
+            <area #mapDesert target="" alt="" title=""  coords="" shape="poly" (mouseenter)="focusMap('desert')" (click)="showModal('desert')">
+            <area #mapFarm target="" alt="" title=""  coords="" shape="poly" (mouseenter)="focusMap('farm')" (click)="showModal('farm')">
+            <area #mapForest target="" alt="" title=""  coords="" shape="poly" (mouseenter)="focusMap('forest')" (click)="showModal('forest')">
+            <area #mapFishing target="" alt="" title=""  coords="" shape="poly" (mouseenter)="focusMap('fishing')" (click)="showModal('fishing')">
         </map>
         <div class="focus" style="width: 100%;">
             <img #mapFocusTrade src="assets/images/unregistered/map/map-trade.png" alt="map-trade" (click)="showModal('trade')" class="map-trade" [hidden]="highlightClan != 'trade'">

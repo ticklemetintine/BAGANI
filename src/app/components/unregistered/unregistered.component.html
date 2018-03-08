@@ -18,11 +18,12 @@
                 </div>
             </div>
             <div class="welcome">
-                <img src="assets/images/common/bagani-logo.png" alt="fb" class="logo">
+                <img src="assets/images/common/bagani-logo.png" class="logo">
                 <div class="writeup">
                     <div class="content">
-                        <p class="sub">TAGADISYERTO. TAGAGUBAT.
-                            <br>TAGAKALAKAL. TAGALAOT. TAGAPATAG.</p>
+                        <img src="assets/images/unregistered/first-fold/welcome-top-emblem.png" class="mobile" alt="">
+                        <p class="sub"><span>TAGADISYERTO.</span> <span>TAGAGUBAT.</span>
+                            <br><span>TAGAKALAKAL.</span> <span>TAGALAOT.</span> <span>TAGAPATAG.</span></p>
                         <p class="title">FIND OUT
                             <br>WHICH TRIBE YOU BELONG TO!</p>
                     </div>
@@ -35,7 +36,7 @@
     </section>
     <section class="map-fold">
         <app-sansinukob-map (mapClick)="showModal($event)"></app-sansinukob-map>
-        <div class="pop-up" *ngFor="let map of maps; let i=index" ngClass="{{map.name}}" [hidden]="showPopUp != map.name">
+        <div class="pop-up" *ngFor="let map of maps; let i=index" ngClass="{{map.name}}" [class.show]="showPopUp == map.name">
             <div class="container">
                 <div class="close">
                     <a (click)="closeModal()"><img src="assets/images/unregistered/map/pop-up-close.png" alt=""></a>
@@ -64,8 +65,7 @@
                 <p>Ang Alamat</p>
             </div>
             <ngx-slick class="content" #slickModal="slick-modal" [config]="alamatSlideConfig">
-                <div class="slide" ngxSlickItem *ngFor="let slide of alamat">
-                    <p [innerHTML]="slide.content"></p>
+                <div class="slide" ngxSlickItem *ngFor="let slide of alamat" [innerHTML]="slide.content">
                 </div>
             </ngx-slick>
         </div>
@@ -104,16 +104,18 @@
                 <div class="content">
                     <p class="title">Latest Updates</p>
                     <div class="banners">
-                        <div class="banner {{update.tribe}}" *ngFor="let update of updates">
-                            <div class="inner">
-                                <img [src]="update.thumbnail" alt="hover-image" class="hover">
-                                <img [src]="update.emblem" alt="emblem-trade" class="emblem">
-                                <div class="writeup">
-                                    <p>{{update.chapterTitle}} </p>
-                                    <p>{{update.desc}}</p>
+                        <ngx-slick #slickModal="slick-modal" [config]="updatesSlideConfig">
+                            <div class="banner {{update.tribe}}" ngxSlickItem *ngFor="let update of updates">
+                                <div class="inner">
+                                    <img [src]="update.thumbnail" alt="hover-image" class="hover">
+                                    <img [src]="update.emblem" alt="emblem-trade" class="emblem">
+                                    <div class="writeup">
+                                        <p>{{update.chapterTitle}} </p>
+                                        <p>{{update.desc}}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </ngx-slick>
                     </div>
                 </div>
             </div>
