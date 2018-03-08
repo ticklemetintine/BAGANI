@@ -7,34 +7,6 @@
         background-size: cover;
         min-height: 100vh;
 
-        .ad {
-            background: rgba(0, 0, 0, .5);
-            padding: 10px;
-            >*:not(.close) {
-                display: block;
-                margin: auto;
-                width: 100%;
-                max-width: percentage(728px/1273px);
-
-                img {
-                    width: 100%;
-                    margin: block;
-                }
-            }
-
-            .close {
-                text-transform: uppercase;
-                font-family: "Lato", sans-serif;
-                font-size: 0.625em;
-                float: right;
-                text-align: right;
-                margin-bottom: 10px;
-                a {
-                    color: #fff;
-                }
-            }
-        }
-
         .container {
             padding: 20px;
 

@@ -26,7 +26,6 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
     ]
 })
 export class UnregisteredComponent implements OnInit {
-    showAd = true;
     showMap: string;
     showPopUp: string;
     maps = [];
@@ -153,9 +152,7 @@ export class UnregisteredComponent implements OnInit {
         this.GetRecap();
     }
 
-    closeAd() {
-        this.showAd = false;
-    }
+    
     focusMap(map) {
         this.showMap = map;
     }

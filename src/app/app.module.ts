@@ -18,18 +18,23 @@ import { MythicalCreaturesService } from './services/mythical-creatures.service'
 import { RecapService } from './services/recap.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { SansinukobMapComponent } from './components/sansinukob-map/sansinukob-map.component';
+import { PaguuriResultsComponent } from './components/paguuri-results/paguuri-results.component';
+import { BannerAdComponent } from './components/banner-ad/banner-ad.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UnregisteredComponent,
     FooterComponent,
-    SansinukobMapComponent
+    SansinukobMapComponent,
+    PaguuriResultsComponent,
+    BannerAdComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
     RouterModule.forRoot([
       { path: '', component: UnregisteredComponent, pathMatch: 'full'},
+      { path: 'paguuri-results', component: PaguuriResultsComponent, pathMatch: 'full'},
     ]),
     TransferHttpCacheModule,
     HttpClientModule,
