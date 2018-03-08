@@ -79,7 +79,7 @@ export class SansinukobMapComponent implements OnInit {
         read: ElementRef
     }) mapFocusFishing: ElementRef;
 
-    @Output('mapFarmlick') mapFarmlick: EventEmitter < string > = new EventEmitter();
+    @Output('mapClick') mapClick: EventEmitter < string > = new EventEmitter();
 
     constructor(
         private renderer: Renderer2
@@ -87,28 +87,28 @@ export class SansinukobMapComponent implements OnInit {
 
     ngOnInit() {
         this.renderer.setAttribute(
-            this.mapTrade.nativeElement, 
-            'coords', 
+            this.mapTrade.nativeElement,
+            'coords',
             this.chunkArray(this.mapTradedefaultCoordinates, 2).join(',')
         );
         this.renderer.setAttribute(
-            this.mapDesert.nativeElement, 
-            'coords', 
+            this.mapDesert.nativeElement,
+            'coords',
             this.chunkArray(this.mapDesertdefaultCoordinates, 2).join(',')
         );
         this.renderer.setAttribute(
-            this.mapFarm.nativeElement, 
-            'coords', 
+            this.mapFarm.nativeElement,
+            'coords',
             this.chunkArray(this.mapFarmdefaultCoordinates, 2).join(',')
         );
         this.renderer.setAttribute(
-            this.mapForest.nativeElement, 
-            'coords', 
+            this.mapForest.nativeElement,
+            'coords',
             this.chunkArray(this.mapForestdefaultCoordinates, 2).join(',')
         );
         this.renderer.setAttribute(
-            this.mapFishing.nativeElement, 
-            'coords', 
+            this.mapFishing.nativeElement,
+            'coords',
             this.chunkArray(this.mapFishingdefaultCoordinates, 2).join(',')
         );
 
@@ -197,7 +197,7 @@ export class SansinukobMapComponent implements OnInit {
     }
 
     showModal($clan: string) {
-        this.mapFarmlick.emit($clan);
+        this.mapClick.emit($clan);
     }
 
     /**
