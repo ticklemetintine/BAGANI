@@ -2,16 +2,16 @@
 	"articles" : [
 		{
 			"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-			"image": "assets/images/unregistered/sansinukob-chronicles/article1.png",
+			"image": "assets/images/common/article1.png",
 			"link": "#"
 		},
 		{
 			"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-			"image": "assets/images/unregistered/sansinukob-chronicles/article2.png",
+			"image": "assets/images/common/article2.png",
 			"link": "#"
 		},{
 			"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-			"image": "assets/images/unregistered/sansinukob-chronicles/article1.png",
+			"image": "assets/images/common/article1.png",
 			"link": "#"
 		}
 

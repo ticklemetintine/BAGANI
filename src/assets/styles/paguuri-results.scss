@@ -1,97 +1,116 @@
 .paguuri-results {
     min-height: 100vh;
-    &.farm {
-        background: url('assets/images/paguuri-results/bg-farm.png') top center no-repeat;
-        background-size: cover;
 
-        .container {
-            padding: 40px 20px 80px;
-            .logo {
+    &.farm {
+        background: url('assets/images/backgrounds/bg-farm.png') top center no-repeat;
+        background-size: cover;
+    }
+    &.fishing {
+        background: url('assets/images/backgrounds/bg-fishing.png') top center no-repeat;
+        background-size: cover;
+    }
+    &.trade {
+        background: url('assets/images/backgrounds/bg-trade.png') top center no-repeat;
+        background-size: cover;
+    }
+    &.forest {
+        background: url('assets/images/backgrounds/bg-forest.png') top center no-repeat;
+        background-size: cover;
+    }
+    &.desert {
+        background: url('assets/images/backgrounds/bg-desert.png') top center no-repeat;
+        background-size: cover;
+    }
+
+    .container {
+        padding: 40px 20px 80px;
+        .logo {
+            max-width: 100%;
+            margin: auto auto;
+            display: block;
+        }
+        .emblem {
+            margin: 20px auto;
+
+            img {
                 max-width: 100%;
                 margin: auto auto;
                 display: block;
             }
-            .emblem {
-                margin: 20px auto;
+        }
+        .writeup {
+            background: -moz-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 27%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 70%, rgba(217, 200, 182, 0) 100%);
+            background: -webkit-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 27%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 70%, rgba(217, 200, 182, 0) 100%);
+            background: linear-gradient(to right, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 27%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 70%, rgba(217, 200, 182, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d9c8b6', endColorstr='#00d9c8b6', GradientType=1);
 
-                img {
-                    max-width: 100%;
+            color: #000000;
+            text-align: center;
+            padding: 40px;
+            position: relative;
+
+            p {
+                &.title {
+                    font-size: 1.875em;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+                &.desc {
+                    font-family: "Lato", sans-serif;
+                    width: percentage(500px/971px);
                     margin: auto auto;
-                    display: block;
+                    line-height: 1.5;
                 }
             }
-            .writeup {
-                background: -moz-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(64, 107, 158, 0) 9%, rgba(217, 200, 182, 0.8) 50%, rgba(143, 188, 222, 0) 90%, rgba(125, 185, 232, 0) 100%);
-                background: -webkit-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(64, 107, 158, 0) 9%, rgba(217, 200, 182, 0.8) 50%, rgba(143, 188, 222, 0) 90%, rgba(125, 185, 232, 0) 100%);
-                background: linear-gradient(to right, rgba(30, 87, 153, 0) 0%, rgba(64, 107, 158, 0) 9%, rgba(217, 200, 182, 0.8) 50%, rgba(143, 188, 222, 0) 90%, rgba(125, 185, 232, 0) 100%);
+
+            .breaker {
+                background: -moz-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(44, 93, 149, 0) 5%, rgba(172, 146, 117, 0.8) 50%, rgba(129, 182, 223, 0) 96%, rgba(125, 185, 232, 0) 100%);
+                background: -webkit-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(44, 93, 149, 0) 5%, rgba(172, 146, 117, 0.8) 50%, rgba(129, 182, 223, 0) 96%, rgba(125, 185, 232, 0) 100%);
+                background: linear-gradient(to right, rgba(30, 87, 153, 0) 0%, rgba(44, 93, 149, 0) 5%, rgba(172, 146, 117, 0.8) 50%, rgba(129, 182, 223, 0) 96%, rgba(125, 185, 232, 0) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#007db9e8', GradientType=1);
-                color: #000000;
-                text-align: center;
-                padding: 40px;
-                position: relative;
-
+                width: percentage(450px/971px);
+                height: 2px;
+                margin: 20px auto;
+            }
+            .share {
                 p {
-                    &.title {
-                        font-size: 1.875em;
-                        text-transform: uppercase;
-                        font-weight: 700;
-                    }
-                    &.desc {
-                        font-family: "Lato", sans-serif;
-                        width: percentage(500px/971px);
-                        margin: auto auto;
+                    text-transform: uppercase;
+                }
+                ul {
+                    padding: 0;
+                    li {
+                        display: inline;
+                        margin: 0 20px;
                     }
                 }
+            }
+            .button {
+                position: absolute;
+                bottom: -40px;
+                left: 0;
+                right: 0;
+                margin: auto;
 
-                .breaker {
-                    background: -moz-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(44, 93, 149, 0) 5%, rgba(172, 146, 117, 0.8) 50%, rgba(129, 182, 223, 0) 96%, rgba(125, 185, 232, 0) 100%);
-                    background: -webkit-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(44, 93, 149, 0) 5%, rgba(172, 146, 117, 0.8) 50%, rgba(129, 182, 223, 0) 96%, rgba(125, 185, 232, 0) 100%);
-                    background: linear-gradient(to right, rgba(30, 87, 153, 0) 0%, rgba(44, 93, 149, 0) 5%, rgba(172, 146, 117, 0.8) 50%, rgba(129, 182, 223, 0) 96%, rgba(125, 185, 232, 0) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#007db9e8', GradientType=1);
-                    width: percentage(450px/971px);
-                    height: 2px;
-                    margin: 20px auto;
-                }
-                .share {
-                    p {
-                        text-transform: uppercase;
-                    }
-                    ul {
-                        padding: 0;
-                        li {
-                            display: inline;
-                            margin: 0 20px;
-                        }
-                    }
-                }
-                .button {
-                	position: absolute;
-                	bottom: -40px;
-                	left: 0;
-                	right: 0;
-                	margin: auto;
+                .btn {
+                    font-size: 1.125em;
+                    display: inline-block;
+                    padding: 20px 30px;
 
-                    .btn {
-                        font-size: 1.125em;
-                        display: inline-block;
-                        padding: 20px 30px;
-
-                        span {
-                            font-size: 1.333em;
-                            display: block;
-                        }
+                    span {
+                        font-size: 1.333em;
+                        display: block;
                     }
                 }
             }
         }
     }
     app-footer {
-	    footer {
-	    	background: transparent;
+        footer {
+            background: transparent;
 
-	    	>.container {
-	    		padding: 0 !important;
-	    	}
-	    }
-	}
+            >.container {
+                padding: 0;
+            }
+        }
+    }
 }

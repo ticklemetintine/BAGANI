@@ -5,7 +5,7 @@
             min-height: auto;
             padding: 20px 0;
             position: relative;
-            
+
             .container {
                 display: block;
                 .left,
@@ -41,7 +41,7 @@
             }
             .pop-up {
                 min-height: 100vh;
-                
+
                 &.trade {
                     .map {
                         img {
@@ -104,6 +104,32 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .paguuri-results {
+        .container {
+            max-width: 100%;
+
+            .writeup {
+                background: -moz-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 15%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 84%, rgba(217, 200, 182, 0) 100%);
+                background: -webkit-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 15%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 84%, rgba(217, 200, 182, 0) 100%);
+                background: linear-gradient(to right, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 15%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 84%, rgba(217, 200, 182, 0) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d9c8b6', endColorstr='#00d9c8b6', GradientType=1);
+
+                p {
+                    &.desc {
+                        width: percentage(400px/609px);
+                    }
+                }
+            }
+        }
+        app-footer {
+            footer {
+                >.container {
+                    padding: 0 20px;
                 }
             }
         }

@@ -22,7 +22,7 @@
                 <img src="assets/images/common/bagani-logo.png" class="logo">
                 <div class="writeup">
                     <div class="content">
-                        <img src="assets/images/unregistered/first-fold/welcome-top-emblem.png" class="mobile" alt="">
+                        <img src="assets/images/borders/content-container-emblem.png" class="mobile" alt="">
                         <p class="sub"><span>TAGADISYERTO.</span> <span>TAGAGUBAT.</span>
                             <br><span>TAGAKALAKAL.</span> <span>TAGALAOT.</span> <span>TAGAPATAG.</span></p>
                         <p class="title">FIND OUT
@@ -40,7 +40,7 @@
         <div class="pop-up" *ngFor="let map of maps; let i=index" ngClass="{{map.name}}" [class.show]="showPopUp == map.name">
             <div class="container">
                 <div class="close">
-                    <a (click)="closeModal()"><img src="assets/images/unregistered/map/pop-up-close.png" alt=""></a>
+                    <a (click)="closeModal()"><img src="assets/images/map/pop-up-close.png" alt=""></a>
                 </div>
                 <div class="emblem">
                     <img [src]="map.emblem" alt="">
@@ -87,7 +87,7 @@
     <section class="sansinukob-chronicles">
         <div class="container">
             <div class="video-recap">
-                <img src="assets/images/unregistered/sansinukob-chronicles/sansinukob-chronicles.png" alt="sansinukob-chronicles" class="title-img">
+                <img src="assets/images/common/sansinukob-chronicles.png" alt="sansinukob-chronicles" class="title-img">
                 <div class="content">
                     <div class="video">
                         <iframe [src]="videoRecap" class="media" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -147,5 +147,5 @@
         </div>
     </section>
 <app-footer></app-footer>
-    
+
 </div>
