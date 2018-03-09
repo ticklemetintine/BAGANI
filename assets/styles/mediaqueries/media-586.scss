@@ -16,7 +16,7 @@
             margin: 13px 10px;
         }
     }
-    .unregistered {
+    app-unregistered {
         .first-fold {
             padding-bottom: 40px;
             background-size: auto;
@@ -27,7 +27,7 @@
                         width: 100%;
                     }
                     .writeup {
-                        background: url('assets/images/unregistered/first-fold/welcome-border-left.png') no-repeat, url('assets/images/unregistered/first-fold/welcome-border-right.png') no-repeat;
+                        background: url('assets/images/borders/border-content-container-left.png') no-repeat, url('assets/images/borders/border-content-container-right.png') no-repeat;
                         background-position: left center, right center;
                         padding: 20px 10px;
                         background-size: contain;
@@ -85,12 +85,12 @@
                     padding: 40px 20px;
                     overflow-y: scroll;
                     max-height: 100vh;
-					
-					.close {
-						img {
-							max-width: 20px;
-						}
-					}
+
+                    .close {
+                        img {
+                            max-width: 20px;
+                        }
+                    }
                     .emblem {
                         width: 100%;
 
@@ -109,7 +109,7 @@
                         }
 
                         >.map img {
-                        	max-height: 200px;
+                            max-height: 200px;
                         }
 
                         .writeup {
@@ -128,7 +128,7 @@
                     background-size: contain;
                 }
                 .content {
-                	padding: 30px 20px;
+                    padding: 30px 20px;
                 }
             }
         }
@@ -257,6 +257,26 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    app-paguuri-results {
+        padding-bottom: 10px;
+
+        .container {
+            .writeup {
+                background: -moz-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.4) 9%, rgba(217, 200, 182, 0.8) 18%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 82%, rgba(217, 200, 182, 0.4) 91%, rgba(217, 200, 182, 0) 100%);
+                background: -webkit-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.4) 9%, rgba(217, 200, 182, 0.8) 18%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 82%, rgba(217, 200, 182, 0.4) 91%, rgba(217, 200, 182, 0) 100%);
+                background: linear-gradient(to right, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.4) 9%, rgba(217, 200, 182, 0.8) 18%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 82%, rgba(217, 200, 182, 0.4) 91%, rgba(217, 200, 182, 0) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d9c8b6', endColorstr='#00d9c8b6', GradientType=1);
+
+                padding: 40px 0;
+
+                p {
+                    &.desc {
+                        width: 90%;
                     }
                 }
             }
