@@ -3,14 +3,14 @@
 		{
 			"tribe": "trade",
 			"emblem": "assets/images/common/emblem-trade.png",
-			"thumbnail": "assets/images/common/tribe-banner-hover.png",
+			"thumbnail": "",
 			"chapterTitle": "Mythical Creatures - ",
 			"desc": "The Titans of the North"
 		},
 		{
 			"tribe": "forest",
 			"emblem": "assets/images/common/emblem-forest.png",
-			"thumbnail": "assets/images/common/tribe-banner-hover.png",
+			"thumbnail": "",
 			"chapterTitle": "CHAPTER 1:",
 			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing"
 		},
@@ -24,14 +24,28 @@
 		{
 			"tribe": "farm",
 			"emblem": "assets/images/common/emblem-farm.png",
-			"thumbnail": "assets/images/common/tribe-banner-hover.png",
+			"thumbnail": "",
 			"chapterTitle": "CHAPTER 1:",
 			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing"
 		},
 		{
 			"tribe": "desert",
 			"emblem": "assets/images/common/emblem-desert.png",
-			"thumbnail": "assets/images/common/tribe-banner-hover.png",
+			"thumbnail": "",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing"
+		},
+		{
+			"tribe": "desert",
+			"emblem": "assets/images/common/emblem-desert.png",
+			"thumbnail": "",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing"
+		},
+		{
+			"tribe": "desert",
+			"emblem": "assets/images/common/emblem-desert.png",
+			"thumbnail": "",
 			"chapterTitle": "CHAPTER 1:",
 			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing"
 		}

@@ -3,7 +3,7 @@
         font-size: 14px;
     }
     footer {
-        .container {
+        .footer-container {
             display: block;
             padding: 10px;
             text-align: center;
@@ -27,16 +27,15 @@
                         width: 100%;
                     }
                     .writeup {
-                        background: url('assets/images/borders/border-content-container-left.png') no-repeat, url('assets/images/borders/border-content-container-right.png') no-repeat;
-                        background-position: left center, right center;
-                        padding: 20px 10px;
-                        background-size: contain;
+                        padding: 9px 10px 8px;
+
+                        background: url('assets/images/borders/border-content-container-bottom.png') center bottom no-repeat, url('assets/images/borders/border-content-container-top.png') center top no-repeat, url('assets/images/borders/border-content-container-left.png') left center no-repeat, url('assets/images/borders/border-content-container-right.png') right center no-repeat, ;
+                        background-size: contain, contain, auto 95%, auto 95%;
 
                         .content {
                             background-color: rgba(0, 0, 0, .6);
-                            padding: 60px 25px;
-                            border-top: solid 6px #000;
-                            border-bottom: solid 6px #000;
+                            padding: 60px 25px; // border-top: solid 6px #000;
+                            // border-bottom: solid 6px #000;
                             position: relative;
 
 
@@ -44,7 +43,7 @@
                                 display: block;
                                 width: 100%;
                                 position: absolute;
-                                top: -55px;
+                                top: -45px;
                                 left: 0;
                                 right: 0;
                             }
@@ -277,6 +276,40 @@
                 p {
                     &.desc {
                         width: 90%;
+                    }
+                }
+            }
+        }
+    }
+    app-email-confirmed {
+        >.container {
+            max-width: 100%;
+            .welcome .writeup {
+                padding: 8px 10px;
+                .content {
+                    p {
+                        &.sub {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    app-paguuri {
+        .paguuri-container {
+            padding: 20px 0;
+            .welcome {
+                .writeup {
+                    padding: 10px 19px 10px;
+                    .content {
+                        .row {
+                            .right {
+                                form {
+                                    width: 100%;
+                                }
+                            }
+                        }
                     }
                 }
             }

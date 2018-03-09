@@ -126,10 +126,47 @@
                 }
             }
         }
-        app-footer {
-            footer {
-                >.container {
-                    padding: 0 20px;
+    }
+
+    app-email-confirmed {
+        >.container {
+            .welcome {
+                width: 100%;
+                margin-top: 40px;
+
+                .writeup {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    app-paguuri {
+        .paguuri-container {
+            padding: 20px 0;
+            .welcome {
+                margin-top: 40px;
+                .writeup {
+                    background-size: contain, contain, auto, auto;
+                    background-repeat: no-repeat, no-repeat, repeat-y, repeat-y;
+                    padding: 20px 19px 18px;
+                    margin-top: 20px;
+                    .content {
+                        .row {
+                            display: block;
+
+                            >* {
+                                width: 100%;
+                            }
+                            .right {
+                                form {
+                                    padding: 0;
+                                    width: percentage(400px/600px);
+                                    margin: auto auto;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
