@@ -1,151 +1,134 @@
-<div class="unregistered">
+<section class="first-fold">
     <app-banner-ad></app-banner-ad>
-    <section class="first-fold">
-        <div class="ad" *ngIf="showAd">
-            <p class="close"><a (click)="closeAd()">Close Ad</a></p>
-            <a href="https://placeholder.com"><img src="http://via.placeholder.com/728x90"></a>
-        </div>
-        <div class="container">
-            <div class="top-nav">
-                <div class="share">
-                    <p>Share</p>
-                    <ul>
-                        <li><a href="#"><img src="assets/images/common/social-fb.png" alt="fb"></a></li>
-                        <li><a href="#"><img src="assets/images/common/social-twitter.png" alt="twitter"></a></li>
-                    </ul>
+    <div class="container">
+        <app-top-nav-social-login></app-top-nav-social-login>
+        <div class="welcome">
+            <img src="assets/images/common/bagani-logo.png" class="logo">
+            <div class="writeup">
+                <div class="content">
+                    <img src="assets/images/borders/content-container-emblem.png" class="mobile" alt="">
+                    <p class="sub"><span>TAGADISYERTO.</span> <span>TAGAGUBAT.</span>
+                        <br><span>TAGAKALAKAL.</span> <span>TAGALAOT.</span> <span>TAGAPATAG.</span></p>
+                    <p class="title">FIND OUT
+                        <br>WHICH TRIBE YOU BELONG TO!</p>
                 </div>
-                <div class="login">
-                    <a href="#" class="btn btn-login">Login</a>
+                <div class="button">
+                    <a href="#" class="btn btn-register">Be a Bagani</a>
                 </div>
             </div>
-            <div class="welcome">
-                <img src="assets/images/common/bagani-logo.png" class="logo">
+        </div>
+    </div>
+</section>
+<section class="map-fold">
+    <app-sansinukob-map (mapClick)="showModal($event)"></app-sansinukob-map>
+    <div class="pop-up" *ngFor="let map of maps; let i=index" ngClass="{{map.name}}" [class.show]="showPopUp == map.name">
+        <div class="container">
+            <div class="close">
+                <a (click)="closeModal()"><img src="assets/images/map/pop-up-close.png" alt=""></a>
+            </div>
+            <div class="emblem">
+                <img [src]="map.emblem" alt="">
+            </div>
+            <div class="row">
+                <div class="map">
+                    <img [src]="map.mapSrc" alt="">
+                </div>
                 <div class="writeup">
-                    <div class="content">
-                        <img src="assets/images/borders/content-container-emblem.png" class="mobile" alt="">
-                        <p class="sub"><span>TAGADISYERTO.</span> <span>TAGAGUBAT.</span>
-                            <br><span>TAGAKALAKAL.</span> <span>TAGALAOT.</span> <span>TAGAPATAG.</span></p>
-                        <p class="title">FIND OUT
-                            <br>WHICH TRIBE YOU BELONG TO!</p>
-                    </div>
+                    <p>{{map.desc}}</p>
+                    <p>{{map.sub}}</p>
                     <div class="button">
                         <a href="#" class="btn btn-register">Be a Bagani</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="map-fold">
-        <app-sansinukob-map (mapClick)="showModal($event)"></app-sansinukob-map>
-        <div class="pop-up" *ngFor="let map of maps; let i=index" ngClass="{{map.name}}" [class.show]="showPopUp == map.name">
-            <div class="container">
-                <div class="close">
-                    <a (click)="closeModal()"><img src="assets/images/map/pop-up-close.png" alt=""></a>
+    </div>
+</section>
+<section class="alamat">
+    <div class="container">
+        <div class="title">
+            <p>Ang Alamat</p>
+        </div>
+        <ngx-slick class="content" #slickModal="slick-modal" [config]="alamatSlideConfig">
+            <div class="slide" ngxSlickItem *ngFor="let slide of alamat" [innerHTML]="slide.content">
+            </div>
+        </ngx-slick>
+    </div>
+</section>
+<section class="mythical-creatures">
+    <div class="container">
+        <p class="title">MYTHICAL CREATURES &amp; DEITIES</p>
+        <ngx-slick class="content" #slickModal="slick-modal" [config]="mythicalSlideConfig">
+            <div class="slide" ngxSlickItem *ngFor="let creature of creatures">
+                <img [src]="creature.image" alt="">
+                <div class="name">
+                    <p>{{creature.name}}</p>
                 </div>
-                <div class="emblem">
-                    <img [src]="map.emblem" alt="">
+            </div>
+        </ngx-slick>
+    </div>
+</section>
+<section class="sansinukob-chronicles">
+    <div class="container">
+        <div class="video-recap">
+            <img src="assets/images/common/sansinukob-chronicles.png" alt="sansinukob-chronicles" class="title-img">
+            <div class="content">
+                <div class="video">
+                    <iframe [src]="videoRecap" class="media" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="social">
+                        <a href="#"><img src="assets/images/common/social-fb.png" alt=""></a>
+                        <a href="#"><img src="assets/images/common/social-twitter.png" alt=""></a>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="map">
-                        <img [src]="map.mapSrc" alt="">
-                    </div>
-                    <div class="writeup">
-                        <p>{{map.desc}}</p>
-                        <p>{{map.sub}}</p>
-                        <div class="button">
-                            <a href="#" class="btn btn-register">Be a Bagani</a>
-                        </div>
-                    </div>
+                <div class="writeup">
+                    <p>{{videoRecapDetails}}</p>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="alamat">
-        <div class="container">
-            <div class="title">
-                <p>Ang Alamat</p>
-            </div>
-            <ngx-slick class="content" #slickModal="slick-modal" [config]="alamatSlideConfig">
-                <div class="slide" ngxSlickItem *ngFor="let slide of alamat" [innerHTML]="slide.content">
-                </div>
-            </ngx-slick>
-        </div>
-    </section>
-    <section class="mythical-creatures">
-        <div class="container">
-            <p class="title">MYTHICAL CREATURES &amp; DEITIES</p>
-            <ngx-slick class="content" #slickModal="slick-modal" [config]="mythicalSlideConfig">
-                <div class="slide" ngxSlickItem *ngFor="let creature of creatures">
-                    <img [src]="creature.image" alt="">
-                    <div class="name">
-                        <p>{{creature.name}}</p>
-                    </div>
-                </div>
-            </ngx-slick>
-        </div>
-    </section>
-    <section class="sansinukob-chronicles">
-        <div class="container">
-            <div class="video-recap">
-                <img src="assets/images/common/sansinukob-chronicles.png" alt="sansinukob-chronicles" class="title-img">
-                <div class="content">
-                    <div class="video">
-                        <iframe [src]="videoRecap" class="media" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        <div class="social">
-                            <a href="#"><img src="assets/images/common/social-fb.png" alt=""></a>
-                            <a href="#"><img src="assets/images/common/social-twitter.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="writeup">
-                        <p>{{videoRecapDetails}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="latest-updates breaker">
-                <div class="content">
-                    <p class="title">Latest Updates</p>
-                    <div class="banners">
-                        <ngx-slick #slickModal="slick-modal" [config]="updatesSlideConfig">
-                            <div class="banner {{update.tribe}}" ngxSlickItem *ngFor="let update of updates">
-                                <div class="inner">
-                                    <img [src]="update.thumbnail" alt="hover-image" class="hover">
-                                    <img [src]="update.emblem" alt="emblem-trade" class="emblem">
-                                    <div class="writeup">
-                                        <p>{{update.chapterTitle}} </p>
-                                        <p>{{update.desc}}</p>
-                                    </div>
+        <div class="latest-updates breaker">
+            <div class="content">
+                <p class="title">Latest Updates</p>
+                <div class="banners">
+                    <ngx-slick #slickModal="slick-modal" [config]="updatesSlideConfig">
+                        <button class="banner {{update.tribe}}" ngxSlickItem *ngFor="let update of updates">
+                            <div class="inner">
+                                <img [src]="update.thumbnail" alt="hover-image" class="hover" *ngIf="update.thumbnail">
+                                <img [src]="update.emblem" alt="emblem-trade" class="emblem">
+                                <div class="writeup">
+                                    <p>{{update.chapterTitle}} </p>
+                                    <p>{{update.desc}}</p>
                                 </div>
                             </div>
-                        </ngx-slick>
-                    </div>
-                </div>
-            </div>
-            <div class="featured-artwork breaker">
-                <div class="content">
-                    <p class="title">Featured Artwork</p>
-                    <ngx-slick #slickModal="slick-modal" [config]="artworkSlideConfig">
-                        <div class="slide" ngxSlickItem *ngFor="let artwork of artworks">
-                            <img [src]="artwork.image" alt="{{artwork.name}}">
-                            <div class="name">
-                                <p>{{artwork.name}}</p>
-                            </div>
-                        </div>
+                        </button>
                     </ngx-slick>
                 </div>
             </div>
-            <div class="beyond-sansinukob breaker">
-                <div class="content">
-                    <p class="title">Beyond Sansinukob</p>
-                    <div class="articles">
-                        <div class="article" *ngFor="let article of articles">
-                            <div class="thumb"><a [href]="article.link"><img [src]="article.image" alt="{{article.title}}"></a></div>
-                            <p class="article-title"><a [href]="article.link">{{article.title}}</a></p>
+        </div>
+        <div class="featured-artwork breaker">
+            <div class="content">
+                <p class="title">Featured Artwork</p>
+                <ngx-slick #slickModal="slick-modal" [config]="artworkSlideConfig">
+                    <div class="slide" ngxSlickItem *ngFor="let artwork of artworks">
+                        <img [src]="artwork.image" alt="{{artwork.name}}">
+                        <div class="name">
+                            <p>{{artwork.name}}</p>
                         </div>
+                    </div>
+                </ngx-slick>
+            </div>
+        </div>
+        <div class="beyond-sansinukob breaker">
+            <div class="content">
+                <p class="title">Beyond Sansinukob</p>
+                <div class="articles">
+                    <div class="article" *ngFor="let article of articles">
+                        <div class="thumb"><a [href]="article.link"><img [src]="article.image" alt="{{article.title}}"></a></div>
+                        <p class="article-title"><a [href]="article.link">{{article.title}}</a></p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 <app-footer></app-footer>
 
-</div>

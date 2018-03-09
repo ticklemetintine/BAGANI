@@ -1,0 +1,325 @@
+.paguuri-container {
+    padding: 20px;
+
+    .welcome {
+        width: percentage(800px/1092px);
+        margin: auto auto;
+        text-align: center;
+        padding-bottom: 40px;
+
+        .logo {
+            display: block;
+            margin: auto auto;
+            max-width: 100%;
+        }
+        .writeup {
+            background: url('assets/images/borders/border-content-container-bottom.png') center bottom no-repeat, url('assets/images/borders/border-content-container-top.png') center top no-repeat, url('assets/images/borders/border-content-container-left.png') left center no-repeat, url('assets/images/borders/border-content-container-right.png') right center no-repeat, ;
+            background-size: contain, contain, auto 95%, auto 95%;
+            padding: 14px 10px;
+
+            .content {
+                background-color: rgba(0, 0, 0, .6);
+                padding: 60px 25px 40px;
+                position: relative;
+
+                .heading {
+                    background: url("assets/images/backgrounds/bg-title-content-container.png") center center no-repeat;
+                    background-size: contain;
+                    padding: 15px 0 20px;
+                    position: absolute;
+                    top: -9px;
+                    left: 0;
+                    right: 0;
+
+                    p {
+                        font-size: 1.625em;
+                    }
+                }
+
+                .babaylan {
+                    display: block;
+                    margin: auto;
+                    max-width: 100%;
+                }
+
+                p {
+                    margin: 0;
+                    &.title {
+                        font-size: 1.5em;
+                    }
+                    &.sub {
+                        font-size: 1.125em;
+                        width: percentage(400px/730px);
+                        margin: auto auto 40px;
+                    }
+                }
+                .button {
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+app-email-confirmed {
+    background: url('assets/images/backgrounds/bg-waves.png') center bottom no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: block;
+    position: relative;
+    background-attachment: fixed;
+
+    >.container {
+        padding: 20px;
+
+        app-footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            display: block;
+
+            .footer-container {
+                max-width: percentage(1280px/1440px);
+                margin: auto auto;
+            }
+        }
+    }
+}
+
+app-paguuri {
+    background: url('assets/images/backgrounds/bg-waves.png') center center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: block;
+    position: relative;
+    background-attachment: fixed;
+
+    .welcome {
+        .writeup {
+            .content {
+                .row {
+                    display: flex;
+
+                    >* {
+                        width: 50%;
+                        padding: 20px 0;
+
+
+                        a {
+                            color: #da9c2a;
+                            text-decoration: none;
+                        }
+                    }
+                    .left {
+                        text-align: center;
+                        .banner {
+                            max-width: 100%;
+                            display: block;
+                            max-height: 180px;
+                        }
+                        p {
+                            font-size: 1.125em;
+                            font-weight: 700;
+
+                            &.small {
+                                font-size: 0.875em;
+                                font-family: "Lato", sans-serif;
+                            }
+                        }
+                        .bottom {
+                            position: relative;
+                            padding-top: 20px;
+
+                            &:before,
+                            &:after {
+                                content: '';
+                                background: -moz-linear-gradient(left, rgba(117, 99, 73, 0) 0%, rgba(117, 99, 73, 0) 5%, rgba(117, 99, 73, 1) 50%, rgba(117, 99, 73, 0) 95%, rgba(117, 99, 73, 0) 100%);
+                                background: -webkit-linear-gradient(left, rgba(117, 99, 73, 0) 0%, rgba(117, 99, 73, 0) 5%, rgba(117, 99, 73, 1) 50%, rgba(117, 99, 73, 0) 95%, rgba(117, 99, 73, 0) 100%);
+                                background: linear-gradient(to right, rgba(117, 99, 73, 0) 0%, rgba(117, 99, 73, 0) 5%, rgba(117, 99, 73, 1) 50%, rgba(117, 99, 73, 0) 95%, rgba(117, 99, 73, 0) 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00756349', endColorstr='#00756349', GradientType=1);
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                                width: 100%;
+                                height: 1px;
+                            }
+                            &:after {
+                                background: -moz-linear-gradient(left, rgba(36, 28, 18, 0) 0%, rgba(36, 28, 18, 0) 5%, rgba(36, 28, 18, 1) 50%, rgba(36, 28, 18, 0) 95%, rgba(36, 28, 18, 0) 100%);
+                                background: -webkit-linear-gradient(left, rgba(36, 28, 18, 0) 0%, rgba(36, 28, 18, 0) 5%, rgba(36, 28, 18, 1) 50%, rgba(36, 28, 18, 0) 95%, rgba(36, 28, 18, 0) 100%);
+                                background: linear-gradient(to right, rgba(36, 28, 18, 0) 0%, rgba(36, 28, 18, 0) 5%, rgba(36, 28, 18, 1) 50%, rgba(36, 28, 18, 0) 95%, rgba(36, 28, 18, 0) 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00241c12', endColorstr='#00241c12', GradientType=1);
+                                top: 1px;
+                            }
+                            p {
+                                width: percentage(280px/365px);
+                                margin: 0px auto 10px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    .right {
+                        form {
+                            padding: 0 30px;
+
+                            .form-group {
+                                margin-bottom: 20px;
+                            }
+
+                            label,
+                            input,
+                            .terms {
+                                display: block;
+                                width: 100%;
+                                text-align: left;
+                                font-family: "Lato", sans-serif;
+                            }
+                            label {
+                                font-size: 0.875em;
+                                line-height: 1.5;
+                            }
+                            input {
+                                background: #fff3de;
+                                border: solid 1px #ae6f2a;
+                                border-radius: 3px;
+                                height: 30px;
+                                padding: 10px;
+                                box-sizing: border-box;
+                                outline: none;
+                            }
+                            .terms {
+                                font-size: 0.750em;
+                                text-align: center;
+                            }
+                            .button {
+                                margin-top: 20px;
+                                button {
+                                    border: 0;
+                                    font-family: 'Averia Serif Libre', sans-serif;
+                                    font-size: 1.5em;
+                                    padding: 20px 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+app-paguuri-results {
+    min-height: 100vh;
+
+    .tribe-farm {
+        background: url('assets/images/backgrounds/bg-farm.png') top center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .tribe-fishing {
+        background: url('assets/images/backgrounds/bg-fishing.png') top center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .tribe-trade {
+        background: url('assets/images/backgrounds/bg-trade.png') top center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .tribe-forest {
+        background: url('assets/images/backgrounds/bg-forest.png') top center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .tribe-desert {
+        background: url('assets/images/backgrounds/bg-desert.png') top center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .container {
+        padding: 40px 20px 20px;
+        .logo {
+            max-width: 100%;
+            margin: auto auto;
+            display: block;
+        }
+        .emblem {
+            margin: 20px auto;
+
+            img {
+                max-width: 100%;
+                margin: auto auto;
+                display: block;
+            }
+        }
+        .writeup {
+            background: -moz-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 27%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 70%, rgba(217, 200, 182, 0) 100%);
+            background: -webkit-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 27%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 70%, rgba(217, 200, 182, 0) 100%);
+            background: linear-gradient(to right, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 27%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 70%, rgba(217, 200, 182, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d9c8b6', endColorstr='#00d9c8b6', GradientType=1);
+
+            color: #000000;
+            text-align: center;
+            padding: 40px;
+            margin-bottom: 40px;
+            position: relative;
+
+            p {
+                &.title {
+                    font-size: 1.875em;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+                &.desc {
+                    font-family: "Lato", sans-serif;
+                    width: percentage(500px/971px);
+                    margin: auto auto;
+                    line-height: 1.5;
+                }
+            }
+
+            .breaker {
+                background: -moz-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(44, 93, 149, 0) 5%, rgba(172, 146, 117, 0.8) 50%, rgba(129, 182, 223, 0) 96%, rgba(125, 185, 232, 0) 100%);
+                background: -webkit-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(44, 93, 149, 0) 5%, rgba(172, 146, 117, 0.8) 50%, rgba(129, 182, 223, 0) 96%, rgba(125, 185, 232, 0) 100%);
+                background: linear-gradient(to right, rgba(30, 87, 153, 0) 0%, rgba(44, 93, 149, 0) 5%, rgba(172, 146, 117, 0.8) 50%, rgba(129, 182, 223, 0) 96%, rgba(125, 185, 232, 0) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#007db9e8', GradientType=1);
+                width: percentage(450px/971px);
+                height: 2px;
+                margin: 20px auto;
+            }
+            .share {
+                p {
+                    text-transform: uppercase;
+                }
+                ul {
+                    padding: 0;
+                    li {
+                        display: inline;
+                        margin: 0 20px;
+                    }
+                }
+            }
+            .button {
+                position: absolute;
+                bottom: -40px;
+                left: 0;
+                right: 0;
+                margin: auto;
+
+                .btn {
+                    font-size: 1.125em;
+                    display: inline-block;
+                    padding: 20px 30px;
+
+                    span {
+                        font-size: 1.333em;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

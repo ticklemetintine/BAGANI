@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700|Lato:400,700');
+
+body {
+    margin: 0;
+    color: #d9c8b6;
+    font-size: 16px;
+    font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+app-banner-ad {
+    position: relative;
+}
+
+.ad {
+    background: rgba(0, 0, 0, .5);
+    padding: 10px;
+    >*:not(.close) {
+        display: block;
+        margin: auto;
+        width: 100%;
+        max-width: percentage(728px/1273px);
+
+        img {
+            width: 100%;
+            margin: block;
+        }
+    }
+
+    .close {
+        text-transform: uppercase;
+        font-family: "Lato", sans-serif;
+        font-size: 0.625em;
+        float: right;
+        text-align: right;
+        margin-bottom: 10px;
+        a {
+            color: #fff;
+        }
+    }
+}
+
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    >* {
+        width: 50%;
+    }
+    .share {
+        >* {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        p {
+            text-transform: uppercase;
+            font-size: 0.750em;
+            color: #000;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                display: inline;
+            }
+        }
+    }
+    .login {
+        text-align: right;
+    }
+}
+
+.container {
+    max-width: percentage(1280px/1440px);
+    margin: auto auto;
+}
+
+.mobile {
+    display: none;
+}
+
+.btn {
+    background: url('assets/images/common/button-state.png') no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding: 10px 20px;
+    color: #d9c8b6;
+    text-decoration: none;
+    font-size: 0.750em;
+    text-transform: uppercase;
+    transition: background 0.5s ease;
+    cursor: pointer;
+    outline: none;
+    
+    &:hover {
+        background: url('assets/images/common/button-state-hover.png') no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+    &.btn-register {
+        font-size: 1.5em;
+        padding: 25px;
+    }
+}
+
+
+.slick-slide {
+    outline: none;
+}
+
+.slick-dots {
+    background: url('assets/images/backgrounds/bg-pagination.png') center center no-repeat;
+    background-size: contain;
+    width: 410px;
+    height: 45px;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: -25px; 
+
+    li {
+        margin: 13px 15px;
+
+        &:after {
+            content: '';
+            height: 2px;
+            width: 30px;
+            background: #000;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 21px;
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+
+        &.slick-active {
+            button {
+                &:before {
+                    background-position: -21px 0;
+                    opacity: 1;
+                    color: transparent;
+                }
+            }
+        }
+        button {
+            padding: 0;
+            &:before {
+                background: url('assets/images/common/pagination-state.png') center center no-repeat;
+                opacity: 1;
+                width: 22px;
+                height: 21px;
+                color: transparent;
+                border-radius: 20px;
+                top: 0;
+                left: 0;
+                background-position: 1px 0;
+            }
+        }
+    }
+}
+
+.clearfix {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+footer {
+    
+    .footer-container {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "Lato", sans-serif;
+        font-size: 0.625em;
+
+        .menu {
+            padding: 0;
+
+            li {
+                display: inline;
+
+                a {
+                    color: #d9c8b6;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

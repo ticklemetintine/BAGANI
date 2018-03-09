@@ -20,6 +20,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SansinukobMapComponent } from './components/sansinukob-map/sansinukob-map.component';
 import { PaguuriResultsComponent } from './components/paguuri-results/paguuri-results.component';
 import { BannerAdComponent } from './components/banner-ad/banner-ad.component';
+import { EmailConfirmedComponent } from './components/email-confirmed/email-confirmed.component';
+import { TopNavSocialLoginComponent } from './components/top-nav-social-login/top-nav-social-login.component';
+import { PaguuriComponent } from './components/paguuri/paguuri.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,18 @@ import { BannerAdComponent } from './components/banner-ad/banner-ad.component';
     FooterComponent,
     SansinukobMapComponent,
     PaguuriResultsComponent,
-    BannerAdComponent
+    BannerAdComponent,
+    EmailConfirmedComponent,
+    TopNavSocialLoginComponent,
+    PaguuriComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
     RouterModule.forRoot([
       { path: '', component: UnregisteredComponent, pathMatch: 'full'},
+      { path: 'paguuri', component: PaguuriComponent, pathMatch: 'full'},
       { path: 'paguuri-results', component: PaguuriResultsComponent, pathMatch: 'full'},
+      { path: 'email-confirmed', component: EmailConfirmedComponent, pathMatch: 'full'},
     ]),
     TransferHttpCacheModule,
     HttpClientModule,

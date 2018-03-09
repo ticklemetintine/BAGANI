@@ -1,6 +1,6 @@
 @media (max-width: 1024px) {
 
-    .unregistered {
+    app-unregistered {
         .alamat {
             .container {
                 width: percentage(790px/1024px);
@@ -56,6 +56,13 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    app-paguuri {
+        .paguuri-container {
+            .welcome {
+                width: 100%;
             }
         }
     }

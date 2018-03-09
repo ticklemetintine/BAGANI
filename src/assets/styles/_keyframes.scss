@@ -1,0 +1,71 @@
+@keyframes cf4FadeInOut {
+    0% {
+        opacity: 1;
+    }
+    17% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    92% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.banner-animate {
+    position: relative;
+    min-height: 180px;
+    margin: 20px auto;
+    img {
+        animation-name: cf4FadeInOut;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 15s;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        &:nth-of-type(1) {
+            animation-delay: 8s;
+        }
+        &:nth-of-type(2) {
+            animation-delay: 6s;
+        }
+        &:nth-of-type(3) {
+            animation-delay: 4s;
+        }
+        &:nth-of-type(4) {
+            animation-delay: 2s;
+        }
+        &:nth-of-type(5) {
+            animation-delay: 0;
+        }
+    }
+}
+
+.banner-animate img:nth-of-type(1) {
+    animation-delay: 12s;
+}
+
+.banner-animate img:nth-of-type(2) {
+    animation-delay: 9s;
+}
+
+.banner-animate img:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+.banner-animate img:nth-of-type(4) {
+    animation-delay: 3s;
+}
+
+.banner-animate img:nth-of-type(5) {
+    animation-delay: 0s;
+}
