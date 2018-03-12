@@ -61,14 +61,18 @@
     }
 }
 
-app-email-confirmed {
+app-email-confirmed,
+app-paguuri,
+app-paguuri-questions {
     background: url('assets/images/backgrounds/bg-waves.png') center bottom no-repeat;
     background-size: cover;
     min-height: 100vh;
     display: block;
     position: relative;
     background-attachment: fixed;
+}
 
+app-email-confirmed {
     >.container {
         padding: 20px;
 
@@ -88,12 +92,6 @@ app-email-confirmed {
 }
 
 app-paguuri {
-    background: url('assets/images/backgrounds/bg-waves.png') center center no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    display: block;
-    position: relative;
-    background-attachment: fixed;
 
     .welcome {
         .writeup {
@@ -292,6 +290,106 @@ app-paguuri-results {
                         font-size: 1.333em;
                         display: block;
                     }
+                }
+            }
+        }
+    }
+}
+
+app-paguuri-questions {
+    .paguuri-container {
+        .welcome {
+            .writeup {
+                padding: 14px 19px 14px 18px;
+                .content {
+                    padding: 12px 2px 7px;
+
+                    .heading {
+                        z-index: 1;
+                    }
+                    .slider {
+                        margin-bottom: 0;
+                    }
+                    .slide {
+                        padding: 60px 25px 20px;
+
+                        .question {
+                            font-size: 1.5em;
+                        }
+
+                        .choices {
+                            padding: 0;
+
+                            li {
+                                width: percentage(220px/708px);
+                                vertical-align: middle;
+                                position: relative;
+                                margin: 0 10px 10px 0;
+                                padding: 10px;
+                                display: inline-table;
+                                cursor: pointer;
+
+                                a {
+                                    color: #d9c8b6;
+                                    margin: auto;
+                                    height: 110px;
+                                    width: 100%;
+                                    padding: 10px;
+                                    background: rgba(15, 11, 6, .7);
+                                    border: solid 5px #0f0b06;
+                                    border-radius: 10px;
+                                    display: table-cell;
+                                    vertical-align: middle;
+                                    outline: none;
+                                }
+
+
+                                &:hover {
+                                    &:before {
+                                        content: '';
+                                        background-color: rgba(44, 22, 3, .7);
+                                        background: url('assets/images/borders/border-tribal-top-left.png') left top no-repeat, url('assets/images/borders/border-tribal-top-right.png') 97% top no-repeat;
+                                        width: 100%;
+                                        height: 20px;
+                                        position: absolute;
+                                        top: 7px;
+                                        left: 3px;
+                                    }
+                                    &:after {
+                                        content: '';
+                                        background-color: rgba(44, 22, 3, .7);
+                                        background: url('assets/images/borders/border-tribal-bottom-left.png') left bottom no-repeat, url('assets/images/borders/border-tribal-bottom-right.png') 97% bottom no-repeat;
+                                        width: 100%;
+                                        height: 20px;
+                                        position: absolute;
+                                        bottom: 7px;
+                                        left: 3px;
+                                    }
+                                    a {
+                                        &:hover {
+                                            background-color: rgba(44, 22, 3, .7);
+                                            border-color: #492705;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .slick-dots {
+                        li {
+                            margin: 13px 10px;
+                            &:after {
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .button {
+                margin-top: 40px;
+                .btn {
+                    font-size: 1.5em;
+                    padding: 20px 40px;
                 }
             }
         }

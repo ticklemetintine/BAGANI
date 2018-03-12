@@ -1,0 +1,28 @@
+<app-banner-ad></app-banner-ad>
+<div class="container paguuri-container">
+    <app-top-nav-social-login></app-top-nav-social-login>
+    <div class="welcome">
+        <img src="assets/images/common/bagani-logo.png" class="logo">
+        <div class="writeup">
+            <div class="content">
+                <div class="heading">
+                    <p>ANG PAG-UURI</p>
+                </div>
+                <div class="row">
+                    <ngx-slick class="slider" #slickModal="slick-modal" [config]="questionsSlideConfig" (afterChange)="afterChange($event)" (Next)="next($event)">
+                        <div class="slide" *ngFor="let question of questions; let i=index" ngxSlickItem [ngStyle]="{'background-image':'url(' + question.background + ')', 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
+                            <p class="question">{{question.question}}</p>
+                            <ul class="choices">
+                                <li *ngFor="let choice of question.choices"><a>{{choice.choice}}</a></li>
+                            </ul>
+                        </div>
+                    </ngx-slick>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <a href="#" class="btn btn-next">Next</a>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

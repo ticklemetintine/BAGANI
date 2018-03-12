@@ -16,11 +16,11 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
     animations: [
         trigger('fadeInOut', [
             transition('void => *', [
-            style({opacity:0}), //style only for transition transition (after transiton it removes)
-            animate(500, style({opacity:1})) // the new state of the transition(after transiton it removes)
+            style({opacity:0}), 
+            animate(500, style({opacity:1})) 
           ]),
           transition('* => void', [
-            animate(500, style({opacity:0})) // the new state of the transition(after transiton it removes)
+            animate(500, style({opacity:0})) 
           ])
         ])
     ]

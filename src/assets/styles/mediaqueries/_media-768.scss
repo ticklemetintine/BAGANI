@@ -197,4 +197,29 @@
             margin: auto;
         }
     }
+
+    app-paguuri-questions {
+        .paguuri-container {
+            .welcome {
+                .writeup {
+                    padding: 15px 17px 14px 16px;
+                    .content {
+                        padding: 8px 2px 4px;
+
+                        .slide {
+                            padding: 60px 10px 20px;
+
+                            .choices {
+                                li {
+                                    margin: 0;
+
+
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
 }

@@ -24,6 +24,8 @@ import { EmailConfirmedComponent } from './components/email-confirmed/email-conf
 import { TopNavSocialLoginComponent } from './components/top-nav-social-login/top-nav-social-login.component';
 import { PaguuriComponent } from './components/paguuri/paguuri.component';
 import { LoginComponent } from './components/login/login.component';
+import { PaguuriQuestionsComponent } from './components/paguuri-questions/paguuri-questions.component';
+import { QuestionsService } from './services/questions.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { LoginComponent } from './components/login/login.component';
     EmailConfirmedComponent,
     TopNavSocialLoginComponent,
     PaguuriComponent,
-    LoginComponent
+    LoginComponent,
+    PaguuriQuestionsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -44,6 +47,7 @@ import { LoginComponent } from './components/login/login.component';
       { path: '', component: UnregisteredComponent, pathMatch: 'full'},
       { path: 'login', component: LoginComponent, pathMatch: 'full'},
       { path: 'paguuri', component: PaguuriComponent, pathMatch: 'full'},
+      { path: 'paguuri/:id', component: PaguuriQuestionsComponent, pathMatch: 'full'},
       { path: 'paguuri-results', component: PaguuriResultsComponent, pathMatch: 'full'},
       { path: 'email-confirmed', component: EmailConfirmedComponent, pathMatch: 'full'},
     ]),
@@ -59,7 +63,8 @@ import { LoginComponent } from './components/login/login.component';
     ArticlesService,
     AngAlamatService,
     MythicalCreaturesService,
-    RecapService
+    RecapService,
+    QuestionsService
   ],
   bootstrap: [AppComponent]
 })
