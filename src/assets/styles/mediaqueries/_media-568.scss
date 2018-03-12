@@ -315,4 +315,29 @@
             }
         }
     }
+    app-login {
+        .paguuri-container {
+            padding: 20px 0;
+
+            .welcome {
+                width: 100%;
+
+                .writeup {
+                    padding: 5px 10px 5px;
+
+                    .content {
+                        padding: 15px 20px;
+
+                        .emblem {
+                            top: -35px;
+                        }
+
+                        form, .bottom {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

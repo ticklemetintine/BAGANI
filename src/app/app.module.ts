@@ -23,6 +23,7 @@ import { BannerAdComponent } from './components/banner-ad/banner-ad.component';
 import { EmailConfirmedComponent } from './components/email-confirmed/email-confirmed.component';
 import { TopNavSocialLoginComponent } from './components/top-nav-social-login/top-nav-social-login.component';
 import { PaguuriComponent } from './components/paguuri/paguuri.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +35,14 @@ import { PaguuriComponent } from './components/paguuri/paguuri.component';
     BannerAdComponent,
     EmailConfirmedComponent,
     TopNavSocialLoginComponent,
-    PaguuriComponent
+    PaguuriComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
     RouterModule.forRoot([
       { path: '', component: UnregisteredComponent, pathMatch: 'full'},
+      { path: 'login', component: LoginComponent, pathMatch: 'full'},
       { path: 'paguuri', component: PaguuriComponent, pathMatch: 'full'},
       { path: 'paguuri-results', component: PaguuriResultsComponent, pathMatch: 'full'},
       { path: 'email-confirmed', component: EmailConfirmedComponent, pathMatch: 'full'},

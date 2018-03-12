@@ -1,4 +1,14 @@
 @media (max-width: 768px) {
+
+    .top-nav {
+        margin-bottom: 20px;
+        .share ul li a {
+            display: inline-block;
+            img {
+                max-width: 30px;
+            }
+        }
+    }
     app-unregistered {
 
         .map-fold {
@@ -169,6 +179,22 @@
                     }
                 }
             }
+        }
+    }
+
+    app-login {
+        .paguuri-container {
+            .welcome {
+                width: 100%;
+            }
+        }
+        app-footer {
+            position: absolute;
+            bottom: 0;
+            width: 95%;
+            left: 0;
+            right: 0;
+            margin: auto;
         }
     }
 }
