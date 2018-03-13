@@ -26,6 +26,8 @@ import { PaguuriComponent } from './components/paguuri/paguuri.component';
 import { LoginComponent } from './components/login/login.component';
 import { PaguuriQuestionsComponent } from './components/paguuri-questions/paguuri-questions.component';
 import { QuestionsService } from './services/questions.service';
+import { SansinukobComponent } from './components/sansinukob/sansinukob.component';
+import { TourComponent } from './components/tour/tour.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { QuestionsService } from './services/questions.service';
     TopNavSocialLoginComponent,
     PaguuriComponent,
     LoginComponent,
-    PaguuriQuestionsComponent
+    PaguuriQuestionsComponent,
+    SansinukobComponent,
+    TourComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -50,6 +54,7 @@ import { QuestionsService } from './services/questions.service';
       { path: 'paguuri/:id', component: PaguuriQuestionsComponent, pathMatch: 'full'},
       { path: 'paguuri-results', component: PaguuriResultsComponent, pathMatch: 'full'},
       { path: 'email-confirmed', component: EmailConfirmedComponent, pathMatch: 'full'},
+      { path: 'tour', component: TourComponent, pathMatch: 'full'},
     ]),
     TransferHttpCacheModule,
     HttpClientModule,

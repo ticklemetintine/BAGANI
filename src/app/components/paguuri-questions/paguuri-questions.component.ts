@@ -32,7 +32,8 @@ export class PaguuriQuestionsComponent implements OnInit {
         'slidesToShow': 1, 
         'slidesToScroll': 1, 
         'dots': true, 
-        'arrows': false 
+        'arrows': false,
+        'infinite': false 
     };
 
     getQuestions() {
@@ -42,7 +43,8 @@ export class PaguuriQuestionsComponent implements OnInit {
             }
         );
     }
-    afterChange() {
+    afterChange(event) {
+        console.log(event.currentSlide);
         this.location.replaceState("/paguuri/q2");
     }
     next() {
