@@ -43,9 +43,23 @@ header {
                 display: block;
                 margin-left: 30px;
                 cursor: pointer;
+                position: relative;
 
                 &:hover {
                     background-position: -90px 0;
+                }
+                &:before {
+                    background: url('assets/images/common/icon-burger.png') no-repeat;
+                    content: '';
+                    width: 50px;
+                    height: 38px;
+                    position: absolute;
+                    top: 10px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+
                 }
             }
         }
@@ -88,6 +102,36 @@ header {
                 max-height: 45px;
                 margin: -30px 20px 0 0;
                 max-width: 100%;
+            }
+        }
+    }
+}
+app-header {
+    .menu-expanded {
+        background: url('assets/images/backgrounds/bg-menu-expanded.png') no-repeat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        text-align: center;
+
+        ul {
+            padding: 0;
+            li {
+                list-style: none;
+                text-transform: uppercase;
+                padding: 15px 0;
+                a {
+                    font-size: 1.875em;
+                    color: #fff;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #da9c2a;
+                    }
+                }
             }
         }
     }

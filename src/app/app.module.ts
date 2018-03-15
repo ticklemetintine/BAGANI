@@ -29,6 +29,7 @@ import { PaguuriQuestionsComponent } from './components/paguuri-questions/paguur
 import { QuestionsService } from './services/questions.service';
 import { SansinukobComponent } from './components/sansinukob/sansinukob.component';
 import { TourComponent } from './components/tour/tour.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { TourComponent } from './components/tour/tour.component';
     LoginComponent,
     PaguuriQuestionsComponent,
     SansinukobComponent,
-    TourComponent
+    TourComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),

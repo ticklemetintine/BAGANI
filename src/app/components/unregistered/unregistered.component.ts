@@ -70,7 +70,9 @@ export class UnregisteredComponent implements OnInit {
                 'breakpoint': 480,
                 'settings': {
                     'slidesToShow': 1,
-                    'slidesToScroll': 1
+                    'slidesToScroll': 1,
+                    'centerMode': true,
+                    'centerPadding': '60px',
                 }
             }
         ]
