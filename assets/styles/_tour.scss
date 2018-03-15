@@ -1,0 +1,123 @@
+app-tour {
+    .main {
+        &.desert {
+            background: url('assets/images/backgrounds/bg-desert-wide.png') no-repeat;
+            background-size: cover;
+        }
+    }
+    .paguuri-container {
+        .welcome {
+            .writeup {
+                margin-top: 100px;
+                .content {
+                    padding: 140px 60px 0;
+                    .heading {
+                        background-size: auto auto;
+                        margin-top: -80px;
+                    }
+                    .slide {
+                        &.tour-1 {
+                            form {
+                                width: percentage(340px/659px);
+                                margin: 20px auto;
+                                padding-bottom: 20px;
+
+                                .upload-photo {
+                                    position: relative;
+
+                                    .profile-picture {
+                                        position: absolute;
+                                    }
+                                    .upload {
+                                        position: relative;
+                                        button {
+                                            background: #a3620a;
+                                            border: 0;
+                                            font-size: 0.750em;
+                                            color: #d9c8b6;
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            height: 30px;
+                                            border-radius: 3px;
+                                            outline: none;
+                                        }
+                                    }
+                                }
+                                .button {
+                                    .goNext {
+                                        font-family: "Lato", sans-serif;
+                                    }
+                                }
+                                .btn {
+                                    font-size: 0.750em;
+                                    font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
+                                    padding: 0;
+                                    width: auto;
+                                    padding: 5px 20px;
+                                    margin: auto;
+                                    display: block;
+                                }
+                            }
+                        }
+                        &.tour-2 {
+                            .emblems {
+                                display: block;
+                                margin: auto auto;
+                                max-width: 100%;
+                            }
+                            .button {
+                                .btn {
+                                    font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
+                                }
+                            }
+                        }
+                        &.tour-3 {
+                            img {
+                                display: block;
+                                margin: auto;
+                                max-width: 100%;
+                            }
+                            .challenges {
+                                text-transform: uppercase;
+                                font-size: 1.875em;
+                            }
+                            .breaker {
+                            	margin: 40px auto;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.5em;
+                        }
+                        .breaker {
+                            background: -webkit-gradient(linear, left top, right top, from(rgba(30, 87, 153, 0)), color-stop(5%, rgba(44, 93, 149, 0)), color-stop(50%, rgba(172, 146, 117, 0.8)), color-stop(96%, rgba(129, 182, 223, 0)), to(rgba(125, 185, 232, 0)));
+                            background: linear-gradient(to right, rgba(30, 87, 153, 0) 0%, rgba(44, 93, 149, 0) 5%, rgba(172, 146, 117, 0.8) 50%, rgba(129, 182, 223, 0) 96%, rgba(125, 185, 232, 0) 100%);
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#007db9e8', GradientType=1);
+                            width: 46.34397528%;
+                            height: 2px;
+                            margin: 20px auto;
+                        }
+                        .button {
+                            margin-top: 20px;
+                            text-align: center;
+
+                            .goNext {
+                                margin-bottom: 20px;
+                                font-size: 0.875em;
+                                text-transform: uppercase;
+                                display: block;
+                                outline: none;
+                            }
+                        }
+                    }
+                    .slick-dotted {
+                        &.slick-slider {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.header {
+    &.desert {
+        background: url('assets/images/backgrounds/bg-header-desert.png') no-repeat;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    &.no-menu {
+    	.container {
+    		.menu-container {
+		    	.burger-menu {
+		    		display: none;
+		    	}
+		    }
+		    .logo-container {
+		    	img {
+		    		margin-top: 0;
+		    	}
+		    }
+	    }
+    }
+
+    .container {
+        background: url('assets/images/borders/border-header-left.png') no-repeat, url('assets/images/borders/border-header-right.png') no-repeat;
+        background-position: left top, right top;
+        background-size: contain, contain;
+        max-width: 100%;
+        padding: 0 80px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: flex-start;
+
+        >div {
+            width: 33.333%;
+        }
+
+        .menu-container {
+            .burger-menu {
+                background: url('assets/images/backgrounds/bg-burger-menu.png') no-repeat;
+                width: 90px;
+                height: 150px;
+                display: block;
+                margin-left: 30px;
+                cursor: pointer;
+
+                &:hover {
+                    background-position: -90px 0;
+                }
+            }
+        }
+
+        .avatar-container {
+            .avatar {
+                display: block;
+                position: relative;
+                max-width: 140px;
+                padding: 10px 20px;
+                margin: auto;
+
+                &:before {
+                    background: url('assets/images/common/avatar-frame-desert.png') no-repeat;
+                    background-position: center center;
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    display: block;
+                }
+                img {
+                    display: block;
+                    border-radius: 100px;
+                    width: 100%;
+                    max-width: 100px;
+                    margin: auto;
+                }
+            }
+        }
+        .logo-container {
+            text-align: right;
+            align-self: center;
+            .logo {
+                max-height: 45px;
+                margin: -30px 20px 0 0;
+            }
+        }
+    }
+}

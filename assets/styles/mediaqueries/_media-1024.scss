@@ -66,4 +66,23 @@
             }
         }
     }
+    app-login {
+        .welcome {
+            .writeup {
+                .content {
+                    form {
+                        width: percentage(390px/567px);
+                    }
+                    .bottom {
+                        width: percentage(370px/567px);
+                    }
+                }
+            }
+        }
+    }
+    app-paguuri-questions {
+        .paguuri-container .welcome {
+            width: 100%;
+        }
+    }
 }

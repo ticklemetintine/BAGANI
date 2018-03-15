@@ -301,13 +301,81 @@
             padding: 20px 0;
             .welcome {
                 .writeup {
-                    padding: 10px 19px 10px;
+                    padding: 6px 19px 10px;
                     .content {
                         .row {
                             .right {
                                 form {
                                     width: 100%;
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    app-login,
+    app-paguuri-questions {
+        .paguuri-container {
+            padding: 20px 0;
+
+            .welcome {
+                width: 100%;
+
+                .writeup {
+                    padding: 5px 10px 5px;
+
+                    .content {
+                        padding: 15px 20px;
+
+                        .emblem {
+                            top: -35px;
+                        }
+
+                        form,
+                        .bottom {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    app-paguuri-questions {
+        .paguuri-container {
+            .welcome {
+                margin-top: 40px;
+                .writeup {
+                    margin-top: 20px;
+                    padding: 10px 20px 5px;
+                    background-size: contain, contain, auto, auto;
+                    background-repeat: no-repeat, no-repeat, repeat-y, repeat-y;
+                    .content {
+                        padding: 0;
+
+                        .heading {
+                            top: -18px;
+                        }
+                        .slide {
+                            padding: 60px 10px 20px;
+                            .choices {
+                                display: block;
+                                li {
+                                    width: 100%;
+                                    display: block;
+                                    margin: 0;
+
+                                    a {
+                                        height: auto;
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                        .slick-dots {
+                            li {
+                                margin: 13px 5px;
                             }
                         }
                     }
