@@ -108,6 +108,7 @@ header {
 }
 app-header {
     .menu-expanded {
+        display: none;
         background: url('assets/images/backgrounds/bg-menu-expanded.png') no-repeat;
         position: fixed;
         top: 0;
