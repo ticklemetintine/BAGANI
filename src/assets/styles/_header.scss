@@ -1,8 +1,6 @@
-.header {
+header {
     &.desert {
         background: url('assets/images/backgrounds/bg-header-desert.png') no-repeat;
-        border-left: 0;
-        border-right: 0;
     }
 
     &.no-menu {
@@ -89,6 +87,7 @@
             .logo {
                 max-height: 45px;
                 margin: -30px 20px 0 0;
+                max-width: 100%;
             }
         }
     }

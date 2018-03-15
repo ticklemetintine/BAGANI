@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UnregisteredComponent } from './components/unregistered/unregistered.component';
@@ -55,11 +56,13 @@ import { TourComponent } from './components/tour/tour.component';
       { path: 'paguuri-results', component: PaguuriResultsComponent, pathMatch: 'full'},
       { path: 'email-confirmed', component: EmailConfirmedComponent, pathMatch: 'full'},
       { path: 'tour', component: TourComponent, pathMatch: 'full'},
+      { path: 'wikia', component: SansinukobComponent, pathMatch: 'full'},
     ]),
     TransferHttpCacheModule,
     HttpClientModule,
     SlickModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     MapsService,

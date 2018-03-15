@@ -1,0 +1,307 @@
+app-sansinukob {
+    header {
+        position: relative;
+        z-index: 1;
+    }
+    .map-fold {
+        background: url('assets/images/backgrounds/bg-map-compass.png') center center no-repeat;
+        padding: 65px 20px 30px;
+        background-size: cover;
+        position: relative;
+        margin-top: -40px;
+        z-index: 0;
+
+        .container {
+            display: flex;
+            width: 100%;
+
+            .left {
+                width: percentage(400px/1240px);
+
+                p {
+                    margin: 0;
+                    text-align: center;
+
+                    &.title {
+                        font-size: 3em;
+                        text-transform: uppercase;
+                        margin-bottom: 40px;
+                    }
+                    &.sub {
+                        font-size: 1.125em;
+                        margin: 25px 0;
+                    }
+                    &.small {
+                        font-size: 0.875em;
+                        margin-top: 35px;
+                        font-family: "Lato", sans-serif;
+                    }
+                }
+                hr {
+                    border-color: #d9c8b6;
+                    width: 75%;
+                }
+            }
+            .right {
+                width: percentage(840px/1240px);
+                position: relative;
+                >img {
+                    width: 100%;
+                }
+                .sansinukob-map {
+                    width: 100%;
+
+                    &:hover {
+                        background: #000;
+                    }
+                }
+                .focus {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+
+                    img {
+                        position: absolute;
+                        cursor: pointer;
+
+                        &.map-trade {
+                            left: percentage(132px/737px);
+                            top: 50px;
+                            width: percentage(319px/737px);
+                        }
+                        &.map-farm {
+                            left: 403px;
+                            top: 200px;
+                        }
+                        &.map-desert {
+                            left: 327px;
+                            top: 20px;
+                        }
+                        &.map-forest {
+                            left: 298px;
+                            top: 278px
+                        }
+                        &.map-fishing {
+                            top: 421px;
+                            left: 159px;
+                            width: 500px;
+                        }
+                    }
+                }
+            }
+        }
+        .pop-up {
+            background: url('assets/images/backgrounds/bg-ocean.png') top center no-repeat;
+            position: fixed;
+            background-size: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+
+            .container {
+                display: block;
+            }
+
+            &.show {
+                opacity: 1;
+                z-index: 2;
+            }
+
+            &.trade {
+                .map {
+                    img {
+                        margin-top: -200px;
+                    }
+                }
+            }
+            &.desert {
+                .map {
+                    img {
+                        margin-top: -40px;
+                    }
+                }
+            }
+            &.farm {
+                .map {
+                    img {
+                        margin-top: -40px;
+                    }
+                }
+            }
+
+            .container {
+                padding: 40px 20px 100px;
+                position: relative;
+                .close {
+                    position: absolute;
+                    right: 0;
+                    top: 20px;
+                    cursor: pointer;
+                }
+                .emblem {
+                    img {
+                        display: block;
+                        margin: auto auto;
+                    }
+                }
+                .row {
+                    display: flex;
+
+                    >* {
+                        width: 50%;
+
+                        &.map {
+                            padding: 40px;
+                            img {
+                                width: 100%;
+                                display: block;
+                            }
+                        }
+                        &.writeup {
+                            p {
+                                width: percentage(380px/522px);
+                                margin: 20px auto;
+                                font-size: 1.125em;
+                                line-height: 1.5;
+
+                                &:first-child {
+                                    padding-bottom: 20px;
+                                    border-bottom: solid 1px #d9c8b6;
+                                }
+                            }
+                            .button {
+                                text-align: center;
+                                margin-top: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .alamat {
+        background: url('assets/images/backgrounds/bg-ang-alamat.png') top center no-repeat;
+        padding: 80px 0;
+        background-size: cover;
+        position: relative;
+
+        .container {
+            width: percentage(700px/1265px);
+            margin: auto auto;
+
+            .title {
+                background: url('assets/images/backgrounds/bg-title-alamat.png') center center no-repeat;
+                padding: 20px;
+                z-index: 1;
+                position: relative;
+
+                p {
+                    text-align: center;
+                    font-size: 1.625em;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+            }
+
+            .content {
+                background-color: rgba(214, 201, 181, .7);
+                border: solid 6px #000;
+                margin-top: -17px;
+                z-index: 0;
+                padding: 30px;
+
+                >* {
+                    color: #000;
+                    font-family: "Lato", sans-serif;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+    .mythical-creatures {
+        background: url('assets/images/backgrounds/bg-mythical-creature.png') top center no-repeat;
+        padding: 40px 0 80px;
+        background-size: cover;
+
+        .container {
+            max-width: 100%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 3em;
+            padding: 0 20px;
+        }
+
+        .slide {
+            padding: 0 10px;
+            img {
+                width: 95%;
+                position: relative;
+                border: solid 6px #0f0b06;
+                cursor: pointer;
+            }
+            .name {
+                background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+                background-size: cover;
+                padding: 15px 0 30px;
+                margin-top: -25px;
+                width: 100%;
+                position: relative;
+                p {
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+
+        .slick-dots {
+            background: transparent;
+            bottom: -40px;
+        }
+    }
+
+    .creatureModal {
+        .modal-content {
+            .name {
+                position: absolute;
+                top: -28px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                text-align: center;
+                background: #333;
+                display: block;
+                background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+                background-size: contain;
+                padding: 15px 0 30px;
+                width: 100%;
+                p {
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+            .image {
+                img {
+                    max-width: 100%;
+                    display: block;
+                }
+            }
+            .desc {
+                color: #010100;
+                font-family: 'Lato', sans-serif;
+                padding: 50px;
+                line-height: 1.5;
+                background: #d9c8b6;
+
+                p {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

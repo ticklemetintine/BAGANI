@@ -17,7 +17,7 @@ export class TourComponent implements OnInit {
         'slidesToScroll': 1, 
         'dots': true, 
         'arrows': false,
-        'infinte': false 
+        'infinite': false 
     };
 
 }

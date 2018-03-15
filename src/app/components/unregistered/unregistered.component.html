@@ -50,7 +50,9 @@
             <p>Ang Alamat</p>
         </div>
         <ngx-slick class="content" #slickModal="slick-modal" [config]="alamatSlideConfig">
-            <div class="slide" ngxSlickItem *ngFor="let slide of alamat" [innerHTML]="slide.content">
+            <div class="slide" ngxSlickItem *ngFor="let slide of alamat">
+                <input type="hidden" value="{{slide.background}}" class="alamat-background">
+                <div [innerHTML]="slide.content"></div>
             </div>
         </ngx-slick>
     </div>

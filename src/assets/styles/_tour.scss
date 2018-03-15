@@ -1,7 +1,9 @@
 app-tour {
     .main {
+
         &.desert {
             background: url('assets/images/backgrounds/bg-desert-wide.png') no-repeat;
+    	background-attachment: fixed;
             background-size: cover;
         }
     }
@@ -10,12 +12,13 @@ app-tour {
             .writeup {
                 margin-top: 100px;
                 .content {
-                    padding: 140px 60px 0;
+                    padding: 140px 60px 40px;
                     .heading {
                         background-size: auto auto;
                         margin-top: -80px;
                     }
                     .slide {
+                    	position: relative;
                         &.tour-1 {
                             form {
                                 width: percentage(340px/659px);
@@ -72,23 +75,50 @@ app-tour {
                                 }
                             }
                         }
-                        &.tour-3 {
+                        &.tour-3,
+                        &.tour-4,
+                        &.tour-5,
+                        &.tour-6 {
                             img {
-                                display: block;
-                                margin: auto;
+                                display: inline-block;
+                                margin: auto 20px 10px;
                                 max-width: 100%;
                             }
-                            .challenges {
-                                text-transform: uppercase;
-                                font-size: 1.875em;
-                            }
                             .breaker {
-                            	margin: 40px auto;
+                                margin: 40px auto;
                             }
+                        }
+
+                        &.tour-6 {
+                            .emblems {
+                                display: block;
+
+                                .emblem {
+                                    display: inline-block;
+                                    margin: auto 20px 10px;
+                                }
+                            }
+
+                            .breaker {
+                            	margin: 25px auto;
+                            }
+                        }
+
+                        &.tour-7 {
+                        	padding-bottom: 40px;
+
+                        	.button {
+                        		margin-top: 60px;
+                        	}
                         }
 
                         p {
                             font-size: 1.5em;
+
+                            &.badge-title {
+                                text-transform: uppercase;
+                                font-size: 1.875em;
+                            }
                         }
                         .breaker {
                             background: -webkit-gradient(linear, left top, right top, from(rgba(30, 87, 153, 0)), color-stop(5%, rgba(44, 93, 149, 0)), color-stop(50%, rgba(172, 146, 117, 0.8)), color-stop(96%, rgba(129, 182, 223, 0)), to(rgba(125, 185, 232, 0)));
@@ -110,6 +140,9 @@ app-tour {
                                 outline: none;
                             }
                         }
+                    }
+                    .slick-dots {
+                    	bottom: -55px;
                     }
                     .slick-dotted {
                         &.slick-slider {

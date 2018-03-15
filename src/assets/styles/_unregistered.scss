@@ -231,8 +231,9 @@ app-unregistered {
     }
     .alamat {
         background: url('assets/images/backgrounds/bg-ang-alamat.png') top center no-repeat;
-        background-attachment: fixed;
         padding: 80px 0;
+        background-size: cover;
+        transition: all 0.2s ease-out;
         position: relative;
 
         .container {
@@ -274,9 +275,14 @@ app-unregistered {
         padding: 40px 0 80px;
         background-size: cover;
 
+        .container {
+            max-width: 100%;
+        }
+
         .title {
             text-align: center;
             font-size: 3em;
+            padding: 0 20px;
         }
 
         .slide {

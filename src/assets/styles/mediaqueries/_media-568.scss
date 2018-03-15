@@ -2,6 +2,38 @@
     body {
         font-size: 14px;
     }
+
+    header {
+        background-size: auto 80px !important;
+
+        .container {
+            padding: 0 50px;
+            background-size: inherit;
+
+            .menu-container {
+                .burger-menu {
+                    margin: 0;
+                    width: 60px;
+                    height: 120px;
+                    background-size: 200%;
+                }
+            }
+            .avatar-container {
+                .avatar {
+                    &:before {
+                        background-size: contain;
+                    }
+                }
+            }
+            .logo-container {
+                margin-top: -20px;
+                .logo {
+                    // margin-top: 0;
+                }
+            }
+        }
+    }
+
     footer {
         .footer-container {
             display: block;
@@ -9,6 +41,7 @@
             text-align: center;
         }
     }
+
     .slick-dots {
         width: 100%;
 
@@ -16,7 +49,21 @@
             margin: 13px 10px;
         }
     }
-    app-unregistered {
+
+    .modal {
+        .close {
+            a {
+                max-width: 30px;
+                margin: auto 0 auto auto;
+            }
+        }
+        .modal-content {
+            width: 100%;
+        }
+    }
+
+    app-unregistered,
+    app-sansinukob {
         .first-fold {
             padding-bottom: 40px;
             background-size: auto;
@@ -261,6 +308,7 @@
             }
         }
     }
+
     app-paguuri-results {
         padding-bottom: 10px;
 
@@ -281,6 +329,7 @@
             }
         }
     }
+
     app-email-confirmed {
         >.container {
             max-width: 100%;
@@ -296,6 +345,7 @@
             }
         }
     }
+
     app-paguuri {
         .paguuri-container {
             padding: 20px 0;
@@ -315,6 +365,7 @@
             }
         }
     }
+
     app-login,
     app-paguuri-questions {
         .paguuri-container {
@@ -342,7 +393,9 @@
             }
         }
     }
-    app-paguuri-questions {
+
+    app-paguuri-questions,
+    app-tour {
         .paguuri-container {
             .welcome {
                 margin-top: 40px;
@@ -379,6 +432,67 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    app-tour {
+        .paguuri-container {
+            padding: 0;
+
+            .welcome {
+                .writeup {
+                    margin-top: 90px;
+
+                    .content {
+                        .heading {
+                            background-size: contain;
+                            top: 0;
+                            margin-top: -70px;
+
+                            img {
+                                max-width: 150px;
+                                margin: auto;
+                            }
+                        }
+                        .slide {
+                            padding: 80px 20px 20px;
+
+                            &.tour-1 {
+
+                                form {
+                                    width: 100%;
+                                }
+                            }
+
+                            &.tour-6 {
+                                .emblems .emblem {
+                                    margin: 10px;
+                                    img {
+                                        max-width: 60px;
+                                    }
+                                }
+                            }
+
+                            .breaker {
+                                width: 100%;
+                            }
+                        }
+                        .slick-dots {
+                            bottom: -25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    app-sansinukob {
+        .creatureModal {
+            .modal-content {
+                .desc {
+                    padding: 30px;
                 }
             }
         }

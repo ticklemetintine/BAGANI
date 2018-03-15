@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 import { MapsService } from '../../services/maps.service';
 import { LatestUpdatesService } from '../../services/latest-updates.service';
@@ -8,7 +8,6 @@ import { AngAlamatService } from '../../services/ang-alamat.service';
 import { MythicalCreaturesService } from '../../services/mythical-creatures.service';
 import { RecapService } from '../../services/recap.service';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
-
 
 @Component({
     selector: 'app-unregistered',
@@ -36,6 +35,7 @@ export class UnregisteredComponent implements OnInit {
     creatures = [];
     videoRecap: SafeResourceUrl;
     videoRecapDetails: string;
+    alamatBackground: any = '';
 
     alamatSlideConfig = { 
         'slidesToShow': 1, 
@@ -165,6 +165,9 @@ export class UnregisteredComponent implements OnInit {
     closeModal() {
         this.showPopUp = '';
     }
+    afterChange(e) {
+        console.log(e);
+      }
     EachMap() {
         this._mapService.EachMap().subscribe(
             (data) => {
@@ -217,7 +220,5 @@ export class UnregisteredComponent implements OnInit {
             }
         );
     }
-
-
 
 }

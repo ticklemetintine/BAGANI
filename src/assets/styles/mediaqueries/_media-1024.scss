@@ -1,6 +1,7 @@
 @media (max-width: 1024px) {
 
-    app-unregistered {
+    app-unregistered,
+    app-sansinukob {
         .alamat {
             .container {
                 width: percentage(790px/1024px);
@@ -80,7 +81,8 @@
             }
         }
     }
-    app-paguuri-questions {
+    app-paguuri-questions,
+    app-tour {
         .paguuri-container .welcome {
             width: 100%;
         }

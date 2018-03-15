@@ -1,0 +1,67 @@
+<header class="header desert">
+    <div class="container">
+        <div class="menu-container">
+            <a class="burger-menu"></a>
+        </div>
+        <div class="avatar-container">
+            <a href="https://placeholder.com" class="avatar"><img src="http://via.placeholder.com/100x100"></a>
+        </div>
+        <div class="logo-container"><img src="assets/images/common/bagani-logo.png" alt="" class="logo"></div>
+    </div>
+</header>
+<section class="map-fold">
+    <div class="container">
+        <div class="left">
+            <p class="title">Explore
+                <br> Sansinukob</p>
+            <hr>
+            <p class="sub">A land rich of Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+            <hr>
+            <p class="small">Click on each of the regions to read about its stories, history, people, and culture.</p>
+        </div>
+        <div class="right">
+            <img #sansinukobMap src="assets/images/map/map-default-mobile.png" alt="sansinukob" usemap="#sansinukob" (window:resize)="onResize($event)" />
+        </div>
+    </div>
+</section>
+<section class="alamat">
+    <div class="container">
+        <div class="title">
+            <p>Ang Alamat</p>
+        </div>
+        <ngx-slick class="content" #slickModal="slick-modal" [config]="alamatSlideConfig">
+            <div class="slide" ngxSlickItem *ngFor="let slide of alamat" [innerHTML]="slide.content">
+            </div>
+        </ngx-slick>
+    </div>
+</section>
+<section class="mythical-creatures">
+    <div class="container">
+        <p class="title">MYTHICAL CREATURES &amp; DEITIES</p>
+        <ngx-slick class="content" #slickModal="slick-modal" [config]="mythicalSlideConfig">
+            <div class="slide" ngxSlickItem *ngFor="let creature of creatures">
+                <img [src]="creature.image" alt="{{creature.name}}" (click)="creatureModal(creature)">
+                <div class="name">
+                    <p>{{creature.name}}</p>
+                </div>
+            </div>
+        </ngx-slick>
+    </div>
+</section>
+<section class="modal creatureModal" [hidden]="!showModalCreature" fadeInOut>
+    <div class="container">
+        <div class="close">
+            <a (click)="closeModal()"><img src="assets/images/common/icon-close-dark.png" alt=""></a>
+        </div>
+        <div class="modal-content">
+            <div class="name">
+                <p>{{modalCreatureData.name}}</p>
+            </div>
+            <div class="image"><img [src]="modalCreatureData.imageLarge" alt=""></div>
+            <div class="desc">
+                {{modalCreatureData.writeup}}          
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>
