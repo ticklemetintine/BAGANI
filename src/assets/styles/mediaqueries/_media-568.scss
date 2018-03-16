@@ -16,6 +16,11 @@
                     width: 60px;
                     height: 120px;
                     background-size: 200%;
+
+                    &:before {
+                        width: 38px;
+                        background-size: contain;
+                    }
                 }
             }
             .avatar-container {
@@ -59,6 +64,37 @@
         }
         .modal-content {
             width: 100%;
+        }
+    }
+    
+    app-header {
+        .menu-expanded {
+            > .container {
+                padding: 0;
+                .menu-container {
+                padding: 0 50px;
+
+                    .burger-menu {
+                        margin: 0;
+                        width: 60px;
+                        height: 120px;
+                        background-size: 200%;
+
+                        &:before {
+                            width: 25px;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+            .main-menu {
+                max-width: 100%;
+                padding-bottom: 100px;
+
+                li {
+                    padding: 0;
+                }
+            }
         }
     }
 
@@ -443,7 +479,7 @@
 
             .welcome {
                 .writeup {
-                    margin-top: 90px;
+                    margin-top: 0px;
 
                     .content {
                         .heading {

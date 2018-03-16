@@ -27,4 +27,27 @@ $(document).ready(function(e) {
             'background-size': 'cover'
         });
     });
+
+    $(document).on('click', 'header .menu-container .burger-menu', function(event) {
+        event.preventDefault();
+        var burgerMenu = $('header .menu-container').clone();
+
+        $('body').addClass('menu-opened');
+        $('.menu-expanded').fadeIn('fast');
+
+        $('.menu-expanded > .container').prepend(burgerMenu);
+    });
+
+    $(document).on('click', '.menu-expanded .menu-container .burger-menu', function(event) {
+        event.preventDefault();
+        $('body').removeClass('menu-opened');
+        $('.menu-expanded').fadeOut('fast');
+
+        $('.menu-expanded > .container .menu-container').remove();
+    });
+
+    $(document).on('click', '.menu-expanded .main-menu .sansinukob a ', function(event) {
+        $('.menu-expanded .main-menu .sansinukob .sub').slideToggle();
+        $('.menu-expanded .main-menu .sansinukob').toggleClass('expanded');
+    });
 });
