@@ -30,6 +30,7 @@ import { QuestionsService } from './services/questions.service';
 import { SansinukobComponent } from './components/sansinukob/sansinukob.component';
 import { TourComponent } from './components/tour/tour.component';
 import { HeaderComponent } from './components/header/header.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { HeaderComponent } from './components/header/header.component';
     AngAlamatService,
     MythicalCreaturesService,
     RecapService,
-    QuestionsService
+    QuestionsService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

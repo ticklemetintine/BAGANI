@@ -4,8 +4,15 @@
     }
 
     header {
-        background-size: auto 80px !important;
+        background-size: auto 70px !important;
 
+        &.no-menu {
+            .container {
+                .logo-container {
+                    margin-top: 7px;
+                }
+            }
+        }
         .container {
             padding: 0 50px;
             background-size: inherit;
@@ -13,25 +20,27 @@
             .menu-container {
                 .burger-menu {
                     margin: 0;
-                    width: 60px;
-                    height: 120px;
+                    width: 50px;
+                    height: 95px;
                     background-size: 200%;
 
                     &:before {
-                        width: 38px;
+                        width: 30px;
                         background-size: contain;
                     }
                 }
             }
             .avatar-container {
                 .avatar {
+                    min-height: 0;
+
                     &:before {
                         background-size: contain;
                     }
                 }
             }
             .logo-container {
-                margin-top: -20px;
+                margin-top: -5px;
                 .logo {
                     // margin-top: 0;
                 }
@@ -66,22 +75,24 @@
             width: 100%;
         }
     }
-    
+
     app-header {
         .menu-expanded {
-            > .container {
+            >.container {
                 padding: 0;
                 .menu-container {
-                padding: 0 50px;
+                    padding: 0 50px;
 
                     .burger-menu {
                         margin: 0;
-                        width: 60px;
-                        height: 120px;
+                        width: 50px;
+                        height: 95px;
                         background-size: 200%;
 
                         &:before {
-                            width: 25px;
+                            width: 18px;
+                            height: 20px;
+                            top: 0;
                             background-size: contain;
                         }
                     }

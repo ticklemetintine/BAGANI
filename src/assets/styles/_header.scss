@@ -2,6 +2,18 @@ header {
     &.desert {
         background: url('assets/images/backgrounds/bg-header-desert.png') no-repeat;
     }
+    &.farm {
+        background: url('assets/images/backgrounds/bg-header-farm.png') no-repeat;
+    }
+    &.trade {
+        background: url('assets/images/backgrounds/bg-header-trade.png') no-repeat;
+    }
+    &.fishing {
+        background: url('assets/images/backgrounds/bg-header-fishing.png') no-repeat;
+    }
+    &.forest {
+        background: url('assets/images/backgrounds/bg-header-forest.png') no-repeat;
+    }
 
     &.no-menu {
         .container {
@@ -68,12 +80,47 @@ header {
                 display: block;
                 position: relative;
                 max-width: 140px;
+                min-height: 110px;
                 padding: 10px 20px;
                 margin: auto;
 
+                &.desert {
+                    &:before {
+                        background: url('assets/images/common/avatar-frame-desert.png') no-repeat;
+                        background-size: contain;
+                        background-position: center center;
+                    }
+                }
+                &.forest {
+                    &:before {
+                        background: url('assets/images/common/avatar-frame-forest.png') no-repeat;
+                        background-size: contain;
+                        background-position: center center;
+                    }
+                }
+                &.trade {
+                    &:before {
+                        background: url('assets/images/common/avatar-frame-trade.png') no-repeat;
+                        background-size: contain;
+                        background-position: center center;
+                    }
+                }
+                &.farm {
+                    &:before {
+                        background: url('assets/images/common/avatar-frame-farm.png') no-repeat;
+                        background-size: contain;
+                        background-position: center center;
+                    }
+                }
+                &.fishing {
+                    &:before {
+                        background: url('assets/images/common/avatar-frame-fishing.png') no-repeat;
+                        background-size: contain;
+                        background-position: center center;
+                    }
+                }
+
                 &:before {
-                    background: url('assets/images/common/avatar-frame-desert.png') no-repeat;
-                    background-position: center center;
                     content: '';
                     position: absolute;
                     width: 100%;
@@ -99,8 +146,10 @@ header {
             align-self: center;
             .logo {
                 max-height: 45px;
-                margin: -30px 20px 0 0;
+                margin: auto 20px auto auto;
                 max-width: 100%;
+                display: block;
+
             }
         }
     }
@@ -246,10 +295,43 @@ app-header {
                         margin: auto;
                         background: #000;
 
+                        &.desert {
+                            &:before {
+                                background: url('assets/images/common/avatar-frame-desert.png') no-repeat;
+                                background-size: contain;
+                                background-position: center center;
+                            }
+                        }
+                        &.forest {
+                            &:before {
+                                background: url('assets/images/common/avatar-frame-forest.png') no-repeat;
+                                background-size: contain;
+                                background-position: center center;
+                            }
+                        }
+                        &.trade {
+                            &:before {
+                                background: url('assets/images/common/avatar-frame-trade.png') no-repeat;
+                                background-size: contain;
+                                background-position: center center;
+                            }
+                        }
+                        &.farm {
+                            &:before {
+                                background: url('assets/images/common/avatar-frame-farm.png') no-repeat;
+                                background-size: contain;
+                                background-position: center center;
+                            }
+                        }
+                        &.fishing {
+                            &:before {
+                                background: url('assets/images/common/avatar-frame-fishing.png') no-repeat;
+                                background-size: contain;
+                                background-position: center center;
+                            }
+                        }
+
                         &:before {
-                            background: url('assets/images/common/avatar-frame-desert.png') no-repeat;
-                            background-position: center center;
-                            background-size: contain;
                             content: '';
                             position: absolute;
                             width: 100%;

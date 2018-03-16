@@ -1,10 +1,13 @@
-<header class="header desert">
+<header class="header" [ngClass]="userDetails.tribe" [class.no-menu]="userDetails.finishedTour == 0">
     <div class="container">
         <div class="menu-container">
             <a class="burger-menu"></a>
         </div>
         <div class="avatar-container">
-            <a href="https://placeholder.com" class="avatar"><img src="http://via.placeholder.com/100x100"></a>
+            <a class="avatar" [ngClass]="userDetails.tribe">
+            	<img [src]="userDetails.profilePicture" *ngIf="userDetails.profilePicture;">
+                <img src="assets/images/common/placeholder-profile-desert.png" *ngIf="!userDetails.profilePicture;">
+            </a>
         </div>
         <div class="logo-container"><img src="assets/images/common/bagani-logo.png" alt="" class="logo"></div>
     </div>
@@ -25,7 +28,10 @@
             </li>
             <li class="challenges"><a>Challenges</a></li>
             <li class="logout"><a>
-				<span class="avatar"><img src="http://via.placeholder.com/100x100"></span>
+				<span class="avatar" [ngClass]="userDetails.tribe">
+					<img [src]="userDetails.profilePicture" *ngIf="userDetails.profilePicture;">
+                	<img src="assets/images/common/placeholder-profile-desert.png" *ngIf="!userDetails.profilePicture;">
+				</span>
 				<span>Logout</span>
 			</a></li>
         </ul>
