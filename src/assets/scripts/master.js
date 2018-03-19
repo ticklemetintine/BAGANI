@@ -23,7 +23,7 @@ $(document).ready(function(e) {
     $(".alamat .content").on("afterChange", function() {
         var bg = $('.slick-active .alamat-background').val();
         $('.alamat').css({
-            'background': 'url('+bg+') top center no-repeat',
+            'background': 'url('+bg+') top center no-repeat fixed',
             'background-size': 'cover'
         });
     });

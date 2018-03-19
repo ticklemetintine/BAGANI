@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container">
+    <section class="video-section noon" [ngClass]="userDetails.tribe" [ngStyle]="{'background': 'url(assets/images/backgrounds/bg-fishing.png) no-repeat', 'background-size': 'contain'}">
+        <video autoplay muted loop>
+            <source src="assets/images/backgrounds/video/{{userDetails.tribe}}/{{userDetails.tribe}}-noon.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section class="banner-region">
+        <div class="banner">
+            <img src="assets/images/common/banner-{{userDetails.tribe}}.png" alt="{{userDetails.tribe}}">
+        </div>
+        <div class="writeup">
+            <div class="content">
+                <p>Situated in the middle of nowhere, the Desert Region is the poorest in all of Sansinukob. Its people have turned to looting and stealing in order to survive. With this notoriety comes the tribe’s reputation as feared warriors, as they are recognized to be both courageous and cunning.</p>
+            </div>
+        </div>
+    </section>
+    <section class="topics">
+        <div class="row">
+            <div class="topic stories">
+                <div class="content">
+                    <p class="entries"><span>3</span> new entries</p>
+                    <p class="title">Stories</p>
+                </div>
+            </div>
+            <div class="topic history">
+                <div class="content">
+                    <p class="entries"><span>3</span> new entries</p>
+                    <p class="title">history</p>
+                </div>
+            </div>
+            <div class="topic culture">
+                <div class="content">
+                    <p class="entries"><span>3</span> new entries</p>
+                    <p class="title">culture</p>
+                </div>
+            </div>
+            <div class="topic people">
+                <div class="content">
+                    <p class="entries"><span>3</span> new entries</p>
+                    <p class="title">people</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -31,6 +31,7 @@ import { SansinukobComponent } from './components/sansinukob/sansinukob.componen
 import { TourComponent } from './components/tour/tour.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UserService } from './services/user.service';
+import { RegionsComponent } from './components/regions/regions.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UserService } from './services/user.service';
     PaguuriQuestionsComponent,
     SansinukobComponent,
     TourComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegionsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -60,6 +62,7 @@ import { UserService } from './services/user.service';
       { path: 'email-confirmed', component: EmailConfirmedComponent, pathMatch: 'full'},
       { path: 'tour', component: TourComponent, pathMatch: 'full'},
       { path: 'wikia', component: SansinukobComponent, pathMatch: 'full'},
+      { path: 'wikia/regions', component: RegionsComponent, pathMatch: 'full'},
     ]),
     TransferHttpCacheModule,
     HttpClientModule,

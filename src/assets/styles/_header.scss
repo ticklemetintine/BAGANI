@@ -1,4 +1,7 @@
 header {
+    z-index: 1;
+    position: relative;
+   
     &.desert {
         background: url('assets/images/backgrounds/bg-header-desert.png') no-repeat;
     }
@@ -149,7 +152,6 @@ header {
                 margin: auto 20px auto auto;
                 max-width: 100%;
                 display: block;
-
             }
         }
     }
