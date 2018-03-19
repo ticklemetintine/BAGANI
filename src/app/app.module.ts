@@ -31,7 +31,11 @@ import { SansinukobComponent } from './components/sansinukob/sansinukob.componen
 import { TourComponent } from './components/tour/tour.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UserService } from './services/user.service';
-import { RegionsComponent } from './components/regions/regions.component';
+import { RegionDesertComponent } from './components/region-desert/region-desert.component';
+import { RegionFarmComponent } from './components/region-farm/region-farm.component';
+import { RegionFishingComponent } from './components/region-fishing/region-fishing.component';
+import { RegionTradeComponent } from './components/region-trade/region-trade.component';
+import { RegionForestComponent } from './components/region-forest/region-forest.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +53,11 @@ import { RegionsComponent } from './components/regions/regions.component';
     SansinukobComponent,
     TourComponent,
     HeaderComponent,
-    RegionsComponent
+    RegionDesertComponent,
+    RegionFarmComponent,
+    RegionFishingComponent,
+    RegionTradeComponent,
+    RegionForestComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -62,7 +70,11 @@ import { RegionsComponent } from './components/regions/regions.component';
       { path: 'email-confirmed', component: EmailConfirmedComponent, pathMatch: 'full'},
       { path: 'tour', component: TourComponent, pathMatch: 'full'},
       { path: 'wikia', component: SansinukobComponent, pathMatch: 'full'},
-      { path: 'wikia/regions', component: RegionsComponent, pathMatch: 'full'},
+      { path: 'wikia/desert', component: RegionDesertComponent, pathMatch: 'full'},
+      { path: 'wikia/farm', component: RegionFarmComponent, pathMatch: 'full'},
+      { path: 'wikia/fishing', component: RegionFishingComponent, pathMatch: 'full'},
+      { path: 'wikia/trade', component: RegionTradeComponent, pathMatch: 'full'},
+      { path: 'wikia/forest', component: RegionForestComponent, pathMatch: 'full'},
     ]),
     TransferHttpCacheModule,
     HttpClientModule,

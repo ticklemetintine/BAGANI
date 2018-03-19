@@ -1,4 +1,4 @@
-app-regions {
+.wikia-region {
     background: #000;
     display: block;
 
@@ -11,6 +11,7 @@ app-regions {
             img {
                 display: block;
                 margin: auto auto;
+                max-width: 100%;
             }
         }
         .writeup {
@@ -38,13 +39,13 @@ app-regions {
     .topics {
         position: relative;
         z-index: 1;
+        text-align: center;
 
         .topic {
             display: inline-table;
             width: percentage(500px/1124px);
             height: 320px;
             margin: 0 40px 40px 0;
-            text-align: center;
             border: solid 10px #0f0b06;
             text-transform: uppercase;
             position: relative;
@@ -68,21 +69,21 @@ app-regions {
                 content: '';
                 background-color: rgba(44, 22, 3, .7);
                 background: url('assets/images/borders/border-tribal-top-left.png') left top no-repeat, url('assets/images/borders/border-tribal-top-right.png') 100% top no-repeat;
-                width: 100%;
+                width: 105%;
                 height: 20px;
                 position: absolute;
-                top: 0;
-                left: 0;
+                top: -12px;
+                left: -12px;
             }
             &:after {
                 content: '';
                 background-color: rgba(44, 22, 3, .7);
-                background: url('assets/images/borders/border-tribal-bottom-left.png') left bottom no-repeat, url('assets/images/borders/border-tribal-bottom-right.png') 97% bottom no-repeat;
+                background: url('assets/images/borders/border-tribal-bottom-left.png') left bottom no-repeat, url('assets/images/borders/border-tribal-bottom-right.png') 100% bottom no-repeat;
                 width: 105%;
                 height: 20px;
                 position: absolute;
-                bottom: -10px;
-                left: -10px;
+                bottom: -12px;
+                left: -12px;
             }
 
             .content {
@@ -96,9 +97,55 @@ app-regions {
                     font-size: 0.875em;
                     color: #da9c2a;
                     font-family: "Lato", sans-serif;
+                    vertical-align: middle;
+
+                    &:before,
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        width: 65px;
+                        height: 1px;
+                        vertical-align: middle;
+                        background: #da9c2a;
+                        margin: 0 10px;
+                    }
                 }
                 .title {
+                	font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
                     font-size: 3em;
+                    color: #d9c8b6;
+                }
+            }
+        }
+    }
+    .other-regions {
+        background: url('assets/images/backgrounds/bg-top-paper.png') no-repeat, url('assets/images/backgrounds/bg-paper.png') repeat-x;
+        background-position: center top, center -7%;
+        padding: 40px 0;
+
+        .container {
+            text-align: center;
+
+            .title {
+                background: url('assets/images/common/chronicles-breaker.png') center top no-repeat;
+                font-size: 1.875em;
+                color: #0e0a06;
+                padding-top: 80px;
+                text-transform: uppercase;
+            }
+            .banners {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                a {
+                    display: block;
+
+                    img {
+                        display: block;
+                        max-width: 175px;
+                        width: 100%;
+                    }
                 }
             }
         }

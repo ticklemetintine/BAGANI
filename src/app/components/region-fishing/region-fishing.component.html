@@ -1,0 +1,61 @@
+<app-header></app-header>
+<div class="wikia-region">
+    <section class="video-section fishing" [class.morning]="hour > 5 && hour < 12" [class.noon]="hour > 11 && hour < 18" [class.evening]="hour > 17 || hour < 6">
+        <video autoplay muted loop>
+            <source src="assets/images/backgrounds/video/fishing/fishing-{{timeClass}}.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section class="banner-region">
+        <div class="container">
+            <div class="banner">
+                <img src="assets/images/common/banner-fishing.png" alt="banner-fishing">
+            </div>
+            <div class="writeup">
+                <div class="content">
+                    <p>Situated in the middle of nowhere, the Desert Region is the poorest in all of Sansinukob. Its people have turned to looting and stealing in order to survive. With this notoriety comes the tribe’s reputation as feared warriors, as they are recognized to be both courageous and cunning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="topics">
+        <div class="container">
+            <div class="row">
+                <div class="topic stories">
+                    <a routerLink="stories" class="content">
+                        <p class="entries"><span>3</span> new entries</p>
+                        <p class="title">Stories</p>
+                    </a>
+                </div>
+                <div class="topic history">
+                    <a routerLink="history" class="content">
+                        <p class="entries"><span>1</span> new entry</p>
+                        <p class="title">history</p>
+                    </a>
+                </div>
+                <div class="topic culture">
+                    <a routerLink="culture" class="content">
+                        <p class="entries"><span></span> new entry</p>
+                        <p class="title">culture</p>
+                    </a>
+                </div>
+                <div class="topic people">
+                    <a routerLink="people" class="content">
+                        <p class="entries"><span>2</span> new entries</p>
+                        <p class="title">people</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="other-regions">
+        <div class="container">
+            <p class="title">Explore other regions</p>
+            <div class="banners">
+                <a routerLink="/wikia/forest"><img src="assets/images/common/banner-forest.png" alt=""></a>
+                <a routerLink="/wikia/trade"><img src="assets/images/common/banner-trade.png" alt=""></a>
+                <a routerLink="/wikia/farm"><img src="assets/images/common/banner-farm.png" alt=""></a>
+                <a routerLink="/wikia/desert"><img src="assets/images/common/banner-desert.png" alt=""></a>
+            </div>
+        </div>
+    </section>
+</div>

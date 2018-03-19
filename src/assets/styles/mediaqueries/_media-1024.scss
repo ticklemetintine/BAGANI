@@ -87,4 +87,23 @@
             width: 100%;
         }
     }
+    .wikia-region {
+        .banner-region, .topics {
+            .container {
+                max-width: 100%;
+
+                .writeup {
+                    width: 85%;
+                }
+            }
+        }
+        .topics {
+            padding: 0 10px;
+            .topic {
+                height: 265px;
+                margin: 0 20px 20px 0;
+                width: percentage(485px/1004px);
+            }
+        }
+    }
 }

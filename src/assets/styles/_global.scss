@@ -310,14 +310,89 @@ input {
 .video-section {
     position: absolute;
     max-width: 100%;
-    width: 100%;
-    height: 100%;
+    overflow: hidden;
     left: 0;
     top: 0;
     z-index: 0;
 
+    &.desert {
+        &.morning {
+            background: url('assets/images/backgrounds/bg-video-desert-morning.jpg') no-repeat;
+            background-size: contain;
+        }
+        &.noon {
+            background: url('assets/images/backgrounds/bg-video-desert-noon.jpg') no-repeat;
+            background-size: contain;
+        }
+        &.evening {
+            background: url('assets/images/backgrounds/bg-video-desert-evening.jpg') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &.farm {
+        &.morning {
+            background: url('assets/images/backgrounds/bg-video-farm-morning.jpg') no-repeat;
+            background-size: contain;
+        }
+        &.noon {
+            background: url('assets/images/backgrounds/bg-video-farm-noon.jpg') no-repeat;
+            background-size: contain;
+        }
+        &.evening {
+            background: url('assets/images/backgrounds/bg-video-farm-evening.jpg') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &.fishing {
+        &.morning {
+            background: url('assets/images/backgrounds/bg-video-fishing-morning.jpg') no-repeat;
+            background-size: contain;
+        }
+        &.noon {
+            background: url('assets/images/backgrounds/bg-video-fishing-noon.jpg') no-repeat;
+            background-size: contain;
+        }
+        &.evening {
+            background: url('assets/images/backgrounds/bg-video-fishing-evening.jpg') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &.forest {
+        &.morning {
+            background: url('assets/images/backgrounds/bg-video-forest-morning.jpg') no-repeat;
+            background-size: contain;
+        }
+        &.noon {
+            background: url('assets/images/backgrounds/bg-video-forest-noon.jpg') no-repeat;
+            background-size: contain;
+        }
+        &.evening {
+            background: url('assets/images/backgrounds/bg-video-forest-evening.jpg') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &.trade {
+        &.morning {
+            background: url('assets/images/backgrounds/bg-video-trade-morning.jpg') no-repeat;
+            background-size: contain;
+        }
+        &.noon {
+            background: url('assets/images/backgrounds/bg-video-trade-noon.jpg') no-repeat;
+            background-size: contain;
+        }
+        &.evening {
+            background: url('assets/images/backgrounds/bg-video-trade-evening.jpg') no-repeat;
+            background-size: contain;
+        }
+    }
+
     video {
         display: block;
-        width: 100%;
+        min-width: 100%;
+        min-height: 100%;
     }
 }

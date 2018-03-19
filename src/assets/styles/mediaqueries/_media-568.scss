@@ -544,4 +544,28 @@
             }
         }
     }
+    .wikia-region {
+        .banner-region {
+            .writeup {
+                .content {
+                    width: 90%;
+                }
+            }
+        }
+        .topics {
+            .topic {
+                width: 100%;
+                padding: 60px 20px;
+            }
+        }
+        .other-regions {
+            .container {
+                .banners {
+                    a {
+                        width: 44%;
+                    }
+                }
+            }
+        }
+    }
 }
