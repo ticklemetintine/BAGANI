@@ -231,8 +231,9 @@ app-unregistered {
     }
     .alamat {
         background: url('assets/images/backgrounds/bg-ang-alamat.png') top center no-repeat;
-        background-attachment: fixed;
         padding: 80px 0;
+        background-size: cover;
+        transition: all 0.2s ease-out;
         position: relative;
 
         .container {
@@ -274,25 +275,38 @@ app-unregistered {
         padding: 40px 0 80px;
         background-size: cover;
 
+        .container {
+            max-width: 100%;
+        }
+
         .title {
             text-align: center;
             font-size: 3em;
+            padding: 0 20px;
         }
 
         .slide {
             padding: 0 10px;
+            max-height: 365px;
+            overflow: hidden;
+
             img {
-                width: 95%;
+                max-width: 100%;
                 position: relative;
                 border: solid 6px #0f0b06;
+                cursor: pointer;
+                width: inherit;
+                display: block;
+                height: 325px;
             }
             .name {
                 background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
                 background-size: cover;
                 padding: 15px 0 30px;
-                margin-top: -25px;
-                width: 100%;
+                margin: -25px auto 0;
+                width: 95%;
                 position: relative;
+
                 p {
                     text-align: center;
                     margin: 0;
