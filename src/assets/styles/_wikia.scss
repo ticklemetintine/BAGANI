@@ -111,7 +111,7 @@
                     }
                 }
                 .title {
-                	font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
+                    font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
                     font-size: 3em;
                     color: #d9c8b6;
                 }
@@ -119,8 +119,8 @@
         }
     }
     .other-regions {
-        background: url('assets/images/backgrounds/bg-top-paper.png') no-repeat, url('assets/images/backgrounds/bg-paper.png') repeat-x;
-        background-position: center top, center -7%;
+        background: url('assets/images/backgrounds/bg-paper-half.png') no-repeat;
+        background-position: center top;
         padding: 40px 0;
 
         .container {
@@ -145,6 +145,187 @@
                         display: block;
                         max-width: 175px;
                         width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wikia-inner {
+    background: #000;
+    display: block;
+
+    .writeup-container {
+        position: relative;
+        z-index: 1;
+    }
+    .latest-updates {
+        background: url('assets/images/backgrounds/bg-paper-half.png') no-repeat;
+        background-position: center top;
+        background-size: cover;
+        padding: 40px 0 80px;
+
+        .container {
+            text-align: center;
+
+            .title {
+                background: url('assets/images/common/chronicles-breaker.png') center top no-repeat;
+                font-size: 1.875em;
+                color: #0e0a06;
+                padding-top: 80px;
+                text-transform: uppercase;
+            }
+        }
+
+        .banners {
+            padding: 0 10px;
+
+            .banner {
+                margin-right: 20px;
+                width: percentage(208px/1124px);
+                position: relative;
+                padding: 0 0 40px;
+                border: 0;
+                background: transparent;
+                font-size: 1em;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:hover {
+                    p {
+                        text-decoration: underline;
+                    }
+                }
+
+                &.trade {
+                    .inner {
+                        background-color: #685735;
+
+                        &:before {
+                            background: url('assets/images/common/tribe-banner-top-trade.png') center top no-repeat;
+                        }
+                        &:after {
+                            background: url('assets/images/common/tribe-banner-bottom-trade.png') center bottom no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                }
+
+                &.forest {
+                    .inner {
+                        background-color: #21944d;
+
+                        &:before {
+                            background: url('assets/images/common/tribe-banner-top-forest.png') center top no-repeat;
+                        }
+                        &:after {
+                            background: url('assets/images/common/tribe-banner-bottom-forest.png') center bottom no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                }
+
+                &.fishing {
+                    .inner {
+                        background-color: #732c91;
+
+                        &:before {
+                            background: url('assets/images/common/tribe-banner-top-fishing.png') center top no-repeat;
+                        }
+                        &:after {
+                            background: url('assets/images/common/tribe-banner-bottom-fishing.png') center bottom no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                }
+
+                &.farm {
+                    .inner {
+                        background-color: #187cc3;
+
+                        &:before {
+                            background: url('assets/images/common/tribe-banner-top-farm.png') center top no-repeat;
+                        }
+                        &:after {
+                            background: url('assets/images/common/tribe-banner-bottom-farm.png') center bottom no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                }
+
+                &.desert {
+                    .inner {
+                        background-color: #d0a907;
+
+                        &:before {
+                            background: url('assets/images/common/tribe-banner-top-desert.png') center top no-repeat;
+                        }
+                        &:after {
+                            background: url('assets/images/common/tribe-banner-bottom-desert.png') center bottom no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                }
+
+                .hover {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 0;
+                    opacity: 0.4;
+                    transition: opacity 0.5s ease;
+                }
+
+                .inner {
+                    position: relative;
+                    background-image: url("assets/images/backgrounds/bg-banner-texture.png");
+                    background-blend-mode: multiply;
+                    padding: 30px 15px 50px;
+                    height: 300px;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 15px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                    }
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        position: absolute;
+                        left: 0;
+                        bottom: -30px;
+                    }
+                    >*:not(.hover) {
+                        position: relative;
+                        z-index: 1;
+                    }
+                    .emblem {
+                        display: block;
+                        margin: 20px auto;
+                    }
+                    .writeup {
+                        position: absolute;
+                        bottom: 10px;
+                        height: 40%;
+                        left: 0;
+                        padding: 10px;
+                        p {
+                            margin: 0;
+                            color: #d9c8b6;
+                            text-align: left;
+                            font-family: 'Averia Serif Libre', sans-serif;
+                        }
                     }
                 }
             }

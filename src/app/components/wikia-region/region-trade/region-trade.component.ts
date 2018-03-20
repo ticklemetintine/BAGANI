@@ -1,36 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
 import { DatePipe } from '@angular/common'
 
 @Component({
-  selector: 'app-region-fishing',
-  templateUrl: 'region-fishing.component.html',
+  selector: 'app-region-trade',
+  templateUrl: 'region-trade.component.html',
   styles: []
 })
-export class RegionFishingComponent implements OnInit {
+export class RegionTradeComponent implements OnInit {
 
-  userDetails = [];
   today:Date;
   hour:number;
   timeClass:string;
 
 
   constructor(
-    private _getUserService: UserService
     ) { }
 
   ngOnInit() {
-    this.getUserDetails();
     this.getTime();
   }
 
-  getUserDetails() {
-    this._getUserService.GetUser().subscribe(
-            (data) => {
-                this.userDetails = data.userDetails;
-            }
-        );
-  }
   getTime() {
     this.today = new Date();
     this.hour = this.today.getHours();

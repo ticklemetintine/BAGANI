@@ -31,11 +31,12 @@ import { SansinukobComponent } from './components/sansinukob/sansinukob.componen
 import { TourComponent } from './components/tour/tour.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UserService } from './services/user.service';
-import { RegionDesertComponent } from './components/region-desert/region-desert.component';
-import { RegionFarmComponent } from './components/region-farm/region-farm.component';
-import { RegionFishingComponent } from './components/region-fishing/region-fishing.component';
-import { RegionTradeComponent } from './components/region-trade/region-trade.component';
-import { RegionForestComponent } from './components/region-forest/region-forest.component';
+import { RegionDesertComponent } from './components/wikia-region/region-desert/region-desert.component';
+import { RegionFarmComponent } from './components/wikia-region/region-farm/region-farm.component';
+import { RegionFishingComponent } from './components/wikia-region/region-fishing/region-fishing.component';
+import { RegionTradeComponent } from './components/wikia-region/region-trade/region-trade.component';
+import { RegionForestComponent } from './components/wikia-region/region-forest/region-forest.component';
+import { InnerForestComponent } from './components/wikia-inner/inner-forest/inner-forest.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { RegionForestComponent } from './components/region-forest/region-forest.
     RegionFarmComponent,
     RegionFishingComponent,
     RegionTradeComponent,
-    RegionForestComponent
+    RegionForestComponent,
+    InnerForestComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -70,11 +72,12 @@ import { RegionForestComponent } from './components/region-forest/region-forest.
       { path: 'email-confirmed', component: EmailConfirmedComponent, pathMatch: 'full'},
       { path: 'tour', component: TourComponent, pathMatch: 'full'},
       { path: 'wikia', component: SansinukobComponent, pathMatch: 'full'},
-      { path: 'wikia/desert', component: RegionDesertComponent, pathMatch: 'full'},
-      { path: 'wikia/farm', component: RegionFarmComponent, pathMatch: 'full'},
-      { path: 'wikia/fishing', component: RegionFishingComponent, pathMatch: 'full'},
-      { path: 'wikia/trade', component: RegionTradeComponent, pathMatch: 'full'},
-      { path: 'wikia/forest', component: RegionForestComponent, pathMatch: 'full'},
+      { path: 'wikia/region/desert', component: RegionDesertComponent, pathMatch: 'full'},
+      { path: 'wikia/region/farm', component: RegionFarmComponent, pathMatch: 'full'},
+      { path: 'wikia/region/fishing', component: RegionFishingComponent, pathMatch: 'full'},
+      { path: 'wikia/region/trade', component: RegionTradeComponent, pathMatch: 'full'},
+      { path: 'wikia/region/forest', component: RegionForestComponent, pathMatch: 'full'},
+      { path: 'wikia/inner/forest', component: InnerForestComponent, pathMatch: 'full'},
     ]),
     TransferHttpCacheModule,
     HttpClientModule,

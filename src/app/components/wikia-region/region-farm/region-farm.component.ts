@@ -1,35 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
 import { DatePipe } from '@angular/common'
 
 @Component({
-  selector: 'app-region-desert',
-  templateUrl: 'region-desert.component.html',
+  selector: 'app-region-farm',
+  templateUrl: 'region-farm.component.html',
   styles: []
 })
-export class RegionDesertComponent implements OnInit {
+export class RegionFarmComponent implements OnInit {
 
-  userDetails = [];
   today:Date;
   hour:number;
   timeClass:string;
 
 
   constructor(
-    private _getUserService: UserService
     ) { }
 
   ngOnInit() {
-    this.getUserDetails();
     this.getTime();
-  }
-
-  getUserDetails() {
-    this._getUserService.GetUser().subscribe(
-            (data) => {
-                this.userDetails = data.userDetails;
-            }
-        );
   }
   getTime() {
     this.today = new Date();

@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="wikia-inner">
+    <section class="video-section forest" [class.morning]="hour > 5 && hour < 12" [class.noon]="hour > 11 && hour < 18" [class.evening]="hour > 17 || hour < 6">
+        <video autoplay muted loop>
+            <source src="assets/images/backgrounds/video/forest/forest-{{timeClass}}.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section class="writeup-container">
+        <div class="container">
+            <div class="title"></div>
+            <div class="writeup">
+                <p class="chapter">Chapter 05</p>
+                <p class="chapter-title">Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eveniet ipsum iste sit accusantium facilis, incidunt reprehenderit deserunt ipsam ut commodi, corporis sed eaque explicabo et laudantium provident, qui fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quidem officia dicta consectetur assumenda hic pariatur tempora, neque cupiditate debitis provident rem, magnam distinctio voluptatibus. Sit rem error labore dolores.</p>
+                <div class="media video">
+                    <img src="assets/images/common/img-wikia-inner-placeholder.png" alt="placeholder">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eveniet ipsum iste sit accusantium facilis, incidunt reprehenderit deserunt ipsam ut commodi, corporis sed eaque explicabo et laudantium provident, qui fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quidem officia dicta consectetur assumenda hic pariatur tempora, neque cupiditate debitis provident rem, magnam distinctio voluptatibus. Sit rem error labore dolores.</p>
+                <div class="media photo">
+                    <img src="assets/images/common/img-wikia-inner-placeholder.png" alt="placeholder">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eveniet ipsum iste sit accusantium facilis, incidunt reprehenderit deserunt ipsam ut commodi, corporis sed eaque explicabo et laudantium provident, qui fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quidem officia dicta consectetur assumenda hic pariatur tempora, neque cupiditate debitis provident rem, magnam distinctio voluptatibus. Sit rem error labore dolores.</p>
+
+            </div>
+        </div>
+    </section>
+    <section class="latest-updates">
+        <div class="container">
+            <div class="content">
+                <p class="title">Latest Updates</p>
+                <div class="banners">
+                    <ngx-slick #slickModal="slick-modal" [config]="updatesSlideConfig">
+                        <button class="banner {{update.tribe}}" ngxSlickItem *ngFor="let update of updates">
+                            <div class="inner">
+                                <img [src]="update.thumbnail" alt="hover-image" class="hover" *ngIf="update.thumbnail">
+                                <img [src]="update.emblem" alt="emblem-trade" class="emblem">
+                                <div class="writeup">
+                                    <p>{{update.chapterTitle}} </p>
+                                    <p>{{update.desc}}</p>
+                                </div>
+                            </div>
+                        </button>
+                    </ngx-slick>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
