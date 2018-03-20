@@ -122,6 +122,8 @@
         background: url('assets/images/backgrounds/bg-paper-half.png') no-repeat;
         background-position: center top;
         padding: 40px 0;
+        position: relative;
+        z-index: 2;
 
         .container {
             text-align: center;
@@ -159,12 +161,75 @@
     .writeup-container {
         position: relative;
         z-index: 1;
+        margin-top: 150px;
+
+        .container {
+            padding: 0 40px;
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                height: 10px;
+                background: #000;
+                border-radius: 10px;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 0;
+            }
+
+            .content {
+                background: rgba(217, 200, 182, .9);
+                padding: 40px;
+            }
+
+            .title {
+                background: url('assets/images/common/title-bg.png') no-repeat;
+                background-position: center top;
+                font-size: 1.625em;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 30px 0 40px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -70px;
+            }
+
+            .writeup {
+                width: percentage(750px/960px);
+                margin: auto auto;
+                p {
+                    font-family: "Lato", sans-serif;
+                    color: #000000;
+                    line-height: 1.5;
+
+                    &.chapter,
+                    &.chapter-title {
+                        font-size: 1.5em;
+                        text-align: center;
+                        font-family: 'Averia Serif Libre', sans-serif;
+                        margin: 10px 0;
+                    }
+                    &.chapter-title {
+                        font-size: 3em;
+                    }
+                }
+                img {
+                    display: block;
+                    margin: auto auto;
+                }
+            }
+        }
     }
     .latest-updates {
         background: url('assets/images/backgrounds/bg-paper-half.png') no-repeat;
         background-position: center top;
         background-size: cover;
         padding: 40px 0 80px;
+        position: relative;
+        z-index: 2;
 
         .container {
             text-align: center;
