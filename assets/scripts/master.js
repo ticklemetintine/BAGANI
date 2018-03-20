@@ -50,4 +50,11 @@ $(document).ready(function(e) {
         $('.menu-expanded .main-menu .sansinukob .sub').slideToggle();
         $('.menu-expanded .main-menu .sansinukob').toggleClass('expanded');
     });
+
+    $(document).on('click', '.focus img', function(event) {
+        $('body').css('overflow', 'hidden');
+    });
+    $(document).on('click', '.pop-up .close a', function(event) {
+        $('body').css('overflow', 'auto');
+    });
 });

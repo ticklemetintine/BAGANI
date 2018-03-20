@@ -155,6 +155,8 @@ app-unregistered {
             &.show {
                 opacity: 1;
                 z-index: 2;
+                max-height: 100%;
+                overflow-y: auto;
             }
 
             &.trade {
@@ -531,7 +533,7 @@ app-unregistered {
                                     padding: 10px;
                                     p {
                                         margin: 0;
-                                        color: #d9c8b6;
+                                        color: #fff;
                                         text-align: left;
                                         font-family: 'Averia Serif Libre', sans-serif;
                                     }
@@ -553,7 +555,8 @@ app-unregistered {
                             &.slick-prev {
                                 background: url('assets/images/common/slider-arrow-prev.png') no-repeat;
                                 background-size: contain;
-                                left: -44px;
+                                left: -30px;
+                                z-index: 1;
                             }
                             &.slick-next {
                                 background: url('assets/images/common/slider-arrow-next.png') no-repeat;

@@ -86,6 +86,14 @@
                 width: 85%;
             }
         }
+        .mythical-creatures {
+            .slide {
+                .name {
+                    background-size: contain;
+                    padding: 15px 0 25px;
+                }
+            }
+        }
         .sansinukob-chronicles {
             .container {
                 .breaker {
@@ -93,7 +101,7 @@
                         .content {
                             .slick-arrow {
                                 &.slick-prev {
-                                    left: -39px;
+                                    left: -33px;
                                 }
                             }
                         }
