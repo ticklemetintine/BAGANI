@@ -36,6 +36,8 @@ export class UnregisteredComponent implements OnInit {
     videoRecap: SafeResourceUrl;
     videoRecapDetails: string;
     alamatBackground: any = '';
+    modalCreatureData:any = [];
+    showModalCreature:boolean = false;
 
     alamatSlideConfig = { 
         'slidesToShow': 1, 
@@ -72,7 +74,8 @@ export class UnregisteredComponent implements OnInit {
                     'slidesToShow': 1,
                     'slidesToScroll': 1,
                     'centerMode': true,
-                    'centerPadding': '60px',
+                    'centerPadding': '40px',
+                    'arrows': true
                 }
             }
         ]
@@ -126,7 +129,8 @@ export class UnregisteredComponent implements OnInit {
                     'slidesToShow': 1,
                     'slidesToScroll': 1,
                     'centerMode': true,
-                    'infinite': true
+                    'infinite': true,
+                    'centerPadding': '20px'
                 }
             }
         ]
@@ -166,6 +170,7 @@ export class UnregisteredComponent implements OnInit {
     }
     closeModal() {
         this.showPopUp = '';
+      this.showModalCreature = false;
     }
     afterChange(e) {
         console.log(e);
@@ -221,6 +226,10 @@ export class UnregisteredComponent implements OnInit {
                 this.videoRecapDetails = data.recap.content;
             }
         );
+    }
+    creatureModal(creature) {
+      this.showModalCreature = true;
+      this.modalCreatureData = creature;
     }
 
 }

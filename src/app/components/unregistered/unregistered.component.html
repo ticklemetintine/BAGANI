@@ -62,7 +62,7 @@
         <p class="title">MYTHICAL CREATURES &amp; DEITIES</p>
         <ngx-slick class="content" #slickModal="slick-modal" [config]="mythicalSlideConfig">
             <div class="slide" ngxSlickItem *ngFor="let creature of creatures">
-                <img [src]="creature.image" alt="">
+                <img [src]="creature.image" alt="" (click)="creatureModal(creature)">
                 <div class="name">
                     <p>{{creature.name}}</p>
                 </div>
@@ -92,7 +92,7 @@
                 <p class="title">Latest Updates</p>
                 <div class="banners">
                     <ngx-slick #slickModal="slick-modal" [config]="updatesSlideConfig">
-                        <button class="banner {{update.tribe}}" ngxSlickItem *ngFor="let update of updates">
+                        <a href="#" class="banner {{update.tribe}}" ngxSlickItem *ngFor="let update of updates">
                             <div class="inner">
                                 <img [src]="update.thumbnail" alt="hover-image" class="hover" *ngIf="update.thumbnail">
                                 <img [src]="update.emblem" alt="emblem-trade" class="emblem">
@@ -101,7 +101,7 @@
                                     <p>{{update.desc}}</p>
                                 </div>
                             </div>
-                        </button>
+                        </a>
                     </ngx-slick>
                 </div>
             </div>
@@ -132,5 +132,41 @@
         </div>
     </div>
 </section>
+<section class="logos">
+    <div class="container">
+        <div class="entertainment">
+            <a href="#"><img src="assets/images/common/logo-entertainment.png" alt="entertainment"></a>
+        </div>
+        <div class="abs-store">
+            <a href="#"><img src="assets/images/common/logo-abs-store.png" alt="abs-store"></a>
+        </div>
+        <div class="iwanttv">
+            <a href="#"><img src="assets/images/common/logo-iwanttv.png" alt="iwanttv"></a>
+        </div>
+        <div class="ktx">
+            <a href="#"><img src="assets/images/common/logo-ktx.png" alt="ktx"></a>
+        </div>
+        <div class="kty">
+            <a href="#"><img src="assets/images/common/logo-kty.png" alt="kty"></a>
+        </div>
+    </div>
+</section>
+<section class="modal creatureModal" [hidden]="!showModalCreature" fadeInOut>
+    <div class="container">
+        <div class="close">
+            <a (click)="closeModal()"><img src="assets/images/common/icon-close-dark.png" alt=""></a>
+        </div>
+        <div class="modal-content">
+            <div class="desc">
+                <div class="img">
+                    <img src="assets/images/borders/content-container-emblem.png" class="mobile" alt="">
+                </div>
+                <p>See more of Sansinukob and learn more about each region’s stories, history, people, and culture.</p>
+                <div class="button">
+                    <a href="#" class="btn btn-register">Be a Bagani</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <app-footer></app-footer>
-

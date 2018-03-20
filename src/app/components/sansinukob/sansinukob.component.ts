@@ -12,7 +12,7 @@ export class SansinukobComponent implements OnInit {
     maps = [];
     alamat = [];
     creatures = [];
-    modalCreatureData = [];
+    modalCreatureData:any = [];
     showModalCreature:boolean = false;
 
     constructor(

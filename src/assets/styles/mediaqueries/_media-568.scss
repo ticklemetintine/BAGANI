@@ -50,9 +50,19 @@
 
     footer {
         .footer-container {
-            display: block;
+            display: table;
             padding: 10px;
             text-align: center;
+
+            .copyright {
+                display: table-footer-group;
+            }
+            .menu {
+                display: table-header-group;
+                li {
+                    margin: 0 10px;
+                }
+            }
         }
     }
 
@@ -228,7 +238,7 @@
         .mythical-creatures {
             padding: 20px 0 40px;
             .title {
-                font-size: 2.3em;
+                font-size: 2.1em;
             }
             .slide {
                 img {
@@ -242,6 +252,27 @@
                     p {
                         font-size: 1.125em;
                     }
+                }
+            }
+            .slick-arrow {
+                z-index: 99999999;
+                top: unset;
+                bottom: -40px;
+                width: 17px;
+                height: 25px;
+
+                &:before {
+                    display: none;
+                }
+
+                &.slick-prev {
+                    background: url('assets/images/common/slick-arrow-prev-white.png') no-repeat;
+                    left: 5px;
+                }
+                &.slick-next {
+                    right: 5px;
+                    background: url('assets/images/common/slick-arrow-next-white.png') no-repeat;
+
                 }
             }
         }
@@ -344,6 +375,19 @@
                                 display: block;
 
                                 .article {
+                                    width: 100%;
+                                    margin: 0;
+
+                                    .thumb {
+                                        a {
+                                            display: block;
+                                        }
+                                        img {
+                                            margin: auto;
+                                            width: 100%;
+                                        }
+                                    }
+
                                     .article-title {
                                         font-size: 1.7em;
                                     }
