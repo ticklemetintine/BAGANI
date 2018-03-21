@@ -4,11 +4,11 @@ import { LatestUpdatesService } from '../../../services/latest-updates.service';
 import { UserService } from '../../../services/user.service';
 
 @Component({
-    selector: 'app-inner-forest',
-    templateUrl: 'inner-forest.component.html',
+    selector: 'app-inner-fishing',
+    templateUrl: 'inner-fishing.component.html',
     styles: []
 })
-export class InnerForestComponent implements OnInit {
+export class InnerFishingComponent implements OnInit {
 
     today: Date;
     hour: number;

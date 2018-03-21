@@ -277,4 +277,26 @@
             }
         }
     }
+    .wikia-inner {
+        .writeup-container {
+            .container {
+                padding: 0 20px;
+            }
+        }
+        .other-chapters {
+            .container {
+                > div {
+                    width: 40%;
+                }
+            }
+        }
+        .latest-updates {
+            .banners {
+                padding: 0;
+                .banner {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
 }

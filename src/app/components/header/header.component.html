@@ -15,15 +15,15 @@
 <div class="menu-expanded">
     <div class="container">
         <ul class="main-menu">
-            <li class="home"><a>Home</a></li>
+            <li class="home"><a routerLink="/">Home</a></li>
             <li class="sansinukob">
                 <a>Sansinukob</a>
                 <ul class="sub">
-                    <li class="desert"><a>Desert Region</a></li>
-                    <li class="forest"><a>Forest Region</a></li>
-                    <li class="trade"><a>Trade Region</a></li>
-                    <li class="fishing"><a>Fishing Region</a></li>
-                    <li class="farming"><a>Farming Region</a></li>
+                    <li class="desert"><a routerLink="/wikia/region/desert">Desert Region</a></li>
+                    <li class="forest"><a routerLink="/wikia/region/forest">Forest Region</a></li>
+                    <li class="trade"><a routerLink="/wikia/region/trade">Trade Region</a></li>
+                    <li class="fishing"><a routerLink="/wikia/region/fishing">Fishing Region</a></li>
+                    <li class="farming"><a routerLink="/wikia/region/farm">Farming Region</a></li>
                 </ul>
             </li>
             <li class="challenges"><a>Challenges</a></li>
@@ -50,4 +50,4 @@
         </div>
     </div>
 </div>
-<app-sidebar *ngIf="userDetails.finishedTour == 1"></app-sidebar>
+<!-- <app-sidebar *ngIf="userDetails.finishedTour == 1"></app-sidebar> -->

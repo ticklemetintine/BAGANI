@@ -38,7 +38,7 @@ $(document).ready(function(e) {
         $('.menu-expanded > .container').prepend(burgerMenu);
     });
 
-    $(document).on('click', '.menu-expanded .menu-container .burger-menu', function(event) {
+    $(document).on('click', '.menu-expanded .menu-container .burger-menu, .menu-expanded li:not(.sansinukob) > a', function(event) {
         event.preventDefault();
         $('body').removeClass('menu-opened');
         $('.menu-expanded').fadeOut('fast');
