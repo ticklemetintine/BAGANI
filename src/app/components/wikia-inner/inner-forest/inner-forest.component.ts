@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common'
 import { LatestUpdatesService } from '../../../services/latest-updates.service';
+import { UserService } from '../../../services/user.service';
 
 @Component({
     selector: 'app-inner-forest',
@@ -13,6 +14,18 @@ export class InnerForestComponent implements OnInit {
     hour: number;
     timeClass: string;
     updates = [];
+    userDetails: any = [];
+
+    constructor(
+        private _getUpdatesService: LatestUpdatesService,
+        private _getUserService: UserService
+    ) {}
+
+    ngOnInit() {
+        this.getTime();
+        this.GetUpdates();
+        this.getUserDetails();
+    }
 
     updatesSlideConfig = {
         'slidesToShow': 5,
@@ -38,15 +51,6 @@ export class InnerForestComponent implements OnInit {
         ]
     };
 
-    constructor(
-        private _getUpdatesService: LatestUpdatesService
-    ) {}
-
-    ngOnInit() {
-        this.getTime();
-        this.GetUpdates();
-    }
-
     getTime() {
         this.today = new Date();
         this.hour = this.today.getHours();
@@ -63,6 +67,13 @@ export class InnerForestComponent implements OnInit {
         this._getUpdatesService.GetUpdates().subscribe(
             (data) => {
                 this.updates = data.latestUpdates;
+            }
+        );
+    }
+    getUserDetails() {
+        this._getUserService.GetUser().subscribe(
+            (data) => {
+                this.userDetails = data.userDetails;
             }
         );
     }

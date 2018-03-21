@@ -26,6 +26,44 @@
             </div>
         </div>
     </section>
+    <section class="other-chapters">
+        <div class="container">
+            <div class="prev">
+                <a href="#" class="btn-prev">
+                    <span class="chapter">Chapter 01</span>
+                    <span class="title">Lorem ipsum dolor sit amet</span>
+                </a>
+            </div>
+            <div class="next">
+                <a href="#" class="btn-next">
+                    <span class="chapter">Chapter 03</span>
+                    <span class="title">Lorem ipsum dolor sit amet</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="comment-section">
+        <div class="container">
+            <div class="content">
+                <p class="title">What are your thoughts?</p>
+                <div class="comment-box">
+                    <div class="avatar"><img [src]="userDetails.profilePicture" class="{{userDetails.tribe}}" alt=""></div>
+                    <form action="#">
+                        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                        <input type="submit" class="btn btn-post" value="Post">
+
+                    </form>
+                </div>
+                <div class="comments">
+                    <p>5 Comments</p>
+                    <div class="item">
+                        <div class="avatar"><img [src]="userDetails.profilePicture" class="forest" alt=""></div>
+                        <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit saepe quos excepturi. Aspernatur labore saepe aut dignissimos adipisci delectus consectetur, quasi distinctio perspiciatis magni ullam molestias possimus ab amet. Quae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="latest-updates">
         <div class="container">
             <div class="content">

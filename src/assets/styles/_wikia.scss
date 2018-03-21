@@ -223,6 +223,143 @@
             }
         }
     }
+    .other-chapters {
+        position: relative;
+        z-index: 2;
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+
+            >div {
+                background: rgba(0, 0, 0, .6);
+                border: solid 5px #000;
+                text-transform: uppercase;
+                padding: 50px 40px;
+                position: relative;
+                margin: 40px 10px;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 50px;
+                    height: 70px;
+                    display: block;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+
+                span {
+                    display: block;
+                    color: #d9c8b6;
+                }
+                .chapter {
+                    font-size: 0.750em;
+                }
+                .title {
+                    font-size: 1.125em;
+                }
+                &.prev {
+                    &:before {
+                        background: url('assets/images/common/slick-arrowhead-prev.png') no-repeat;
+                        left: -55px;
+                    }
+                }
+                &.next {
+                    &:before {
+                        background: url('assets/images/common/slick-arrowhead-next.png') no-repeat;
+                        right: -55px;
+                    }
+                }
+            }
+        }
+    }
+    .comment-section {
+        position: relative;
+        z-index: 2;
+        margin-top: 60px;
+
+        .content {
+            background: rgba(0, 0, 0, .6);
+            border: solid 5px #000;
+
+            .title {
+                background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+                text-align: center;
+                padding: 15px 0 35px;
+                margin-top: -30px;
+            }
+            .avatar {
+                width: 50px;
+                height: 50px;
+
+                img {
+                    max-width: 100%;
+                    border: solid 3px;
+                    border-radius: 70px;
+                    height: 100%;
+                    width: auto;
+
+
+                    &.desert {
+                        border-color: #855b00;
+                    }
+                    &.farm {
+                        border-color: #073f79;
+                    }
+                    &.fishing {
+                        border-color: #3f004e;
+                    }
+                    &.trade {
+                        border-color: #5b0200;
+                    }
+                    &.forest {
+                        border-color: #0c4c28;
+                    }
+                }
+            }
+            .comment-box {
+                width: percentage(550px/1115px);
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+
+                form {
+                    width: 90%;
+
+                    textarea {
+                        width: 100%;
+                        border: solid 1px #746556;
+                        background: #fff3de;
+                        border-radius: 2px;
+                        outline: none;
+                    }
+                    .btn-post {
+                        display: block;
+                        margin: 10px 0 auto auto;
+                        width: 100px;
+                        text-align: center;
+                        font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
+                        padding: 8px 10px;
+                    }
+                }
+            }
+            .comments {
+                width: percentage(750px/1115px);
+                margin: 40px auto;
+
+                .item {
+                    border-top: solid 1px #302c28;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
     .latest-updates {
         background: url('assets/images/backgrounds/bg-paper-half.png') no-repeat;
         background-position: center top;
