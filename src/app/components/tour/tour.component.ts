@@ -12,12 +12,12 @@ export class TourComponent implements OnInit {
     ngOnInit() {
     }
 
-    tourSlideConfig = { 
-        'slidesToShow': 1, 
-        'slidesToScroll': 1, 
-        'dots': true, 
+    tourSlideConfig = {
+        'slidesToShow': 1,
+        'slidesToScroll': 1,
+        'dots': true,
         'arrows': false,
-        'infinite': false 
+        'infinite': false
     };
 
 }

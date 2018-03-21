@@ -1,0 +1,413 @@
+<!-- Widgets buttons -->
+<div class="widget-sidebar-container">
+	<a href="#" class="widget-btn widget-questlog" data-target="#sidebarQuestlog" title="Quest Log"></a>
+	<a href="#" class="widget-btn widget-badge" data-target="#sidebarBadges" title="Badges"></a>
+	<a href="#" class="widget-btn widget-chat" data-target="#sidebarChat" title="Chat"></a>
+	<a href="#" class="widget-btn widget-help" data-target="#sidebarHelp" title="Help"></a>
+</div>
+<!-- /Widgets buttons -->
+
+<!-- Journal -->
+<div class="main-sidebar sidebar-journal" id="sidebarQuestlog">
+	<div class="sidebar-header">
+		<a (click)="closeModal()" class="close-sidebar">
+			<img src="assets/images/map/pop-up-close.png" alt="">
+		</a>
+	</div>
+	<div class="sidebar-body">
+		<div class="sidebar-sub-header">
+			<div class="figure">
+				<img src="assets/images/common/img-babaylan.png" alt="babaylan" class="babaylan">
+			</div>
+			<div class="details">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+			</div>
+		</div>
+		<div>
+			<ul class="bulleted-list">
+				<li class="active">
+					<div>
+						<div class="left">
+							<h3>Be a citizen of Sansinukob</h3>
+						</div>
+						<div class="right">
+							<button class="btn btn-claim">CLAIM</button>
+						</div>
+					</div>	
+					<ul class="bulleted-list sub">
+						<li class="active">
+							<div class="left">
+								<p>Registration/Login of Kapamilya account</p>
+							</div>
+						</li>
+						<li class="active">
+							<div class="left">
+								<p>Finish the tribe sorting questions</p>
+							</div>	
+						</li>
+						<li class="active">
+							<div class="left">
+								<p>Finish  Babaylan’s tour</p>
+							</div>	
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="bulleted-list">
+				<li class="active">
+					<div>
+						<div class="left">
+							<h3>Copper Desert Region Scholar</h3>
+							<p>Read entries about the Desert Region</p>
+						</div>
+						<div class="right">
+							<button class="btn btn-claim">CLAIM</button>
+						</div>
+					</div>	
+				</li>
+			</ul>
+			<ul class="bulleted-list">
+				<li>
+					<div>
+						<div class="left">
+							<h3>Copper Journeyman</h3>
+							<p>Do Challenges</p>
+						</div>
+						<div class="right">
+							<h3>10/25</h3>
+						</div>
+					</div>	
+				</li>
+			</ul>
+			<ul class="bulleted-list">
+				<li>
+					<div>
+						<div class="left">
+							<h3>Copper Sage</h3>
+							<p>Answer questions correctly</p>
+						</div>
+						<div class="right">
+							<h3>8/25</h3>
+						</div>
+					</div>	
+				</li>
+			</ul>
+			<ul class="bulleted-list">
+				<li>
+					<div>
+						<div class="left">
+							<h3>Copper Patriot</h3>
+							<p>Login for consecutive days</p>
+						</div>
+						<div class="right">
+							<h3>4/7</h3>
+						</div>
+					</div>	
+				</li>
+			</ul>
+		</div>
+	</div>	
+</div>
+<!-- /Journal -->
+
+<!-- Badges -->
+<div class="main-sidebar sidebar-badges" id="sidebarBadges"> 
+	<div class="sidebar-header">
+		<a (click)="closeModal()" class="close-sidebar"><img src="assets/images/map/pop-up-close.png" alt=""></a>
+		<!-- <div class="header-full">
+			<h1>BADGES</h1>
+			<p style="display: none;">You've achived 4/15 badges!</p>
+		</div> -->
+		<div class="header-full">
+			<div class="grid grid-1">
+	        	<div class="grid-cell">
+	        		<h1>BADGES</h1>
+	        	</div>
+	        </div>	
+		</div>
+	</div>
+	<div class="sidebar-body">
+		<div class="sidebar-sub-header">
+			<div class="figure">
+				<span class="badge badge-full badge-copper">
+                	<span class="badge-icons farming-citizen-icon"></span>
+                	<span class="plate plate-2 plate-desert">DESERT REGION SCHOLAR</span>
+                </span>
+			</div>
+			<div class="details">
+				<div class="progress-bar-container">
+					<span class="label">NEXT: BRONZE</span>
+					<span class="num">2/5</span>
+					<div class="progress-bar">
+						<span style="width: 40%;"></span>
+					</div>
+					<p>Read 5 entries about the Desert Region.</p>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="grid grid-4">
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-unearned">
+	                	<span class="badge-icons adventurer-icon-gray"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-gold">
+	                	<span class="badge-icons adventurer-icon"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-bronze">
+	                	<span class="badge-icons communicator-icon-gray"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-silver">
+	                	<span class="badge-icons communicator-icon"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-copper">
+	                	<span class="badge-icons desert-citizen-icon-gray"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-copper">
+	                	<span class="badge-icons desert-citizen-icon"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-unearned">
+	                	<span class="badge-icons desert-scholar-icon-gray"></span>
+	                </div>
+	        	</div>
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-unearned">
+	                	<span class="badge-icons desert-scholar-icon"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-unearned">
+	                	<span class="badge-icons farming-citizen-icon-gray"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-gold">
+	                	<span class="badge-icons farming-citizen-icon"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-bronze">
+	                	<span class="badge-icons farming-citizen-icon"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-silver">
+	                	<span class="badge-icons farming-citizen-icon-gray"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-silver">
+	                	<span class="badge-icons communicator-icon"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-copper">
+	                	<span class="badge-icons desert-citizen-icon-gray"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-copper">
+	                	<span class="badge-icons desert-citizen-icon"></span>
+	                </div>
+	        	</div>	
+	        	<div class="grid-cell">
+	        		<div class="badge badge-full badge-unearned">
+	                	<span class="badge-icons desert-scholar-icon-gray"></span>
+	                </div>
+	        	</div>
+			</div>
+			<div class="blank-more">
+				<h1>MORE BADGES<br>COMING SOON!</h1>
+			</div>
+		</div>
+	</div>	
+</div>
+<!-- /Badges -->
+
+<!-- Chat -->
+<div class="main-sidebar sidebar-chat farming-theme" id="sidebarChat"> 
+	<div class="sidebar-header">
+		<a (click)="closeModal()" class="close-sidebar"><img src="assets/images/map/pop-up-close.png" alt=""></a>
+		<div class="header-full">
+			<div class="grid grid-2">
+	        	<div class="grid-cell tab tribe-tab active" data-target="#tribeChat">
+	        		<img src="assets/images/common/farm-icon-sm.png" alt="Icon" class="icon">
+	        		<span>Farming Tribe</span>
+	        	</div>
+	        	<div class="grid-cell tab global-tab" data-target="#globalChat">
+	        		<img src="assets/images/common/sansinukob-icon.png" alt="" class="icon">
+	        		<span>Sansinukob</span>
+	        	</div>
+	        </div>	
+		</div>
+	</div>
+	<div class="sidebar-body">
+		<div class="chat-convo tribe-chat active" id="tribeChat">
+			<div class="content">
+				<div class="message-container">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar.jpg" alt="">
+					</span>
+				</div>
+				<div class="message-container owner">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar-you.jpg" alt="">
+					</span>
+				</div>
+				<div class="message-container">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar.jpg" alt="">
+					</span>
+				</div>
+				<div class="message-container owner">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar-you.jpg" alt="">
+					</span>
+				</div>
+				<div class="message-container">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar.jpg" alt="">
+					</span>
+				</div>
+				<div class="message-container owner">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar-you.jpg" alt="">
+					</span>
+				</div>
+			</div>
+			<div class="chat-form">
+				<textarea rows="1" placeholder="Talk to your tribe"></textarea>
+				<button class="btn btn-claim">POST</button>
+			</div>
+		</div>
+		<div class="chat-convo global-chat" id="globalChat">
+			<div class="content">
+				<div class="message-container farming-tribe">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar.jpg" alt="">
+					</span>
+				</div>
+				<div class="message-container fishing-tribe">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar.jpg" alt="">
+					</span>
+				</div>
+				<div class="message-container forest-tribe">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar.jpg" alt="">
+					</span>
+				</div>
+				<div class="message-container desert-tribe owner">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar-you.jpg" alt="">
+					</span>
+				</div>
+				<div class="message-container desert-tribe owner">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar-you.jpg" alt="">
+					</span>
+				</div>
+				<div class="message-container trade-tribe">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar.jpg" alt="">
+					</span>
+				</div>
+				<div class="message-container desert-tribe owner">
+					<div class="message-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<span class="time">Mar 13 | 12:30 AM</span>
+					</div>
+					<span class="user-image">
+						<img src="assets/images/common/user-avatar-you.jpg" alt="">
+					</span>
+				</div>
+			</div>
+			<div class="chat-form">
+				<textarea rows="1" placeholder="Talk to your tribe"></textarea>
+				<button class="btn btn-claim">POST</button>
+			</div>
+		</div>
+	</div>	
+</div>
+<!-- /Chat -->
+
+<!-- START: Lightbox Error -->
+<div class="lightbox lightbox-centered" id="errorLightbox" style="display: block;"> 
+	<a (click)="closeModal()" class="btn-close"><img src="assets/images/map/pop-up-close.png" alt=""></a>
+	<div class="lightbox-content">
+		<div class="lightbox-body">
+			<div class="content-body">
+				<div class="claim-badge">
+					<span class="badge badge-full badge-copper">
+	                	<span class="badge-icons farming-citizen-icon"></span>
+	                	<span class="plate plate-desert">CITIZEN</span>
+	                </span>
+	                <img src="assets/images/common/circle-shine.png" alt="Shine" class="circle-shine">  
+				</div>
+				<h1>Congratulations!</h1>
+				<h3>You’ve earned the Citizen Badge.</h3>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END: Lightbox Error -->
