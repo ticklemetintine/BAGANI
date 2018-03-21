@@ -36,8 +36,8 @@ export class UnregisteredComponent implements OnInit {
     videoRecap: SafeResourceUrl;
     videoRecapDetails: string;
     alamatBackground: any = '';
-    modalCreatureData:any = [];
-    showModalCreature:boolean = false;
+    modalCreatureData: any = [];
+    showModalCreature = false;
 
     alamatSlideConfig = {
         'slidesToShow': 1,
