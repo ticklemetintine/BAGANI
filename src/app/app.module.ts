@@ -37,6 +37,7 @@ import { RegionFishingComponent } from './components/wikia-region/region-fishing
 import { RegionTradeComponent } from './components/wikia-region/region-trade/region-trade.component';
 import { RegionForestComponent } from './components/wikia-region/region-forest/region-forest.component';
 import { InnerForestComponent } from './components/wikia-inner/inner-forest/inner-forest.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { InnerForestComponent } from './components/wikia-inner/inner-forest/inne
     RegionTradeComponent,
     RegionForestComponent,
     InnerForestComponent
+    SidebarComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -78,6 +80,7 @@ import { InnerForestComponent } from './components/wikia-inner/inner-forest/inne
       { path: 'wikia/region/trade', component: RegionTradeComponent, pathMatch: 'full'},
       { path: 'wikia/region/forest', component: RegionForestComponent, pathMatch: 'full'},
       { path: 'wikia/inner/forest', component: InnerForestComponent, pathMatch: 'full'},
+      { path: 'sidebar', component: SidebarComponent, pathMatch: 'full'},
     ]),
     TransferHttpCacheModule,
     HttpClientModule,

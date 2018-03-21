@@ -57,4 +57,37 @@ $(document).ready(function(e) {
     $(document).on('click', '.pop-up .close a', function(event) {
         $('body').css('overflow', 'auto');
     });
+
+    //Widget buttons
+    $(document).on('click', '.widget-btn', function(event) {
+        event.preventDefault();
+        var widgetTarget = $(this).data("target");
+        $(widgetTarget).toggleClass('show');
+    });
+    
+    //Sidebar close
+    $(document).on('click', '.sidebar-header .close-sidebar', function(event) {
+        event.preventDefault();
+        $(this).parent().parent().removeClass('show');
+    });
+    
+    //Lightbox close button
+    $(document).on('click', '.lightbox .btn-close', function(e) {
+        $(this).closest('.lightbox').fadeOut();
+        $('body').removeClass("lightbox-open");
+        e.preventDefault();
+    });
+
+    //Lightbox close button
+    $(document).on('click', '.sidebar-chat .tab', function(e) {
+        event.preventDefault();
+        var tabTarget = $(this).data("target");
+        //$(this).toggleClass();
+        $(".sidebar-chat .tab").removeClass('active');
+        $(this).toggleClass('active');
+        $(".chat-convo").removeClass('active');
+        $(tabTarget).toggleClass('active');
+        console.log(tabTarget);
+    });
+
 });

@@ -1,0 +1,75 @@
+//////////////
+// LAYOUTS //
+//////////////
+
+.grid {
+	display: block;
+	font-size: 0;
+	.grid-cell {
+		display: inline-block;
+		font-size: 16px;
+	}
+}
+
+.grid {
+	&-1 {
+		.grid-cell {
+			width: percentage(1400px/1400px);
+		}
+	}
+	&-2 {
+		.grid-cell {
+			width: percentage(700px/1400px);
+		}
+	}
+	&-3 {
+		.grid-cell {
+			width: percentage(466.66px/1400px);
+		}
+	}
+	&-4 {
+		.grid-cell {
+			width: percentage(350px/1400px);
+		}
+	}
+	&-5 {
+		.grid-cell {
+			width: percentage(280px/1400px);
+		}
+	}
+	&-6 {
+		.grid-cell {
+			width: percentage(233.33px/1400px);
+		}
+	}
+	&-7 {
+		.grid-cell {
+			width: percentage(200px/1400px);
+		}
+	}
+	&-8 {
+		.grid-cell {
+			width: percentage(175px/1400px);
+		}
+	}
+	&-9 {
+		.grid-cell {
+			width: percentage(155.55px/1400px);
+		}
+	}
+	&-10 {
+		.grid-cell {
+			width: percentage(140px/1400px);
+		}
+	}
+	&-11 {
+		.grid-cell {
+			width: percentage(127.77px/1400px);
+		}
+	}
+	&-12 {
+		.grid-cell {
+			width: percentage(116.66px/1400px);
+		}
+	}
+}

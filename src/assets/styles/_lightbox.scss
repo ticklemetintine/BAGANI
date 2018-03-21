@@ -1,0 +1,96 @@
+/* Lightbox */
+
+//Lightbox
+.lightbox {
+    display: none;  
+    width: 100%;   
+    height: 100%;
+    overflow: scroll;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    outline: 0;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.95);
+    -webkit-overflow-scrolling: auto;
+    overflow: auto;
+    .btn-close {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.9;
+        img {
+            width: 25px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .lightbox-content {
+        position: relative;
+        width: 100%;
+        max-width: 90%;
+        margin: 7% auto;
+        padding: 15px 20px;
+        overflow-scrolling: touch !important;
+        -webkit-overflow-scrolling: touch !important;
+        apple-overflow-scrolling: touch !important;
+        img {
+            max-width: 100%;
+        } 
+        h1, h2, h3, p {
+            color: #d9c8b6;
+        }
+        h1 {
+            margin-bottom: 5px;
+        }
+        h3 {
+            margin-top: 5px;
+        }
+    } 
+    .lightbox-body {
+        padding: 10px 0px;
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+            min-height: 50px;
+            min-width: 50px;
+        }
+        .content-body {
+            p {
+                margin-bottom: 0;
+                color: #fff;
+                line-height: 1.8em;
+            }
+        }
+        .logo {
+            display: block;
+            width: 180px;
+            margin: 30px auto 0 auto;
+            height: auto;
+        }
+    } 
+    &.lightbox-centered {
+        text-align: center;
+    }
+}
+
+ 
+.lightbox-open {    
+    overflow: hidden !important;
+    -webkit-overflow-scrolling: auto;
+    .main { overflow: auto; }
+    .lightbox {    
+        position: fixed;
+        -webkit-overflow-scrolling: auto!important;
+    }
+}

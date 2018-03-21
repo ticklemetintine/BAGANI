@@ -19,8 +19,8 @@ export class PaguuriQuestionsComponent implements OnInit {
         private _getQuestionsService: QuestionsService,
         private sanitizer: DomSanitizer,
         private location: Location,
-        private _router: Router 
-    ) { 
+        private _router: Router
+    ) {
         this.router = _router;
     }
 
@@ -28,12 +28,12 @@ export class PaguuriQuestionsComponent implements OnInit {
         this.getQuestions();
     }
 
-    questionsSlideConfig = { 
-        'slidesToShow': 1, 
-        'slidesToScroll': 1, 
-        'dots': true, 
+    questionsSlideConfig = {
+        'slidesToShow': 1,
+        'slidesToScroll': 1,
+        'dots': true,
         'arrows': false,
-        'infinite': false 
+        'infinite': false
     };
 
     getQuestions() {
@@ -45,7 +45,7 @@ export class PaguuriQuestionsComponent implements OnInit {
     }
     afterChange(event) {
         console.log(event.currentSlide);
-        this.location.replaceState("/paguuri/q2");
+        this.location.replaceState('/paguuri/q2');
     }
     next() {
         console.log('next');

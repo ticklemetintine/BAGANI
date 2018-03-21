@@ -15,11 +15,11 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
     animations: [
         trigger('fadeInOut', [
             transition('void => *', [
-            style({opacity:0}), 
-            animate(500, style({opacity:1})) 
+            style({opacity: 0}),
+            animate(500, style({opacity: 1}))
           ]),
           transition('* => void', [
-            animate(500, style({opacity:0})) 
+            animate(500, style({opacity: 0}))
           ])
         ])
     ]
@@ -39,11 +39,11 @@ export class UnregisteredComponent implements OnInit {
     modalCreatureData:any = [];
     showModalCreature:boolean = false;
 
-    alamatSlideConfig = { 
-        'slidesToShow': 1, 
-        'slidesToScroll': 1, 
-        'dots': true, 
-        'arrows': false 
+    alamatSlideConfig = {
+        'slidesToShow': 1,
+        'slidesToScroll': 1,
+        'dots': true,
+        'arrows': false
     };
 
     mythicalSlideConfig = {
@@ -80,10 +80,10 @@ export class UnregisteredComponent implements OnInit {
             }
         ]
     };
-    artworkSlideConfig = { 
-        'slidesToShow': 4, 
-        'slidesToScroll': 2, 
-        'dots': false, 
+    artworkSlideConfig = {
+        'slidesToShow': 4,
+        'slidesToScroll': 2,
+        'dots': false,
         'arrows': true,
         'responsive': [
             {
@@ -110,9 +110,9 @@ export class UnregisteredComponent implements OnInit {
             }
         ]
     };
-    updatesSlideConfig = { 
-        'slidesToShow': 5, 
-        'dots': false, 
+    updatesSlideConfig = {
+        'slidesToShow': 5,
+        'dots': false,
         'arrows': false,
         'infinite': false,
         'responsive': [
@@ -158,7 +158,7 @@ export class UnregisteredComponent implements OnInit {
         this.GetRecap();
     }
 
-    
+
     focusMap(map) {
         this.showMap = map;
     }
