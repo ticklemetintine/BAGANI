@@ -33,8 +33,6 @@
     <meta name="twitter:image:src" content="">
     <!-- TWITTER CARDS -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-    
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
     <base href="/">
@@ -42,10 +40,20 @@
 
 <body>
     <app-root></app-root>
-
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://unpkg.com/slick-carousel@1.6.0/slick/slick.js"></script>
-    <!-- <script src="https://raw.githubusercontent.com/davidjbradshaw/imagemap-resizer/master/js/imageMapResizer.min.js"></script> -->
+    <script src='http://cdn.gigya.com/JS/gigya.js?...' type='text/javascript'></script>
+    <script type='text/javascript'>
+    var params = {
+        categoryID: 'baganiCommenting',
+        streamID: '',
+        version: 2,
+        containerID: 'commentsDiv',
+        cid: '',
+        enabledShareProviders: 'facebook'
+    }
+    gigya.comments.showCommentsUI(params);
+    </script>
 </body>
 
 </html>

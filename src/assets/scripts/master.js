@@ -1,3 +1,13 @@
+var params ={
+    categoryID: 'baganiCommenting',
+    streamID: '',
+    version: 2,
+    containerID: 'commentsDiv',
+    cid:'',
+    enabledShareProviders: 'facebook'
+}
+gigya.comments.showCommentsUI(params);
+
 $(document).ready(function(e) {
 
     $('img[usemap]').rwdImageMaps();
