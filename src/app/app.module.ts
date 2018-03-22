@@ -60,7 +60,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     RegionFishingComponent,
     RegionTradeComponent,
     RegionForestComponent,
-    InnerForestComponent
+    InnerForestComponent,
     SidebarComponent
   ],
   imports: [

@@ -130,6 +130,14 @@ $sansinukob-color: #372918;
 	box-shadow: $shadow;
 }
 
+//Calc
+@mixin calcWidth($percentage, $pixels) {
+  width: calc(#{$percentage} - #{$pixels});
+  width: -moz-calc(#{$percentage} - #{$pixels});
+  width: -webkit-calc(#{$percentage} - #{$pixels});
+  width: -o-calc(#{$percentage} - #{$pixels});
+}
+
 //Animations
 @-webkit-keyframes pulse {
   0% {
