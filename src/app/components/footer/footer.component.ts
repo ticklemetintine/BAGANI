@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
     styles: []
 })
 export class FooterComponent implements OnInit {
-	showModalPrivacy:boolean = false;
-	showModalTerms:boolean = false;
+	showModalPrivacy = false;
+	showModalTerms = false;
 
     constructor() {}
 

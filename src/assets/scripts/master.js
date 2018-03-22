@@ -100,7 +100,25 @@ $(document).ready(function(e) {
         $(this).toggleClass('active');
         $(".chat-convo").removeClass('active');
         $(tabTarget).toggleClass('active');
-        console.log(tabTarget);
+        if(tabTarget == "#globalChat") {
+            $(".sidebar-chat .sidebar-header").addClass("sansinukob-theme");
+        } else {
+            $(".sidebar-chat .sidebar-header").removeClass("sansinukob-theme");
+        }
+    });
+
+    //Collapsible
+    var allCollapsible = $('.collapsible-item .collapsible-content');
+    $(document).on('click', '.collapsible-wrapper .collapsible-item', function(e) {
+        if ($(this).hasClass('show')) {
+            $(this).find("li .collapsible-content").slideUp(350);
+            $(this).toggleClass('show');
+        } else {
+            allCollapsible.slideUp();
+            $(this).find("li .collapsible-content").slideDown(350);
+            $(this).toggleClass('show');
+        }
+        return false;
     });
 
 });

@@ -285,6 +285,11 @@ body {
     .header-full {
         padding: 0;
     }
+    .sidebar-header {
+        &.sansinukob-theme {
+            border-color: #372918;
+        }
+    }
 }
 
 .bulleted-list {
@@ -370,6 +375,24 @@ body {
             border-top: solid 1px #302c28;
         }
         
+    }
+}
+
+.collapsible-wrapper {
+    .collapsible-item {
+        overflow: hidden;
+        cursor: pointer;
+        &.show {
+            .collapsible-content {
+                display: block;
+            }
+        }
+        &:hover {
+            background-color: rgba(0,0,0,0.25);
+        }
+    }
+    .collapsible-content {
+        display: none;
     }
 }
 
