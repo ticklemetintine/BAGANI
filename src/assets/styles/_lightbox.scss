@@ -79,8 +79,19 @@
             height: auto;
         }
     } 
+    &.show {
+        //display: block;
+    }
     &.lightbox-centered {
         text-align: center;
+    }
+    &.lightbox-help {
+        text-align: center;
+        .details {
+            p {
+                color: #d9c8b6;
+            }
+        }
     }
 }
 

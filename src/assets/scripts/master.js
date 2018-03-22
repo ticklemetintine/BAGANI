@@ -63,12 +63,15 @@ $(document).ready(function(e) {
         event.preventDefault();
         var widgetTarget = $(this).data("target");
         $(widgetTarget).toggleClass('show');
+        $(widgetTarget).fadeIn(200);
+        $('body').toggleClass('lightbox-open');
     });
     
     //Sidebar close
     $(document).on('click', '.sidebar-header .close-sidebar', function(event) {
         event.preventDefault();
         $(this).parent().parent().removeClass('show');
+        $('body').removeClass("lightbox-open");
     });
     
     //Lightbox close button

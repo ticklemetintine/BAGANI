@@ -8,7 +8,7 @@ import { UserService } from '../../services/user.service';
 })
 export class ChallengesComponent implements OnInit {
 
-	userDetails:any = [];
+	userDetails: any = [];
 
   constructor(
   	private _getUserService: UserService

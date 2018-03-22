@@ -38,8 +38,8 @@ export class UnregisteredComponent implements OnInit {
     alamatBackground: any = '';
     modalCreatureData: any = [];
     modalFanartData: any = [];
-    showModalCreature: boolean = false;
-    showModalFanart: boolean = false;
+    showModalCreature = false;
+    showModalFanart = false;
 
     alamatSlideConfig = {
         'slidesToShow': 1,
