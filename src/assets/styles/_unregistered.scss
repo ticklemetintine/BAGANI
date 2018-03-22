@@ -253,6 +253,7 @@ app-unregistered {
                     font-size: 1.625em;
                     text-transform: uppercase;
                     margin: 0;
+                    color: #d9c8b6;
                 }
             }
 
@@ -649,7 +650,7 @@ app-unregistered {
             justify-content: space-between;
             align-items: center;
 
-            > * {
+            >* {
                 width: 15%;
             }
 
@@ -690,6 +691,52 @@ app-unregistered {
                 .button {
                     text-align: center;
                     margin-top: 60px;
+                }
+            }
+        }
+    }
+    .fanartModal {
+        .modal-content {
+            background: #d9c8b6;
+
+            .name {
+                margin: auto;
+                text-align: center;
+                background: #333;
+                display: block;
+                background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+                background-size: contain;
+                padding: 15px 0 30px;
+                width: 100%;
+                p {
+                    text-align: center;
+                    margin: 0;
+                    color: #d9c8b6;
+                }
+            }
+            .content {
+                display: flex;
+                align-items: center;
+
+                >* {
+                    width: 50%;
+                }
+                .image {
+                    img {
+                        max-width: 100%;
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                .desc {
+                    padding: 0 50px;
+
+                    >p {
+                        margin-top: 0;
+                        color: #010100;
+                        line-height: 1.5;
+                        font-family: 'Lato', sans-serif;
+                    }
                 }
             }
         }

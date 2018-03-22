@@ -15,12 +15,12 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
     animations: [
         trigger('fadeInOut', [
             transition('void => *', [
-            style({opacity: 0}),
-            animate(500, style({opacity: 1}))
-          ]),
-          transition('* => void', [
-            animate(500, style({opacity: 0}))
-          ])
+                style({ opacity: 0 }),
+                animate(500, style({ opacity: 1 }))
+            ]),
+            transition('* => void', [
+                animate(500, style({ opacity: 0 }))
+            ])
         ])
     ]
 })
@@ -37,7 +37,9 @@ export class UnregisteredComponent implements OnInit {
     videoRecapDetails: string;
     alamatBackground: any = '';
     modalCreatureData: any = [];
+    modalFanartData: any = [];
     showModalCreature = false;
+    showModalFanart = false;
 
     alamatSlideConfig = {
         'slidesToShow': 1,
@@ -45,14 +47,12 @@ export class UnregisteredComponent implements OnInit {
         'dots': true,
         'arrows': false
     };
-
     mythicalSlideConfig = {
         'slidesToShow': 4,
         'slidesToScroll': 1,
         'dots': true,
         'arrows': false,
-        'responsive': [
-            {
+        'responsive': [{
                 'breakpoint': 1024,
                 'settings': {
                     'slidesToShow': 3,
@@ -85,8 +85,7 @@ export class UnregisteredComponent implements OnInit {
         'slidesToScroll': 2,
         'dots': false,
         'arrows': true,
-        'responsive': [
-            {
+        'responsive': [{
                 'breakpoint': 1024,
                 'settings': {
                     'slidesToShow': 3,
@@ -115,12 +114,11 @@ export class UnregisteredComponent implements OnInit {
         'dots': false,
         'arrows': false,
         'infinite': false,
-        'responsive': [
-            {
-                'breakpoint': 600,
+        'responsive': [{
+                'breakpoint': 700,
                 'settings': {
-                    'slidesToShow': 2,
-                    'slidesToScroll': 2
+                    'slidesToShow': 3,
+                    'slidesToScroll': 3
                 }
             },
             {
@@ -145,8 +143,7 @@ export class UnregisteredComponent implements OnInit {
         private _getMythicalCreaturesService: MythicalCreaturesService,
         private _getRecapService: RecapService,
         private sanitizer: DomSanitizer
-    ) {
-    }
+    ) {}
 
     ngOnInit() {
         this.EachMap();
@@ -170,11 +167,12 @@ export class UnregisteredComponent implements OnInit {
     }
     closeModal() {
         this.showPopUp = '';
-      this.showModalCreature = false;
+        this.showModalCreature = false;
+        this.showModalFanart = false;
     }
     afterChange(e) {
         console.log(e);
-      }
+    }
     EachMap() {
         this._mapService.EachMap().subscribe(
             (data) => {
@@ -228,8 +226,12 @@ export class UnregisteredComponent implements OnInit {
         );
     }
     creatureModal(creature) {
-      this.showModalCreature = true;
-      this.modalCreatureData = creature;
+        this.showModalCreature = true;
+        this.modalCreatureData = creature;
+    }
+    fanartModal(fanart) {
+        this.showModalFanart = true;
+        this.modalFanartData = fanart;
     }
 
 }

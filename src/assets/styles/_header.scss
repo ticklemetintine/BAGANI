@@ -50,7 +50,7 @@ header {
         align-items: flex-start;
 
         >div {
-            width: 33.333%;
+            width: 25%;
         }
 
         .menu-container {
@@ -82,6 +82,9 @@ header {
         }
 
         .avatar-container {
+            background: url('assets/images/borders/border-header-top.png') top right no-repeat, url('assets/images/borders/border-header-top.png') top left no-repeat;
+            width: 50%;
+
             .avatar {
                 display: block;
                 position: relative;

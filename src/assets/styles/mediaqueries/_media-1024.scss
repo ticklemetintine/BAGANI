@@ -59,6 +59,11 @@
                 }
             }
         }
+        .fanartModal {
+            .modal-content {
+                width: percentage(775px/910px);
+            }
+        }
     }
     app-paguuri {
         .paguuri-container {
@@ -88,7 +93,8 @@
         }
     }
     .wikia-region {
-        .banner-region, .topics {
+        .banner-region,
+        .topics {
             .container {
                 max-width: 100%;
 
