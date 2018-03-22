@@ -668,6 +668,32 @@ app-unregistered {
     .termsModal {
         z-index: 9999999999;
         .modal-content {
+
+            .name {
+                position: absolute;
+                top: -28px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                text-align: center;
+                background: #333;
+                display: block;
+                background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+                background-size: contain;
+                padding: 15px 0 30px;
+                width: 100%;
+                p {
+                    text-align: center;
+                    margin: 0;
+                    color: #d9c8b6;
+                }
+            }
+            .image {
+                img {
+                    max-width: 100%;
+                    display: block;
+                }
+            }
             .desc {
                 color: #010100;
                 padding: 50px;
@@ -681,6 +707,7 @@ app-unregistered {
                         display: block;
                         margin: auto auto;
                         max-width: 100%;
+                        width: 100%;
                     }
                 }
 
