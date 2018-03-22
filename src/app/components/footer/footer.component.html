@@ -4,8 +4,46 @@
 			<p>&copy; Copyright 2018. ABS-CBN Store. All Rights Reserved.</p>
 		</div>
 		<ul class="menu">
-			<li><a href="#">Privacy Policy</a></li>
-			<li><a href="#">Terms &amp; Conditions</a></li>
+			<li><a (click)="modalPrivacy()">Privacy Policy</a></li>
+			<li><a (click)="modalTerms()">Terms &amp; Conditions</a></li>
 		</ul>
 	</div>
 </footer>
+<section class="modal privacyModal" [hidden]="!showModalPrivacy" fadeInOut>
+    <div class="container">
+        <div class="close">
+            <a (click)="closeModal()"><img src="assets/images/common/icon-close-dark.png" alt=""></a>
+        </div>
+        <div class="modal-content">
+            <div class="desc">
+                <div class="img">
+                    <img src="assets/images/borders/content-container-emblem.png" alt="">
+                </div>
+                <p class="title">Privacy Policy</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sed a nostrum architecto nobis voluptate, sequi incidunt? Perferendis, reprehenderit, commodi. Optio perferendis recusandae quisquam esse, numquam officiis assumenda! Rerum, ut?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sed a nostrum architecto nobis voluptate, sequi incidunt? Perferendis, reprehenderit, commodi. Optio perferendis recusandae quisquam esse, numquam officiis assumenda! Rerum, ut?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sed a nostrum architecto nobis voluptate, sequi incidunt? Perferendis, reprehenderit, commodi. Optio perferendis recusandae quisquam esse, numquam officiis assumenda! Rerum, ut?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sed a nostrum architecto nobis voluptate, sequi incidunt? Perferendis, reprehenderit, commodi. Optio perferendis recusandae quisquam esse, numquam officiis assumenda! Rerum, ut?</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="modal termsModal" [hidden]="!showModalTerms" fadeInOut>
+    <div class="container">
+        <div class="close">
+            <a (click)="closeModal()"><img src="assets/images/common/icon-close-dark.png" alt=""></a>
+        </div>
+        <div class="modal-content">
+            <div class="desc">
+                <div class="img">
+                    <img src="assets/images/borders/content-container-emblem.png" alt="">
+                </div>
+                <p class="title">Terms &amp; Conditions</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sed a nostrum architecto nobis voluptate, sequi incidunt? Perferendis, reprehenderit, commodi. Optio perferendis recusandae quisquam esse, numquam officiis assumenda! Rerum, ut?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sed a nostrum architecto nobis voluptate, sequi incidunt? Perferendis, reprehenderit, commodi. Optio perferendis recusandae quisquam esse, numquam officiis assumenda! Rerum, ut?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sed a nostrum architecto nobis voluptate, sequi incidunt? Perferendis, reprehenderit, commodi. Optio perferendis recusandae quisquam esse, numquam officiis assumenda! Rerum, ut?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sed a nostrum architecto nobis voluptate, sequi incidunt? Perferendis, reprehenderit, commodi. Optio perferendis recusandae quisquam esse, numquam officiis assumenda! Rerum, ut?</p>
+            </div>
+        </div>
+    </div>
+</section>
