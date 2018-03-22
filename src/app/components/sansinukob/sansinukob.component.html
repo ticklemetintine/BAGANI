@@ -10,17 +10,17 @@
             <p class="small">Click on each of the regions to read about its stories, history, people, and culture.</p>
         </div>
         <div class="right">
-            <img #sansinukobMap src="assets/images/map/map-default-mobile.png" alt="sansinukob" usemap="#sansinukob"/>
+            <img #sansinukobMap src="assets/images/map/map-default-mobile.png" alt="sansinukob" usemap="#sansinukob" />
         </div>
     </div>
 </section>
 <section class="alamat">
     <div class="container">
-        <div class="title">
-            <p>Ang Alamat</p>
-        </div>
         <ngx-slick class="content" #slickModal="slick-modal" [config]="alamatSlideConfig">
             <div class="slide" ngxSlickItem *ngFor="let slide of alamat">
+                <div class="title">
+                    <p>Ang Alamat</p>
+                </div>
                 <input type="hidden" value="{{slide.background}}" class="alamat-background">
                 <div [innerHTML]="slide.content"></div>
             </div>
@@ -51,7 +51,7 @@
             </div>
             <div class="image"><img [src]="modalCreatureData.imageLarge" alt=""></div>
             <div class="desc">
-                {{modalCreatureData.writeup}}          
+                {{modalCreatureData.writeup}}
             </div>
         </div>
     </div>

@@ -126,6 +126,17 @@
                 }
             }
         }
+
+
+        .fanartModal {
+            .modal-content {
+                .content {
+                    .desc {
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
     }
 
     app-sansinukob {
@@ -285,7 +296,7 @@
         }
         .other-chapters {
             .container {
-                > div {
+                >div {
                     width: 40%;
                 }
             }

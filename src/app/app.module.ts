@@ -65,7 +65,7 @@ import { ChallengesComponent } from './components/challenges/challenges.componen
     RegionFishingComponent,
     RegionTradeComponent,
     RegionForestComponent,
-    InnerForestComponent
+    InnerForestComponent,
     SidebarComponent,
     InnerDesertComponent,
     InnerTradeComponent,

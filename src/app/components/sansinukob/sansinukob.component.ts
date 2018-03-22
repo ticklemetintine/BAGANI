@@ -14,8 +14,6 @@ export class SansinukobComponent implements OnInit {
     creatures = [];
     modalCreatureData:any = [];
     showModalCreature:boolean = false;
-    modalCreatureData = [];
-    showModalCreature = false;
 
     constructor(
         private _mapService: MapsService,

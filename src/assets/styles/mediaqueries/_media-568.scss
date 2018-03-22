@@ -397,6 +397,17 @@
                 }
             }
         }
+        .fanartModal {
+            .modal-content {
+                .content {
+                    display: block;
+                    >* {
+                        width: 100%;
+                        margin: 0 auto 20px;
+                    }
+                }
+            }
+        }
     }
 
     app-paguuri-results {
@@ -620,7 +631,8 @@
                 .title {
                     background-size: contain;
                     top: -30px;
-                    padding: 15px 0px 20px;;
+                    padding: 15px 0px 20px;
+                    ;
                 }
                 .content {
                     padding: 20px 20px;

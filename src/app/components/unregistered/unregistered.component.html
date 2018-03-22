@@ -46,11 +46,11 @@
 </section>
 <section class="alamat">
     <div class="container">
-        <div class="title">
-            <p>Ang Alamat</p>
-        </div>
         <ngx-slick class="content" #slickModal="slick-modal" [config]="alamatSlideConfig">
             <div class="slide" ngxSlickItem *ngFor="let slide of alamat">
+                <div class="title">
+                    <p>{{slide.title}}</p>
+                </div>
                 <input type="hidden" value="{{slide.background}}" class="alamat-background">
                 <div [innerHTML]="slide.content"></div>
             </div>
@@ -159,11 +159,26 @@
         <div class="modal-content">
             <div class="desc">
                 <div class="img">
-                    <img src="assets/images/borders/content-container-emblem.png" class="mobile" alt="">
+                    <img src="assets/images/borders/content-container-emblem.png" alt="">
                 </div>
                 <p>See more of Sansinukob and learn more about each region’s stories, history, people, and culture.</p>
-                <div class="button">
-                    <a href="#" class="btn btn-register">Be a Bagani</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="modal fanartModal" [hidden]="!showModalFanart" fadeInOut>
+    <div class="container">
+        <div class="close">
+            <a (click)="closeModal()"><img src="assets/images/common/icon-close-dark.png" alt=""></a>
+        </div>
+        <div class="modal-content">
+            <div class="content">
+                <div class="image"><img [src]="modalFanartData.image" alt=""></div>
+                <div class="desc">
+                    <div class="name">
+                        <p>{{modalFanartData.handle}}</p>
+                    </div>
+                    <p>{{modalFanartData.caption}}</p>
                 </div>
             </div>
         </div>
