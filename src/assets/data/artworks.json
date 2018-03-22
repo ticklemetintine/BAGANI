@@ -2,25 +2,37 @@
 	"artworks" : [
 		{
 			"name": "Juan dela Cruz",
-			"image": "assets/images/common/artwork1.png"
+			"image": "assets/images/common/artwork1.png",
+			"handle": "@juanDelacruz",
+			"caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsam excepturi architecto, ipsa nesciunt aperiam quos, eius, voluptatem ex molestiae sequi voluptates. A ratione delectus voluptas temporibus reiciendis distinctio ipsum."
 		},
 		{
 			"name": "Juan dela Cruz",
-			"image": "assets/images/common/artwork2.png"
+			"image": "assets/images/common/artwork2.png",
+			"handle": "@juanDelacruz",
+			"caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nam quia dolore libero? Labore, error perferendis possimus ut cum eius velit quas tenetur doloremque sapiente, nisi officiis dolor, earum magnam."
 		},{
 			"name": "Juan dela Cruz",
-			"image": "assets/images/common/artwork1.png"
+			"image": "assets/images/common/artwork1.png",
+			"handle": "@juanDelacruz",
+			"caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus reiciendis eveniet placeat saepe vitae! Quas perspiciatis maiores ipsam, earum. Odio id ex nihil fugiat iusto corporis porro voluptatibus illum, quidem."
 		},
 		{
 			"name": "Juan dela Cruz",
-			"image": "assets/images/common/artwork2.png"
+			"image": "assets/images/common/artwork2.png",
+			"handle": "@juanDelacruz",
+			"caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus vel velit quia reiciendis sit. Laborum aliquam, placeat autem suscipit harum delectus amet animi modi neque repellat necessitatibus repellendus fugit vel!"
 		},{
 			"name": "Juan dela Cruz",
-			"image": "assets/images/common/artwork1.png"
+			"image": "assets/images/common/artwork1.png",
+			"handle": "@juanDelacruz",
+			"caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, at. Tempore quod impedit, ea dolorem incidunt magnam officia cumque voluptatibus unde, totam repudiandae esse adipisci, provident odio beatae architecto molestiae!"
 		},
 		{
 			"name": "Juan dela Cruz",
-			"image": "assets/images/common/artwork2.png"
+			"image": "assets/images/common/artwork2.png",
+			"handle": "@juanDelacruz",
+			"caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolorem iusto architecto repellat voluptas suscipit, doloremque iste quisquam, dolor consequuntur minima nisi voluptatibus in error magnam illum aut, aliquid, temporibus."
 		}
 
 	]

@@ -1,0 +1,149 @@
+app-challenges {
+    .main-content {
+        background-size: cover;
+        min-height: 100vh;
+        display: block;
+        position: relative;
+        background-attachment: fixed;
+
+        &.farm {
+            background: url('assets/images/backgrounds/bg-farm.png') center bottom no-repeat;
+            .welcome {
+                .writeup {
+                    .content {
+                        .timer {
+                            p {
+                                color: #187cc3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.desert {
+            background: url('assets/images/backgrounds/bg-desert.png') center bottom no-repeat;
+            .welcome {
+                .writeup {
+                    .content {
+                        .timer {
+                            p {
+                                color: #d6a20e;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.fishing {
+            background: url('assets/images/backgrounds/bg-fishing.png') center bottom no-repeat;
+            .welcome {
+                .writeup {
+                    .content {
+                        .timer {
+                            p {
+                                color: #722b90;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.trade {
+            background: url('assets/images/backgrounds/bg-trade.png') center bottom no-repeat;
+            .welcome {
+                .writeup {
+                    .content {
+                        .timer {
+                            p {
+                                color: #b70f17;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.forest {
+            background: url('assets/images/backgrounds/bg-forest.png') center bottom no-repeat;
+            .welcome {
+                .writeup {
+                    .content {
+                        .timer {
+                            p {
+                                color: #20954d;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .instruction {
+            font-size: 1.125em;
+            color: #222222;
+        }
+        .welcome {
+            .writeup {
+                .content {
+                    padding: 60px 0 40px;
+                    .timer {
+                        p {
+                            font-size: 2.500em;
+                        }
+                    }
+                    .question {
+                        font-size: 1.875em;
+                        width: percentage(445px/775px);
+                        margin: 40px auto 20px;
+                    }
+                    .hint-container {
+                        background: url('assets/images/backgrounds/bg-yellow-texture.png') center center repeat-x;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        justify-content: flex-end;
+                        align-content: center;
+                        align-items: center;
+                        position: relative;
+                        margin-bottom: 25px;
+
+                        p {
+                            margin: 0;
+                        }
+                        .babaylan {
+                            position: absolute;
+                            top: -80px;
+                            left: -100px;
+                        }
+                        .hint {
+                            width: percentage(460px/775px);
+                            padding-right: 10px;
+                            display: flex;
+                            align-items: center;
+                            text-align: left;
+                            justify-content: space-between;
+
+                            img {
+                                margin-right: 30px;
+                            }
+                        }
+                        .brand {
+                            background: url('assets/images/backgrounds/bg-black-texture.png') center center no-repeat;
+                            background-size: cover;
+                            align-self: center;
+                            width: percentage(200px/775px);
+                            padding: 20px 0;
+                        }
+                    }
+                    .choices {
+                    	> * {
+                    		display: block;
+                    		font-size: 1.875em;
+                    		color: #d9c8b6;
+                    		padding: 20px;
+                    	}
+                    }
+                }
+            }
+        }
+    }
+}

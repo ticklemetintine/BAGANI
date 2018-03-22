@@ -111,7 +111,7 @@
                 <p class="title">Featured Artwork</p>
                 <ngx-slick #slickModal="slick-modal" [config]="artworkSlideConfig">
                     <div class="slide" ngxSlickItem *ngFor="let artwork of artworks">
-                        <img [src]="artwork.image" alt="{{artwork.name}}">
+                        <img [src]="artwork.image" alt="{{artwork.name}}" (click)="fanartModal(artwork)">
                         <div class="name">
                             <p>{{artwork.name}}</p>
                         </div>

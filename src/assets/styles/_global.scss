@@ -246,6 +246,13 @@ input {
 
 .form-group {
     margin-bottom: 20px;
+
+    .error {
+        font-size: 0.875em;
+        color: #b70f17;
+        text-align: left;
+        font-family: "Lato", sans-serif;
+    }
 }
 
 .gradient-separator {

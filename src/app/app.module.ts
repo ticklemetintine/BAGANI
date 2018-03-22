@@ -42,6 +42,7 @@ import { InnerDesertComponent } from './components/wikia-inner/inner-desert/inne
 import { InnerTradeComponent } from './components/wikia-inner/inner-trade/inner-trade.component';
 import { InnerFishingComponent } from './components/wikia-inner/inner-fishing/inner-fishing.component';
 import { InnerFarmComponent } from './components/wikia-inner/inner-farm/inner-farm.component';
+import { ChallengesComponent } from './components/challenges/challenges.component';
 
 @NgModule({
   declarations: [
@@ -69,12 +70,14 @@ import { InnerFarmComponent } from './components/wikia-inner/inner-farm/inner-fa
     InnerDesertComponent,
     InnerTradeComponent,
     InnerFishingComponent,
-    InnerFarmComponent
+    InnerFarmComponent,
+    ChallengesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
     RouterModule.forRoot([
       { path: '', component: UnregisteredComponent, pathMatch: 'full'},
+      { path: 'sidebar', component: SidebarComponent, pathMatch: 'full'},
       { path: 'login', component: LoginComponent, pathMatch: 'full'},
       { path: 'paguuri', component: PaguuriComponent, pathMatch: 'full'},
       { path: 'paguuri/:id', component: PaguuriQuestionsComponent, pathMatch: 'full'},
@@ -92,7 +95,7 @@ import { InnerFarmComponent } from './components/wikia-inner/inner-farm/inner-fa
       { path: 'wikia/inner/trade', component: InnerTradeComponent, pathMatch: 'full'},
       { path: 'wikia/inner/fishing', component: InnerFishingComponent, pathMatch: 'full'},
       { path: 'wikia/inner/farm', component: InnerFarmComponent, pathMatch: 'full'},
-      { path: 'sidebar', component: SidebarComponent, pathMatch: 'full'},
+      { path: 'challenges', component: ChallengesComponent, pathMatch: 'full'},
     ]),
     TransferHttpCacheModule,
     HttpClientModule,
