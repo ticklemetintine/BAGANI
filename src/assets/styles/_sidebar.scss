@@ -285,6 +285,11 @@ body {
     .header-full {
         padding: 0;
     }
+    .sidebar-header {
+        &.sansinukob-theme {
+            border-color: #372918;
+        }
+    }
 }
 
 .bulleted-list {

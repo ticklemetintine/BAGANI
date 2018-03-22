@@ -90,7 +90,11 @@ $(document).ready(function(e) {
         $(this).toggleClass('active');
         $(".chat-convo").removeClass('active');
         $(tabTarget).toggleClass('active');
-        console.log(tabTarget);
+        if(tabTarget == "#globalChat") {
+            $(".sidebar-chat .sidebar-header").addClass("sansinukob-theme");
+        } else {
+            $(".sidebar-chat .sidebar-header").removeClass("sansinukob-theme");
+        }
     });
 
     //Collapsible
