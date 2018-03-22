@@ -26,6 +26,9 @@ header {
                 }
             }
             .logo-container {
+                .logo {
+                    margin-top: auto;
+                }
                 img {
                     margin-top: 0;
                 }
@@ -47,7 +50,7 @@ header {
         align-items: flex-start;
 
         >div {
-            width: 33.333%;
+            width: 25%;
         }
 
         .menu-container {
@@ -79,6 +82,9 @@ header {
         }
 
         .avatar-container {
+            background: url('assets/images/borders/border-header-top.png') top right no-repeat, url('assets/images/borders/border-header-top.png') top left no-repeat;
+            width: 50%;
+
             .avatar {
                 display: block;
                 position: relative;
@@ -149,7 +155,7 @@ header {
             align-self: center;
             .logo {
                 max-height: 45px;
-                margin: auto 20px auto auto;
+                margin: -30px 20px auto auto;
                 max-width: 100%;
                 display: block;
             }

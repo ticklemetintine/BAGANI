@@ -1,0 +1,456 @@
+@font-face {
+  font-family: 'Bagani'; 
+  src:  url('/fonts/bagani.eot?1zqp5i');
+  src:  url('/fonts/bagani.eot?1zqp5i#iefix') format('embedded-opentype'),
+    url('/fonts/bagani.ttf?1zqp5i') format('truetype'),
+    url('/fonts/bagani.woff?1zqp5i') format('woff'),
+    url('/fonts/bagani.svg?1zqp5i#tarsier') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-bagani {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Bagani' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-desert-logo:before {
+  content: "\e900";
+}
+.icon-farming-logo:before {
+  content: "\e901";
+}
+.icon-fishing-logo:before {
+  content: "\e902";
+}
+.icon-forest-logo:before {
+  content: "\e903";
+}
+.icon-trade-logo:before {
+  content: "\e904";
+}
+.icon-logo:before {
+  content: "\e905";
+}
+
+/* Badges icons */
+@mixin stitches-badge($x, $y) {
+    background-position: $x $y;
+}
+
+.badge {
+  display: inline-block;
+  background-image: url(assets/images/badges/badges-spritesheet.png);
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 165px;
+  &.badge-unearned {
+      @include stitches-badge(0, 0);
+  }
+  &.badge-gold {
+      @include stitches-badge(-150px, 0);
+  }  
+  &.badge-bronze {
+      @include stitches-badge(-300px, 0);
+  }
+  &.badge-silver {
+      @include stitches-badge(-450px, 0);
+  }  
+  &.badge-copper {
+      @include stitches-badge(-600px, 0);
+  }
+}
+
+.badge-icons {
+  display: inline-block;
+  background-image: url(assets/images/badges/badge-icons-spritesheet.png);
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 75px;
+  &.adventurer-icon-gray {
+    background-position: 0 0;
+  }
+
+  &.adventurer-icon {
+    background-position: -75px 0;
+  }
+
+  &.communicator-icon-gray {
+    background-position: -150px 0;
+  }
+
+  &.communicator-icon {
+    background-position: -225px 0;
+  }
+
+  &.desert-citizen-icon-gray {
+    background-position: -300px 0;
+  }
+
+  &.desert-citizen-icon {
+    background-position: -375px 0;
+  }
+
+  &.desert-scholar-icon-gray {
+    background-position: -450px 0;
+  }
+
+  &.desert-scholar-icon {
+    background-position: -525px 0;
+  }
+
+  &.farming-citizen-icon-gray {
+    background-position: -600px 0;
+  }
+
+  &.farming-citizen-icon {
+    background-position: -675px 0;
+  }
+
+  &.farming-scholar-icon-gray {
+    background-position: -750px 0;
+  }
+
+  &.farming-scholar-icon {
+    background-position: -825px 0;
+  }
+
+  &.fishing-citizen-icon-gray {
+    background-position: -900px 0;
+  }
+
+  &.fishing-citizen-icon {
+    background-position: -975px 0;
+  }
+
+  &.fishing-scholar-icon-gray {
+    background-position: -1050px 0;
+  }
+
+  &.fishing-scholar-icon {
+    background-position: -1125px 0;
+  }
+
+  &.forest-citizen-icon-gray {
+    background-position: -1200px 0;
+  }
+
+  &.forest-citizen-icon {
+    background-position: -1275px 0;
+  }
+
+  &.forest-scholar-icon-gray {
+    background-position: -1350px 0;
+  }
+
+  &.forest-scholar-icon {
+    background-position: -1425px 0;
+  }
+
+  &.orator-icon-gray {
+    background-position: -1500px 0;
+  }
+
+  &.orator-icon {
+    background-position: -1575px 0;
+  }
+
+  &.patriot-icon-gray {
+    background-position: -1650px 0;
+  }
+
+  &.patriot-icon {
+    background-position: -1725px 0;
+  }
+
+  &.sage-icon-gray {
+    background-position: -1800px 0;
+  }
+
+  &.sage-icon {
+    background-position: -1875px 0;
+  }
+
+  &.sansinukob-scholar-icon-gray {
+    background-position: -1950px 0;
+  }
+
+  &.sansinukob-scholar-icon {
+    background-position: -2025px 0;
+  }
+
+  &.trade-citizen-icon-gray {
+    background-position: -2100px 0;
+  }
+
+  &.trade-citizen-icon {
+    background-position: -2175px 0;
+  }
+
+  &.trade-scholar-icon-gray {
+    background-position: -2250px 0;
+  }
+
+  &.trade-scholar-icon {
+    background-position: -2325px 0;
+  }
+}
+
+.badge-full {
+  position: relative;
+  .plate {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    bottom: 0;
+  }
+  .badge-icons {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.plate {
+  display: inline-block;
+  background-image: url(assets/images/badges/plates-spritesheet.png);
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 43px;
+
+  padding: 11px 5px 10px 5px;
+  font-family: $font-averia;
+  font-size: 0.875em;
+  text-align: center;
+  color: #d9c8b6;
+  text-transform: uppercase;
+
+  &.plate-2 {
+    background-image: url(assets/images/badges/plates-spritesheet2.png);
+    padding: 7px 10px 10px 10px;
+    line-height: 0.9;
+  }
+  &.plate-farming {
+    background-position: 0 0;
+  }
+  &.plate-fishing {
+    background-position: -150px 0;
+  }
+  &.plate-trade {
+    background-position: -300px 0;
+  }
+  &.plate-forest {
+    background-position: -450px 0;
+  }
+  &.plate-desert {
+    background-position: -600px 0;
+  }
+}
+
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .badge {
+     background-image: url(assets/images/badges/badges-spritesheet@2x.png);
+     background-size: 750px 165px;
+  }
+  .badge-icons {
+     background-image: url(assets/images/badges/badge-icons-spritesheet@2x.png);
+     background-size: 2400px 75px;
+  }
+  .plate {
+     background-image: url(assets/images/badges/plates-spritesheet@2x.png);
+     background-size: 750px 43px;
+     &.plate-2 {
+      background-image: url(assets/images/badges/plates-spritesheet2@2x.png);
+    }
+  }
+}
+
+.badge {
+  -webkit-transition: opacity 0.6s ease,-webkit-transform 0.6s ease;
+  -moz-transition: opacity 0.6s ease,transform 0.6s ease;
+  -ms-transition: opacity 0.6s ease,transform 0.6s ease;
+  transition: opacity 0.6s ease,transform 0.6s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+  }
+}
+
+.grid-4 {
+    .badge {
+        display: block;
+        margin: 0 auto;
+        width: 91px; //less 59px from orig
+        height: 101px; //less 64px from orig
+        background-size: cover;
+        //background-size: 686px 101px;
+        &.badge-unearned {
+          @include stitches-badge(0, 0);
+        }
+        &.badge-gold {
+          @include stitches-badge(-92px, 0);
+        }  
+        &.badge-bronze {
+          @include stitches-badge(-184px, 0);
+        }
+        &.badge-silver {
+          @include stitches-badge(-276px, 0);
+        }  
+        &.badge-copper {
+          @include stitches-badge(-367px, 0);
+        }
+    }
+    .badge-icons {
+        display: block;
+        width: 40px; //less 30px from orig
+        height: 40px; //less 30px from orig
+        background-size: cover;
+        &.adventurer-icon-gray {
+          background-position: 0 0;
+        }
+
+        &.adventurer-icon {
+          background-position: -40px 0;
+        }
+
+        &.communicator-icon-gray {
+          background-position: -80px 0;
+        }
+
+        &.communicator-icon {
+          background-position: -120px 0;
+        }
+
+        &.desert-citizen-icon-gray {
+          background-position: -160px 0;
+        }
+
+        &.desert-citizen-icon {
+          background-position: -200px 0;
+        }
+
+        &.desert-scholar-icon-gray {
+          background-position: -240px 0;
+        }
+
+        &.desert-scholar-icon {
+          background-position: -280px 0;
+        }
+
+        &.farming-citizen-icon-gray {
+          background-position: -320px 0;
+        }
+
+        &.farming-citizen-icon {
+          background-position: -360px 0;
+        }
+
+        &.farming-scholar-icon-gray {
+          background-position: -400px 0;
+        }
+
+        &.farming-scholar-icon {
+          background-position: -440px 0;
+        }
+
+        &.fishing-citizen-icon-gray {
+          background-position: -480px 0;
+        }
+
+        &.fishing-citizen-icon {
+          background-position: -520px 0;
+        }
+
+        &.fishing-scholar-icon-gray {
+          background-position: -560px 0;
+        }
+
+        &.fishing-scholar-icon {
+          background-position: -600px 0;
+        }
+
+        &.forest-citizen-icon-gray {
+          background-position: -640px 0;
+        }
+
+        &.forest-citizen-icon {
+          background-position: -680px 0;
+        }
+
+        &.forest-scholar-icon-gray {
+          background-position: -720px 0;
+        }
+
+        &.forest-scholar-icon {
+          background-position: -760px 0;
+        }
+
+        &.orator-icon-gray {
+          background-position: -800px 0;
+        }
+
+        &.orator-icon {
+          background-position: -840px 0;
+        }
+
+        &.patriot-icon-gray {
+          background-position: -880px 0;
+        }
+
+        &.patriot-icon {
+          background-position: -920px 0;
+        }
+
+        &.sage-icon-gray {
+          background-position: -940px 0;
+        }
+
+        &.sage-icon {
+          background-position: -980px 0;
+        }
+
+        &.sansinukob-scholar-icon-gray {
+          background-position: -1020px 0;
+        }
+
+        &.sansinukob-scholar-icon {
+          background-position: -1060px 0;
+        }
+
+        &.trade-citizen-icon-gray {
+          background-position: -2000px 0;
+        }
+
+        &.trade-citizen-icon {
+          background-position: -2040px 0;
+        }
+
+        &.trade-scholar-icon-gray {
+          background-position: -2080px 0;
+        }
+
+        &.trade-scholar-icon {
+          background-position: -3020px 0;
+        }
+    }
+}
+
+

@@ -16,7 +16,7 @@ app-unregistered {
 
         .container {
             padding: 20px;
-            
+
             .welcome {
                 .logo {
                     display: block;
@@ -151,7 +151,7 @@ app-unregistered {
             .container {
                 display: block;
             }
-            
+
             &.show {
                 opacity: 1;
                 z-index: 2;
@@ -253,20 +253,26 @@ app-unregistered {
                     font-size: 1.625em;
                     text-transform: uppercase;
                     margin: 0;
+                    color: #d9c8b6;
                 }
             }
 
             .content {
-                background-color: rgba(214, 201, 181, .7);
-                border: solid 6px #000;
+                // background-color: rgba(214, 201, 181, .7);
+                // border: solid 6px #000;
                 margin-top: -17px;
                 z-index: 0;
                 padding: 30px;
 
                 >* {
                     color: #000;
-                    font-family: "Lato", sans-serif;
+                    font-size: 1.250em;
                     line-height: 1.5;
+                }
+
+                .slick-track {
+                    display: flex;
+                    align-items: flex-end;
                 }
             }
         }
@@ -479,7 +485,7 @@ app-unregistered {
                                     }
                                 }
                             }
-                            
+
                             .hover {
                                 width: 100%;
                                 height: 100%;
@@ -631,6 +637,105 @@ app-unregistered {
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    .logos {
+        margin: 20px 0;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            >* {
+                width: 15%;
+            }
+
+            a {
+                display: block;
+                img {
+                    // max-height: 100px;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .creatureModal {
+        z-index: 9999999999;
+        .modal-content {
+            .desc {
+                color: #010100;
+                padding: 50px;
+                line-height: 1.5;
+                background: #d9c8b6;
+                text-align: center;
+
+                .img {
+                    margin: -105px 0 40px;
+                    img {
+                        display: block;
+                        margin: auto auto;
+                        max-width: 100%;
+                    }
+                }
+
+                p {
+                    margin-top: 0;
+                    font-size: 1.5em;
+                    text-align: center;
+                }
+                .button {
+                    text-align: center;
+                    margin-top: 60px;
+                }
+            }
+        }
+    }
+    .fanartModal {
+        .modal-content {
+            background: #d9c8b6;
+
+            .name {
+                margin: auto;
+                text-align: center;
+                background: #333;
+                display: block;
+                background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+                background-size: contain;
+                padding: 15px 0 30px;
+                width: 100%;
+                p {
+                    text-align: center;
+                    margin: 0;
+                    color: #d9c8b6;
+                }
+            }
+            .content {
+                display: flex;
+                align-items: center;
+
+                >* {
+                    width: 50%;
+                }
+                .image {
+                    img {
+                        max-width: 100%;
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                .desc {
+                    padding: 0 50px;
+
+                    >p {
+                        margin-top: 0;
+                        color: #010100;
+                        line-height: 1.5;
+                        font-family: 'Lato', sans-serif;
                     }
                 }
             }
