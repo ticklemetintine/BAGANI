@@ -93,4 +93,18 @@ $(document).ready(function(e) {
         console.log(tabTarget);
     });
 
+    //Collapsible
+    var allCollapsible = $('.collapsible-item .collapsible-content');
+    $(document).on('click', '.collapsible-wrapper .collapsible-item', function(e) {
+        if ($(this).hasClass('show')) {
+            $(this).find("li .collapsible-content").slideUp(350);
+            $(this).toggleClass('show');
+        } else {
+            allCollapsible.slideUp();
+            $(this).find("li .collapsible-content").slideDown(350);
+            $(this).toggleClass('show');
+        }
+        return false;
+    });
+
 });

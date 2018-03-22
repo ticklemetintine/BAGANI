@@ -373,6 +373,24 @@ body {
     }
 }
 
+.collapsible-wrapper {
+    .collapsible-item {
+        overflow: hidden;
+        cursor: pointer;
+        &.show {
+            .collapsible-content {
+                display: block;
+            }
+        }
+        &:hover {
+            background-color: rgba(0,0,0,0.25);
+        }
+    }
+    .collapsible-content {
+        display: none;
+    }
+}
+
 .progress-bar-container {
     padding: 10px;
     .label, .num {
