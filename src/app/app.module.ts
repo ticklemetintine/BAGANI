@@ -66,16 +66,12 @@ import { ChallengesComponent } from './components/challenges/challenges.componen
     RegionTradeComponent,
     RegionForestComponent,
     InnerForestComponent,
-<<<<<<< HEAD
-    SidebarComponent
-=======
     SidebarComponent,
     InnerDesertComponent,
     InnerTradeComponent,
     InnerFishingComponent,
     InnerFarmComponent,
     ChallengesComponent
->>>>>>> 5461aa25410a5ba6c6c3db883048186acbd5d09d
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
