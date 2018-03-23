@@ -92,7 +92,7 @@
                 <p class="title">Latest Updates</p>
                 <div class="banners">
                     <ngx-slick #slickModal="slick-modal" [config]="updatesSlideConfig">
-                        <a href="#" class="banner {{update.tribe}}" ngxSlickItem *ngFor="let update of updates">
+                        <a [href]="update.link" class="banner {{update.tribe}}" ngxSlickItem *ngFor="let update of updates">
                             <div class="inner">
                                 <img [src]="update.thumbnail" alt="hover-image" class="hover" *ngIf="update.thumbnail">
                                 <img [src]="update.emblem" alt="emblem-trade" class="emblem">

@@ -43,6 +43,7 @@ import { InnerTradeComponent } from './components/wikia-inner/inner-trade/inner-
 import { InnerFishingComponent } from './components/wikia-inner/inner-fishing/inner-fishing.component';
 import { InnerFarmComponent } from './components/wikia-inner/inner-farm/inner-farm.component';
 import { ChallengesComponent } from './components/challenges/challenges.component';
+import { ChallengeQuestionService } from './services/challenge-question.service';
 
 @NgModule({
   declarations: [
@@ -112,7 +113,8 @@ import { ChallengesComponent } from './components/challenges/challenges.componen
     MythicalCreaturesService,
     RecapService,
     QuestionsService,
-    UserService
+    UserService,
+    ChallengeQuestionService
   ],
   bootstrap: [AppComponent]
 })

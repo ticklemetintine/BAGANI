@@ -7,27 +7,24 @@
             <div class="writeup">
                 <div class="content">
                     <div class="heading timer">
-                    	<p>00:00:00</p>
+                        <p>00:00:00</p>
                     </div>
-                    <p class="question">Who was severely injured during the surprised attack?</p>
-                    <div class="hint-container">
-                    	<img src="assets/images/common/img-babaylan.png" alt="babaylan" class="babaylan">
-                    	<div class="hint">
-                    		<img src="assets/images/common/img-hint-yellow.png" alt="">
-                    		<p>Lorem Ipsum Dolor Sit Amet. Consecteteur Sit Amet. Consecteteur</p>
-                    	</div>
-                    	<div class="brand">
-                    		<p>Brand</p>
-                    	</div>
+                    <p class="question">{{challengeQuestion.question}}</p>
+                    <div class="hint-container" [class.no-brand]="!challengeQuestion.brand">
+                        <img src="assets/images/common/img-babaylan.png" alt="babaylan" class="babaylan">
+                        <div class="hint">
+                            <img src="assets/images/common/img-hint-yellow.png" alt="">
+                            <p>{{challengeQuestion.hint}}</p>
+                        </div>
+                        <div class="brand">
+                            <p>Brand</p>
+                        </div>
                     </div>
                     <div class="choices">
-                    	<a href="#">Ganda</a>
-                    	<a href="#">Liksi</a>
-                    	<a href="#">Lakas</a>
-                    	<a href="#">Lakam</a>
+                        <a (click)="selectedAnswer(choice)" *ngFor="let choice of challengeQuestion.choices">{{choice.choice}}</a>
                     </div>
                     <div class="button">
-                        <a href="#" class="btn btn-submit">Submit</a>
+                        <a class="btn btn-submit" (click)="checkAnswer()">Submit</a>
                     </div>
                 </div>
             </div>
@@ -35,3 +32,36 @@
         <app-footer></app-footer>
     </div>
 </div>
+<section class="modal challengeAnswerModal" [hidden]="!showModalChallengeAnswer" fadeInOut>
+    <div class="container">
+        <div class="close">
+            <a (click)="closeModal()"><img src="assets/images/common/icon-close-dark.png" alt=""></a>
+        </div>
+        <div class="modal-content">
+            <div class="content">
+                <div class="top">
+                    <img src="assets/images/common/img-babaylan-lg.png" alt="">
+                </div>
+                <div class="results correct">
+                    <p class="result">Correct!</p>
+                    <p class="writeup"><span>May tama ka &ndash;</span> your tribe would be proud!</p>
+                </div>
+                <div class="results wrong" style="display: none;">
+                    <p class="result">Wrong!</p>
+                    <p class="writeup"><span>Anyare?</span> Basa-basa rin ‘pag may time, ha.</p>
+                </div>
+                <div class="share">
+                    <p>Share</p>
+                    <ul>
+                        <li><a href="#"><img src="assets/images/common/social-fb.png" alt="fb"></a></li>
+                        <li><a href="#"><img src="assets/images/common/social-twitter.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn">View Journal</a>
+                    <a href="#" class="btn">Go Back Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

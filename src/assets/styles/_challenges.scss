@@ -13,6 +13,7 @@ app-challenges {
         }
         .welcome {
             .writeup {
+                padding: 14px 25px;
                 .content {
                     padding: 60px 0 40px;
                     .timer {
@@ -37,6 +38,12 @@ app-challenges {
                         position: relative;
                         margin-bottom: 25px;
 
+                        &.no-brand {
+                            .brand {
+                                opacity: 0;
+                            }
+                        }
+
                         p {
                             margin: 0;
                         }
@@ -52,6 +59,7 @@ app-challenges {
                             align-items: center;
                             text-align: left;
                             justify-content: space-between;
+
 
                             img {
                                 margin-right: 30px;
@@ -78,7 +86,8 @@ app-challenges {
                             z-index: 1;
                             text-transform: uppercase;
 
-                            &:hover {
+                            &:hover,
+                            &.active {
                                 color: #292015;
 
                                 &:before {
@@ -101,6 +110,72 @@ app-challenges {
                             font-size: 1.875em;
                             padding: 20px 40px;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.challengeAnswerModal {
+    .container {
+        .modal-content {
+            margin-top: 175px;
+            width: percentage(700px/1110px);
+
+            .content {
+                background: #38322b;
+                text-align: center;
+                padding-bottom: 60px;
+
+                .top {
+                    img {
+                        margin-top: -175px;
+                        width: 100%;
+                    }
+                }
+                .results {
+                    color: #d9c8b6;
+                    margin-top: -40px;
+                    padding: 0 50px;
+                    .result {
+                        font-size: 3.188em;
+                        margin: 0;
+                        text-transform: uppercase;
+                    }
+                    .writeup {
+                        font-size: 2.250em;
+                        margin: 0;
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+                .share {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    p {
+                        font-size: 0.750em;
+                        color: #fff;
+                        margin-right: 5px;
+                        text-transform: uppercase;
+                    }
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                        li {
+                            display: inline;
+                            margin: 0 5px 0 0;
+                        }
+                    }
+                }
+                .buttons {
+                    margin-top: 40px;
+                    .btn {
+                        font-size: 1.250em;
+                        padding: 40px;
+                        margin: 0 10px;
                     }
                 }
             }

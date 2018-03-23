@@ -30,6 +30,7 @@ $(document).ready(function(e) {
         $("#tourSlide").slick('slickNext');
     });
 
+    // ALAMAT SECTION BACKGROUND CHANGE
     $(".alamat .content").on("afterChange", function() {
         var bg = $('.slick-active .alamat-background').val();
         $('.alamat').css({
@@ -38,6 +39,7 @@ $(document).ready(function(e) {
         });
     });
 
+    //HEADER MENU
     $(document).on('click', 'header .menu-container .burger-menu', function(event) {
         event.preventDefault();
         var burgerMenu = $('header .menu-container').clone();
@@ -54,12 +56,16 @@ $(document).ready(function(e) {
         $('.menu-expanded').fadeOut('fast');
 
         $('.menu-expanded > .container .menu-container').remove();
+        $('.menu-expanded .main-menu .sansinukob .sub').slideToggle();
+        $('.menu-expanded .main-menu .sansinukob').toggleClass('expanded');
     });
 
     $(document).on('click', '.menu-expanded .main-menu .sansinukob a ', function(event) {
         $('.menu-expanded .main-menu .sansinukob .sub').slideToggle();
         $('.menu-expanded .main-menu .sansinukob').toggleClass('expanded');
     });
+
+    //MAP POP-UP
 
     $(document).on('click', '.focus img', function(event) {
         $('body').css('overflow', 'hidden');
@@ -119,6 +125,13 @@ $(document).ready(function(e) {
             $(this).toggleClass('show');
         }
         return false;
+    });
+
+    //CHALLENGES        
+    $(document).on('click', 'app-challenges .choices a', function(event) {
+        event.preventDefault();
+        $('app-challenges .choices a.active').removeClass('active');
+        $(this).addClass('active');
     });
 
 });
