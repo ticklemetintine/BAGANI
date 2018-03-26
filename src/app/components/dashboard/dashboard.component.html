@@ -1,22 +1,78 @@
 <app-header></app-header>
-<div class="wikia-region">
+<div class="dashboard">
     <section class="video-section desert" [class.morning]="hour > 5 && hour < 12" [class.noon]="hour > 11 && hour < 18" [class.evening]="hour > 17 || hour < 6">
         <video autoplay muted loop>
             <source src="assets/images/backgrounds/video/desert/desert-{{timeClass}}.mp4" type="video/mp4">
         </video>
     </section>
-    <section class="banner-region">
+    <section class="welcome-container">
         <div class="container">
-            <div class="banner">
-                <img src="assets/images/common/banner-desert.png" alt="banner-desert">
+            <p class="welcome">Welcome back, <span *ngIf="userDetails.username">{{userDetails.username}}</span><span *ngIf="!userDetails.username">Kapamilya</span>!</p>
+        </div>
+    </section>
+    <section class="notifications">
+        <div class="container">
+            <div class="notification challenge">
+                <p>Babaylan has a new challenge for you! “First five words of the question...” </p>
+                <a href="#" class="btn btn-view">View</a>
             </div>
-            <div class="writeup">
-                <div class="content">
-                    <p>Situated in the middle of nowhere, the Desert Region is the poorest in all of Sansinukob. Its people have turned to looting and stealing in order to survive. With this notoriety comes the tribe’s reputation as feared warriors, as they are recognized to be both courageous and cunning.</p>
-                </div>
+            <div class="notification announcement">
+                <p>Announcement: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
+                <a href="#" class="btn btn-ok">ok</a>
             </div>
         </div>
     </section>
+    <div class="achievements">
+        <div class="container">
+            <div class="title">
+                <p>Achievements</p>
+            </div>
+            <div class="badges">
+                <div class="badge-item">
+                    <span class="badge badge-full badge-gold">
+                    <span class="badge-icons {{userDetails.tribe}}-citizen-icon"></span>
+                    <span class="plate plate-{{userDetails.tribe}}">Citizen</span>
+                    </span>
+                </div>
+                <div class="badge-item">
+                    <span class="badge badge-full badge-silver">
+                    <span class="badge-icons communicator-icon"></span>
+                    <span class="plate plate-{{userDetails.tribe}}">Communicator</span>
+                    </span>
+                </div>
+                <div class="badge-item">
+                    <span class="badge badge-full badge-copper">
+                    <span class="badge-icons journeyman-icon"></span>
+                    <span class="plate plate-{{userDetails.tribe}}">Journeyman</span>
+                    </span> 
+                </div>
+                <div class="badge-item">
+                    <span class="badge badge-full badge-unearned">
+                    <span class="badge-icons sage-icon-gray"></span>
+                    <span class="plate plate-{{userDetails.tribe}}">Sage</span>
+                    </span>
+                </div>
+                <div class="badge-item">
+                    <span class="badge badge-full badge-bronze">
+                    <span class="badge-icons {{userDetails.tribe}}-citizen-icon"></span>
+                    <span class="plate plate-{{userDetails.tribe}}">Name of Badge</span>
+                    </span>
+                </div>
+                <div class="badge-item">
+                    <span class="badge badge-full badge-unearned">
+                    <span class="badge-icons {{userDetails.tribe}}-citizen-icon-gray"></span>
+                    <span class="plate plate-{{userDetails.tribe}}">Name of Badge</span>
+                    </span>
+                </div>
+                <div class="badge-item">
+                    <span class="badge badge-full badge-unearned">
+                    <span class="badge-icons {{userDetails.tribe}}-citizen-icon-gray"></span>
+                    <span class="plate plate-{{userDetails.tribe}}">Name of Badge</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="topics">
         <div class="container">
             <div class="row">
@@ -60,7 +116,7 @@
                             <a [href]="update.link" class="banner {{update.tribe}}" ngxSlickItem *ngFor="let update of updates">
                                 <div class="inner">
                                     <img [src]="update.thumbnail" alt="hover-image" class="hover" *ngIf="update.thumbnail">
-                                    <img [src]="update.emblem" alt="emblem-trade" class="emblem">
+                                    <img [src]="update.emblem" alt="emblem-{{userDetails.tribe}}" class="emblem">
                                     <div class="writeup">
                                         <p>{{update.chapterTitle}} </p>
                                         <p>{{update.desc}}</p>

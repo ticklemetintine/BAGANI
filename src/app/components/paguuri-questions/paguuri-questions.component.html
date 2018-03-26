@@ -9,7 +9,7 @@
                     <p>ANG PAG-UURI</p>
                 </div>
                 <div class="row">
-                    <ngx-slick class="slider" id="paguuri-questions" #slickModal="slick-modal" [config]="questionsSlideConfig" (afterChange)="afterChange($event)">
+                    <ngx-slick class="slider" #slickModal="slick-modal" [config]="questionsSlideConfig" (afterChange)="afterChange($event)">
                         <div class="slide" *ngFor="let question of questions; let i=index" ngxSlickItem [ngStyle]="{'background-image':'url(' + question.background + ')', 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
                             <p class="question">{{question.question}}</p>
                             <ul class="choices">

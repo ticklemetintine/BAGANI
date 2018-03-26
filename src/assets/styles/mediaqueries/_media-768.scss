@@ -10,7 +10,8 @@
         }
     }
     app-unregistered,
-    app-sansinukob {
+    app-sansinukob,
+    app-dashboard {
 
         .map-fold {
             min-height: auto;
@@ -330,6 +331,32 @@
                             font-size: 0.875em;
                             padding: 10px 0;
                         }
+                    }
+                }
+            }
+        }
+    }
+    app-dashboard {
+
+        .notifications {
+            .notification {
+                width: percentage(600px/768px);
+            }
+        }
+        .topics {
+            .topic {
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+        .achievements {
+            .badges {
+                .badge-item {
+                    margin: 0 10px;
+                    width: percentage(150px/730px);
+
+                    > * {
+                        width: 100%;
                     }
                 }
             }

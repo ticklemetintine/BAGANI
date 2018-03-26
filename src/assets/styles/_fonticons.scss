@@ -27,7 +27,7 @@
 .icon-desert-logo:before {
   content: "\e900";
 }
-.icon-farming-logo:before {
+.icon-farm-logo:before {
   content: "\e901";
 }
 .icon-fishing-logo:before {
@@ -77,11 +77,11 @@
   background-repeat: no-repeat;
   width: 75px;
   height: 75px;
-  &.adventurer-icon-gray {
+  &.journeyman-icon-gray {
     background-position: 0 0;
   }
 
-  &.adventurer-icon {
+  &.journeyman-icon {
     background-position: -75px 0;
   }
 
@@ -109,19 +109,19 @@
     background-position: -525px 0;
   }
 
-  &.farming-citizen-icon-gray {
+  &.farm-citizen-icon-gray {
     background-position: -600px 0;
   }
 
-  &.farming-citizen-icon {
+  &.farm-citizen-icon {
     background-position: -675px 0;
   }
 
-  &.farming-scholar-icon-gray {
+  &.farm-scholar-icon-gray {
     background-position: -750px 0;
   }
 
-  &.farming-scholar-icon {
+  &.farm-scholar-icon {
     background-position: -825px 0;
   }
 
@@ -246,7 +246,7 @@
     padding: 7px 10px 10px 10px;
     line-height: 0.9;
   }
-  &.plate-farming {
+  &.plate-farm {
     background-position: 0 0;
   }
   &.plate-fishing {
@@ -355,19 +355,19 @@
           background-position: -280px 0;
         }
 
-        &.farming-citizen-icon-gray {
+        &.farm-citizen-icon-gray {
           background-position: -320px 0;
         }
 
-        &.farming-citizen-icon {
+        &.farm-citizen-icon {
           background-position: -360px 0;
         }
 
-        &.farming-scholar-icon-gray {
+        &.farm-scholar-icon-gray {
           background-position: -400px 0;
         }
 
-        &.farming-scholar-icon {
+        &.farm-scholar-icon {
           background-position: -440px 0;
         }
 

@@ -4,6 +4,7 @@ import { LatestUpdatesService } from '../../services/latest-updates.service';
 import { ArtworksService } from '../../services/artworks.service';
 import { ArticlesService } from '../../services/articles.service';
 import { RecapService } from '../../services/recap.service';
+import { UserService } from '../../services/user.service';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -19,6 +20,7 @@ export class DashboardComponent implements OnInit {
     updates = [];
     artworks = [];
     articles = [];
+    userDetails: any = [];
     videoRecap: SafeResourceUrl;
     videoRecapDetails: string;
 
@@ -28,6 +30,7 @@ export class DashboardComponent implements OnInit {
         private _getArtworksService: ArtworksService,
         private _getArticlesService: ArticlesService,
         private _getRecapService: RecapService,
+        private _getUserService: UserService,
         private sanitizer: DomSanitizer
     ) {}
 
@@ -37,6 +40,7 @@ export class DashboardComponent implements OnInit {
         this.GetArtworks();
         this.GetArticles();
         this.GetRecap();
+        this.getUserDetails();
     }
 
 
@@ -93,6 +97,14 @@ export class DashboardComponent implements OnInit {
             }
         ]
     };
+
+    getUserDetails() {
+      this._getUserService.GetUser().subscribe(
+            (data) => {
+                this.userDetails = data.userDetails;
+            }
+        );
+  }
 
     getTime() {
         this.today = new Date();

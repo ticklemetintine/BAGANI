@@ -1,11 +1,12 @@
 @media (max-width: 1024px) {
 
     app-unregistered,
-    app-sansinukob {
+    app-sansinukob,
+    app-dashboard {
         .map-fold {
             .container {
                 .right {
-                    > img {
+                    >img {
                         &.desktop {
                             display: none;
                         }
@@ -123,6 +124,24 @@
                 height: 265px;
                 margin: 0 20px 20px 0;
                 width: percentage(485px/1004px);
+            }
+        }
+    }
+    app-dashboard {
+        .dashboard .container {
+            max-width: 95%;
+        }
+        .notifications {
+            .notification {
+                width: percentage(630px/1024px);
+            }
+        }
+        .achievements {
+            .badges {
+                .badge-item {
+                    margin: 0 10px;
+                    width: percentage(150px/910px);
+                }
             }
         }
     }
