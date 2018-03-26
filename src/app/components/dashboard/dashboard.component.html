@@ -1,0 +1,100 @@
+<app-header></app-header>
+<div class="wikia-region">
+    <section class="video-section desert" [class.morning]="hour > 5 && hour < 12" [class.noon]="hour > 11 && hour < 18" [class.evening]="hour > 17 || hour < 6">
+        <video autoplay muted loop>
+            <source src="assets/images/backgrounds/video/desert/desert-{{timeClass}}.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section class="banner-region">
+        <div class="container">
+            <div class="banner">
+                <img src="assets/images/common/banner-desert.png" alt="banner-desert">
+            </div>
+            <div class="writeup">
+                <div class="content">
+                    <p>Situated in the middle of nowhere, the Desert Region is the poorest in all of Sansinukob. Its people have turned to looting and stealing in order to survive. With this notoriety comes the tribe’s reputation as feared warriors, as they are recognized to be both courageous and cunning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="topics">
+        <div class="container">
+            <div class="row">
+                <div class="topic explore-sansinukob">
+                    <a routerLink="stories" class="content">
+                        <p class="entries"><span>3</span> new entries</p>
+                        <p class="title">Stories</p>
+                    </a>
+                </div>
+                <div class="topic start-test">
+                    <a routerLink="history" class="content">
+                        <p class="entries"><span>1</span> new entry</p>
+                        <p class="title">history</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sansinukob-chronicles">
+        <div class="container">
+            <div class="video-recap">
+                <img src="assets/images/common/sansinukob-chronicles.png" alt="sansinukob-chronicles" class="title-img">
+                <div class="content">
+                    <div class="video">
+                        <iframe [src]="videoRecap" class="media" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <div class="social">
+                            <a href="#"><img src="assets/images/common/social-fb.png" alt=""></a>
+                            <a href="#"><img src="assets/images/common/social-twitter.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="writeup">
+                        <p>{{videoRecapDetails}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="latest-updates breaker">
+                <div class="content">
+                    <p class="title">Latest Updates</p>
+                    <div class="banners">
+                        <ngx-slick #slickModal="slick-modal" [config]="updatesSlideConfig">
+                            <a [href]="update.link" class="banner {{update.tribe}}" ngxSlickItem *ngFor="let update of updates">
+                                <div class="inner">
+                                    <img [src]="update.thumbnail" alt="hover-image" class="hover" *ngIf="update.thumbnail">
+                                    <img [src]="update.emblem" alt="emblem-trade" class="emblem">
+                                    <div class="writeup">
+                                        <p>{{update.chapterTitle}} </p>
+                                        <p>{{update.desc}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </ngx-slick>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-artwork breaker">
+                <div class="content">
+                    <p class="title">Featured Artwork</p>
+                    <ngx-slick #slickModal="slick-modal" [config]="artworkSlideConfig">
+                        <div class="slide" ngxSlickItem *ngFor="let artwork of artworks">
+                            <img [src]="artwork.image" alt="{{artwork.name}}" (click)="fanartModal(artwork)">
+                            <div class="name">
+                                <p>{{artwork.name}}</p>
+                            </div>
+                        </div>
+                    </ngx-slick>
+                </div>
+            </div>
+            <div class="beyond-sansinukob breaker">
+                <div class="content">
+                    <p class="title">Beyond Sansinukob</p>
+                    <div class="articles">
+                        <div class="article" *ngFor="let article of articles">
+                            <div class="thumb"><a [href]="article.link"><img [src]="article.image" alt="{{article.title}}"></a></div>
+                            <p class="article-title"><a [href]="article.link">{{article.title}}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

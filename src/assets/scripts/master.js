@@ -1,14 +1,15 @@
-var params ={
+var params = {
     categoryID: 'baganiCommenting',
     streamID: '',
     version: 2,
     containerID: 'commentsDiv',
-    cid:'',
+    cid: '',
     enabledShareProviders: 'facebook'
 }
 gigya.comments.showCommentsUI(params);
 
 $(document).ready(function(e) {
+    alamatHeight();
 
     $('img[usemap]').rwdImageMaps();
 
@@ -34,7 +35,7 @@ $(document).ready(function(e) {
     $(".alamat .content").on("afterChange", function() {
         var bg = $('.slick-active .alamat-background').val();
         $('.alamat').css({
-            'background': 'url('+bg+') top center no-repeat fixed',
+            'background': 'url(' + bg + ') top center no-repeat fixed',
             'background-size': 'cover'
         });
     });
@@ -82,14 +83,14 @@ $(document).ready(function(e) {
         $(widgetTarget).fadeIn(200);
         $('body').toggleClass('lightbox-open');
     });
-    
+
     //Sidebar close
     $(document).on('click', '.sidebar-header .close-sidebar', function(event) {
         event.preventDefault();
         $(this).parent().parent().removeClass('show');
         $('body').removeClass("lightbox-open");
     });
-    
+
     //Lightbox close button
     $(document).on('click', '.lightbox .btn-close', function(e) {
         $(this).closest('.lightbox').fadeOut();
@@ -106,7 +107,7 @@ $(document).ready(function(e) {
         $(this).toggleClass('active');
         $(".chat-convo").removeClass('active');
         $(tabTarget).toggleClass('active');
-        if(tabTarget == "#globalChat") {
+        if (tabTarget == "#globalChat") {
             $(".sidebar-chat .sidebar-header").addClass("sansinukob-theme");
         } else {
             $(".sidebar-chat .sidebar-header").removeClass("sansinukob-theme");
@@ -127,18 +128,26 @@ $(document).ready(function(e) {
         return false;
     });
 
-    //PAGUURI QUESTIONS        
-    $(document).on('click', 'app-paguuri-questions .choices a', function(event) {
+    //PAGUURI QUESTIONS NEXT
+
+    $(document).on('click', 'app-paguuri-questions .btn-next', function(event) {
         event.preventDefault();
-        $('app-paguuri-questions .choices li.active').removeClass('active');
-        $(this).parent().addClass('active');
+        $("#paguuri-questions").slick('slickNext');
     });
 
-    //CHALLENGES        
-    $(document).on('click', 'app-challenges .choices a', function(event) {
-        event.preventDefault();
-        $('app-challenges .choices a.active').removeClass('active');
-        $(this).addClass('active');
-    });
-
+    window.addEventListener("orientationchange", function() {
+        alamatHeight();
+    }, false);
 });
+
+
+//ANG ALAMAT SLIDE HEIGHT
+function alamatHeight(event) {
+    var maxHeight = 0;
+    $('.alamat .slide').each(function() {
+        if ($(this).find('div:last-child').height() > maxHeight) {
+            maxHeight = $(this).find('div:last-child').height();
+        }
+    });
+    $('.alamat .slide div:last-child').css('height', maxHeight + 'px');
+}

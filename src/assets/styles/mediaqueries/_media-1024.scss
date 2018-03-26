@@ -2,6 +2,20 @@
 
     app-unregistered,
     app-sansinukob {
+        .map-fold {
+            .container {
+                .right {
+                    > img {
+                        &.desktop {
+                            display: none;
+                        }
+                        &.mobile {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
         .alamat {
             .container {
                 width: percentage(790px/1024px);

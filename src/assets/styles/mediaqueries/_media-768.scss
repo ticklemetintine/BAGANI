@@ -41,11 +41,11 @@
                     }
                 }
                 .right {
-                    position: static;
+                    position: relative;
                     max-height: unset;
+                    width: 70%;
 
                     .mobile {
-                        width: 60%;
                         margin: auto auto;
                     }
                 }
@@ -61,10 +61,12 @@
                     }
                 }
                 .container {
-                    padding: 30% 20px 0;
+                    padding: 25% 20px 0;
                     .emblem {
                         width: 40%;
-                        margin-bottom: 20px
+                        margin-bottom: 20px img {
+                            width: 100%;
+                        }
                     }
                     .row {
                         >.map {
@@ -72,7 +74,7 @@
                         }
                         .writeup {
                             width: 60%;
-                            margin-top: -25%;
+                            margin-top: -35%;
                             p {
                                 margin-bottom: 40px;
                             }
@@ -110,11 +112,15 @@
                         .banners {
                             .banner {
                                 .inner {
-                                    height: 250px;
+                                    padding: 30px 5px 0;
+                                    min-height: 200px;
+
                                     .emblem {
                                         margin: 0 auto;
                                     }
                                     .writeup {
+                                        position: static;
+                                        padding: 10px 0;
                                         p {
                                             font-size: 0.875em;
                                         }
@@ -135,6 +141,11 @@
                         padding: 0 20px;
                     }
                 }
+            }
+        }
+        .fanartModal {
+            .modal-content {
+                padding: 10px;
             }
         }
     }
@@ -296,16 +307,30 @@
         }
         .other-chapters {
             .container {
-                >div {
+                >a {
                     width: 40%;
                 }
             }
         }
         .latest-updates {
+            .container {
+                max-width: 100%;
+            }
             .banners {
-                padding: 0;
+                padding: 0 10px;
                 .banner {
                     margin-right: 10px;
+
+                    .inner {
+                        min-height: 200px;
+                        padding: 30px 5px 0;
+
+                        .writeup {
+                            position: static;
+                            font-size: 0.875em;
+                            padding: 10px 0;
+                        }
+                    }
                 }
             }
         }

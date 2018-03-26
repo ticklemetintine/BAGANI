@@ -216,6 +216,8 @@
 
                         >.map img {
                             max-height: 200px;
+                            width: auto;
+                            margin: auto auto;
                         }
 
                         .writeup {
@@ -332,6 +334,7 @@
                                         height: 120px;
                                     }
                                     .writeup {
+                                        position: absolute;
                                         width: 100%;
                                         padding: 40px 20px;
                                         bottom: 50px;
@@ -597,6 +600,10 @@
             .modal-content {
                 .desc {
                     padding: 30px;
+
+                    .img {
+                        margin-top: -80px;
+                    }
                 }
             }
         }
@@ -648,7 +655,7 @@
         }
         .other-chapters {
             .container {
-                >div {
+                >a {
                     width: 40%;
                     padding: 10px;
 

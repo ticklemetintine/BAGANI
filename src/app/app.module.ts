@@ -87,6 +87,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
       { path: 'paguuri-results', component: PaguuriResultsComponent, pathMatch: 'full'},
       { path: 'email-confirmed', component: EmailConfirmedComponent, pathMatch: 'full'},
       { path: 'tour', component: TourComponent, pathMatch: 'full'},
+      { path: 'dashboard', component: DashboardComponent, pathMatch: 'full'},
       { path: 'wikia', component: SansinukobComponent, pathMatch: 'full'},
       { path: 'wikia/region/desert', component: RegionDesertComponent, pathMatch: 'full'},
       { path: 'wikia/region/farm', component: RegionFarmComponent, pathMatch: 'full'},
