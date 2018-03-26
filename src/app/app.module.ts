@@ -44,6 +44,7 @@ import { InnerFishingComponent } from './components/wikia-inner/inner-fishing/in
 import { InnerFarmComponent } from './components/wikia-inner/inner-farm/inner-farm.component';
 import { ChallengesComponent } from './components/challenges/challenges.component';
 import { ChallengeQuestionService } from './services/challenge-question.service';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { ChallengeQuestionService } from './services/challenge-question.service'
     InnerTradeComponent,
     InnerFishingComponent,
     InnerFarmComponent,
-    ChallengesComponent
+    ChallengesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),

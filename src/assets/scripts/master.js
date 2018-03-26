@@ -127,6 +127,13 @@ $(document).ready(function(e) {
         return false;
     });
 
+    //PAGUURI QUESTIONS        
+    $(document).on('click', 'app-paguuri-questions .choices a', function(event) {
+        event.preventDefault();
+        $('app-paguuri-questions .choices li.active').removeClass('active');
+        $(this).parent().addClass('active');
+    });
+
     //CHALLENGES        
     $(document).on('click', 'app-challenges .choices a', function(event) {
         event.preventDefault();

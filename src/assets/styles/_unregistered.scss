@@ -575,7 +575,8 @@ app-unregistered {
                         }
                         .slick-list {
                             padding-top: 20px;
-                            padding-bottom: 40px;                        }
+                            padding-bottom: 30px;
+                        }
                         .slide {
                             position: relative;
                             img {
@@ -702,7 +703,7 @@ app-unregistered {
                 text-align: center;
 
                 .img {
-                    margin: -105px 0 40px;
+                    margin: -120px 0 40px;
                     img {
                         display: block;
                         margin: auto auto;
@@ -719,6 +720,11 @@ app-unregistered {
                 .button {
                     text-align: center;
                     margin-top: 60px;
+
+                    .btn {
+                        font-size: 1.5em;
+                        padding: 40px;
+                    }
                 }
             }
         }
@@ -764,6 +770,19 @@ app-unregistered {
                         color: #010100;
                         line-height: 1.5;
                         font-family: 'Lato', sans-serif;
+                    }
+                    .share {
+                        display: flex;
+                        align-items: center;
+
+                        ul {
+                            padding-left: 10px;
+                            li {
+                                list-style: none;
+                                display: inline;
+                                margin-right: 5px;
+                            }
+                        }
                     }
                 }
             }
