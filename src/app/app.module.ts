@@ -45,6 +45,9 @@ import { InnerFarmComponent } from './components/wikia-inner/inner-farm/inner-fa
 import { ChallengesComponent } from './components/challenges/challenges.component';
 import { ChallengeQuestionService } from './services/challenge-question.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoadingModule } from 'ngx-loading';
+import { NotificationsService } from './services/notifications.service';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -74,14 +77,16 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     InnerFishingComponent,
     InnerFarmComponent,
     ChallengesComponent,
-    DashboardComponent
+    DashboardComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
     RouterModule.forRoot([
       { path: '', component: UnregisteredComponent, pathMatch: 'full'},
       { path: 'sidebar', component: SidebarComponent, pathMatch: 'full'},
-      { path: 'login', component: LoginComponent, pathMatch: 'full'},
+      { path: 'accounts/login', component: LoginComponent, pathMatch: 'full'},
+      { path: 'accounts/forgot-password', component: ForgotPasswordComponent, pathMatch: 'full'},
       { path: 'paguuri', component: PaguuriComponent, pathMatch: 'full'},
       { path: 'paguuri/:id', component: PaguuriQuestionsComponent, pathMatch: 'full'},
       { path: 'paguuri-results', component: PaguuriResultsComponent, pathMatch: 'full'},
@@ -117,7 +122,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     RecapService,
     QuestionsService,
     UserService,
-    ChallengeQuestionService
+    ChallengeQuestionService,
+    NotificationsService
   ],
   bootstrap: [AppComponent]
 })

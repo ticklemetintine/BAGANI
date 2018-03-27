@@ -149,8 +149,16 @@ app-dashboard {
                 }
                 .title {
                     font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
-                    font-size: 3em;
+                    font-size: 1.125em;
                     color: #d9c8b6;
+                    line-height: 1.5;
+                    letter-spacing: 3px;
+                }
+                .btn {
+                    font-size: 1.5em;
+                    margin-top: 20px;
+                    display: block;
+                    padding: 20px;
                 }
             }
         }

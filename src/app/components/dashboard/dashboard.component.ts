@@ -5,6 +5,7 @@ import { ArtworksService } from '../../services/artworks.service';
 import { ArticlesService } from '../../services/articles.service';
 import { RecapService } from '../../services/recap.service';
 import { UserService } from '../../services/user.service';
+import { NotificationsService } from '../../services/notifications.service';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -21,6 +22,7 @@ export class DashboardComponent implements OnInit {
     artworks = [];
     articles = [];
     userDetails: any = [];
+    notifications: any = [];
     videoRecap: SafeResourceUrl;
     videoRecapDetails: string;
 
@@ -31,6 +33,7 @@ export class DashboardComponent implements OnInit {
         private _getArticlesService: ArticlesService,
         private _getRecapService: RecapService,
         private _getUserService: UserService,
+        private _getNotificationsService: NotificationsService,
         private sanitizer: DomSanitizer
     ) {}
 
@@ -41,6 +44,7 @@ export class DashboardComponent implements OnInit {
         this.GetArticles();
         this.GetRecap();
         this.getUserDetails();
+        this.getNotifications();
     }
 
 
@@ -147,6 +151,13 @@ export class DashboardComponent implements OnInit {
                 this.videoRecap = this.sanitizer.bypassSecurityTrustResourceUrl(data.recap.videoUrl);
 
                 this.videoRecapDetails = data.recap.content;
+            }
+        );
+    }
+    getNotifications() {
+        this._getNotificationsService.GetNotifications().subscribe(
+            (data) => {
+                this.notifications = data.notifications;
             }
         );
     }
