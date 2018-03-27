@@ -3,9 +3,9 @@
     <div class="container paguuri-container">
         <div class="welcome">
             <img src="assets/images/common/bagani-logo.png" class="logo">
-            <p class="instruction">You only get one chance to answer the question correctly.</p>
+            <p class="instruction" *ngIf="challengeQuestion != ''">You only get one chance to answer the question correctly.</p>
             <div class="writeup">
-                <div class="content">
+                <div class="content" *ngIf="challengeQuestion">
                     <div class="heading timer">
                         <p>00:00:00</p>
                     </div>
@@ -26,6 +26,12 @@
                     <div class="button">
                         <a class="btn btn-submit" (click)="checkAnswer()">Submit</a>
                     </div>
+                </div>
+                <div class="content" *ngIf="!challengeQuestion">
+                    <div class="heading timer">
+                        <p>00:00:00</p>
+                    </div>
+                    <p class="question">There are no challenges right now. <br> <br>Take this time to learn more about Sansinukob or to chat with others.</p>
                 </div>
             </div>
         </div>

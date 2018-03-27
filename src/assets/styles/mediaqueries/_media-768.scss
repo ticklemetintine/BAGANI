@@ -362,4 +362,12 @@
             }
         }
     }
+
+    .grid {
+        &.achievements-grid {
+            .grid-cell {
+                width: percentage(350px/1400px);
+            }
+        }
+    }
 }

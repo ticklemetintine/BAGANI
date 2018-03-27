@@ -166,7 +166,8 @@ export class DashboardComponent implements OnInit {
     getAchievements() {
         this._getAchievementsService.GetAchievements().subscribe(
             (data) => {
-                this.notifications = data.notifications;
+                this.achievements = data.achievements;
+                console.log(data);
             }
         );
     }

@@ -145,4 +145,11 @@
             }
         }
     }
+    .grid {
+         &.achievements-grid {
+            .grid-cell {
+                width: percentage(280px/1400px);
+            }
+        }
+    }
 }
