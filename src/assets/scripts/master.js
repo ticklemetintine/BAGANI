@@ -78,6 +78,7 @@ $(document).ready(function(e) {
     //Widget buttons
     $(document).on('click', '.widget-btn', function(event) {
         event.preventDefault();
+        console.log("ye==");
         var widgetTarget = $(this).data("target");
         $(widgetTarget).toggleClass('show');
         $(widgetTarget).fadeIn(200);

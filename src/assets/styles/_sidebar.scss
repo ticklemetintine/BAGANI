@@ -862,6 +862,190 @@ body {
             padding-right: 15px;
         }
     }
+
+    //Grid 
+    .grid {
+        &.achievements-grid {
+            .badge {
+                display: block;
+                margin: 0 auto;
+                width: 71px; //less 59px from orig
+                height: 81px; //less 64px from orig
+                background-size: cover;
+                //background-size: 686px 101px;
+                &.badge-unearned {
+                  @include stitches-badge(0, 0);
+                }
+                &.badge-gold {
+                  @include stitches-badge(-74px, 0);
+                }  
+                &.badge-bronze {
+                  @include stitches-badge(-148px, 0);
+                }
+                &.badge-silver {
+                  @include stitches-badge(-222px, 0);
+                }  
+                &.badge-copper {
+                  @include stitches-badge(-295px, 0);
+                }
+            }
+            .badge-icons {
+                display: block;
+                width: 30px; //less 30px from orig
+                height: 30px; //less 30px from orig
+                background-size: cover;
+                &.adventurer-icon-gray {
+                  background-position: 0 0;
+                }
+
+                &.adventurer-icon {
+                  background-position: -30px 0;
+                }
+
+                &.communicator-icon-gray {
+                  background-position: -60px 0;
+                }
+
+                &.communicator-icon {
+                  background-position: -90px 0;
+                }
+
+                &.desert-citizen-icon-gray {
+                  background-position: -120px 0;
+                }
+
+                &.desert-citizen-icon {
+                  background-position: -150px 0;
+                }
+
+                &.desert-scholar-icon-gray {
+                  background-position: -180px 0;
+                }
+
+                &.desert-scholar-icon {
+                  background-position: -210px 0;
+                }
+
+                &.farming-citizen-icon-gray {
+                  background-position: -240px 0;
+                }
+
+                &.farming-citizen-icon {
+                  background-position: -270px 0;
+                }
+
+                &.farming-scholar-icon-gray {
+                  background-position: -300px 0;
+                }
+
+                &.farming-scholar-icon {
+                  background-position: -330px 0;
+                }
+
+                &.fishing-citizen-icon-gray {
+                  background-position: -360px 0;
+                }
+
+                &.fishing-citizen-icon {
+                  background-position: -390px 0;
+                }
+
+                &.fishing-scholar-icon-gray {
+                  background-position: -410px 0;
+                }
+
+                &.fishing-scholar-icon {
+                  background-position: 440px 0;
+                }
+
+                &.forest-citizen-icon-gray {
+                  background-position: -480px 0;
+                }
+
+                &.forest-citizen-icon {
+                  background-position: -510px;
+                }
+
+                &.forest-scholar-icon-gray {
+                  background-position: -530px 0;
+                }
+
+                &.forest-scholar-icon {
+                  background-position: -560px 0;
+                }
+
+                &.orator-icon-gray {
+                  background-position: -590px 0;
+                }
+
+                &.orator-icon {
+                  background-position: -610px 0;
+                }
+
+                &.patriot-icon-gray {
+                  background-position: -640px 0;
+                }
+
+                &.patriot-icon {
+                  background-position: -670px 0;
+                }
+
+                &.sage-icon-gray {
+                  background-position: -700px 0;
+                }
+
+                &.sage-icon {
+                  background-position: -730px 0;
+                }
+
+                &.sansinukob-scholar-icon-gray {
+                  background-position: -760px 0;
+                }
+
+                &.sansinukob-scholar-icon {
+                  background-position: -790px 0;
+                }
+
+                &.trade-citizen-icon-gray {
+                  background-position: -810px 0;
+                }
+
+                &.trade-citizen-icon {
+                  background-position: -840px 0;
+                }
+
+                &.trade-scholar-icon-gray {
+                  background-position: -870px 0;
+                }
+
+                &.trade-scholar-icon {
+                  background-position: -900px 0;
+                }
+            }
+            .plate {
+                width: 150px;
+                height: 45px;
+                margin: 0 auto;
+                padding: 10px 5px 8px 5px;
+                
+                zoom: 1;
+
+                transform:scale(0.5);
+                -webkit-transform:scale(0.5);
+                -moz-transform:scale(0.5);
+
+                transform-origin: 0 0;
+                -webkit-transform-origin: 0 0;
+                -moz-transform-origin: 0 0;
+
+                bottom: -30%;
+                left: -1px;
+                &.plate-2 {
+                    padding: 8px 5px 8px 5px;
+                }
+            }
+        }
+    }
 } 
 
 @media (max-width: 420px) {
@@ -898,7 +1082,7 @@ body {
               @include stitches-badge(-148px, 0);
             }
             &.badge-silver {
-              @include stitches-badge(-221px, 0);
+              @include stitches-badge(-222px, 0);
             }  
             &.badge-copper {
               @include stitches-badge(-295px, 0);
@@ -978,7 +1162,7 @@ body {
             }
 
             &.forest-citizen-icon {
-              background-position: -500px 0;
+              background-position: -509px 0;
             }
 
             &.forest-scholar-icon-gray {
