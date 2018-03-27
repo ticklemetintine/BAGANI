@@ -853,6 +853,21 @@ body {
             }
         }
     }
+    .widget-sidebar-container {
+        width: 80%;
+        top: 110px;
+        left: 50%;
+        text-align: center;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        .widget-btn {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
     .message-container {
         width: 100%;
     }
