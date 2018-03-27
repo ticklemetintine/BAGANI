@@ -62,6 +62,14 @@
             &.people {
                 background: url('assets/images/backgrounds/bg-wikia-people.png') no-repeat;
             }
+            &.explore-sansinukob {
+                background: url('assets/images/backgrounds/bg-explore-sansinukob.png') no-repeat;
+                background-size: cover;
+            }
+            &.start-test {
+                background: url('assets/images/backgrounds/bg-test.png') no-repeat;
+                background-size: cover;
+            }
             &:nth-child(2n) {
                 margin-right: 0;
             }
@@ -236,7 +244,7 @@
             align-content: center;
             align-items: center;
 
-            >div {
+            >a {
                 background: rgba(0, 0, 0, .6);
                 border: solid 5px #000;
                 text-transform: uppercase;
@@ -415,10 +423,10 @@
                         background-color: #685735;
 
                         &:before {
-                            background: url('assets/images/common/tribe-banner-top-trade.png') left top;
+                            background: url('assets/images/common/tribe-banner-top-trade.png') left top repeat-x;
                         }
                         &:after {
-                            background: url('assets/images/common/tribe-banner-bottom-trade.png') left bottom;
+                            background: url('assets/images/common/tribe-banner-bottom-trade.png') left bottom repeat-x;
                             background-size: contain;
                         }
                     }
@@ -429,10 +437,10 @@
                         background-color: #21944d;
 
                         &:before {
-                            background: url('assets/images/common/tribe-banner-top-forest.png') left top;
+                            background: url('assets/images/common/tribe-banner-top-forest.png') left top repeat-x;
                         }
                         &:after {
-                            background: url('assets/images/common/tribe-banner-bottom-forest.png') left bottom;
+                            background: url('assets/images/common/tribe-banner-bottom-forest.png') left bottom repeat-x;
                             background-size: contain;
                         }
                     }
@@ -443,10 +451,10 @@
                         background-color: #732c91;
 
                         &:before {
-                            background: url('assets/images/common/tribe-banner-top-fishing.png') left top;
+                            background: url('assets/images/common/tribe-banner-top-fishing.png') left top repeat-x;
                         }
                         &:after {
-                            background: url('assets/images/common/tribe-banner-bottom-fishing.png') left bottom;
+                            background: url('assets/images/common/tribe-banner-bottom-fishing.png') left bottom repeat-x;
                             background-size: contain;
                         }
                     }
@@ -457,10 +465,10 @@
                         background-color: #187cc3;
 
                         &:before {
-                            background: url('assets/images/common/tribe-banner-top-farm.png') left top;
+                            background: url('assets/images/common/tribe-banner-top-farm.png') left top repeat-x;
                         }
                         &:after {
-                            background: url('assets/images/common/tribe-banner-bottom-farm.png') left bottom;
+                            background: url('assets/images/common/tribe-banner-bottom-farm.png') left bottom repeat-x;
                             background-size: contain;
                         }
                     }
@@ -471,10 +479,10 @@
                         background-color: #d0a907;
 
                         &:before {
-                            background: url('assets/images/common/tribe-banner-top-desert.png') left top;
+                            background: url('assets/images/common/tribe-banner-top-desert.png') left top repeat-x;
                         }
                         &:after {
-                            background: url('assets/images/common/tribe-banner-bottom-desert.png') left bottom;
+                            background: url('assets/images/common/tribe-banner-bottom-desert.png') left bottom repeat-x;
                             background-size: contain;
                         }
                     }
@@ -496,7 +504,7 @@
                     background-image: url("assets/images/backgrounds/bg-banner-texture.png");
                     background-blend-mode: multiply;
                     padding: 30px 15px 50px;
-                    height: 300px;
+                    min-height: 300px;
 
                     &:before {
                         content: '';

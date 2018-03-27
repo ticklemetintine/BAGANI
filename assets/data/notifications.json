@@ -1,0 +1,11 @@
+{
+	"notifications": [
+		{
+			"type": "challenge",
+			"message": "Babaylan has a new challenge for you! First five words of the question..."
+		}, {
+			"type": "announcement",
+			"message": "Announcement: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
+		}
+	]
+}

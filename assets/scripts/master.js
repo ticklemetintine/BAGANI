@@ -1,4 +1,15 @@
+var params = {
+    categoryID: 'baganiCommenting',
+    streamID: '',
+    version: 2,
+    containerID: 'commentsDiv',
+    cid: '',
+    enabledShareProviders: 'facebook'
+}
+gigya.comments.showCommentsUI(params);
+
 $(document).ready(function(e) {
+    alamatHeight();
 
     $('img[usemap]').rwdImageMaps();
 
@@ -20,14 +31,16 @@ $(document).ready(function(e) {
         $("#tourSlide").slick('slickNext');
     });
 
+    // ALAMAT SECTION BACKGROUND CHANGE
     $(".alamat .content").on("afterChange", function() {
         var bg = $('.slick-active .alamat-background').val();
         $('.alamat').css({
-            'background': 'url('+bg+') top center no-repeat fixed',
+            'background': 'url(' + bg + ') top center no-repeat fixed',
             'background-size': 'cover'
         });
     });
 
+    //HEADER MENU
     $(document).on('click', 'header .menu-container .burger-menu', function(event) {
         event.preventDefault();
         var burgerMenu = $('header .menu-container').clone();
@@ -44,12 +57,16 @@ $(document).ready(function(e) {
         $('.menu-expanded').fadeOut('fast');
 
         $('.menu-expanded > .container .menu-container').remove();
+        $('.menu-expanded .main-menu .sansinukob .sub').slideToggle();
+        $('.menu-expanded .main-menu .sansinukob').toggleClass('expanded');
     });
 
     $(document).on('click', '.menu-expanded .main-menu .sansinukob a ', function(event) {
         $('.menu-expanded .main-menu .sansinukob .sub').slideToggle();
         $('.menu-expanded .main-menu .sansinukob').toggleClass('expanded');
     });
+
+    //MAP POP-UP
 
     $(document).on('click', '.focus img', function(event) {
         $('body').css('overflow', 'hidden');
@@ -61,16 +78,20 @@ $(document).ready(function(e) {
     //Widget buttons
     $(document).on('click', '.widget-btn', function(event) {
         event.preventDefault();
+        console.log("ye==");
         var widgetTarget = $(this).data("target");
         $(widgetTarget).toggleClass('show');
+        $(widgetTarget).fadeIn(200);
+        $('body').toggleClass('lightbox-open');
     });
-    
+
     //Sidebar close
     $(document).on('click', '.sidebar-header .close-sidebar', function(event) {
         event.preventDefault();
         $(this).parent().parent().removeClass('show');
+        $('body').removeClass("lightbox-open");
     });
-    
+
     //Lightbox close button
     $(document).on('click', '.lightbox .btn-close', function(e) {
         $(this).closest('.lightbox').fadeOut();
@@ -87,7 +108,51 @@ $(document).ready(function(e) {
         $(this).toggleClass('active');
         $(".chat-convo").removeClass('active');
         $(tabTarget).toggleClass('active');
-        console.log(tabTarget);
+        if (tabTarget == "#globalChat") {
+            $(".sidebar-chat .sidebar-header").addClass("sansinukob-theme");
+        } else {
+            $(".sidebar-chat .sidebar-header").removeClass("sansinukob-theme");
+        }
     });
 
+    //Collapsible
+    var allCollapsible = $('.collapsible-item .collapsible-content');
+    $(document).on('click', '.collapsible-wrapper .collapsible-item', function(e) {
+        if ($(this).hasClass('show')) {
+            $(this).find("li .collapsible-content").slideUp(350);
+            $(this).toggleClass('show');
+        } else {
+            allCollapsible.slideUp();
+            $(this).find("li .collapsible-content").slideDown(350);
+            $(this).toggleClass('show');
+        }
+        return false;
+    });
+
+    //PAGUURI QUESTIONS NEXT
+
+    $(document).on('click', 'app-paguuri-questions .btn-next', function(event) {
+        event.preventDefault();
+        $("#paguuri-questions").slick('slickNext');
+    });
+
+    window.addEventListener("orientationchange", function() {
+        alamatHeight();
+    }, false);
+
+    $(document).on('scroll', "body *", function() {
+        console.log('hello');
+    });
 });
+
+
+//ANG ALAMAT SLIDE HEIGHT
+function alamatHeight(event) {
+    var maxHeight = 0;
+    $('.alamat .slide').each(function() {
+        if ($(this).find('div:last-child').height() > maxHeight) {
+            maxHeight = $(this).find('div:last-child').height();
+        }
+    });
+    $('.alamat .slide div:last-child').css('height', maxHeight + 'px');
+}

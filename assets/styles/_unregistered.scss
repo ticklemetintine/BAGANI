@@ -1,4 +1,5 @@
-app-unregistered {
+app-unregistered,
+app-dashboard {
     background-color: #0d2f40;
     display: block;
 
@@ -272,7 +273,20 @@ app-unregistered {
 
                 .slick-track {
                     display: flex;
-                    align-items: flex-end;
+                    align-items: stretch;
+
+                    .slide {
+                        word-break: break-word;
+
+                        div:last-child {
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: nowrap;
+                            justify-content: flex-end;
+                            align-content: stretch;
+                            align-items: flex-start;
+                        }
+                    }
                 }
             }
         }
@@ -502,7 +516,7 @@ app-unregistered {
                                 background-image: url("assets/images/backgrounds/bg-banner-texture.png");
                                 background-blend-mode: multiply;
                                 padding: 30px 15px 50px;
-                                height: 300px;
+                                min-height: 300px;
 
                                 &:before {
                                     content: '';
@@ -575,7 +589,8 @@ app-unregistered {
                         }
                         .slick-list {
                             padding-top: 20px;
-                            padding-bottom: 40px;                        }
+                            padding-bottom: 30px;
+                        }
                         .slide {
                             position: relative;
                             img {
@@ -668,6 +683,32 @@ app-unregistered {
     .termsModal {
         z-index: 9999999999;
         .modal-content {
+
+            .name {
+                position: absolute;
+                top: -28px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                text-align: center;
+                background: #333;
+                display: block;
+                background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+                background-size: contain;
+                padding: 15px 0 30px;
+                width: 100%;
+                p {
+                    text-align: center;
+                    margin: 0;
+                    color: #d9c8b6;
+                }
+            }
+            .image {
+                img {
+                    max-width: 100%;
+                    display: block;
+                }
+            }
             .desc {
                 color: #010100;
                 padding: 50px;
@@ -676,11 +717,12 @@ app-unregistered {
                 text-align: center;
 
                 .img {
-                    margin: -105px 0 40px;
+                    margin: -120px 0 40px;
                     img {
                         display: block;
                         margin: auto auto;
                         max-width: 100%;
+                        width: 100%;
                     }
                 }
 
@@ -692,6 +734,11 @@ app-unregistered {
                 .button {
                     text-align: center;
                     margin-top: 60px;
+
+                    .btn {
+                        font-size: 1.5em;
+                        padding: 40px;
+                    }
                 }
             }
         }
@@ -737,6 +784,19 @@ app-unregistered {
                         color: #010100;
                         line-height: 1.5;
                         font-family: 'Lato', sans-serif;
+                    }
+                    .share {
+                        display: flex;
+                        align-items: center;
+
+                        ul {
+                            padding-left: 10px;
+                            li {
+                                list-style: none;
+                                display: inline;
+                                margin-right: 5px;
+                            }
+                        }
                     }
                 }
             }

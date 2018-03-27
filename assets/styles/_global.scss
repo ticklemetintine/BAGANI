@@ -217,6 +217,7 @@ footer {
                 a {
                     color: #d9c8b6;
                     text-decoration: none;
+                    cursor: pointer;
                 }
             }
         }
@@ -249,13 +250,12 @@ input {
 
 .form-group {
     margin-bottom: 20px;
+}
 
-    .error {
-        font-size: 0.875em;
-        color: #b70f17;
-        text-align: left;
-        font-family: "Lato", sans-serif;
-    }
+.error {
+    font-size: 0.875em;
+    color: #b70f17;
+    font-family: "Lato", sans-serif;
 }
 
 .gradient-separator {
@@ -336,6 +336,7 @@ input {
     max-width: 100%;
     overflow: hidden;
     left: 0;
+    right: 0;
     top: 0;
     z-index: 0;
 
@@ -418,5 +419,65 @@ input {
         display: block;
         min-width: 100%;
         min-height: 100vh;
+    }
+}
+
+.privacyModal,
+.termsModal {
+    z-index: 9999999999;
+    .modal-content {
+
+        .name {
+            position: absolute;
+            top: -28px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            background: #333;
+            display: block;
+            background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+            background-size: contain;
+            padding: 15px 0 30px;
+            width: 100%;
+            p {
+                text-align: center;
+                margin: 0;
+                color: #d9c8b6;
+            }
+        }
+        .image {
+            img {
+                max-width: 100%;
+                display: block;
+            }
+        }
+        .desc {
+            color: #010100;
+            padding: 50px;
+            line-height: 1.5;
+            background: #d9c8b6;
+            text-align: center;
+
+            .img {
+                margin: -105px 0 40px;
+                img {
+                    display: block;
+                    margin: auto auto;
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+
+            p {
+                margin-top: 0;
+                font-size: 1.5em;
+                text-align: center;
+            }
+            .button {
+                text-align: center;
+                margin-top: 60px;
+            }
+        }
     }
 }

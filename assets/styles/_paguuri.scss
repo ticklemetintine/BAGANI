@@ -344,7 +344,8 @@ app-paguuri-questions {
                                 }
 
 
-                                &:hover {
+                                &:hover,
+                                &.active {
                                     &:before {
                                         content: '';
                                         background-color: rgba(44, 22, 3, .7);
@@ -366,16 +367,15 @@ app-paguuri-questions {
                                         left: 3px;
                                     }
                                     a {
-                                        &:hover {
-                                            background-color: rgba(44, 22, 3, .7);
-                                            border-color: #492705;
-                                        }
+                                        background-color: rgba(44, 22, 3, .7);
+                                        border-color: #492705;
                                     }
                                 }
                             }
                         }
                     }
                     .slick-dots {
+                        background: url('assets/images/backgrounds/bg-pagination.png') no-repeat;
                         li {
                             margin: 13px 10px;
                             &:after {
