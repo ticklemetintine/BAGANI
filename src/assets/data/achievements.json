@@ -1,0 +1,39 @@
+{
+	"achievements": [
+		{
+			"id": 1,
+			"title": "citizen",
+			"status": "gold"
+		},
+		{
+			"id": 2,
+			"title": "communicator",
+			"status": "silver"
+		},
+		{
+			"id": 3,
+			"title": "journeyman",
+			"status": "copper"
+		},
+		{
+			"id": 4,
+			"title": "sage",
+			"status": "unearned"
+		},
+		{
+			"id": 5,
+			"title": "name of badge",
+			"status": "bronze"
+		},
+		{
+			"id": 6,
+			"title": "name of badge",
+			"status": "unearned"
+		},
+		{
+			"id": 7,
+			"title": "name of badge",
+			"status": "unearned"
+		},
+	]
+}

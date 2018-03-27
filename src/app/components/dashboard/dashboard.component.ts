@@ -6,6 +6,7 @@ import { ArticlesService } from '../../services/articles.service';
 import { RecapService } from '../../services/recap.service';
 import { UserService } from '../../services/user.service';
 import { NotificationsService } from '../../services/notifications.service';
+import { AchievementsService } from '../../services/achievements.service';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -23,6 +24,7 @@ export class DashboardComponent implements OnInit {
     articles = [];
     userDetails: any = [];
     notifications: any = [];
+    achievements: any = [];
     videoRecap: SafeResourceUrl;
     videoRecapDetails: string;
 
@@ -34,6 +36,7 @@ export class DashboardComponent implements OnInit {
         private _getRecapService: RecapService,
         private _getUserService: UserService,
         private _getNotificationsService: NotificationsService,
+        private _getAchievementsService: AchievementsService,
         private sanitizer: DomSanitizer
     ) {}
 
@@ -45,6 +48,7 @@ export class DashboardComponent implements OnInit {
         this.GetRecap();
         this.getUserDetails();
         this.getNotifications();
+        this.getAchievements();
     }
 
 
@@ -147,9 +151,7 @@ export class DashboardComponent implements OnInit {
     GetRecap() {
         this._getRecapService.GetRecap().subscribe(
             (data) => {
-                // this.videoRecap = data.recap.videoUrl;
                 this.videoRecap = this.sanitizer.bypassSecurityTrustResourceUrl(data.recap.videoUrl);
-
                 this.videoRecapDetails = data.recap.content;
             }
         );
@@ -161,5 +163,11 @@ export class DashboardComponent implements OnInit {
             }
         );
     }
-
+    getAchievements() {
+        this._getAchievementsService.GetAchievements().subscribe(
+            (data) => {
+                this.notifications = data.notifications;
+            }
+        );
+    }
 }
