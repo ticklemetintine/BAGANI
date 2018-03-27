@@ -23,10 +23,10 @@ import { ChallengeQuestionService } from '../../services/challenge-question.serv
 export class ChallengesComponent implements OnInit {
 
 	userDetails: any = [];
-  showModalChallengeAnswer:boolean = false;
+  showModalChallengeAnswer = false;
   challengeQuestion: any = [];
   selectedAnswerData: any = [];
-  status:string;
+  status: string;
 
   constructor(
     private _getUserService: UserService,
