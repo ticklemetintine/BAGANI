@@ -49,6 +49,7 @@ export class ChallengesComponent implements OnInit {
     this._getChallengeService.GetQuestion().subscribe(
             (data) => {
                 this.challengeQuestion = data.challengeQuestion;
+                console.log(data.challengeQuestion);
             }
         );
   }

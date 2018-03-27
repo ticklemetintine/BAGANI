@@ -48,6 +48,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoadingModule } from 'ngx-loading';
 import { NotificationsService } from './services/notifications.service';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { AchievementsService } from './services/achievements.service';
 
 @NgModule({
   declarations: [
@@ -123,7 +124,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     QuestionsService,
     UserService,
     ChallengeQuestionService,
-    NotificationsService
+    NotificationsService,
+    AchievementsService
   ],
   bootstrap: [AppComponent]
 })

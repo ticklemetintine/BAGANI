@@ -12,6 +12,7 @@ app-dashboard {
     .notifications {
         position: relative;
         z-index: 2;
+        padding-bottom: 20px;
 
         .notification {
             background: rgba(29, 24, 20, .8);

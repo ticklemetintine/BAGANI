@@ -139,6 +139,10 @@ $(document).ready(function(e) {
     window.addEventListener("orientationchange", function() {
         alamatHeight();
     }, false);
+
+    $(document).on('scroll', "body *", function() {
+        console.log('hello');
+    });
 });
 
 

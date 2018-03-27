@@ -14,130 +14,32 @@
         <div class="container">
             <div class="notification {{notification.type}}" *ngFor="let notification of notifications">
                 <p>{{notification.message}}</p>
-                <a href="#" class="btn btn-view" *ngIf="notification.type == 'challenge'">View</a>
-                <a href="#" class="btn btn-ok" *ngIf="notification.type == 'announcement'">Ok</a>
+                <a routerLink="/challenges" class="btn btn-view" *ngIf="notification.type == 'challenge'">View</a>
+                <a class="btn btn-ok" *ngIf="notification.type == 'announcement'">Ok</a>
             </div>
         </div>
     </section>
-    <div class="achievements">
+    <section class="achievements" *ngIf="achievements.length > 0">
         <div class="container">
             <div class="title">
                 <p>Achievements</p>
             </div>
-            <div class="badges">
-                <div class="badge-item">
-                    <span class="badge badge-full badge-gold">
-                    <span class="badge-icons {{userDetails.tribe}}-citizen-icon"></span>
-                    <span class="plate plate-{{userDetails.tribe}}">Citizen</span>
+            <div class="grid grid-7 icons-grid achievements-grid badges">
+                <div class="grid-cell" *ngFor="let achievement of achievements">
+                    <span class="badge badge-full badge-{{achievement.status}}" *ngIf="achievement.status != 'unearned'">
+                        <span class="badge-icons {{userDetails.tribe}}-{{achievement.title}}-icon" *ngIf="achievement.title == 'citizen'"></span>
+                        <span class="badge-icons {{achievement.title}}-icon" *ngIf="achievement.title != 'citizen'"></span>
+                        <span class="plate plate-{{userDetails.tribe}}">{{achievement.title}}</span>
                     </span>
-                </div>
-                <div class="badge-item">
-                    <span class="badge badge-full badge-silver">
-                    <span class="badge-icons communicator-icon"></span>
-                    <span class="plate plate-{{userDetails.tribe}}">Communicator</span>
+                    <span class="badge badge-full badge-{{achievement.status}}" *ngIf="achievement.status == 'unearned'">
+                        <span class="badge-icons {{userDetails.tribe}}-{{achievement.title}}-icon-gray" *ngIf="achievement.title == 'citizen'"></span>
+                        <span class="badge-icons {{achievement.title}}-icon-gray" *ngIf="achievement.title != 'citizen'"></span>
+                        <span class="plate plate-{{userDetails.tribe}}">{{achievement.title}}</span>
                     </span>
-                </div>
-                <div class="badge-item">
-                    <span class="badge badge-full badge-copper">
-                    <span class="badge-icons journeyman-icon"></span>
-                    <span class="plate plate-{{userDetails.tribe}}">Journeyman</span>
-                    </span> 
-                </div>
-                <div class="badge-item">
-                    <span class="badge badge-full badge-unearned">
-                    <span class="badge-icons sage-icon-gray"></span>
-                    <span class="plate plate-{{userDetails.tribe}}">Sage</span>
-                    </span>
-                </div>
-                <div class="badge-item">
-                    <span class="badge badge-full badge-bronze">
-                    <span class="badge-icons {{userDetails.tribe}}-citizen-icon"></span>
-                    <span class="plate plate-{{userDetails.tribe}}">Name of Badge</span>
-                    </span>
-                </div>
-                <div class="badge-item">
-                    <span class="badge badge-full badge-unearned">
-                    <span class="badge-icons {{userDetails.tribe}}-citizen-icon-gray"></span>
-                    <span class="plate plate-{{userDetails.tribe}}">Name of Badge</span>
-                    </span>
-                </div>
-                <div class="badge-item">
-                    <span class="badge badge-full badge-unearned">
-                    <span class="badge-icons {{userDetails.tribe}}-citizen-icon-gray"></span>
-                    <span class="plate plate-{{userDetails.tribe}}">Name of Badge</span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Badges Full -->
-    <section>
-        <div class="container">
-            <div class="title">
-                <p>Achievements</p>
-            </div>
-            <div class="grid grid-7 icons-grid achievements-grid">
-                <div class="grid-cell">
-                    <span class="badge badge-full badge-copper">
-                        <span class="badge-icons farming-citizen-icon"></span>
-                        <span class="plate plate-desert">CITIZEN</span>
-                    </span>
-                </div>
-                <div class="grid-cell">
-                    <div>
-                        <span class="badge badge-full badge-bronze">
-                            <span class="badge-icons fishing-citizen-icon"></span>
-                            <span class="plate plate-2 plate-forest">LONG FORM NAME OF BADGE</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div>
-                        <span class="badge badge-full badge-silver">
-                            <span class="badge-icons forest-citizen-icon"></span>
-                            <span class="plate plate-trade">Name of Badge</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div>
-                        <span class="badge badge-full badge-gold">
-                            <span class="badge-icons desert-citizen-icon"></span>
-                            <span class="plate plate-fishing">Name of Badge</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div>
-                        <span class="badge badge-full badge-unearned">
-                            <span class="badge-icons trade-citizen-icon-gray"></span>
-                            <span class="plate plate-farming">Name of Badge</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div>
-                        <span class="badge badge-full badge-unearned">
-                            <span class="badge-icons trade-citizen-icon-gray"></span>
-                            <span class="plate plate-farming">Name of Badge</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div>
-                        <span class="badge badge-full badge-unearned">
-                            <span class="badge-icons trade-citizen-icon-gray"></span>
-                            <span class="plate plate-farming">Name of Badge</span>
-                        </span>
-                    </div>
                 </div>
             </div> 
         </div>
     </section>
-    <!-- /Badges Full -->
-
     <section class="topics">
         <div class="container">
             <div class="row">
