@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {RouterModule, Routes, PreloadAllModules} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -45,7 +45,6 @@ import { InnerFarmComponent } from './components/wikia-inner/inner-farm/inner-fa
 import { ChallengesComponent } from './components/challenges/challenges.component';
 import { ChallengeQuestionService } from './services/challenge-question.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { LoadingModule } from 'ngx-loading';
 import { NotificationsService } from './services/notifications.service';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { AchievementsService } from './services/achievements.service';
@@ -106,7 +105,7 @@ import { AchievementsService } from './services/achievements.service';
       { path: 'wikia/inner/fishing', component: InnerFishingComponent, pathMatch: 'full'},
       { path: 'wikia/inner/farm', component: InnerFarmComponent, pathMatch: 'full'},
       { path: 'challenges', component: ChallengesComponent, pathMatch: 'full'},
-    ]),
+    ], { preloadingStrategy: PreloadAllModules }),
     TransferHttpCacheModule,
     HttpClientModule,
     SlickModule,

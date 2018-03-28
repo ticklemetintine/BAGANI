@@ -6,6 +6,7 @@ import { Router, NavigationEnd } from '@angular/router';
 	templateUrl: './app.component.html',
 })
 export class AppComponent {
+	loading:string = "loading";
 
 	constructor(
 		private router: Router,
@@ -19,5 +20,12 @@ export class AppComponent {
 			}
 			window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
 		});
+	}
+	ngAfterContentInit() {
+	    setTimeout(() => {
+	    	this.loading = "loaded";
+			console.log(this.loading);
+	        
+	    }, 1000);
 	}
 }

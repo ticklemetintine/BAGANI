@@ -45,7 +45,8 @@ export class InnerForestComponent implements OnInit {
                     'slidesToShow': 1,
                     'slidesToScroll': 1,
                     'centerMode': true,
-                    'infinite': true
+                    'infinite': true,
+                    'centerPadding': '20px'
                 }
             }
         ]

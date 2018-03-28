@@ -370,4 +370,25 @@
             }
         }
     }
+
+    app-challenges {
+        .paguuri-container {
+            .welcome {
+                width: 90%;
+
+                .writeup {
+                    .content {
+                        .question {
+                            width: 85%;
+                        }
+                        .hint-container {
+                            .hint {
+                                width: percentage(315px/570px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
