@@ -119,8 +119,9 @@ $(document).ready(function(e) {
     var allCollapsible = $('.collapsible-item .collapsible-content');
     $(document).on('click', '.collapsible-wrapper .collapsible-item', function(e) {
         if ($(this).hasClass('show')) {
+            //allCollapsible.slideUp();
             $(this).find("li .collapsible-content").slideUp(350);
-            $(this).toggleClass('show');
+            $(this).removeClass('show');
         } else {
             allCollapsible.slideUp();
             $(this).find("li .collapsible-content").slideDown(350);

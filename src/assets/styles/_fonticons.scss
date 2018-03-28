@@ -90,11 +90,11 @@ $y) {
     background-repeat: no-repeat;
     width: 75px;
     height: 75px;
-    &.journeyman-icon-gray {
+    &.journeyman-icon-gray, &.adventurer-icon-gray {
         background-position: 0 0;
     }
 
-    &.journeyman-icon {
+    &.journeyman-icon, &.adventurer-icon {
         background-position: -75px 0;
     }
 
