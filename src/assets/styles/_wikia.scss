@@ -551,3 +551,64 @@
         }
     }
 }
+
+app-wikia-table-of-contents {
+    .openTableOfContents {
+        position: fixed;
+        bottom: 40px;
+        z-index: 3;
+        left: 40px;
+    }
+
+    .table-of-contents {
+        background: #000;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        top: 0;
+        left: 0;
+        position: absolute;
+        max-height: 100%;
+        overflow-y: scroll;
+        opacity: 0;
+        transition: all ease 0.5s;
+
+        &.show {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .title {
+            font-size: 1.5em;
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+        .menu {
+            margin-top: -50px;
+        }
+        ul {
+            padding: 0;
+            margin-bottom: 40px;
+            li {
+                list-style-type: none;
+                margin-bottom: 10px;
+
+                &.active {
+                    a {
+                        color: #da9c2a;
+                    }
+                }
+
+                a {
+                    color: #d9c8b6;
+
+                    &:hover {
+                        color: #da9c2a;
+                    }
+                }
+            }
+        }
+    }
+}

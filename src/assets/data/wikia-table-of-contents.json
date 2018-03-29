@@ -1,0 +1,69 @@
+{
+	"wikiaMenu": [
+		{
+			"title": "stories",
+			"subMenu": [
+				{
+					"title": "Chapter 01: Lorem Ipsum Dolor Sit Amet Consectetur",
+					"slug": "chapter-01"
+				},
+				{
+					"title": "Chapter 02: Lorem Ipsum Dolor Sit ",
+					"slug": "chapter-02"
+				},
+				{
+					"title": "Chapter 03: Lorem Ipsum Dolor Sit Amet",
+					"slug": "chapter-03"
+				}
+			]
+		}, {
+			"title": "history",
+			"subMenu": [
+				{
+					"title": "The Beginning",
+					"slug": "beginning"
+				},
+				{
+					"title": "The Middle",
+					"slug": "middle"
+				},
+				{
+					"title": "The End",
+					"slug": "end"
+				}
+			]
+		}, {
+			"title": "culture",
+			"subMenu": [
+				{
+					"title": "Clothing and Weapons",
+					"slug": "clothing-and-weapons"
+				},
+				{
+					"title": "Religion",
+					"slug": "religion"
+				},
+				{
+					"title": "Food and Flavors",
+					"slug": "food-and-flavors"
+				}
+			]
+		}, {
+			"title": "people",
+			"subMenu": [
+				{
+					"title": "Lakas",
+					"slug": "lakas"
+				},
+				{
+					"title": "Ganda",
+					"slug": "ganda"
+				},
+				{
+					"title": "Babaylan",
+					"slug": "Babaylan"
+				}
+			]
+		}
+	]
+}

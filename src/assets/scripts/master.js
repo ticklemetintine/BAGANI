@@ -50,6 +50,13 @@ $(document).ready(function(e) {
 
         $('.menu-expanded > .container').prepend(burgerMenu);
     });
+    
+    // WIKIA MENU
+    $(document).on('click', '.openTableOfContents', function(event) {
+        event.preventDefault();
+
+        $('body').toggleClass('menu-opened');
+    });
 
     $(document).on('click', '.menu-expanded .menu-container .burger-menu, .menu-expanded li:not(.sansinukob) > a', function(event) {
         event.preventDefault();

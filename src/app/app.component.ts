@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import {Http} from '@angular/http';
+import {Subscription} from 'rxjs';
 
 @Component({
 	selector: 'app-root',
@@ -10,7 +12,6 @@ export class AppComponent {
 
 	constructor(
 		private router: Router,
-
 	) { }
 
 	ngOnInit() {

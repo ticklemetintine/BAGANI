@@ -48,6 +48,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NotificationsService } from './services/notifications.service';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { AchievementsService } from './services/achievements.service';
+import { WikiaTableOfContentsComponent } from './components/wikia-table-of-contents/wikia-table-of-contents.component';
+import { WikiaTableOfContentsService } from './services/wikia-table-of-contents.service';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,8 @@ import { AchievementsService } from './services/achievements.service';
     InnerFarmComponent,
     ChallengesComponent,
     DashboardComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    WikiaTableOfContentsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -102,6 +105,7 @@ import { AchievementsService } from './services/achievements.service';
       { path: 'wikia/inner/forest', component: InnerForestComponent, pathMatch: 'full'},
       { path: 'wikia/inner/desert', component: InnerDesertComponent, pathMatch: 'full'},
       { path: 'wikia/inner/trade', component: InnerTradeComponent, pathMatch: 'full'},
+      { path: 'wikia/inner/trade/:id', component: InnerTradeComponent, pathMatch: 'full'},
       { path: 'wikia/inner/fishing', component: InnerFishingComponent, pathMatch: 'full'},
       { path: 'wikia/inner/farm', component: InnerFarmComponent, pathMatch: 'full'},
       { path: 'challenges', component: ChallengesComponent, pathMatch: 'full'},
@@ -124,7 +128,8 @@ import { AchievementsService } from './services/achievements.service';
     UserService,
     ChallengeQuestionService,
     NotificationsService,
-    AchievementsService
+    AchievementsService,
+    WikiaTableOfContentsService
   ],
   bootstrap: [AppComponent]
 })
