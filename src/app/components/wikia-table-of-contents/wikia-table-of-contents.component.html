@@ -1,7 +1,7 @@
 <a (click)="openTableOfContents()" class="openTableOfContents" *ngIf="!showTableOfContents"><img src="assets/images/badges/badge-table-of-contents.png" alt=""></a>
 <a (click)="closeTableOfContents()" class="openTableOfContents" *ngIf="showTableOfContents"><img src="assets/images/badges/badge-close.png" alt=""></a>
 <section class="table-of-contents" [class.show]="showTableOfContents" fadeInOut>
-    <div class="banner">
+    <div class="banner" *ngIf="userDetails.tribe">
         <img src="assets/images/common/banner-{{userDetails.tribe}}.png" alt="">
     </div>
     <div class="menu">

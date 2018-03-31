@@ -4,13 +4,12 @@
     }
 
     app-header {
-        padding-bottom: 165px;
+        padding-bottom: 10px;
         display: block;
     }
     header {
         background-size: auto 70px !important;
         margin-bottom: 65px;
-        position: fixed;
         width: 100%;
 
         &.no-menu {
@@ -19,6 +18,9 @@
                     margin-top: 7px;
                 }
             }
+        }
+        &.stickyBorder:before {
+            background-size: 50px 50px;
         }
         .container {
             padding: 0 50px;

@@ -4,6 +4,7 @@ import {RouterModule, Routes, PreloadAllModules} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { CountdownModule } from 'ngx-countdown';
 
 import { AppComponent } from './app.component';
 import { UnregisteredComponent } from './components/unregistered/unregistered.component';
@@ -50,6 +51,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { AchievementsService } from './services/achievements.service';
 import { WikiaTableOfContentsComponent } from './components/wikia-table-of-contents/wikia-table-of-contents.component';
 import { WikiaTableOfContentsService } from './services/wikia-table-of-contents.service';
+import { JournalService } from './services/journal.service';
 
 @NgModule({
   declarations: [
@@ -114,7 +116,8 @@ import { WikiaTableOfContentsService } from './services/wikia-table-of-contents.
     HttpClientModule,
     SlickModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    CountdownModule
   ],
   providers: [
     MapsService,
@@ -129,7 +132,8 @@ import { WikiaTableOfContentsService } from './services/wikia-table-of-contents.
     ChallengeQuestionService,
     NotificationsService,
     AchievementsService,
-    WikiaTableOfContentsService
+    WikiaTableOfContentsService,
+    JournalService
   ],
   bootstrap: [AppComponent]
 })
