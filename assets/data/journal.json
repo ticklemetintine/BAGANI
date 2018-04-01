@@ -1,0 +1,68 @@
+{	
+	"journalHeading": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore illo deserunt eligendi nobis velit, optio animi accusamus? Dicta rem neque quae ut necessitatibus, sunt, similique minus accusantium, ad incidunt voluptates.",
+    "journal": [
+    {
+        "title": "Be a citizen of Sansinukob",
+        "desc": "Lorem ipsum dolor sit amet.",
+        "link": "#",
+        "startDateTime": "2018-04-01T03:06:00",
+        "endDateTime": "2018-04-05T10:00:00",
+        "challenges": [
+        {
+            "title": "Registration/Login of Kapamilya account",
+            "link": "#",
+            "status": "done"
+        },
+        {
+            "title": "Finish the tribe sorting questions",
+            "link": "#",
+            "status": "done"
+        },
+        {
+            "title": "Finish Babaylan’s tour",
+            "link": "#",
+            "status": "undone"
+        }]
+    },
+    {
+        "title": "Lorem Ipsum",
+        "desc": "Lorem ipsum dolor sit amet.",
+        "link": "#",
+        "startDateTime": "2018-04-01T03:06:00",
+        "endDateTime": "2018-04-01T10:00:00",
+        "challenges": []
+    },
+    {
+        "title": "Dolorem esse consectetur suscipit distinctio.",
+        "desc": "",
+        "link": "#",
+        "startDateTime": "2018-04-01T03:06:00",
+        "endDateTime": "2018-04-05T10:00:00",
+        "challenges": [
+        {
+            "title": "Registration/Login of Kapamilya account",
+            "link": "#",
+            "status": "done"
+        },
+        {
+            "title": "Finish the tribe sorting questions",
+            "link": "#",
+            "status": "done"
+        },
+        {
+            "title": "Finish Babaylan’s tour",
+            "link": "#",
+            "status": "undone"
+        },
+        {
+            "title": "Finish the tribe sorting questions",
+            "link": "#",
+            "status": "done"
+        },
+        {
+            "title": "Finish Babaylan’s tour",
+            "link": "#",
+            "status": "undone"
+        }]
+    }]
+}

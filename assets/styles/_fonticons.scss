@@ -90,11 +90,11 @@ $y) {
     background-repeat: no-repeat;
     width: 75px;
     height: 75px;
-    &.journeyman-icon-gray {
+    &.journeyman-icon-gray, &.adventurer-icon-gray {
         background-position: 0 0;
     }
 
-    &.journeyman-icon {
+    &.journeyman-icon, &.adventurer-icon {
         background-position: -75px 0;
     }
 
@@ -441,19 +441,19 @@ $y) {
         }
 
         &.sage-icon-gray {
-            background-position: -940px 0;
+            background-position: -960px 0;
         }
 
         &.sage-icon {
-            background-position: -980px 0;
+            background-position: -1000px 0;
         }
 
         &.sansinukob-scholar-icon-gray {
-            background-position: -1020px 0;
+            background-position: -1040px 0;
         }
 
         &.sansinukob-scholar-icon {
-            background-position: -1060px 0;
+            background-position: -1080px 0;
         }
 
         &.trade-citizen-icon-gray {

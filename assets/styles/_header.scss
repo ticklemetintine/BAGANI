@@ -1,307 +1,110 @@
-header {
-    z-index: 1;
-    position: relative;
-   
-    &.desert {
-        background: url('assets/images/backgrounds/bg-header-desert.png') no-repeat;
-    }
-    &.farm {
-        background: url('assets/images/backgrounds/bg-header-farm.png') no-repeat;
-    }
-    &.trade {
-        background: url('assets/images/backgrounds/bg-header-trade.png') no-repeat;
-    }
-    &.fishing {
-        background: url('assets/images/backgrounds/bg-header-fishing.png') no-repeat;
-    }
-    &.forest {
-        background: url('assets/images/backgrounds/bg-header-forest.png') no-repeat;
-    }
-
-    &.no-menu {
-        .container {
-            .menu-container {
-                .burger-menu {
-                    display: none;
-                }
-            }
-            .logo-container {
-                .logo {
-                    margin-top: auto;
-                }
-                img {
-                    margin-top: 0;
-                }
-            }
-        }
-    }
-
-    .container {
-        background: url('assets/images/borders/border-header-left.png') no-repeat, url('assets/images/borders/border-header-right.png') no-repeat;
-        background-position: left top, right top;
-        background-size: contain, contain;
-        max-width: 100%;
-        padding: 0 80px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-content: center;
-        align-items: flex-start;
-
-        >div {
-            width: 25%;
-        }
-
-        .menu-container {
-            .burger-menu {
-                background: url('assets/images/backgrounds/bg-burger-menu.png') no-repeat;
-                width: 90px;
-                height: 150px;
-                display: block;
-                margin-left: 30px;
-                cursor: pointer;
-                position: relative;
-
-                &:hover {
-                    background-position: -90px 0;
-                }
-                &:before {
-                    background: url('assets/images/common/icon-burger.png') no-repeat;
-                    content: '';
-                    width: 50px;
-                    height: 38px;
-                    position: absolute;
-                    top: 10px;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                }
-            }
-        }
-
-        .avatar-container {
-            background: url('assets/images/borders/border-header-top.png') top right no-repeat, url('assets/images/borders/border-header-top.png') top left no-repeat;
-            width: 50%;
-
-            .avatar {
-                display: block;
-                position: relative;
-                max-width: 140px;
-                min-height: 110px;
-                padding: 10px 20px;
-                margin: auto;
-
-                &.desert {
-                    &:before {
-                        background: url('assets/images/common/avatar-frame-desert.png') no-repeat;
-                        background-size: contain;
-                        background-position: center center;
-                    }
-                }
-                &.forest {
-                    &:before {
-                        background: url('assets/images/common/avatar-frame-forest.png') no-repeat;
-                        background-size: contain;
-                        background-position: center center;
-                    }
-                }
-                &.trade {
-                    &:before {
-                        background: url('assets/images/common/avatar-frame-trade.png') no-repeat;
-                        background-size: contain;
-                        background-position: center center;
-                    }
-                }
-                &.farm {
-                    &:before {
-                        background: url('assets/images/common/avatar-frame-farm.png') no-repeat;
-                        background-size: contain;
-                        background-position: center center;
-                    }
-                }
-                &.fishing {
-                    &:before {
-                        background: url('assets/images/common/avatar-frame-fishing.png') no-repeat;
-                        background-size: contain;
-                        background-position: center center;
-                    }
-                }
-
-                &:before {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    margin: auto;
-                    display: block;
-                }
-                img {
-                    display: block;
-                    border-radius: 100px;
-                    width: 100%;
-                    max-width: 100px;
-                    margin: auto;
-                }
-            }
-        }
-        .logo-container {
-            text-align: right;
-            align-self: center;
-            .logo {
-                max-height: 45px;
-                margin: -30px 20px auto auto;
-                max-width: 100%;
-                display: block;
-            }
-        }
-    }
-}
-
-app-header {
-    .menu-expanded {
-        display: none;
-        background: url('assets/images/backgrounds/bg-menu-expanded.png');
-        background-size: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 99;
-        text-align: center;
-        min-height: 100vh;
-        max-height: 100%;
-        overflow: auto;
-
-        >.container {
-            padding: 0 80px 40px;
-            min-height: 100vh;
+        header {
+            z-index: 4;
             position: relative;
-            max-width: 100%;
 
-            .menu-container {
-                .burger-menu {
-                    background: url('assets/images/backgrounds/bg-burger-menu.png') no-repeat;
-                    width: 90px;
-                    height: 150px;
-                    display: block;
-                    margin-left: 30px;
-                    cursor: pointer;
-                    position: relative;
-
-                    &:hover {
-                        background-position: -90px 0;
-                    }
-                    &:before {
-                        background: url('assets/images/common/icon-menu-close.png') no-repeat;
-                        content: '';
-                        width: 38px;
-                        height: 38px;
-                        position: absolute;
-                        top: 10px;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        margin: auto;
-                    }
-                }
+            &.desert {
+                background: url('assets/images/backgrounds/bg-header-desert.png') no-repeat;
             }
-        }
+            &.farm {
+                background: url('assets/images/backgrounds/bg-header-farm.png') no-repeat;
+            }
+            &.trade {
+                background: url('assets/images/backgrounds/bg-header-trade.png') no-repeat;
+            }
+            &.fishing {
+                background: url('assets/images/backgrounds/bg-header-fishing.png') no-repeat;
+            }
+            &.forest {
+                background: url('assets/images/backgrounds/bg-header-forest.png') no-repeat;
+            }
 
-        .main-menu {
-            padding: 0 0 40px;
-            min-width: 360px;
-            max-width: percentage(360px/1105px);
-            margin: auto auto;
-            >li {
-                list-style: none;
-                text-transform: uppercase;
-                padding: 5px 0 15px;
-                margin-bottom: 10px;
-                position: relative;
-
-                &.home {
-                    a {
-                        &:before {
-                            background-position: 11px 1px;
-                        }
-                    }
-                    &:hover {
-                        a {
-                            &:before {
-                                background-position: 11px -38px;
-                            }
-                        }
-                    }
-                }
-
-                &.sansinukob {
-                    >a {
-                        &:before {
-                            background-position: -42px 1px;
-                        }
-                        &:after {
-                            content: '';
-                            background: url('assets/images/common/icon-menu-sprite.png') no-repeat #000;
-                            background-position: -141px -10px;
-                            width: 15px;
-                            height: 12px;
-                            position: absolute;
-                            bottom: 25px;
-                            right: 40px;
-                        }
-                    }
-                    &:hover,
-                    &.expanded {
-                        >a {
-                            &:before {
-                                background-position: -42px -38px;
-                            }
-                            &:after {
-                                background-position: -141px -51px;
-                            }
-                        }
-                    }
-                }
-
-                &.challenges {
-                    a {
-                        position: relative;
-
-                        &:before {
-                            height: 35px;
-                            background-position: -90px 0px;
-                        }
-                    }
-                    &:hover {
-                        a {
-                            &:before {
-                                background-position: -90px -39px;
-                            }
-                        }
-                    }
-                }
-
-                &.logout {
-                    a {
-                        padding-top: 0;
-
-                        &:before {
+            &.no-menu {
+                .container {
+                    .menu-container {
+                        .burger-menu {
                             display: none;
                         }
                     }
+                    .logo-container {
+                        .logo {
+                            margin-top: auto;
+                        }
+                        img {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+
+            &.stickyBorder {
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 100px;
+                    position: fixed;
+                    top: 0;
+                    background: url('assets/images/borders/border-header-left.png') no-repeat, url('assets/images/borders/border-header-right.png') no-repeat;
+                    background-position: left top, right top;
+                    background-size: contain, contain;
+                }
+            }
+
+            .container {
+                background: url('assets/images/borders/border-header-left.png') no-repeat, url('assets/images/borders/border-header-right.png') no-repeat;
+                background-position: left top, right top;
+                background-size: contain, contain;
+                max-width: 100%;
+                padding: 0 80px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-content: center;
+                align-items: flex-start;
+
+                >div {
+                    width: 25%;
+                }
+
+                .menu-container {
+                    .burger-menu {
+                        background: url('assets/images/backgrounds/bg-burger-menu.png') no-repeat;
+                        width: 90px;
+                        height: 150px;
+                        display: block;
+                        margin-left: 30px;
+                        cursor: pointer;
+                        position: relative;
+
+                        &:hover {
+                            background-position: -90px 0;
+                        }
+                        &:before {
+                            background: url('assets/images/common/icon-burger.png') no-repeat;
+                            content: '';
+                            width: 50px;
+                            height: 38px;
+                            position: absolute;
+                            top: 10px;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                        }
+                    }
+                }
+
+                .avatar-container {
+                    background: url('assets/images/borders/border-header-top.png') top right no-repeat, url('assets/images/borders/border-header-top.png') top left no-repeat;
+                    width: 50%;
+
                     .avatar {
                         display: block;
                         position: relative;
-                        max-width: 50px;
-                        padding: 3px 10px;
+                        max-width: 140px;
+                        min-height: 110px;
+                        padding: 10px 20px;
                         margin: auto;
-                        background: #000;
 
                         &.desert {
                             &:before {
@@ -360,168 +163,378 @@ app-header {
                         }
                     }
                 }
-
-                &:before,
-                &:after {
-                    content: '';
-                    display: block;
-                    width: 100%;
-                    height: 2px;
-                }
-
-                &:before {
-                    position: absolute;
-                    top: 20px;
-                }
-
-                &:hover,
-                &.expanded {
-                    &:before {
-                        background: -moz-linear-gradient(left, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
-                        background: -webkit-linear-gradient(left, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
-                        background: linear-gradient(to right, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
-                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d79a2a', endColorstr='#00d79a2a', GradientType=1);
-                    }
-                    &:after {
-                        background: -moz-linear-gradient(left, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
-                        background: -webkit-linear-gradient(left, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
-                        background: linear-gradient(to right, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
-                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d79a2a', endColorstr='#00d79a2a', GradientType=1);
-                    }
-                    a {
-                        color: #da9c2a;
+                .logo-container {
+                    text-align: right;
+                    align-self: center;
+                    .logo {
+                        max-height: 45px;
+                        margin: -30px 20px auto auto;
+                        max-width: 100%;
+                        display: block;
                     }
                 }
+            }
+        }
 
-                >a {
-                    font-size: 1.875em;
-                    color: #d9c8b6;
-                    cursor: pointer;
+        app-header {
+            .menu-expanded {
+                display: none;
+                background: url('assets/images/backgrounds/bg-menu-expanded.png');
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 99;
+                text-align: center;
+                min-height: 100vh;
+                max-height: 100%;
+                overflow: auto;
+
+                >.container {
+                    padding: 0 80px 40px;
+                    min-height: 100vh;
                     position: relative;
-                    padding: 40px 0 10px;
-                    transition: all 0.5s ease;
-                    display: block;
+                    max-width: 100%;
 
-                    &:before {
-                        content: '';
-                        background: url('assets/images/common/icon-menu-sprite.png') no-repeat #000;
-                        width: 50px;
-                        height: 40px;
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        top: 0;
-                        margin: auto;
-                    }
-                }
-
-                .sub {
-                    display: none;
-                    padding: 0;
-                    width: percentage(300px/360px);
-                    margin: auto;
-
-                    li {
-                        background: #000000;
-                        list-style-type: none;
-                        font-size: 1.5em;
-                        text-transform: capitalize;
-                        text-align: left;
-                        border-bottom: solid 1px #2e2721;
-
-                        &:hover {
-                            background: url('assets/images/backgrounds/bg-menu-texture.png') center center;
-                        }
-
-                        &.forest {
-                            a {
-                                &:before {
-                                    background-position: 0 -30px;
-                                }
-                            }
-                        }
-
-                        &.trade {
-                            a {
-                                &:before {
-                                    background-position: 0 -60px;
-                                }
-                            }
-                        }
-
-                        &.fishing {
-                            a {
-                                &:before {
-                                    background-position: 0 -90px;
-                                }
-                            }
-                        }
-
-                        &.farming {
-                            a {
-                                &:before {
-                                    background-position: 0 -123px;
-                                }
-                            }
-                        }
-
-                        a {
-                            color: #d9c8b6;
-                            cursor: pointer;
+                    .menu-container {
+                        .burger-menu {
+                            background: url('assets/images/backgrounds/bg-burger-menu.png') no-repeat;
+                            width: 90px;
+                            height: 150px;
                             display: block;
-                            padding: 20px 20px 20px 80px;
+                            margin-left: 30px;
+                            cursor: pointer;
                             position: relative;
 
+                            &:hover {
+                                background-position: -90px 0;
+                            }
+                            &:before {
+                                background: url('assets/images/common/icon-menu-close.png') no-repeat;
+                                content: '';
+                                width: 38px;
+                                height: 38px;
+                                position: absolute;
+                                top: 10px;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
 
+                .main-menu {
+                    padding: 0 0 40px;
+                    min-width: 360px;
+                    max-width: percentage(360px/1105px);
+                    margin: auto auto;
+                    >li {
+                        list-style: none;
+                        text-transform: uppercase;
+                        padding: 5px 0 15px;
+                        margin-bottom: 10px;
+                        position: relative;
+
+                        &.home {
+                            a {
+                                &:before {
+                                    background-position: 11px 1px;
+                                }
+                            }
+                            &:hover {
+                                a {
+                                    &:before {
+                                        background-position: 11px -38px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.sansinukob {
+                            >a {
+                                &:before {
+                                    background-position: -42px 1px;
+                                }
+                                &:after {
+                                    content: '';
+                                    background: url('assets/images/common/icon-menu-sprite.png') no-repeat #000;
+                                    background-position: -141px -10px;
+                                    width: 15px;
+                                    height: 12px;
+                                    position: absolute;
+                                    bottom: 25px;
+                                    right: 40px;
+                                }
+                            }
+                            &:hover,
+                            &.expanded {
+                                >a {
+                                    &:before {
+                                        background-position: -42px -38px;
+                                    }
+                                    &:after {
+                                        background-position: -141px -51px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.challenges {
+                            a {
+                                position: relative;
+
+                                &:before {
+                                    height: 35px;
+                                    background-position: -90px 0px;
+                                }
+                            }
+                            &:hover {
+                                a {
+                                    &:before {
+                                        background-position: -90px -39px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.logout {
+                            a {
+                                padding-top: 0;
+
+                                &:before {
+                                    display: none;
+                                }
+                            }
+                            .avatar {
+                                display: block;
+                                position: relative;
+                                max-width: 50px;
+                                padding: 3px 10px;
+                                margin: auto;
+                                background: #000;
+
+                                &.desert {
+                                    &:before {
+                                        background: url('assets/images/common/avatar-frame-desert.png') no-repeat;
+                                        background-size: contain;
+                                        background-position: center center;
+                                    }
+                                }
+                                &.forest {
+                                    &:before {
+                                        background: url('assets/images/common/avatar-frame-forest.png') no-repeat;
+                                        background-size: contain;
+                                        background-position: center center;
+                                    }
+                                }
+                                &.trade {
+                                    &:before {
+                                        background: url('assets/images/common/avatar-frame-trade.png') no-repeat;
+                                        background-size: contain;
+                                        background-position: center center;
+                                    }
+                                }
+                                &.farm {
+                                    &:before {
+                                        background: url('assets/images/common/avatar-frame-farm.png') no-repeat;
+                                        background-size: contain;
+                                        background-position: center center;
+                                    }
+                                }
+                                &.fishing {
+                                    &:before {
+                                        background: url('assets/images/common/avatar-frame-fishing.png') no-repeat;
+                                        background-size: contain;
+                                        background-position: center center;
+                                    }
+                                }
+
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    display: block;
+                                }
+                                img {
+                                    display: block;
+                                    border-radius: 100px;
+                                    width: 100%;
+                                    max-width: 100px;
+                                    margin: auto;
+                                }
+                            }
+                        }
+
+                        &:before,
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                        }
+
+                        &:before {
+                            position: absolute;
+                            top: 20px;
+                        }
+
+                        &:hover,
+                        &.expanded {
+                            &:before {
+                                background: -moz-linear-gradient(left, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
+                                background: -webkit-linear-gradient(left, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
+                                background: linear-gradient(to right, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d79a2a', endColorstr='#00d79a2a', GradientType=1);
+                            }
+                            &:after {
+                                background: -moz-linear-gradient(left, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
+                                background: -webkit-linear-gradient(left, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
+                                background: linear-gradient(to right, rgba(215, 154, 42, 0) 0%, rgba(215, 154, 42, 1) 50%, rgba(215, 154, 42, 0) 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d79a2a', endColorstr='#00d79a2a', GradientType=1);
+                            }
+                            a {
+                                color: #da9c2a;
+                            }
+                        }
+
+                        >a {
+                            font-size: 1.875em;
+                            color: #d9c8b6;
+                            cursor: pointer;
+                            position: relative;
+                            padding: 40px 0 10px;
+                            transition: all 0.5s ease;
+                            display: block;
 
                             &:before {
                                 content: '';
-                                background: url('assets/images/common/icon-menu-emblem.png') no-repeat;
+                                background: url('assets/images/common/icon-menu-sprite.png') no-repeat #000;
+                                width: 50px;
+                                height: 40px;
                                 position: absolute;
-                                vertical-align: middle;
-                                left: 30px;
+                                left: 0;
+                                right: 0;
                                 top: 0;
-                                bottom: 0;
-                                width: 35px;
-                                height: 30px;
                                 margin: auto;
-                                display: block;
+                            }
+                        }
+
+                        .sub {
+                            display: none;
+                            padding: 0;
+                            width: percentage(300px/360px);
+                            margin: auto;
+
+                            li {
+                                background: #000000;
+                                list-style-type: none;
+                                font-size: 1.5em;
+                                text-transform: capitalize;
+                                text-align: left;
+                                border-bottom: solid 1px #2e2721;
+
+                                &:hover {
+                                    background: url('assets/images/backgrounds/bg-menu-texture.png') center center;
+                                }
+
+                                &.forest {
+                                    a {
+                                        &:before {
+                                            background-position: 0 -30px;
+                                        }
+                                    }
+                                }
+
+                                &.trade {
+                                    a {
+                                        &:before {
+                                            background-position: 0 -60px;
+                                        }
+                                    }
+                                }
+
+                                &.fishing {
+                                    a {
+                                        &:before {
+                                            background-position: 0 -90px;
+                                        }
+                                    }
+                                }
+
+                                &.farming {
+                                    a {
+                                        &:before {
+                                            background-position: 0 -123px;
+                                        }
+                                    }
+                                }
+
+                                a {
+                                    color: #d9c8b6;
+                                    cursor: pointer;
+                                    display: block;
+                                    padding: 20px 20px 20px 80px;
+                                    position: relative;
+
+
+
+                                    &:before {
+                                        content: '';
+                                        background: url('assets/images/common/icon-menu-emblem.png') no-repeat;
+                                        position: absolute;
+                                        vertical-align: middle;
+                                        left: 30px;
+                                        top: 0;
+                                        bottom: 0;
+                                        width: 35px;
+                                        height: 30px;
+                                        margin: auto;
+                                        display: block;
+                                    }
+                                }
                             }
                         }
                     }
                 }
-            }
-        }
 
-        .footer {
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            left: 0;
-            background: #000;
+                .footer {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    background: #000;
 
-            .container {
-                padding: 10px 0;
-                font-family: 'Lato', sans-serif;
+                    .container {
+                        padding: 10px 0;
+                        font-family: 'Lato', sans-serif;
 
-                ul {
-                    list-style-type: none;
-                    padding: 0;
-                    font-size: 14px;
+                        ul {
+                            list-style-type: none;
+                            padding: 0;
+                            font-size: 14px;
 
-                    li {
-                        margin: 0 10px;
-                        display: inline-block;
+                            li {
+                                margin: 0 10px;
+                                display: inline-block;
 
-                        a {
-                            color: #d9c8b6;
+                                a {
+                                    color: #d9c8b6;
+                                }
+                            }
+                        }
+                        p {
+                            font-size: 0.625em;
                         }
                     }
                 }
-                p {
-                    font-size: 0.625em;
-                }
             }
         }
-    }
-}

@@ -4,13 +4,12 @@
     }
 
     app-header {
-        padding-bottom: 165px;
+        padding-bottom: 10px;
         display: block;
     }
     header {
         background-size: auto 70px !important;
         margin-bottom: 65px;
-        position: fixed;
         width: 100%;
 
         &.no-menu {
@@ -19,6 +18,9 @@
                     margin-top: 7px;
                 }
             }
+        }
+        &.stickyBorder:before {
+            background-size: 50px 50px;
         }
         .container {
             padding: 0 50px;
@@ -692,6 +694,30 @@
                 padding: 0;
                 .banner {
                     margin-right: 10px;
+
+                    .inner {
+                        height: 520px;
+                        background-size: cover;
+
+                        &:before,
+                        &:after {
+                            background-repeat: repeat !important;
+                        }
+
+                        .emblem {
+                            height: 120px;
+                        }
+                        .writeup {
+                            position: absolute;
+                            width: 100%;
+                            padding: 40px 20px;
+                            bottom: 50px;
+                            p {
+                                font-size: 2.125em;
+                                line-height: 1.2;
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -1,14 +1,25 @@
-var params = {
-    categoryID: 'baganiCommenting',
-    streamID: '',
-    version: 2,
-    containerID: 'commentsDiv',
-    cid: '',
-    enabledShareProviders: 'facebook'
-}
-gigya.comments.showCommentsUI(params);
+// var params = {
+//     categoryID: 'baganiCommenting',
+//     streamID: '',
+//     version: 2,
+//     containerID: 'commentsDiv',
+//     cid: '',
+//     enabledShareProviders: 'facebook'
+// }
+// gigya.comments.showCommentsUI(params);
 
 $(document).ready(function(e) {
+    $(document).on("scroll", function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 100) {
+            $('.header').addClass("stickyBorder");
+            $('.widget-sidebar-container').addClass('scroll');
+        } else {
+            $('.header').removeClass('stickyBorder')
+            $('.widget-sidebar-container').removeClass('scroll');
+        }
+    });
     alamatHeight();
 
     $('img[usemap]').rwdImageMaps();
@@ -51,6 +62,13 @@ $(document).ready(function(e) {
         $('.menu-expanded > .container').prepend(burgerMenu);
     });
 
+    // WIKIA MENU
+    $(document).on('click', '.openTableOfContents', function(event) {
+        event.preventDefault();
+
+        $('body').toggleClass('menu-opened');
+    });
+
     $(document).on('click', '.menu-expanded .menu-container .burger-menu, .menu-expanded li:not(.sansinukob) > a', function(event) {
         event.preventDefault();
         $('body').removeClass('menu-opened');
@@ -78,7 +96,6 @@ $(document).ready(function(e) {
     //Widget buttons
     $(document).on('click', '.widget-btn', function(event) {
         event.preventDefault();
-        console.log("ye==");
         var widgetTarget = $(this).data("target");
         $(widgetTarget).toggleClass('show');
         $(widgetTarget).fadeIn(200);
@@ -117,14 +134,15 @@ $(document).ready(function(e) {
 
     //Collapsible
     var allCollapsible = $('.collapsible-item .collapsible-content');
-    $(document).on('click', '.collapsible-wrapper .collapsible-item', function(e) {
-        if ($(this).hasClass('show')) {
-            $(this).find("li .collapsible-content").slideUp(350);
-            $(this).toggleClass('show');
+    $(document).on('click', '.collapsible-wrapper .collapsible-item .collapsible-header', function(e) {
+        if ($(this).parent().parent().hasClass('show')) {
+            //allCollapsible.slideUp();
+            $(this).parent().parent().find("li .collapsible-content").slideUp(350);
+            $(this).parent().parent().removeClass('show');
         } else {
             allCollapsible.slideUp();
-            $(this).find("li .collapsible-content").slideDown(350);
-            $(this).toggleClass('show');
+            $(this).parent().parent().find("li .collapsible-content").slideDown(350);
+            $(this).parent().parent().toggleClass('show');
         }
         return false;
     });
