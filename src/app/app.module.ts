@@ -52,6 +52,8 @@ import { AchievementsService } from './services/achievements.service';
 import { WikiaTableOfContentsComponent } from './components/wikia-table-of-contents/wikia-table-of-contents.component';
 import { WikiaTableOfContentsService } from './services/wikia-table-of-contents.service';
 import { JournalService } from './services/journal.service';
+import { BadgesService } from './services/badges.service';
+import { SidebarHelpService } from './services/sidebar-help.service';
 
 @NgModule({
   declarations: [
@@ -133,7 +135,9 @@ import { JournalService } from './services/journal.service';
     NotificationsService,
     AchievementsService,
     WikiaTableOfContentsService,
-    JournalService
+    JournalService,
+    BadgesService,
+    SidebarHelpService
   ],
   bootstrap: [AppComponent]
 })

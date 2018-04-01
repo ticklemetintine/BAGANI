@@ -19,7 +19,7 @@
                 <img src="assets/images/common/img-babaylan.png" alt="babaylan" class="babaylan">
             </div>
             <div class="details">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p>{{journalHeading}} </p>
             </div>
         </div>
         <div class="content-details collapsible-wrapper">
@@ -83,102 +83,30 @@
     <div class="sidebar-body">
         <div class="sidebar-sub-header">
             <div class="figure">
-                <span class="badge badge-full badge-copper">
-                	<span class="badge-icons farming-citizen-icon"></span>
-                <span class="plate plate-2 plate-desert">DESERT REGION SCHOLAR</span>
+                <span class="badge badge-full badge-{{currentBadgeView.currentLevel}}">
+                	<span class="badge-icons {{currentBadgeView.slug}}-icon-gray" *ngIf="currentBadgeView.currentLevel == 'unearned'"></span>
+                	<span class="badge-icons {{currentBadgeView.slug}}-icon" *ngIf="currentBadgeView.currentLevel != 'unearned'"></span>
+                	<span class="plate plate-2 plate-{{userDetails.tribe}}">{{currentBadgeView.title}}</span>
                 </span>
             </div>
             <div class="details">
                 <div class="progress-bar-container">
-                    <span class="label">NEXT: BRONZE</span>
-                    <span class="num">2/5</span>
+                    <span class="label">NEXT: {{currentBadgeView.nextLevel}}</span>
+                    <span class="num">{{currentBadgeView.completedSubChallenges}}/{{currentBadgeView.totalSubChallenges}}</span>
                     <div class="progress-bar">
-                        <span style="width: 40%;"></span>
+                        <!-- <span style="width: 40%;"></span> -->
+                        <span [ngStyle]="{'width': (currentBadgeView.completedSubChallenges/currentBadgeView.totalSubChallenges)*100+'%'}"></span>
                     </div>
-                    <p>Read 5 entries about the Desert Region.</p>
+                    <p>{{currentBadgeView.instructions}}</p>
                 </div>
             </div>
         </div>
         <div class="scrollable">
             <div class="grid grid-4">
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-unearned">
-                        <span class="badge-icons adventurer-icon-gray"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-gold">
-                        <span class="badge-icons adventurer-icon"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-bronze">
-                        <span class="badge-icons communicator-icon-gray"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-silver">
-                        <span class="badge-icons communicator-icon"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-copper">
-                        <span class="badge-icons desert-citizen-icon-gray"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-copper">
-                        <span class="badge-icons desert-citizen-icon"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-unearned">
-                        <span class="badge-icons desert-scholar-icon-gray"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-unearned">
-                        <span class="badge-icons desert-scholar-icon"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-unearned">
-                        <span class="badge-icons farming-citizen-icon-gray"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-gold">
-                        <span class="badge-icons farming-citizen-icon"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-bronze">
-                        <span class="badge-icons farming-citizen-icon"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-silver">
-                        <span class="badge-icons farming-citizen-icon-gray"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-silver">
-                        <span class="badge-icons communicator-icon"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-copper">
-                        <span class="badge-icons desert-citizen-icon-gray"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-copper">
-                        <span class="badge-icons desert-citizen-icon"></span>
-                    </div>
-                </div>
-                <div class="grid-cell">
-                    <div class="badge badge-full badge-unearned">
-                        <span class="badge-icons desert-scholar-icon-gray"></span>
+                <div class="grid-cell" *ngFor="let badge of badgesData" (click)="currentBadge(badge)">
+                    <div class="badge badge-full badge-{{badge.currentLevel}}">
+                        <span class="badge-icons {{badge.slug}}-icon-gray" *ngIf="badge.currentLevel == 'unearned'"></span>
+                        <span class="badge-icons {{badge.slug}}-icon" *ngIf="badge.currentLevel != 'unearned'"></span>
                     </div>
                 </div>
             </div>
@@ -372,13 +300,7 @@
                 <div class="figure">
                     <img src="assets/images/common/img-babaylan.png" alt="babaylan" class="babaylan">
                 </div>
-                <div class="details">
-                    <p>My name is Babaylan, and I will be your guide in Sansinukob.</p>
-                    <p>As a member of the tribe, you are expected to contribute and provide aid in the coming battles. But before those, you have to prepare yourself by gaining knowledge about your region and the lands beyond. I urge you to learn as much since I’ll be sending you questions daily to test your knowledge.</p>
-                    <p>Your efforts in enriching your understanding of Sansinukob will be rewarded with badges. There are many badges to collect—refer to your Journal for more information on what you need to do to unlock these.</p>
-                    <p>And while I may be your guide, you can also turn to others. Click on the chat function to talk to your fellow tribe members or even the members of other tribes. If you need my guidance, click on the help function.</p>
-                    <p>This is only the beginning. The real challenges will arrive soon.
-                        <br>Take this time to know more about the world and to prepare for what’s coming.</p>
+                <div class="details" [innerHTML]="helpData">
                 </div>
             </div>
         </div>

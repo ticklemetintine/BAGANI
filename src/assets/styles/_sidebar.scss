@@ -169,7 +169,7 @@ body {
     }
     .header-full {
         display: inline-block; //width: 365px;
-        @include calcWidth(100%, 55px);
+        @include calcWidth(100%, 70px);
         max-height: 55px;
         padding: 0 15px;
         text-align: right;
@@ -246,7 +246,7 @@ body {
 
 .sidebar-badges {
     .sidebar-sub-header {
-        position: absolute;
+        // position: absolute;
         top: 0;
         right: 0;
         z-index: 9;
@@ -255,7 +255,7 @@ body {
     }
     .sidebar-body {
         position: relative;
-        padding-top: 205px;
+        // padding-top: 205px;
         overflow: hidden;
         .grid-cell {
             border-bottom: solid 1px #3c3731;
@@ -437,6 +437,8 @@ body {
         display: inline-block;
         width: 50%;
         font-size: 12px;
+        margin-left: -4px;
+        text-transform: uppercase;
     }
     .num {
         text-align: right;

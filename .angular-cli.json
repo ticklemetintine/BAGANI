@@ -26,6 +26,8 @@
           "assets/scripts/slick.js",
           "assets/scripts/jquery.rwdImageMaps.min.js",
           "assets/scripts/jquery.maphilight.js",
+          "assets/scripts/bideo.js",
+          "assets/scripts/main.js",
           "assets/scripts/master.js"
         ],
         "environmentSource": "environments/environment.ts",
