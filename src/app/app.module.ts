@@ -4,7 +4,6 @@ import {RouterModule, Routes, PreloadAllModules} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { CountdownModule } from 'ngx-countdown';
 
 import { AppComponent } from './app.component';
 import { UnregisteredComponent } from './components/unregistered/unregistered.component';
@@ -118,8 +117,7 @@ import { SidebarHelpService } from './services/sidebar-help.service';
     HttpClientModule,
     SlickModule,
     BrowserAnimationsModule,
-    FormsModule,
-    CountdownModule
+    FormsModule
   ],
   providers: [
     MapsService,
