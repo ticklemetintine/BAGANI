@@ -53,6 +53,7 @@ import { WikiaTableOfContentsService } from './services/wikia-table-of-contents.
 import { JournalService } from './services/journal.service';
 import { BadgesService } from './services/badges.service';
 import { SidebarHelpService } from './services/sidebar-help.service';
+import { InnerDesertService } from './services/wikia-inner/inner-desert.service';
 
 @NgModule({
   declarations: [
@@ -106,10 +107,13 @@ import { SidebarHelpService } from './services/sidebar-help.service';
       { path: 'wikia/region/trade', component: RegionTradeComponent, pathMatch: 'full'},
       { path: 'wikia/region/forest', component: RegionForestComponent, pathMatch: 'full'},
       { path: 'wikia/inner/forest', component: InnerForestComponent, pathMatch: 'full'},
+      { path: 'wikia/inner/forest/:id', component: InnerForestComponent, pathMatch: 'full'},
       { path: 'wikia/inner/desert', component: InnerDesertComponent, pathMatch: 'full'},
+      { path: 'wikia/inner/desert/:id', component: InnerDesertComponent, pathMatch: 'full'},
       { path: 'wikia/inner/trade', component: InnerTradeComponent, pathMatch: 'full'},
       { path: 'wikia/inner/trade/:id', component: InnerTradeComponent, pathMatch: 'full'},
       { path: 'wikia/inner/fishing', component: InnerFishingComponent, pathMatch: 'full'},
+      { path: 'wikia/inner/fishing/:id', component: InnerFishingComponent, pathMatch: 'full'},
       { path: 'wikia/inner/farm', component: InnerFarmComponent, pathMatch: 'full'},
       { path: 'challenges', component: ChallengesComponent, pathMatch: 'full'},
     ], { preloadingStrategy: PreloadAllModules }),
@@ -135,7 +139,8 @@ import { SidebarHelpService } from './services/sidebar-help.service';
     WikiaTableOfContentsService,
     JournalService,
     BadgesService,
-    SidebarHelpService
+    SidebarHelpService,
+    InnerDesertService
   ],
   bootstrap: [AppComponent]
 })

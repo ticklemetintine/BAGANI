@@ -251,6 +251,7 @@
                 padding: 50px 40px;
                 position: relative;
                 margin: 40px 10px;
+                width: percentage(375px/1124px);
 
                 &:before {
                     content: '';

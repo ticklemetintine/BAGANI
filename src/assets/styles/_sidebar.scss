@@ -169,6 +169,7 @@ body {
     }
     .header-full {
         display: inline-block; //width: 365px;
+        vertical-align: top;
         @include calcWidth(100%, 70px);
         max-height: 55px;
         padding: 0 15px;
@@ -241,6 +242,7 @@ body {
         display: inline-block;
         vertical-align: middle;
         margin-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -642,6 +644,7 @@ body {
     background-color: #000;
     padding: 10px;
     font-size: 0;
+    display: flex;
     textarea {
         display: inline-block;
         vertical-align: middle;
@@ -663,6 +666,7 @@ body {
         vertical-align: middle;
         width: 18%;
         font-size: 12px;
+        padding: 0;
     }
 }
 
@@ -719,7 +723,8 @@ body {
 
 /* Farming */
 
-.farming-theme {
+.farming-theme,
+.farm-theme {
     .sidebar-header {
         border-color: $farming-color;
         .grid {
