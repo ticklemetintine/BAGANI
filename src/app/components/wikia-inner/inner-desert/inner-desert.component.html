@@ -10,30 +10,19 @@
             <div class="content">
                 <div class="title">Stories</div>
                 <div class="writeup">
-                    <p class="chapter">Chapter 05</p>
-                    <p class="chapter-title">Lorem ipsum dolor sit amet</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eveniet ipsum iste sit accusantium facilis, incidunt reprehenderit deserunt ipsam ut commodi, corporis sed eaque explicabo et laudantium provident, qui fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quidem officia dicta consectetur assumenda hic pariatur tempora, neque cupiditate debitis provident rem, magnam distinctio voluptatibus. Sit rem error labore dolores.</p>
-                    <div class="media video">
-                        <img src="assets/images/common/img-wikia-inner-placeholder.png" alt="placeholder">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eveniet ipsum iste sit accusantium facilis, incidunt reprehenderit deserunt ipsam ut commodi, corporis sed eaque explicabo et laudantium provident, qui fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quidem officia dicta consectetur assumenda hic pariatur tempora, neque cupiditate debitis provident rem, magnam distinctio voluptatibus. Sit rem error labore dolores.</p>
-                    <div class="media photo">
-                        <img src="assets/images/common/img-wikia-inner-placeholder.png" alt="placeholder">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eveniet ipsum iste sit accusantium facilis, incidunt reprehenderit deserunt ipsam ut commodi, corporis sed eaque explicabo et laudantium provident, qui fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quidem officia dicta consectetur assumenda hic pariatur tempora, neque cupiditate debitis provident rem, magnam distinctio voluptatibus. Sit rem error labore dolores.</p>
+                    <p class="chapter">{{innerDesertData.chapter}}</p>
+                    <p class="chapter-title">{{innerDesertData.chapterTitle}}</p>
+                    <div class="details" [innerHTML]="innerDesertData.innerBody"></div>
                 </div>
             </div>
         </div>
     </section>
     <section class="other-chapters">
         <div class="container">
-            <a href="#" class="prev">
-                <span class="chapter">Chapter 01</span>
-                <span class="title">Lorem ipsum dolor sit amet</span>
-            </a>
-            <a href="#" class="next">
-                <span class="chapter">Chapter 03</span>
-                <span class="title">Lorem ipsum dolor sit amet</span>
+            <a routerLink="/wikia/inner/desert/{{chapter.slug}}" [class.prev]="i == 0"
+            [class.next]="i == 1" *ngFor="let chapter of innerDesertData.chapters; let i=index">
+                <span class="chapter">{{chapter.chapter}}</span>
+                <span class="title">{{chapter.chapterTitle}}</span>
             </a>
         </div>
     </section>

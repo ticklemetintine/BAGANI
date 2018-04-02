@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { LatestUpdatesService } from '../../../services/latest-updates.service';
+import { InnerDesertService } from '../../../services/wikia-inner/inner-desert.service';
 import { UserService } from '../../../services/user.service';
 
 @Component({
@@ -13,18 +14,21 @@ export class InnerDesertComponent implements OnInit {
     today: Date;
     hour: number;
     timeClass: string;
-    updates = [];
+    updates:any = [];
+    innerDesertData:any = [];
     userDetails: any = [];
 
     constructor(
         private _getUpdatesService: LatestUpdatesService,
-        private _getUserService: UserService
+        private _getUserService: UserService,
+        private _getInnerDesert: InnerDesertService
     ) {}
 
     ngOnInit() {
         this.getTime();
         this.GetUpdates();
         this.getUserDetails();
+        this.getInnerDesert();
     }
 
     updatesSlideConfig = {
@@ -79,4 +83,12 @@ export class InnerDesertComponent implements OnInit {
         );
     }
 
+    getInnerDesert() {
+        this._getInnerDesert.GetInnerDesert().subscribe(
+            (data) => {
+                this.innerDesertData = data.wikiaDesertInner;
+                console.log(this.innerDesertData);
+            }
+        );
+    }
 }
