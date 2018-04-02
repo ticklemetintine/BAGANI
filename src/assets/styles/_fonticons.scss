@@ -241,39 +241,47 @@ $y) {
 }
 
 .plate {
-    display: inline-block;
-    background-image: url(assets/images/badges/plates-spritesheet.png);
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 43px;
+  display: table;
+  margin: 0 auto !important;
+  background-image: url(assets/images/badges/plates-spritesheet.png);
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 43px;
 
-    padding: 11px 5px 10px 5px;
-    font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 0.875em;
-    text-align: center;
-    color: #d9c8b6;
-    text-transform: uppercase;
-
-    &.plate-2 {
-        background-image: url(assets/images/badges/plates-spritesheet2.png);
-        padding: 7px 10px 10px 10px;
-        line-height: 0.9;
-    }
-    &.plate-farm {
-        background-position: 0 0;
-    }
-    &.plate-fishing {
-        background-position: -150px 0;
-    }
-    &.plate-trade {
-        background-position: -300px 0;
-    }
-    &.plate-forest {
-        background-position: -450px 0;
-    }
-    &.plate-desert {
-        background-position: -600px 0;
-    }
+  padding: 11px 5px 10px 5px;
+  font-size: 0.875em;
+  text-align: center;
+  color: #d9c8b6;
+  text-transform: uppercase;
+  text-align: center;
+  strong {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 0.95; 
+    font-weight: 300;
+  }
+  &.plate-2 {
+    display: table;
+    margin: 0 auto !important;
+    background-image: url(assets/images/badges/plates-spritesheet2.png);
+    padding: 5px 10px 10px 10px;
+    line-height: 0.9;
+  }
+  &.plate-farm {
+    background-position: 0 0;
+  }
+  &.plate-fishing {
+    background-position: -150px 0;
+  }
+  &.plate-trade {
+    background-position: -300px 0;
+  }
+  &.plate-forest {
+    background-position: -450px 0;
+  }
+  &.plate-desert {
+    background-position: -600px 0;
+  }
 }
 
 @media (min--moz-device-pixel-ratio: 1.5),

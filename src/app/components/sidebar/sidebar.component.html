@@ -67,7 +67,7 @@
 <!-- Badges -->
 <div class="main-sidebar sidebar-badges" id="sidebarBadges">
     <div class="sidebar-header">
-        <a class="close-sidebar"><img src="assets/images/map/pop-up-close.png" alt=""></a>
+        <a href="#" class="close-sidebar"><img src="assets/images/map/pop-up-close.png" alt=""></a>
         <!-- <div class="header-full">
 			<h1>BADGES</h1>
 			<p style="display: none;">You've achived 4/15 badges!</p>
@@ -86,7 +86,7 @@
                 <span class="badge badge-full badge-{{currentBadgeView.currentLevel}}">
                 	<span class="badge-icons {{currentBadgeView.slug}}-icon-gray" *ngIf="currentBadgeView.currentLevel == 'unearned'"></span>
                 	<span class="badge-icons {{currentBadgeView.slug}}-icon" *ngIf="currentBadgeView.currentLevel != 'unearned'"></span>
-                	<span class="plate plate-2 plate-{{userDetails.tribe}}">{{currentBadgeView.title}}</span>
+                	<span class="plate plate-2 plate-{{userDetails.tribe}}"><strong>{{currentBadgeView.title}}</strong></span>
                 </span>
             </div>
             <div class="details">
