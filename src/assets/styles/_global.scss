@@ -342,75 +342,75 @@ input {
     &.desert {
         &.morning {
             background: url('assets/images/backgrounds/bg-video-desert-morning.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
         &.noon {
             background: url('assets/images/backgrounds/bg-video-desert-noon.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
         &.evening {
             background: url('assets/images/backgrounds/bg-video-desert-evening.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
     }
 
     &.farm {
         &.morning {
             background: url('assets/images/backgrounds/bg-video-farm-morning.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
         &.noon {
             background: url('assets/images/backgrounds/bg-video-farm-noon.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
         &.evening {
             background: url('assets/images/backgrounds/bg-video-farm-evening.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
     }
 
     &.fishing {
         &.morning {
             background: url('assets/images/backgrounds/bg-video-fishing-morning.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
         &.noon {
             background: url('assets/images/backgrounds/bg-video-fishing-noon.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
         &.evening {
             background: url('assets/images/backgrounds/bg-video-fishing-evening.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
     }
 
     &.forest {
         &.morning {
             background: url('assets/images/backgrounds/bg-video-forest-morning.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
         &.noon {
             background: url('assets/images/backgrounds/bg-video-forest-noon.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
         &.evening {
             background: url('assets/images/backgrounds/bg-video-forest-evening.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
     }
 
     &.trade {
         &.morning {
             background: url('assets/images/backgrounds/bg-video-trade-morning.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
         &.noon {
             background: url('assets/images/backgrounds/bg-video-trade-noon.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
         &.evening {
             background: url('assets/images/backgrounds/bg-video-trade-evening.jpg') no-repeat;
-            background-size: contain;
+            background-size: auto;
         }
     }
 
@@ -418,14 +418,6 @@ input {
         display: block;
         min-width: 100%;
         min-height: 100vh;
-        position: fixed;
-  right: 0; 
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  width: auto; 
-  height: auto;
-  z-index: -100;
     }
 }
 
