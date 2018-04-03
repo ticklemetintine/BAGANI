@@ -97,15 +97,15 @@ body {
 }
 
 .main-sidebar {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -ms-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    // display: -ms-flexbox;
+    // display: -webkit-flex;
+    // display: flex;
+    // -webkit-box-orient: vertical;
+    // -ms-box-orient: vertical;
+    // box-orient: vertical;
+    // -webkit-flex-direction: column;
+    // -ms-flex-direction: column;
+    // flex-direction: column;
 
     height: 100%;
     width: 420px;
@@ -161,19 +161,20 @@ body {
 .sidebar-header {
     display: block;
     width: 100%;
-    height: 60px;
+    height: 59px;
     background-color: #000;
     border-bottom: solid 4px #302c28; // font-size: 0;
     @extend .clearfix;
     font-size: 0;
     .close-sidebar {
-        display: inline-block;
-        vertical-align: top;
+        position: absolute;
+        right: 0;
+        left: auto;
     }
     .header-full {
         display: inline-block; //width: 365px;
         vertical-align: top;
-        @include calcWidth(100%, 70px);
+        @include calcWidth(100%, 55px);
         max-height: 55px;
         padding: 0 15px;
         text-align: right;
@@ -462,6 +463,7 @@ body {
         .progress-bar {
             height: 14px;
             width: 80%;
+            margin-right: 5px;
             span {
                 vertical-align: top;
             }

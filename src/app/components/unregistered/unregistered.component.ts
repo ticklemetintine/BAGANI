@@ -30,6 +30,7 @@ export class UnregisteredComponent implements OnInit {
     maps = [];
     updates = [];
     artworks = [];
+    news_feed = [];
     articles = [];
     alamat = [];
     creatures = [];
@@ -190,7 +191,7 @@ export class UnregisteredComponent implements OnInit {
     GetArtworks() {
         this._getArtworksService.GetArtworks().subscribe(
             (data) => {
-                this.artworks = data.artworks;
+                this.news_feed = data.news_feed.posts.post;
             }
         );
     }
