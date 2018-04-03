@@ -97,15 +97,15 @@ body {
 }
 
 .main-sidebar {
-    // display: -ms-flexbox;
-    // display: -webkit-flex;
-    // display: flex;
-    // -webkit-box-orient: vertical;
-    // -ms-box-orient: vertical;
-    // box-orient: vertical;
-    // -webkit-flex-direction: column;
-    // -ms-flex-direction: column;
-    // flex-direction: column;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 
     height: 100%;
     width: 420px;
@@ -159,12 +159,25 @@ body {
 }
 
 .sidebar-header {
-    display: block;
+    //display: block;
     width: 100%;
     height: 59px;
+    min-height: 59px;
+    max-height: 59px;
     background-color: #000;
     border-bottom: solid 4px #302c28; // font-size: 0;
-    @extend .clearfix;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+
+    //@extend .clearfix;
     font-size: 0;
     .close-sidebar {
         position: absolute;

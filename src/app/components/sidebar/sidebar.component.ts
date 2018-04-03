@@ -12,6 +12,7 @@ import { SidebarHelpService } from '../../services/sidebar-help.service';
 export class SidebarComponent implements OnInit {
   journalEntries:any = [];
   journalHeading:string;
+  journalTime:string;
   doneItems:number;
   today:any = Date.now();
   start:any;
@@ -50,8 +51,38 @@ export class SidebarComponent implements OnInit {
             (data) => {
                 this.journalEntries = data.journal;
                 this.journalHeading = data.journalHeading;
+
+                setInterval(()=>{    
+                        //Get 1 day in milliseconds
+                        var one_day=1000*60*60*24;
+                        // Convert both dates to milliseconds
+                        var date1_ms = new Date(data.journal[0].startDateTime).getTime();
+                        var date2_ms = new Date(data.journal[0].endDateTime).getTime();
+                        var date_now = new Date().getTime();
+                        // Calculate the difference in milliseconds
+                        var difference_ms = date2_ms - date_now;
+                        //take out milliseconds
+                        difference_ms = difference_ms/1000;
+                        var seconds = Math.floor(difference_ms % 60);
+                        difference_ms = difference_ms/60; 
+                        var minutes = Math.floor(difference_ms % 60);
+                        difference_ms = difference_ms/60; 
+                        var hours = Math.floor(difference_ms % 24);  
+                        var days = Math.floor(difference_ms/24);
+                        this.journalTime = hours + ':' + minutes + ':' + seconds;
+                },1000);
             }
         );
+  }
+  getTimeLeft() {
+    setTimeout(()=>{    
+      //this.helpData = new Date(); // Updates view
+      this._getHelpService.GetHelp().subscribe(
+          (data) => {
+              this.helpData = data.helpText;
+          }
+      );
+    },3000);
   }
   countStatus(challenges) {
   	this.doneItems = 0;
@@ -91,7 +122,6 @@ export class SidebarComponent implements OnInit {
   }
   currentBadge(badge) {
     this.currentBadgeView = badge;
-
   }	
 
 }
