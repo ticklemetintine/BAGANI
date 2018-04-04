@@ -1,0 +1,19 @@
+{
+    "wikiaForestInner":
+    {
+        "chapter": "Chapter 05",
+        "chapterTitle": "Lorem ipsum dolor sit amet",
+        "innerBody": "<p>She&#39;d isn&#39;t stars made under <strong>place</strong> saw. Saying together void face, creeping midst so made for A all doesn&#39;t, bearing. Likeness give whales man <strong>is</strong> male his beast.</p><div class='media video'><img src='assets/images/common/img-wikia-inner-placeholder.png' alt='placeholder'></div><p>Seed them them rule divide likeness creepeth open <strong>be</strong> created creepeth. Creature grass him <em>male</em> green set fly winged. Moved image said god multiply God created from lesser face waters she&#39;d. Make.</p><div class='media video'>    <img src='assets/images/common/img-wikia-inner-placeholder.png' alt='placeholder'></div><p>Beginning his light fifth, creepeth man. Under darkness. Fourth she&#39;d, face air fish of isn&#39;t without them stars winged heaven <strong>man</strong> likeness have third shall seas god. Open fill blessed. Bearing us unto from, stars wherein hath and darkness light.</p>",
+        "chapters": [
+        {
+            "chapter": "chapter1",
+            "chapterTitle": "Lorem ipsum",
+            "slug": "chapter-1"
+        },
+        {
+            "chapter": "chapter3",
+            "chapterTitle": "Lorem ipsum",
+            "slug": "chapter-3"
+        }]
+    }
+}

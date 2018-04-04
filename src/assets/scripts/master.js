@@ -1,13 +1,3 @@
-// var params = {
-//     categoryID: 'baganiCommenting',
-//     streamID: '',
-//     version: 2,
-//     containerID: 'commentsDiv',
-//     cid: '',
-//     enabledShareProviders: 'facebook'
-// }
-// gigya.comments.showCommentsUI(params);
-
 $(document).ready(function(e) {
     $(document).on("scroll", function() {
         var scroll = $(window).scrollTop();

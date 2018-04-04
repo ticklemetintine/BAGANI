@@ -54,6 +54,12 @@ import { JournalService } from './services/journal.service';
 import { BadgesService } from './services/badges.service';
 import { SidebarHelpService } from './services/sidebar-help.service';
 import { InnerDesertService } from './services/wikia-inner/inner-desert.service';
+import { InnerTradeService } from './services/wikia-inner/inner-trade.service';
+import { InnerFishingService } from './services/wikia-inner/inner-fishing.service';
+import { InnerFarmService } from './services/wikia-inner/inner-farm.service';
+import { InnerForestService } from './services/wikia-inner/inner-forest.service';
+import { WikiaRegionService } from './services/wikia-region.service';
+import { TestComponent } from './components/test/test.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +91,8 @@ import { InnerDesertService } from './services/wikia-inner/inner-desert.service'
     ChallengesComponent,
     DashboardComponent,
     ForgotPasswordComponent,
-    WikiaTableOfContentsComponent
+    WikiaTableOfContentsComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -116,6 +123,7 @@ import { InnerDesertService } from './services/wikia-inner/inner-desert.service'
       { path: 'wikia/inner/fishing/:id', component: InnerFishingComponent, pathMatch: 'full'},
       { path: 'wikia/inner/farm', component: InnerFarmComponent, pathMatch: 'full'},
       { path: 'challenges', component: ChallengesComponent, pathMatch: 'full'},
+      { path: 'test', component: TestComponent, pathMatch: 'full'},
     ], { preloadingStrategy: PreloadAllModules }),
     TransferHttpCacheModule,
     HttpClientModule,
@@ -140,7 +148,12 @@ import { InnerDesertService } from './services/wikia-inner/inner-desert.service'
     JournalService,
     BadgesService,
     SidebarHelpService,
-    InnerDesertService
+    InnerDesertService,
+    InnerTradeService,
+    InnerFishingService,
+    InnerFarmService,
+    InnerForestService,
+    WikiaRegionService
   ],
   bootstrap: [AppComponent]
 })

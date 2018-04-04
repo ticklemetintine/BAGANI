@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { LatestUpdatesService } from '../../../services/latest-updates.service';
+import { InnerTradeService } from '../../../services/wikia-inner/inner-trade.service';
 import { UserService } from '../../../services/user.service';
 
 @Component({
@@ -13,18 +14,22 @@ export class InnerTradeComponent implements OnInit {
     today: Date;
     hour: number;
     timeClass: string;
-    updates = [];
+    updates:any = [];
+    innerTradeData:any = [];
     userDetails: any = [];
 
     constructor(
         private _getUpdatesService: LatestUpdatesService,
-        private _getUserService: UserService
+        private _getUserService: UserService,
+        private _getInnerTrade: InnerTradeService
+
     ) {}
 
     ngOnInit() {
         this.getTime();
         this.GetUpdates();
         this.getUserDetails();
+        this.getInnerTrade();
     }
 
     updatesSlideConfig = {
@@ -75,6 +80,14 @@ export class InnerTradeComponent implements OnInit {
         this._getUserService.GetUser().subscribe(
             (data) => {
                 this.userDetails = data.userDetails;
+            }
+        );
+    }
+
+    getInnerTrade() {
+        this._getInnerTrade.GetInnerTrade().subscribe(
+            (data) => {
+                this.innerTradeData = data.wikiaTradeInner;
             }
         );
     }

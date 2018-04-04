@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { LatestUpdatesService } from '../../../services/latest-updates.service';
+import { InnerFarmService } from '../../../services/wikia-inner/inner-farm.service';
 import { UserService } from '../../../services/user.service';
 
 @Component({
@@ -13,18 +14,21 @@ export class InnerFarmComponent implements OnInit {
     today: Date;
     hour: number;
     timeClass: string;
-    updates = [];
+    updates:any = [];
+    innerFarmData:any = [];
     userDetails: any = [];
 
     constructor(
         private _getUpdatesService: LatestUpdatesService,
-        private _getUserService: UserService
+        private _getUserService: UserService,
+        private _getInnerFarm: InnerFarmService
     ) {}
 
     ngOnInit() {
         this.getTime();
         this.GetUpdates();
         this.getUserDetails();
+        this.getInnerFarm();
     }
 
     updatesSlideConfig = {
@@ -75,6 +79,14 @@ export class InnerFarmComponent implements OnInit {
         this._getUserService.GetUser().subscribe(
             (data) => {
                 this.userDetails = data.userDetails;
+            }
+        );
+    }
+
+    getInnerFarm() {
+        this._getInnerFarm.GetInnerFarm().subscribe(
+            (data) => {
+                this.innerFarmData = data.wikiaFarmInner;
             }
         );
     }

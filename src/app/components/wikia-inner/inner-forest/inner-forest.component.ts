@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { LatestUpdatesService } from '../../../services/latest-updates.service';
+import { InnerForestService } from '../../../services/wikia-inner/inner-forest.service';
 import { UserService } from '../../../services/user.service';
 
 @Component({
@@ -13,18 +14,21 @@ export class InnerForestComponent implements OnInit {
     today: Date;
     hour: number;
     timeClass: string;
-    updates = [];
+    updates:any = [];
+    innerForestData:any = [];
     userDetails: any = [];
 
     constructor(
         private _getUpdatesService: LatestUpdatesService,
-        private _getUserService: UserService
+        private _getUserService: UserService,
+        private _getInnerForest: InnerForestService
     ) {}
 
     ngOnInit() {
         this.getTime();
         this.GetUpdates();
         this.getUserDetails();
+        this.getInnerForest();
     }
 
     updatesSlideConfig = {
@@ -75,6 +79,14 @@ export class InnerForestComponent implements OnInit {
         this._getUserService.GetUser().subscribe(
             (data) => {
                 this.userDetails = data.userDetails;
+            }
+        );
+    }
+
+    getInnerForest() {
+        this._getInnerForest.GetInnerForest().subscribe(
+            (data) => {
+                this.innerForestData = data.wikiaForestInner;
             }
         );
     }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { LatestUpdatesService } from '../../../services/latest-updates.service';
+import { InnerFishingService } from '../../../services/wikia-inner/inner-fishing.service';
 import { UserService } from '../../../services/user.service';
 
 @Component({
@@ -13,18 +14,21 @@ export class InnerFishingComponent implements OnInit {
     today: Date;
     hour: number;
     timeClass: string;
-    updates = [];
+    updates:any = [];
+    innerFishingData:any = [];
     userDetails: any = [];
 
     constructor(
         private _getUpdatesService: LatestUpdatesService,
-        private _getUserService: UserService
+        private _getUserService: UserService,
+        private _getInnerFishing: InnerFishingService
     ) {}
 
     ngOnInit() {
         this.getTime();
         this.GetUpdates();
         this.getUserDetails();
+        this.getInnerFishing();
     }
 
     updatesSlideConfig = {
@@ -75,6 +79,14 @@ export class InnerFishingComponent implements OnInit {
         this._getUserService.GetUser().subscribe(
             (data) => {
                 this.userDetails = data.userDetails;
+            }
+        );
+    }
+
+    getInnerFishing() {
+        this._getInnerFishing.GetInnerFishing().subscribe(
+            (data) => {
+                this.innerFishingData = data.wikiaFishingInner;
             }
         );
     }

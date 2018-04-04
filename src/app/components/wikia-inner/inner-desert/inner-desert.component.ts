@@ -87,7 +87,6 @@ export class InnerDesertComponent implements OnInit {
         this._getInnerDesert.GetInnerDesert().subscribe(
             (data) => {
                 this.innerDesertData = data.wikiaDesertInner;
-                console.log(this.innerDesertData);
             }
         );
     }
