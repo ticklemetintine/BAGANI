@@ -1,0 +1,180 @@
+app-dashboard {
+    .welcome-container {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+
+        .welcome {
+            font-size: 1.875em;
+            color: #000;
+        }
+    }
+    .notifications {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 20px;
+
+        .notification {
+            background: rgba(29, 24, 20, .8);
+            width: percentage(600px/1124px);
+            margin: auto;
+            border: solid 1px #1d1814;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 17px 20px;
+            margin-bottom: 5px;
+
+            p {
+                font-size: 0.875em;
+                padding-right: 20px;
+                margin: 0;
+            }
+            .btn {
+                font-size: 0.750em;
+                padding: 10px 20px;
+                line-height: 1;
+            }
+        }
+    }
+    .achievements {
+        position: relative;
+        z-index: 2;
+
+        .title {
+            position: relative;
+
+            &:before {
+                content: '';
+                background: #0f0b06;
+                position: absolute;
+                width: 100%;
+                height: 10px;
+                bottom: 10px;
+                left: 0;
+                z-index: 1;
+            }
+
+            p {
+                margin: 0;
+                background: url('assets/images/backgrounds/bg-title-content-container.png') center center no-repeat;
+                font-size: 1.625em;
+                text-align: center;
+                text-transform: uppercase;
+                padding: 30px 0;
+                margin: 40px 0;
+                position: relative;
+                z-index: 2;
+            }
+        }
+        .badges {
+            text-align: center;
+            margin: 40px 0 60px;
+
+            .badge-item {
+                display: inline-block;
+                vertical-align: top;
+                width: percentage(150px/1124px);
+            }
+        }
+    }
+    .topics {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+
+        .topic {
+            display: inline-table;
+            width: percentage(500px/1124px);
+            height: 320px;
+            margin: 0 40px 40px 0;
+            border: solid 10px #0f0b06;
+            text-transform: uppercase;
+            position: relative;
+
+            &.explore-sansinukob {
+                background: url('assets/images/backgrounds/bg-explore-sansinukob.png') no-repeat;
+                background-size: cover;
+            }
+            &.start-test {
+                background: url('assets/images/backgrounds/bg-test.png') no-repeat;
+                background-size: cover;
+            }
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+            &:before {
+                content: '';
+                background-color: rgba(44, 22, 3, .7);
+                background: url('assets/images/borders/border-tribal-top-left.png') left top no-repeat, url('assets/images/borders/border-tribal-top-right.png') 100% top no-repeat;
+                width: 105%;
+                height: 20px;
+                position: absolute;
+                top: -12px;
+                left: -12px;
+            }
+            &:after {
+                content: '';
+                background-color: rgba(44, 22, 3, .7);
+                background: url('assets/images/borders/border-tribal-bottom-left.png') left bottom no-repeat, url('assets/images/borders/border-tribal-bottom-right.png') 100% bottom no-repeat;
+                width: 105%;
+                height: 20px;
+                position: absolute;
+                bottom: -12px;
+                left: -12px;
+            }
+
+            .content {
+                display: table-cell;
+                vertical-align: middle;
+
+                p {
+                    margin: 0;
+                }
+                .entries {
+                    font-size: 0.875em;
+                    color: #da9c2a;
+                    font-family: "Lato", sans-serif;
+                    vertical-align: middle;
+
+                    &:before,
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        width: 65px;
+                        height: 1px;
+                        vertical-align: middle;
+                        background: #da9c2a;
+                        margin: 0 10px;
+                    }
+                }
+                .title {
+                    font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
+                    font-size: 1.125em;
+                    color: #d9c8b6;
+                    line-height: 1.5;
+                    letter-spacing: 3px;
+                }
+                .btn {
+                    font-size: 1.5em;
+                    margin-top: 20px;
+                    display: block;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+    .sansinukob-chronicles {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.grid {
+    &.achievements-grid {
+        text-align: center;
+        .grid-cell {
+            vertical-align: top;
+        }
+    }
+}

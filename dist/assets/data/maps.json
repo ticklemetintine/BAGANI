@@ -1,0 +1,36 @@
+{
+	"maps" : [
+		{
+			"name": "fishing",
+			"emblem": "assets/images/common/banner-fishing.png",
+			"mapSrc": "assets/images/map/map-fishing-lg.png",
+			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region. Despite this, it’s the only one that employs a slavery system.",
+			"sub": "Dive into the Fishing Region by becoming a member of one of the tribes!"
+		},{
+			"name": "farm",
+			"emblem": "assets/images/common/banner-farm.png",
+			"mapSrc": "assets/images/map/map-farm-lg.png",
+			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region.",
+			"sub": "Dive into the Fishing Region by becoming a member of one of the tribes!"
+		},{
+			"name": "trade",
+			"emblem": "assets/images/common/banner-trade.png",
+			"mapSrc": "assets/images/map/map-trade-lg.png",
+			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region. Despite this, it’s the only one that employs a slavery system. This way of life has persisted since its people are known to be sticklers for tradition.",
+			"sub": "Dive into the Fishing Region by becoming a member of one of the tribes!"
+		},{
+			"name": "desert",
+			"emblem": "assets/images/common/banner-desert.png",
+			"mapSrc": "assets/images/map/map-desert-lg.png",
+			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region.",
+			"sub": "Dive into the Fishing Region by becoming a member of one of the tribes!"
+		},{
+			"name": "forest",
+			"emblem": "assets/images/common/banner-forest.png",
+			"mapSrc": "assets/images/map/map-forest-lg.png",
+			"desc": "Famous for the best fishermen and boat makers in Sansinukob, the Fishing Region is also known as a peace-loving region. Despite this, it’s the only one that employs a slavery system. ",
+			"sub": "Dive into the Fishing Region by becoming a member of one of the tribes!"
+		}
+
+	]
+}

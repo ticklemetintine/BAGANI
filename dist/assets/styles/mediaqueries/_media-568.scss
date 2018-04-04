@@ -1,0 +1,787 @@
+@media (max-width: 568px) {
+    body {
+        font-size: 14px;
+    }
+
+    app-header {
+        padding-bottom: 10px;
+        display: block;
+    }
+    header {
+        background-size: auto 70px !important;
+        margin-bottom: 65px;
+        width: 100%;
+
+        &.no-menu {
+            .container {
+                .logo-container {
+                    margin-top: 7px;
+                }
+            }
+        }
+        &.stickyBorder:before {
+            background-size: 50px 50px;
+        }
+        .container {
+            padding: 0 50px;
+            background-size: inherit;
+
+            .menu-container {
+                .burger-menu {
+                    margin: 0;
+                    width: 50px;
+                    height: 95px;
+                    background-size: 200%;
+
+                    &:before {
+                        width: 30px;
+                        background-size: contain;
+                    }
+                }
+            }
+            .avatar-container {
+                .avatar {
+                    min-height: 0;
+
+                    &:before {
+                        background-size: contain;
+                    }
+                }
+            }
+            .logo-container {
+                margin-top: -5px;
+                .logo {
+                    margin-top: -14px;
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer-container {
+            display: table;
+            padding: 10px;
+            text-align: center;
+
+            .copyright {
+                display: table-footer-group;
+            }
+            .menu {
+                display: table-header-group;
+                li {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        width: 100%;
+
+        li {
+            margin: 13px 10px;
+        }
+    }
+
+    .modal {
+        .close {
+            a {
+                max-width: 30px;
+                margin: auto 0 auto auto;
+            }
+        }
+        .modal-content {
+            width: 100%;
+            .desc {
+                padding: 50px 20px;
+            }
+        }
+    }
+
+    app-header {
+        .menu-expanded {
+            >.container {
+                padding: 0;
+                .menu-container {
+                    padding: 0 50px;
+
+                    .burger-menu {
+                        margin: 0;
+                        width: 50px;
+                        height: 95px;
+                        background-size: 200%;
+
+                        &:before {
+                            width: 18px;
+                            height: 20px;
+                            top: 0;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+            .main-menu {
+                max-width: 100%;
+                padding-bottom: 100px;
+
+                li {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    app-unregistered,
+    app-sansinukob,
+    app-dashboard {
+        .first-fold {
+            padding-bottom: 40px;
+            background-size: auto;
+            .container {
+                .welcome {
+                    .logo {
+                        margin: 40px auto;
+                        width: 100%;
+                    }
+                    .writeup {
+                        padding: 9px 10px 8px;
+
+                        background: url('assets/images/borders/border-content-container-bottom.png') center bottom no-repeat, url('assets/images/borders/border-content-container-top.png') center top no-repeat, url('assets/images/borders/border-content-container-left.png') left center no-repeat, url('assets/images/borders/border-content-container-right.png') right center no-repeat, ;
+                        background-size: contain, contain, auto 95%, auto 95%;
+
+                        .content {
+                            background-color: rgba(0, 0, 0, .6);
+                            padding: 60px 25px; // border-top: solid 6px #000;
+                            // border-bottom: solid 6px #000;
+                            position: relative;
+
+
+                            .mobile {
+                                display: block;
+                                width: 100%;
+                                position: absolute;
+                                top: -45px;
+                                left: 0;
+                                right: 0;
+                            }
+                            .sub {
+                                br {
+                                    display: none;
+                                }
+                                span {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .map-fold {
+            background-size: auto;
+            background-position: top center;
+
+            .container {
+                .left {
+                    p {
+                        &.sub {
+                            width: 100%;
+                        }
+                    }
+                }
+                .right {
+                    .mobile {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .pop-up {
+                .container {
+                    padding: 40px 20px;
+                    overflow-y: scroll;
+                    max-height: 100vh;
+
+                    .close {
+                        img {
+                            max-width: 20px;
+                        }
+                    }
+                    .emblem {
+                        width: 100%;
+
+                        img {
+                            max-width: 150px;
+                        }
+                    }
+                    .row {
+                        display: block;
+
+                        >.map,
+                        .writeup {
+                            width: 100%;
+                            position: static;
+                            display: block;
+                        }
+
+                        >.map img {
+                            max-height: 200px;
+                            width: auto;
+                            margin: auto auto;
+                        }
+
+                        .writeup {
+                            margin-top: 0;
+                            p {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .alamat {
+            .container {
+                .title {
+                    background-size: contain;
+                }
+                .content {
+                    padding: 30px 20px;
+                }
+            }
+        }
+        .mythical-creatures {
+            padding: 20px 0 40px;
+            .title {
+                font-size: 2.1em;
+            }
+            .slide {
+                img {
+                    width: 100%;
+                }
+                .name {
+                    background-size: contain;
+                    padding: 20px 0 40px;
+                    margin-top: -32px;
+
+                    p {
+                        font-size: 1.125em;
+                    }
+                }
+            }
+            .slick-arrow {
+                z-index: 99999999;
+                top: unset;
+                bottom: -40px;
+                width: 17px;
+                height: 25px;
+
+                &:before {
+                    display: none;
+                }
+
+                &.slick-prev {
+                    background: url('assets/images/common/slick-arrow-prev-white.png') no-repeat;
+                    left: 5px;
+                }
+                &.slick-next {
+                    right: 5px;
+                    background: url('assets/images/common/slick-arrow-next-white.png') no-repeat;
+                }
+            }
+        }
+        .sansinukob-chronicles {
+            .container {
+                .title-img {
+                    width: 95%;
+                }
+                .video-recap {
+                    padding-bottom: 40px;
+
+                    .content {
+                        width: 100%;
+
+                        .video {
+                            .media {
+                                padding: 0;
+                            }
+                            .social {
+                                position: static;
+                                padding: 10px;
+
+                                >* {
+                                    display: inline;
+                                }
+                            }
+                        }
+                        .writeup {
+                            padding: 0 10px;
+
+                            p {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+                .breaker {
+                    background-size: contain;
+                    &.latest-updates {
+                        .banners {
+                            padding: 0;
+                            .banner {
+                                margin-right: 0;
+                                padding: 20px 5px 40px;
+                                .inner {
+                                    height: 520px;
+                                    background-size: cover;
+
+                                    &:before,
+                                    &:after {
+                                        background-repeat: repeat !important;
+                                    }
+
+                                    .emblem {
+                                        height: 120px;
+                                    }
+                                    .writeup {
+                                        position: absolute;
+                                        width: 100%;
+                                        padding: 40px 20px;
+                                        bottom: 50px;
+                                        p {
+                                            font-size: 2.125em;
+                                            line-height: 1.2;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.featured-artwork {
+                        .content {
+                            padding: 0 40px;
+
+                            .slick-list {
+                                padding: 20px;
+                            }
+                            .slick-arrow {
+                                &.slick-prev {
+                                    z-index: 1;
+                                    left: -42px;
+                                }
+                                &.slick-next {
+                                    right: -42px;
+                                }
+                            }
+                            .slide {
+                                .name {
+                                    padding: 20px;
+                                    width: 80%;
+                                    p {
+                                        font-size: 1.2em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.beyond-sansinukob {
+                        .content {
+                            .articles {
+                                display: block;
+
+                                .article {
+                                    width: 100%;
+                                    margin: 0;
+
+                                    .thumb {
+                                        a {
+                                            display: block;
+                                        }
+                                        img {
+                                            margin: auto;
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    .article-title {
+                                        font-size: 1.7em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .fanartModal {
+            .modal-content {
+                .content {
+                    display: block;
+                    >* {
+                        width: 100%;
+                        margin: 0 auto 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    app-paguuri-results {
+        padding-bottom: 10px;
+
+        .container {
+            .writeup {
+                background: -moz-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.4) 9%, rgba(217, 200, 182, 0.8) 18%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 82%, rgba(217, 200, 182, 0.4) 91%, rgba(217, 200, 182, 0) 100%);
+                background: -webkit-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.4) 9%, rgba(217, 200, 182, 0.8) 18%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 82%, rgba(217, 200, 182, 0.4) 91%, rgba(217, 200, 182, 0) 100%);
+                background: linear-gradient(to right, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.4) 9%, rgba(217, 200, 182, 0.8) 18%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 82%, rgba(217, 200, 182, 0.4) 91%, rgba(217, 200, 182, 0) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d9c8b6', endColorstr='#00d9c8b6', GradientType=1);
+
+                padding: 40px 0;
+
+                p {
+                    &.desc {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    app-email-confirmed {
+        >.container {
+            max-width: 100%;
+            .welcome .writeup {
+                padding: 8px 10px;
+                .content {
+                    p {
+                        &.sub {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    app-paguuri {
+        .paguuri-container {
+            padding: 20px 0;
+            .welcome {
+                .writeup {
+                    padding: 6px 19px 10px;
+                    .content {
+                        .row {
+                            .right {
+                                form {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    app-login,
+    app-paguuri-questions {
+        .paguuri-container {
+            padding: 20px 0;
+
+            .welcome {
+                width: 100%;
+
+                .writeup {
+                    padding: 5px 10px 5px;
+
+                    .content {
+                        padding: 15px 20px;
+
+                        .emblem {
+                            top: -35px;
+                        }
+
+                        form,
+                        .bottom {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    app-paguuri-questions,
+    app-tour {
+        .paguuri-container {
+            .welcome {
+                margin-top: 40px;
+                .writeup {
+                    margin-top: 20px;
+                    padding: 10px 20px 5px;
+                    background-size: contain, contain, auto, auto;
+                    background-repeat: no-repeat, no-repeat, repeat-y, repeat-y;
+                    .content {
+                        padding: 0;
+
+                        .heading {
+                            top: -18px;
+                        }
+                        .slide {
+                            padding: 60px 10px 20px;
+                            .choices {
+                                display: block;
+                                li {
+                                    width: 100%;
+                                    display: block;
+                                    margin: 0;
+
+                                    a {
+                                        height: auto;
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                        .slick-dots {
+                            li {
+                                margin: 13px 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    app-tour {
+        .paguuri-container {
+            padding: 0;
+
+            .welcome {
+                .writeup {
+                    margin-top: 0px;
+
+                    .content {
+                        .heading {
+                            background-size: contain;
+                            top: 0;
+                            margin-top: -70px;
+
+                            img {
+                                max-width: 150px;
+                                margin: auto;
+                            }
+                        }
+                        .slide {
+                            padding: 80px 20px 20px;
+
+                            &.tour-1 {
+
+                                form {
+                                    width: 100%;
+                                }
+                            }
+
+                            &.tour-6 {
+                                .emblems .emblem {
+                                    margin: 10px;
+                                    img {
+                                        max-width: 60px;
+                                    }
+                                }
+                            }
+
+                            .breaker {
+                                width: 100%;
+                            }
+                        }
+                        .slick-dots {
+                            bottom: -25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    app-sansinukob {
+        .creatureModal {
+            .modal-content {
+                .desc {
+                    padding: 30px;
+
+                    .img {
+                        margin-top: -80px;
+                    }
+                }
+            }
+        }
+    }
+    .wikia-region {
+        .banner-region {
+            .writeup {
+                .content {
+                    width: 90%;
+                }
+            }
+        }
+        .topics {
+            .topic {
+                width: 100%;
+                padding: 60px 20px;
+            }
+        }
+        .other-regions {
+            .container {
+                .banners {
+                    a {
+                        width: 44%;
+                    }
+                }
+            }
+        }
+    }
+    .wikia-inner {
+        .writeup-container {
+            margin-top: 60px;
+            .container {
+                padding: 0 10px;
+
+                .title {
+                    background-size: contain;
+                    top: -30px;
+                    padding: 15px 0px 20px;
+                    ;
+                }
+                .content {
+                    padding: 20px 20px;
+
+                    .writeup {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .other-chapters {
+            .container {
+                >a {
+                    width: 40%;
+                    padding: 10px;
+
+                    &:before {
+                        width: 20px;
+                        height: 30px;
+                    }
+
+                    &.prev {
+                        &:before {
+                            left: -25px;
+                            background-size: contain;
+                        }
+                    }
+                    &.next {
+                        &:before {
+                            right: -25px;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+        .latest-updates {
+            .banners {
+                padding: 0;
+                .banner {
+                    margin-right: 10px;
+
+                    .inner {
+                        height: 520px;
+                        background-size: cover;
+
+                        &:before,
+                        &:after {
+                            background-repeat: repeat !important;
+                        }
+
+                        .emblem {
+                            height: 120px;
+                        }
+                        .writeup {
+                            position: absolute;
+                            width: 100%;
+                            padding: 40px 20px;
+                            bottom: 50px;
+                            p {
+                                font-size: 2.125em;
+                                line-height: 1.2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    app-dashboard {
+        .notifications {
+            .notification {
+                width: 100%;
+            }
+        }
+        .achievements {
+            .title {
+                p {
+                    background-size: contain;
+                    padding: 25px 0;
+                }
+            }
+        }
+        .topics {
+            .topic {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    }
+    app-challenges {
+        .main-content {
+            .paguuri-container {
+                max-width: 100%;
+                padding: 0;
+                font-size: 12px;
+            }
+            .welcome {
+                .writeup {
+                    background-size: contain, contain, auto 97%, auto 97%;
+                    padding: 7px 25px;
+                    .content {
+                        padding-top: 25px;
+                        .hint-container {
+                            display: block;
+                            background-size: cover;
+                            margin-bottom: 10px;
+
+                            .babaylan {
+                                position: static;
+                                display: inline-block;
+                                width: 100px;
+                                vertical-align: middle;
+                            }
+
+                            .hint {
+                                display: inline-block;
+                                vertical-align: middle;
+                                padding: 10px 0;
+                            }
+
+                            .brand {
+                                width: 100%;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

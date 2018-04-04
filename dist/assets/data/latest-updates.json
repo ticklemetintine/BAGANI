@@ -1,0 +1,61 @@
+{
+	"latestUpdates" : [
+		{
+			"tribe": "trade",
+			"emblem": "assets/images/common/emblem-trade.png",
+			"thumbnail": "",
+			"chapterTitle": "Mythical Creatures - ",
+			"desc": "The Titans of the North",
+			"link": "#"
+		},
+		{
+			"tribe": "forest",
+			"emblem": "assets/images/common/emblem-forest.png",
+			"thumbnail": "",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing",
+			"link": "#"
+		},
+		{
+			"tribe": "fishing",
+			"emblem": "assets/images/common/emblem-fishing.png",
+			"thumbnail": "assets/images/common/tribe-banner-hover.png",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing",
+			"link": "#"
+		},
+		{
+			"tribe": "farm",
+			"emblem": "assets/images/common/emblem-farm.png",
+			"thumbnail": "",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing",
+			"link": "#"
+		},
+		{
+			"tribe": "desert",
+			"emblem": "assets/images/common/emblem-desert.png",
+			"thumbnail": "",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing",
+			"link": "#"
+		},
+		{
+			"tribe": "desert",
+			"emblem": "assets/images/common/emblem-desert.png",
+			"thumbnail": "",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing",
+			"link": "#"
+		},
+		{
+			"tribe": "desert",
+			"emblem": "assets/images/common/emblem-desert.png",
+			"thumbnail": "",
+			"chapterTitle": "CHAPTER 1:",
+			"desc": "Lorem Ipsum Dolor Sit Amet, Consecetuer Adipscing",
+			"link": "#"
+		}
+
+	]
+}

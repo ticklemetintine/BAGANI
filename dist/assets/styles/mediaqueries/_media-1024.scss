@@ -1,0 +1,155 @@
+@media (max-width: 1024px) {
+
+    app-unregistered,
+    app-sansinukob,
+    app-dashboard {
+        .map-fold {
+            .container {
+                .right {
+                    >img {
+                        &.desktop {
+                            display: none;
+                        }
+                        &.mobile {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .alamat {
+            .container {
+                width: percentage(790px/1024px);
+            }
+        }
+        .sansinukob-chronicles {
+            .container {
+                .video-recap {
+                    .content {
+                        width: percentage(790px/1024px);
+                    }
+                }
+                .breaker {
+                    &.latest-updates {
+                        .banners {
+                            .banner {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .map-fold {
+            .focus {
+                display: none;
+            }
+            .pop-up {
+                .container {
+                    .row>*.map {
+                        padding: 0;
+                    }
+                }
+                &.trade {
+                    .map {
+                        img {
+                            margin-top: -50px;
+                        }
+                    }
+                }
+                &.desert,
+                &.farm {
+                    .map {
+                        img {
+                            margin-top: 0;
+                        }
+                    }
+                }
+                &.fishing {
+                    .map {
+                        img {
+                            margin-top: 60px;
+                        }
+                    }
+                }
+            }
+        }
+        .fanartModal {
+            .modal-content {
+                width: percentage(775px/910px);
+            }
+        }
+    }
+    app-paguuri {
+        .paguuri-container {
+            .welcome {
+                width: 100%;
+            }
+        }
+    }
+    app-login {
+        .welcome {
+            .writeup {
+                .content {
+                    form {
+                        width: percentage(390px/567px);
+                    }
+                    .bottom {
+                        width: percentage(370px/567px);
+                    }
+                }
+            }
+        }
+    }
+    app-paguuri-questions,
+    app-tour {
+        .paguuri-container .welcome {
+            width: 100%;
+        }
+    }
+    .wikia-region {
+        .banner-region,
+        .topics {
+            .container {
+                max-width: 100%;
+
+                .writeup {
+                    width: 85%;
+                }
+            }
+        }
+        .topics {
+            padding: 0 10px;
+            .topic {
+                height: 265px;
+                margin: 0 20px 20px 0;
+                width: percentage(485px/1004px);
+            }
+        }
+    }
+    app-dashboard {
+        .dashboard .container {
+            max-width: 95%;
+        }
+        .notifications {
+            .notification {
+                width: percentage(630px/1024px);
+            }
+        }
+        .achievements {
+            .badges {
+                .badge-item {
+                    margin: 0 10px;
+                    width: percentage(150px/910px);
+                }
+            }
+        }
+    }
+    .grid {
+         &.achievements-grid {
+            .grid-cell {
+                width: percentage(280px/1400px);
+            }
+        }
+    }
+}

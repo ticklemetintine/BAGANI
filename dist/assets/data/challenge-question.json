@@ -1,0 +1,27 @@
+{
+    "challengeQuestion": 
+        {
+            "id": 1,
+            "question": "What will you do if you're the richest man in the world?",
+            "hint": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "brand": "brand",
+            "choices": [
+            {
+                "cid": 1,
+                "choice": "Ganda"
+            },
+            {
+                "cid": 2,
+                "choice": "Liksi"
+            },
+            {
+                "cid": 3,
+                "choice": "Lakas"
+            },
+            {
+                "cid": 4,
+                "choice": "Lakam"
+            }]
+        }
+    
+}

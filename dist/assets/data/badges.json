@@ -1,0 +1,123 @@
+{
+	"badgesList": [{
+		"title": "DESERT REGION SCHOLAR",
+		"slug": "sansinukob-scholar",
+		"currentLevel": "copper",
+		"nextLevel": "bronze",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 2,
+		"totalSubChallenges": 5
+	}, {
+		"title": "SCHOLAR",
+		"slug": "patriot",
+		"currentLevel": "unearned",
+		"nextLevel": "copper",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 0,
+		"totalSubChallenges": 5
+	}, {
+		"title": "REGION",
+		"slug": "orator",
+		"currentLevel": "bronze",
+		"nextLevel": "silver",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 3,
+		"totalSubChallenges": 5
+	}, {
+		"title": "SCHOLAR",
+		"slug": "sage",
+		"currentLevel": "unearned",
+		"nextLevel": "copper",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 0,
+		"totalSubChallenges": 5
+	}, {
+		"title": "Lorem ipsum dolor",
+		"slug": "adventurer",
+		"currentLevel": "silver",
+		"nextLevel": "gold",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 4,
+		"totalSubChallenges": 5
+	},{
+		"title": "DESERT REGION SCHOLAR",
+		"slug": "adventurer",
+		"currentLevel": "copper",
+		"nextLevel": "bronze",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 2,
+		"totalSubChallenges": 5
+	}, {
+		"title": "SCHOLAR",
+		"slug": "adventurer",
+		"currentLevel": "unearned",
+		"nextLevel": "copper",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 0,
+		"totalSubChallenges": 5
+	}, {
+		"title": "REGION",
+		"slug": "adventurer",
+		"currentLevel": "bronze",
+		"nextLevel": "silver",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 3,
+		"totalSubChallenges": 5
+	}, {
+		"title": "SCHOLAR",
+		"slug": "adventurer",
+		"currentLevel": "unearned",
+		"nextLevel": "copper",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 0,
+		"totalSubChallenges": 5
+	}, {
+		"title": "Lorem ipsum dolor",
+		"slug": "adventurer",
+		"currentLevel": "silver",
+		"nextLevel": "gold",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 4,
+		"totalSubChallenges": 5
+	},{
+		"title": "DESERT REGION SCHOLAR",
+		"slug": "adventurer",
+		"currentLevel": "copper",
+		"nextLevel": "bronze",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 2,
+		"totalSubChallenges": 5
+	}, {
+		"title": "SCHOLAR",
+		"slug": "adventurer",
+		"currentLevel": "unearned",
+		"nextLevel": "copper",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 0,
+		"totalSubChallenges": 5
+	}, {
+		"title": "REGION",
+		"slug": "adventurer",
+		"currentLevel": "bronze",
+		"nextLevel": "silver",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 3,
+		"totalSubChallenges": 5
+	}, {
+		"title": "SCHOLAR",
+		"slug": "adventurer",
+		"currentLevel": "unearned",
+		"nextLevel": "copper",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 0,
+		"totalSubChallenges": 5
+	}, {
+		"title": "Lorem ipsum dolor",
+		"slug": "adventurer",
+		"currentLevel": "silver",
+		"nextLevel": "gold",
+		"instructions": "Read 5 entries about the Desert Region.",
+		"completedSubChallenges": 4,
+		"totalSubChallenges": 5
+	}]
+}

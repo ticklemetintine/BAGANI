@@ -1,0 +1,184 @@
+app-challenges {
+    .main-content {
+        background: url('assets/images/backgrounds/bg-video-desert-morning.jpg') left top no-repeat;
+        min-height: 100vh;
+        display: block;
+        position: relative;
+        background-attachment: fixed;
+        background-size: cover;
+
+        .instruction {
+            font-size: 1.125em;
+            color: #222222;
+        }
+        .welcome {
+            .writeup {
+                padding: 14px 25px;
+                .content {
+                    padding: 60px 0 40px;
+                    .timer {
+                        p {
+                            font-size: 2.500em;
+                            color: #d6a20e;
+                        }
+                    }
+                    .question {
+                        font-size: 1.875em;
+                        width: percentage(445px/775px);
+                        margin: 40px auto 20px;
+                    }
+                    .hint-container {
+                        background: url('assets/images/backgrounds/bg-yellow-texture.png') center center repeat-x;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        justify-content: flex-end;
+                        align-content: center;
+                        align-items: center;
+                        position: relative;
+                        margin-bottom: 25px;
+
+                        &.no-brand {
+                            .brand {
+                                opacity: 0;
+                            }
+                        }
+
+                        p {
+                            margin: 0;
+                        }
+                        .babaylan {
+                            position: absolute;
+                            top: -80px;
+                            left: -100px;
+                        }
+                        .hint {
+                            width: percentage(460px/775px);
+                            padding-right: 10px;
+                            display: flex;
+                            align-items: center;
+                            text-align: left;
+                            justify-content: space-between;
+
+
+                            img {
+                                margin-right: 30px;
+                            }
+                        }
+                        .brand {
+                            background: url('assets/images/backgrounds/bg-black-texture.png') center center no-repeat;
+                            background-size: cover;
+                            align-self: center;
+                            width: percentage(200px/775px);
+                            padding: 30px 0;
+                        }
+                    }
+                    .choices {
+                        >* {
+                            display: block;
+                            font-size: 1.875em;
+                            color: #d9c8b6;
+                            padding: 10px;
+                            max-width: percentage(385px/775px);
+                            margin: auto;
+                            cursor: pointer;
+                            position: relative;
+                            z-index: 1;
+                            text-transform: uppercase;
+
+                            &:hover,
+                            &.active {
+                                color: #292015;
+
+                                &:before {
+                                    content: '';
+                                    background: url('assets/images/backgrounds/bg-challenges-yellow-active.png') center center no-repeat;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: -1;
+                                    animation: fadein 0.5s;
+                                }
+                            }
+                        }
+                    }
+                    .button {
+                        margin-top: 40px;
+                        .btn-submit {
+                            font-size: 1.875em;
+                            padding: 20px 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.challengeAnswerModal {
+    .container {
+        .modal-content {
+            margin-top: 175px;
+            width: percentage(700px/1110px);
+
+            .content {
+                background: #38322b;
+                text-align: center;
+                padding-bottom: 60px;
+
+                .top {
+                    img {
+                        margin-top: -175px;
+                        width: 100%;
+                    }
+                }
+                .results {
+                    color: #d9c8b6;
+                    margin-top: -40px;
+                    padding: 0 50px;
+                    .result {
+                        font-size: 3.188em;
+                        margin: 0;
+                        text-transform: uppercase;
+                    }
+                    .writeup {
+                        font-size: 2.250em;
+                        margin: 0;
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+                .share {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    p {
+                        font-size: 0.750em;
+                        color: #fff;
+                        margin-right: 5px;
+                        text-transform: uppercase;
+                    }
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                        li {
+                            display: inline;
+                            margin: 0 5px 0 0;
+                        }
+                    }
+                }
+                .buttons {
+                    margin-top: 40px;
+                    .btn {
+                        font-size: 1.250em;
+                        padding: 40px;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}

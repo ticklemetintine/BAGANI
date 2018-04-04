@@ -1,0 +1,305 @@
+///////////////
+// Variables //
+///////////////
+
+//Primary Colors
+$black: #000;
+$white: #fff;
+$black-primary: rgba(0,0,0,.85);
+$grey-primary: #e2e2e2;
+
+$text-color: rgba(0,0,0,.85); 
+$link-color: #212121;
+$link-hover-color: $black;
+$link-hover-decoration: none;
+
+//Tribe Theming
+$farming-color: #073f79;
+$fishing-color: #3f004e;
+$trade-color: #5b0200;
+$forest-color: #0c4c28;
+$desert-color: #855b00;
+$sansinukob-color: #372918;
+
+// Convert pixels to ems
+// eg. for a relational value of 12px write em(12) when the parent is 16px
+// if the parent is another value say 24px write em(12, 24)
+@function strip-units($value) {
+	@return ($value / ($value * 0 + 1));
+}
+@function em($pxval, $base: $base-font-size) {
+	@if not unitless($pxval) {
+		$pxval: strip-units($pxval);
+	}
+	@if not unitless($base) {
+		$base: strip-units($base);
+	}
+	@return ($pxval / $base) * 1em;
+}
+
+// Micro clearfix
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+//Fluidity
+@function fluidity($target, $context){
+	@return percentage($target / $context);
+}
+
+//Positioning
+@mixin centered-horizontal() {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	-o-transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+}
+
+@mixin centered-vertical() {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+
+@mixin centered-all() {
+	overflow: auto;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+@mixin centered-full() {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+// Border radius shorthand
+@mixin borderradius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+}
+
+// Border radius shorthand specific
+@mixin borderradius_custom($radius-top, $radius-left, $radius-bottom, $radius-right) {
+	border-radius: $radius-top $radius-left $radius-bottom $radius-right;
+	-webkit-border-radius: $radius-top $radius-left $radius-bottom $radius-right;
+	-moz-border-radius: $radius-top $radius-left $radius-bottom $radius-right;
+	-ms-border-radius: $radius-top $radius-left $radius-bottom $radius-right;
+	-o-border-radius: $radius-top $radius-left $radius-bottom $radius-right;
+}
+
+//Text Shadow
+@mixin textshadow($h-shadow, $v-shadow, $blur-radius, $color) {
+	-moz-shadow: $h-shadow $v-shadow $blur-radius $color;
+	-webkit-text-shadow: $h-shadow $v-shadow $blur-radius $color;
+	text-shadow: $h-shadow $v-shadow $blur-radius $color;
+}
+
+//Box Shadow
+@mixin boxshadow($h-shadow, $v-shadow, $blur-radius, $spread, $color) {
+	-moz-box-shadow: $h-shadow $v-shadow $blur-radius $spread $color;
+	-webkit-box-shadow: $h-shadow $v-shadow $blur-radius $spread $color;
+	box-shadow: $h-shadow $v-shadow $blur-radius $spread $color;
+}
+
+//Box Shadow
+@mixin boxshadow_none($shadow) {
+	-moz-box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+//Calc
+@mixin calcWidth($percentage, $pixels) {
+  width: calc(#{$percentage} - #{$pixels});
+  width: -moz-calc(#{$percentage} - #{$pixels});
+  width: -webkit-calc(#{$percentage} - #{$pixels});
+  width: -o-calc(#{$percentage} - #{$pixels});
+}
+
+//Animations
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 5px rgba(217,217,217,0.9);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(217,217,217, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(217,217,217, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(217,217,217, 0.9);
+    box-shadow: 0 0 0 0 rgba(217,217,217, 0.9);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(217,217,217, 0);
+      box-shadow: 0 0 0 10px rgba(217,217,217, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(217,217,217, 0);
+      box-shadow: 0 0 0 0 rgba(217,217,217, 0);
+  }
+}
+
+@-webkit-keyframes pulse2 {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse2 {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse2 {
+  -webkit-animation-name: pulse2;
+  animation-name: pulse2;
+}
+
+@-webkit-keyframes rotateIn {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.rotateIn {
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn;
+}
+
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

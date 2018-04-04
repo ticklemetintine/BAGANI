@@ -1,0 +1,394 @@
+@media (max-width: 768px) {
+
+    .top-nav {
+        margin-bottom: 20px;
+        .share ul li a {
+            display: inline-block;
+            img {
+                max-width: 30px;
+            }
+        }
+    }
+    app-unregistered,
+    app-sansinukob,
+    app-dashboard {
+
+        .map-fold {
+            min-height: auto;
+            padding: 20px 0;
+            position: relative;
+
+            .container {
+                display: block;
+                .left,
+                .right {
+                    width: 100%;
+                    display: block;
+                    margin: auto auto;
+                }
+                .left {
+                    p {
+                        &.title {
+                            margin-bottom: 0;
+                        }
+                        &.sub,
+                        &.small {
+                            width: percentage(500px/730px);
+                            margin: 20px auto;
+                        }
+                    }
+                    hr {
+                        width: 60%;
+                    }
+                }
+                .right {
+                    position: relative;
+                    max-height: unset;
+                    width: 70%;
+
+                    .mobile {
+                        margin: auto auto;
+                    }
+                }
+            }
+            .pop-up {
+                min-height: 100vh;
+
+                &.trade {
+                    .map {
+                        img {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                .container {
+                    padding: 25% 20px 0;
+                    .emblem {
+                        width: 40%;
+                        margin-bottom: 20px img {
+                            width: 100%;
+                        }
+                    }
+                    .row {
+                        >.map {
+                            width: 40%;
+                        }
+                        .writeup {
+                            width: 60%;
+                            margin-top: -35%;
+                            p {
+                                margin-bottom: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .alamat {
+            .container {
+                width: 85%;
+            }
+        }
+        .mythical-creatures {
+            .slide {
+                .name {
+                    background-size: contain;
+                    padding: 15px 0 25px;
+                }
+            }
+        }
+        .sansinukob-chronicles {
+            .container {
+                .breaker {
+                    &.featured-artwork {
+                        .content {
+                            .slick-arrow {
+                                &.slick-prev {
+                                    left: -33px;
+                                }
+                            }
+                        }
+                    }
+                    &.latest-updates {
+                        .banners {
+                            .banner {
+                                .inner {
+                                    padding: 30px 5px 0;
+                                    min-height: 200px;
+
+                                    .emblem {
+                                        margin: 0 auto;
+                                    }
+                                    .writeup {
+                                        position: static;
+                                        padding: 10px 0;
+                                        p {
+                                            font-size: 0.875em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .fanartModal {
+            .modal-content {
+                .content {
+                    .desc {
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+        .fanartModal {
+            .modal-content {
+                padding: 10px;
+            }
+        }
+    }
+
+    app-sansinukob {
+        .map-fold {
+            padding: 80px 0;
+        }
+    }
+
+    app-paguuri-results {
+        .container {
+            max-width: 100%;
+
+            .writeup {
+                background: -moz-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 15%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 84%, rgba(217, 200, 182, 0) 100%);
+                background: -webkit-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 15%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 84%, rgba(217, 200, 182, 0) 100%);
+                background: linear-gradient(to right, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 15%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 84%, rgba(217, 200, 182, 0) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d9c8b6', endColorstr='#00d9c8b6', GradientType=1);
+
+                p {
+                    &.desc {
+                        width: percentage(400px/609px);
+                    }
+                }
+            }
+        }
+    }
+
+    app-email-confirmed {
+        >.container {
+            .welcome {
+                width: 100%;
+                margin-top: 40px;
+
+                .writeup {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    app-paguuri {
+        .paguuri-container {
+            padding: 20px 0;
+            .welcome {
+                margin-top: 40px;
+                .writeup {
+                    background-size: contain, contain, auto, auto;
+                    background-repeat: no-repeat, no-repeat, repeat-y, repeat-y;
+                    padding: 20px 19px 18px;
+                    margin-top: 20px;
+                    .content {
+                        .row {
+                            display: block;
+
+                            >* {
+                                width: 100%;
+                            }
+                            .right {
+                                form {
+                                    padding: 0;
+                                    width: percentage(400px/600px);
+                                    margin: auto auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    app-login {
+        .paguuri-container {
+            .welcome {
+                width: 100%;
+            }
+        }
+        app-footer {
+            position: absolute;
+            bottom: 0;
+            width: 95%;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+
+    app-paguuri-questions {
+        .paguuri-container {
+            .welcome {
+                .writeup {
+                    padding: 15px 17px 14px 16px;
+                    .content {
+                        padding: 8px 2px 4px;
+
+                        .slide {
+                            padding: 60px 10px 20px;
+
+                            .choices {
+                                li {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .wikia-region {
+        .banner-region {
+            .container {
+                .writeup {
+                    width: 100%;
+                }
+            }
+        }
+        .topics {
+            .topic {
+                display: block;
+                margin: 40px auto;
+                width: 80%;
+                height: auto;
+                padding: 100px 40px;
+
+                &:nth-child(2n) {
+                    margin: 20px auto;
+                }
+                .content {
+                    display: block;
+                }
+            }
+        }
+        .other-regions {
+            .container {
+                .banners {
+                    display: block;
+
+                    a {
+                        display: inline-block;
+                        width: 35%;
+
+                        img {
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .wikia-inner {
+        .writeup-container {
+            .container {
+                padding: 0 20px;
+            }
+        }
+        .other-chapters {
+            .container {
+                >a {
+                    width: 40%;
+                }
+            }
+        }
+        .latest-updates {
+            .container {
+                max-width: 100%;
+            }
+            .banners {
+                padding: 0 10px;
+                .banner {
+                    margin-right: 10px;
+
+                    .inner {
+                        min-height: 200px;
+                        padding: 30px 5px 0;
+
+                        .writeup {
+                            position: static;
+                            font-size: 0.875em;
+                            padding: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    app-dashboard {
+
+        .notifications {
+            .notification {
+                width: percentage(600px/768px);
+            }
+        }
+        .topics {
+            .topic {
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+        .achievements {
+            .badges {
+                .badge-item {
+                    margin: 0 10px;
+                    width: percentage(150px/730px);
+
+                    > * {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .grid {
+        &.achievements-grid {
+            .grid-cell {
+                width: percentage(350px/1400px);
+            }
+        }
+    }
+
+    app-challenges {
+        .paguuri-container {
+            .welcome {
+                width: 90%;
+
+                .writeup {
+                    .content {
+                        .question {
+                            width: 85%;
+                        }
+                        .hint-container {
+                            .hint {
+                                width: percentage(315px/570px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

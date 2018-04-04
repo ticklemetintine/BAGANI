@@ -1,0 +1,805 @@
+app-unregistered,
+app-dashboard {
+    background-color: #0d2f40;
+    display: block;
+
+    app-footer {
+        display: block;
+        max-width: percentage(1280px/1440px);
+        margin: auto auto;
+    }
+
+    .first-fold {
+        background: url('assets/images/backgrounds/bg-waves.png') center bottom no-repeat;
+        padding-bottom: 100px;
+        background-size: cover;
+        min-height: 100vh;
+
+        .container {
+            padding: 20px;
+
+            .welcome {
+                .logo {
+                    display: block;
+                    margin: auto auto;
+                    max-width: 375px;
+                }
+                .writeup {
+                    background: url('assets/images/backgrounds/bg-content-container-emblem.png') center center no-repeat;
+                    background-size: contain;
+                    text-align: center;
+                    padding: 180px 0 100px;
+                    position: relative;
+
+                    p {
+                        margin: 0;
+                        &.sub {
+                            font-size: 1.5em;
+                            margin-bottom: 40px;
+                        }
+                        &.title {
+                            font-size: 2.250em;
+                        }
+                    }
+                    .button {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+    .map-fold {
+        background: url('assets/images/backgrounds/bg-map-compass.png') center center no-repeat;
+        padding: 65px 20px 30px;
+        background-size: cover;
+        position: relative;
+        min-height: 100vh;
+
+        .container {
+            display: flex;
+            width: 100%;
+
+            .left {
+                width: percentage(400px/1240px);
+
+                p {
+                    margin: 0;
+                    text-align: center;
+
+                    &.title {
+                        font-size: 3em;
+                        text-transform: uppercase;
+                        margin-bottom: 40px;
+                    }
+                    &.sub {
+                        font-size: 1.125em;
+                        margin: 25px 0;
+                    }
+                    &.small {
+                        font-size: 0.875em;
+                        margin-top: 35px;
+                        font-family: "Lato", sans-serif;
+                    }
+                }
+                hr {
+                    border-color: #d9c8b6;
+                    width: 75%;
+                }
+            }
+            .right {
+                width: percentage(840px/1240px);
+                position: relative;
+                >img {
+                    width: 100%;
+                }
+                .sansinukob-map {
+                    width: 100%;
+
+                    &:hover {
+                        background: #000;
+                    }
+                }
+                .focus {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+
+                    img {
+                        position: absolute;
+                        cursor: pointer;
+
+                        &.map-trade {
+                            left: percentage(132px/737px);
+                            top: 50px;
+                            width: percentage(319px/737px);
+                        }
+                        &.map-farm {
+                            left: 403px;
+                            top: 200px;
+                        }
+                        &.map-desert {
+                            left: 327px;
+                            top: 20px;
+                        }
+                        &.map-forest {
+                            left: 298px;
+                            top: 278px
+                        }
+                        &.map-fishing {
+                            top: 421px;
+                            left: 159px;
+                            width: 500px;
+                        }
+                    }
+                }
+            }
+        }
+        .pop-up {
+            background: url('assets/images/backgrounds/bg-ocean.png') top center no-repeat;
+            position: fixed;
+            background-size: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+
+            .container {
+                display: block;
+            }
+
+            &.show {
+                opacity: 1;
+                z-index: 2;
+                max-height: 100%;
+                overflow-y: auto;
+            }
+
+            &.trade {
+                .map {
+                    img {
+                        margin-top: -200px;
+                    }
+                }
+            }
+            &.desert {
+                .map {
+                    img {
+                        margin-top: -40px;
+                    }
+                }
+            }
+            &.farm {
+                .map {
+                    img {
+                        margin-top: -40px;
+                    }
+                }
+            }
+
+            .container {
+                padding: 40px 20px 100px;
+                position: relative;
+                .close {
+                    position: absolute;
+                    right: 0;
+                    top: 20px;
+                    cursor: pointer;
+                }
+                .emblem {
+                    img {
+                        display: block;
+                        margin: auto auto;
+                    }
+                }
+                .row {
+                    display: flex;
+
+                    >* {
+                        width: 50%;
+
+                        &.map {
+                            padding: 40px;
+                            img {
+                                width: 100%;
+                                display: block;
+                            }
+                        }
+                        &.writeup {
+                            p {
+                                width: percentage(380px/522px);
+                                margin: 20px auto;
+                                font-size: 1.125em;
+                                line-height: 1.5;
+
+                                &:first-child {
+                                    padding-bottom: 20px;
+                                    border-bottom: solid 1px #d9c8b6;
+                                }
+                            }
+                            .button {
+                                text-align: center;
+                                margin-top: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .alamat {
+        background: url('assets/images/backgrounds/bg-ang-alamat.png') top center no-repeat;
+        padding: 80px 0;
+        background-size: cover;
+        transition: all 0.2s ease-out;
+        position: relative;
+
+        .container {
+            width: percentage(700px/1265px);
+            margin: auto auto;
+
+            .title {
+                background: url('assets/images/backgrounds/bg-title-alamat.png') center center no-repeat;
+                padding: 20px;
+                z-index: 1;
+                position: relative;
+
+                p {
+                    text-align: center;
+                    font-size: 1.625em;
+                    text-transform: uppercase;
+                    margin: 0;
+                    color: #d9c8b6;
+                }
+            }
+
+            .content {
+                // background-color: rgba(214, 201, 181, .7);
+                // border: solid 6px #000;
+                margin-top: -17px;
+                z-index: 0;
+                padding: 30px;
+
+                >* {
+                    color: #000;
+                    font-size: 1.250em;
+                    line-height: 1.5;
+                }
+
+                .slick-track {
+                    display: flex;
+                    align-items: stretch;
+
+                    .slide {
+                        word-break: break-word;
+
+                        div:last-child {
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: nowrap;
+                            justify-content: flex-end;
+                            align-content: stretch;
+                            align-items: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mythical-creatures {
+        background: url('assets/images/backgrounds/bg-mythical-creature.png') top center no-repeat;
+        padding: 40px 0 80px;
+        background-size: cover;
+
+        .container {
+            max-width: 100%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 3em;
+            padding: 0 20px;
+        }
+
+        .slide {
+            padding: 0 10px;
+            max-height: 365px;
+            overflow: hidden;
+
+            img {
+                max-width: 100%;
+                position: relative;
+                border: solid 6px #0f0b06;
+                cursor: pointer;
+                width: inherit;
+                display: block;
+                height: 325px;
+            }
+            .name {
+                background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+                background-size: contain;
+                padding: 15px 0 30px;
+                margin: -25px auto 0;
+                width: 95%;
+                position: relative;
+
+                p {
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+
+        .slick-dots {
+            background: transparent;
+            bottom: -40px;
+        }
+    }
+    .sansinukob-chronicles {
+        padding: 0px 0;
+        .container {
+            background: url('assets/images/backgrounds/bg-bottom-paper.png') left bottom repeat-x;
+            padding-bottom: 40px;
+
+            .title-img {
+                display: block;
+                margin: 40px auto;
+                width: percentage(770px/1124px);
+            }
+
+            .video-recap {
+                background: url('assets/images/backgrounds/bg-sansinukob.png') no-repeat;
+                background-size: cover;
+                padding: 80px 0 0;
+                .content {
+                    width: percentage(800px/1200px);
+                    margin: auto auto;
+                    .video {
+                        position: relative;
+
+                        .media {
+                            width: 100%;
+                            height: 395px;
+                            margin: auto auto;
+                            display: block;
+                            padding: 0 40px;
+                            box-sizing: border-box;
+                        }
+                        .social {
+                            position: absolute;
+                            top: 0;
+                            right: -20px;
+                            >* {
+                                display: block;
+                            }
+                        }
+                    }
+                    .writeup {
+                        font-family: "Lato", sans-serif;
+                        font-size: 0.875em;
+                        color: #363636;
+                        line-height: 1.5;
+                        padding: 0 40px;
+
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .breaker {
+                padding: 40px 0 60px;
+                background: url('assets/images/common/chronicles-breaker.png') top center no-repeat, url('assets/images/backgrounds/bg-paper.png');
+
+                .title {
+                    font-size: 1.875em;
+                    text-transform: uppercase;
+                    text-align: center;
+                    color: #000000;
+                    margin-top: 15px;
+                }
+
+                &.latest-updates {
+                    padding-bottom: 80px;
+
+                    .banners {
+                        padding: 0 10px;
+
+                        .banner {
+                            margin-right: 20px;
+                            width: percentage(208px/1124px);
+                            position: relative;
+                            padding: 0 0 40px;
+                            border: 0;
+                            background: transparent;
+                            font-size: 1em;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                            &:hover {
+                                p {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            &.trade {
+                                .inner {
+                                    background-color: #685735;
+
+                                    &:before {
+                                        background: url('assets/images/common/tribe-banner-top-trade.png') center top repeat-x;
+                                    }
+                                    &:after {
+                                        background: url('assets/images/common/tribe-banner-bottom-trade.png') center bottom repeat-x;
+                                        background-size: contain;
+                                    }
+                                }
+                            }
+
+                            &.forest {
+                                .inner {
+                                    background-color: #21944d;
+
+                                    &:before {
+                                        background: url('assets/images/common/tribe-banner-top-forest.png') center top repeat-x;
+                                    }
+                                    &:after {
+                                        background: url('assets/images/common/tribe-banner-bottom-forest.png') center bottom repeat-x;
+                                        background-size: contain;
+                                    }
+                                }
+                            }
+
+                            &.fishing {
+                                .inner {
+                                    background-color: #732c91;
+
+                                    &:before {
+                                        background: url('assets/images/common/tribe-banner-top-fishing.png') center top repeat-x;
+                                    }
+                                    &:after {
+                                        background: url('assets/images/common/tribe-banner-bottom-fishing.png') center bottom repeat-x;
+                                        background-size: contain;
+                                    }
+                                }
+                            }
+
+                            &.farm {
+                                .inner {
+                                    background-color: #187cc3;
+
+                                    &:before {
+                                        background: url('assets/images/common/tribe-banner-top-farm.png') center top repeat-x;
+                                    }
+                                    &:after {
+                                        background: url('assets/images/common/tribe-banner-bottom-farm.png') center bottom repeat-x;
+                                        background-size: contain;
+                                    }
+                                }
+                            }
+
+                            &.desert {
+                                .inner {
+                                    background-color: #d0a907;
+
+                                    &:before {
+                                        background: url('assets/images/common/tribe-banner-top-desert.png') center top repeat-x;
+                                    }
+                                    &:after {
+                                        background: url('assets/images/common/tribe-banner-bottom-desert.png') center bottom repeat-x;
+                                        background-size: contain;
+                                    }
+                                }
+                            }
+
+                            .hover {
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: 0;
+                                opacity: 0.4;
+                                transition: opacity 0.5s ease;
+                            }
+
+                            .inner {
+                                position: relative;
+                                background-image: url("assets/images/backgrounds/bg-banner-texture.png");
+                                background-blend-mode: multiply;
+                                padding: 30px 15px 50px;
+                                min-height: 300px;
+
+                                &:before {
+                                    content: '';
+                                    display: block;
+                                    width: 100%;
+                                    height: 15px;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    z-index: 1;
+                                }
+                                &:after {
+                                    content: '';
+                                    display: block;
+                                    width: 100%;
+                                    height: 50px;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -30px;
+                                }
+                                >*:not(.hover) {
+                                    position: relative;
+                                    z-index: 1;
+                                }
+                                .emblem {
+                                    display: block;
+                                    margin: 20px auto;
+                                }
+                                .writeup {
+                                    position: absolute;
+                                    bottom: 10px;
+                                    height: 40%;
+                                    left: 0;
+                                    padding: 10px;
+                                    p {
+                                        margin: 0;
+                                        color: #fff;
+                                        text-align: left;
+                                        font-family: 'Averia Serif Libre', sans-serif;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.featured-artwork {
+                    .title {
+                        margin-bottom: 10px;
+                    }
+                    .content {
+                        padding: 0 60px;
+
+                        .slick-arrow {
+                            height: 100%;
+                            width: 52px;
+                            &.slick-prev {
+                                background: url('assets/images/common/slider-arrow-prev.png') no-repeat;
+                                background-size: contain;
+                                left: -38px;
+                                z-index: 1;
+                            }
+                            &.slick-next {
+                                background: url('assets/images/common/slider-arrow-next.png') no-repeat;
+                                background-size: contain;
+                                right: -52px;
+                            }
+                            &:before {
+                                display: none;
+                            }
+                        }
+                        .slick-list {
+                            padding-top: 20px;
+                            padding-bottom: 30px;
+                        }
+                        .slide {
+                            position: relative;
+                            img {
+                                width: 100%;
+                                display: block;
+                                border: solid 3px #514941;
+                            }
+                            .name {
+                                background: url('assets/images/common/title-bg.png') no-repeat;
+                                background-size: 100% 100%;
+                                padding: 20px 0;
+                                text-align: center;
+                                position: absolute;
+                                bottom: -20px;
+                                left: 0;
+                                width: auto;
+                                z-index: 99999;
+                                width: 90%;
+                                right: 0;
+                                margin: auto;
+
+                                p {
+                                    font-size: 1.125em;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.beyond-sansinukob {
+                    .content {
+                        width: percentage(900px/1124px);
+                        margin: auto auto;
+
+                        .articles {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .article {
+                                width: percentage(280px/1124px);
+                                .thumb {
+                                    a {
+                                        display: block;
+                                    }
+                                    img {
+                                        width: 100%;
+                                        border: solid 3px #000;
+                                        display: block;
+                                    }
+                                }
+                                .article-title {
+                                    font-size: 1.125em;
+                                    margin-top: 10px;
+                                    a {
+                                        text-decoration: none;
+                                        color: #000;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .logos {
+        margin: 20px 0;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            >* {
+                width: 15%;
+            }
+
+            a {
+                display: block;
+                img {
+                    // max-height: 100px;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .creatureModal,
+    .privacyModal,
+    .termsModal {
+        z-index: 9999999999;
+        .modal-content {
+
+            .name {
+                position: absolute;
+                top: -28px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                text-align: center;
+                background: #333;
+                display: block;
+                background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+                background-size: contain;
+                padding: 15px 0 30px;
+                width: 100%;
+                p {
+                    text-align: center;
+                    margin: 0;
+                    color: #d9c8b6;
+                }
+            }
+            .image {
+                img {
+                    max-width: 100%;
+                    display: block;
+                }
+            }
+            .desc {
+                color: #010100;
+                padding: 50px;
+                line-height: 1.5;
+                background: #d9c8b6;
+                text-align: center;
+
+                .img {
+                    margin: -120px 0 40px;
+                    img {
+                        display: block;
+                        margin: auto auto;
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                }
+
+                p {
+                    margin-top: 0;
+                    font-size: 1.5em;
+                    text-align: center;
+                }
+                .button {
+                    text-align: center;
+                    margin-top: 60px;
+
+                    .btn {
+                        font-size: 1.5em;
+                        padding: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .fanartModal {
+        .modal-content {
+            background: #d9c8b6;
+
+            .name {
+                margin: auto;
+                text-align: center;
+                background: #333;
+                display: block;
+                background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+                background-size: contain;
+                padding: 15px 0 30px;
+                width: 100%;
+                p {
+                    text-align: center;
+                    margin: 0;
+                    color: #d9c8b6;
+                }
+            }
+            .content {
+                display: flex;
+                align-items: center;
+
+                >* {
+                    width: 50%;
+                }
+                .image {
+                    img {
+                        max-width: 100%;
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                .desc {
+                    padding: 0 50px;
+
+                    >p {
+                        margin-top: 0;
+                        color: #010100;
+                        line-height: 1.5;
+                        font-family: 'Lato', sans-serif;
+                    }
+                    .share {
+                        display: flex;
+                        align-items: center;
+
+                        ul {
+                            padding-left: 10px;
+                            li {
+                                list-style: none;
+                                display: inline;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

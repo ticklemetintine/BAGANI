@@ -1,0 +1,621 @@
+.wikia-region {
+    background: #000;
+    display: block;
+
+    .banner-region {
+        padding: 50px 0;
+        .banner {
+            position: relative;
+            z-index: 1;
+
+            img {
+                display: block;
+                margin: auto auto;
+                max-width: 100%;
+            }
+        }
+        .writeup {
+            background: -moz-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 15%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 85%, rgba(217, 200, 182, 0) 100%);
+            background: -webkit-linear-gradient(left, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 15%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 85%, rgba(217, 200, 182, 0) 100%);
+            background: linear-gradient(to right, rgba(217, 200, 182, 0) 0%, rgba(217, 200, 182, 0.8) 15%, rgba(217, 200, 182, 0.8) 50%, rgba(217, 200, 182, 0.8) 85%, rgba(217, 200, 182, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d9c8b6', endColorstr='#00d9c8b6', GradientType=1);
+
+            width: percentage(800px/1124px);
+            margin: -200px auto auto;
+            color: #000000;
+            text-align: center;
+            padding: 150px 40px 40px;
+            position: relative;
+            z-index: 0;
+            font-family: "Lato", sans-serif;
+
+            .content {
+                width: percentage(520px/720px);
+                margin: auto auto;
+                line-height: 1.5;
+            }
+        }
+    }
+    .topics {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+
+        .topic {
+            display: inline-table;
+            width: percentage(500px/1124px);
+            height: 320px;
+            margin: 0 40px 40px 0;
+            border: solid 10px #0f0b06;
+            text-transform: uppercase;
+            position: relative;
+
+            &.stories {
+                background: url('assets/images/backgrounds/bg-wikia-stories.png') no-repeat;
+            }
+            &.history {
+                background: url('assets/images/backgrounds/bg-wikia-history.png') no-repeat;
+            }
+            &.culture {
+                background: url('assets/images/backgrounds/bg-wikia-culture.png') no-repeat;
+            }
+            &.people {
+                background: url('assets/images/backgrounds/bg-wikia-people.png') no-repeat;
+            }
+            &.explore-sansinukob {
+                background: url('assets/images/backgrounds/bg-explore-sansinukob.png') no-repeat;
+                background-size: cover;
+            }
+            &.start-test {
+                background: url('assets/images/backgrounds/bg-test.png') no-repeat;
+                background-size: cover;
+            }
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+            &:before {
+                content: '';
+                background-color: rgba(44, 22, 3, .7);
+                background: url('assets/images/borders/border-tribal-top-left.png') left top no-repeat, url('assets/images/borders/border-tribal-top-right.png') 100% top no-repeat;
+                width: 105%;
+                height: 20px;
+                position: absolute;
+                top: -12px;
+                left: -12px;
+            }
+            &:after {
+                content: '';
+                background-color: rgba(44, 22, 3, .7);
+                background: url('assets/images/borders/border-tribal-bottom-left.png') left bottom no-repeat, url('assets/images/borders/border-tribal-bottom-right.png') 100% bottom no-repeat;
+                width: 105%;
+                height: 20px;
+                position: absolute;
+                bottom: -12px;
+                left: -12px;
+            }
+
+            .content {
+                display: table-cell;
+                vertical-align: middle;
+
+                p {
+                    margin: 0;
+                }
+                .entries {
+                    font-size: 0.875em;
+                    color: #da9c2a;
+                    font-family: "Lato", sans-serif;
+                    vertical-align: middle;
+
+                    &:before,
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        width: 65px;
+                        height: 1px;
+                        vertical-align: middle;
+                        background: #da9c2a;
+                        margin: 0 10px;
+                    }
+                }
+                .title {
+                    font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
+                    font-size: 3em;
+                    color: #d9c8b6;
+                }
+            }
+        }
+    }
+    .other-regions {
+        background: url('assets/images/backgrounds/bg-paper-half.png') no-repeat;
+        background-position: center top;
+        padding: 40px 0;
+        position: relative;
+        z-index: 2;
+        background-size: cover;
+
+        .container {
+            text-align: center;
+
+            .title {
+                background: url('assets/images/common/chronicles-breaker.png') center top no-repeat;
+                font-size: 1.875em;
+                color: #0e0a06;
+                padding-top: 80px;
+                text-transform: uppercase;
+            }
+            .banners {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                a {
+                    display: block;
+
+                    img {
+                        display: block;
+                        max-width: 175px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wikia-inner {
+    background: #000;
+    display: block;
+
+    .writeup-container {
+        position: relative;
+        z-index: 1;
+        margin-top: 150px;
+
+        .container {
+            padding: 0 40px;
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                height: 10px;
+                background: #000;
+                border-radius: 10px;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 0;
+            }
+
+            .content {
+                background: rgba(217, 200, 182, .9);
+                padding: 40px;
+            }
+
+            .title {
+                background: url('assets/images/common/title-bg.png') no-repeat;
+                background-position: center top;
+                font-size: 1.625em;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 30px 0 40px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -70px;
+            }
+
+            .writeup {
+                width: percentage(750px/960px);
+                margin: auto auto;
+                p {
+                    font-family: "Lato", sans-serif;
+                    color: #000000;
+                    line-height: 1.5;
+
+                    &.chapter,
+                    &.chapter-title {
+                        font-size: 1.5em;
+                        text-align: center;
+                        font-family: 'Averia Serif Libre', sans-serif;
+                        margin: 10px 0;
+                    }
+                    &.chapter-title {
+                        font-size: 3em;
+                    }
+                }
+                img {
+                    display: block;
+                    margin: auto auto;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .other-chapters {
+        position: relative;
+        z-index: 2;
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+
+            >a {
+                background: rgba(0, 0, 0, .6);
+                border: solid 5px #000;
+                text-transform: uppercase;
+                padding: 50px 40px;
+                position: relative;
+                margin: 40px 10px;
+                width: percentage(375px/1124px);
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 50px;
+                    height: 70px;
+                    display: block;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+
+                span {
+                    display: block;
+                    color: #d9c8b6;
+                }
+                .chapter {
+                    font-size: 0.750em;
+                }
+                .title {
+                    font-size: 1.125em;
+                }
+                &.prev {
+                    &:before {
+                        background: url('assets/images/common/slick-arrowhead-prev.png') no-repeat;
+                        left: -55px;
+                    }
+                }
+                &.next {
+                    &:before {
+                        background: url('assets/images/common/slick-arrowhead-next.png') no-repeat;
+                        right: -55px;
+                    }
+                }
+            }
+        }
+    }
+    .comment-section {
+        position: relative;
+        z-index: 2;
+        margin-top: 60px;
+        padding-bottom: 60px;
+
+        .placeholder {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+        }
+
+        .content {
+            background: rgba(0, 0, 0, .6);
+            border: solid 5px #000;
+
+            .title {
+                background: url('assets/images/backgrounds/bg-title-creature-name.png') center center no-repeat;
+                text-align: center;
+                padding: 15px 0 35px;
+                margin-top: -30px;
+            }
+            .avatar {
+                width: 50px;
+                height: 50px;
+
+                img {
+                    max-width: 100%;
+                    border: solid 3px;
+                    border-radius: 70px;
+                    height: 100%;
+                    width: auto;
+
+
+                    &.desert {
+                        border-color: #855b00;
+                    }
+                    &.farm {
+                        border-color: #073f79;
+                    }
+                    &.fishing {
+                        border-color: #3f004e;
+                    }
+                    &.trade {
+                        border-color: #5b0200;
+                    }
+                    &.forest {
+                        border-color: #0c4c28;
+                    }
+                }
+            }
+            .comment-box {
+                width: percentage(550px/1115px);
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+
+                form {
+                    width: 90%;
+
+                    textarea {
+                        width: 100%;
+                        border: solid 1px #746556;
+                        background: #fff3de;
+                        border-radius: 2px;
+                        outline: none;
+                    }
+                    .btn-post {
+                        display: block;
+                        margin: 10px 0 auto auto;
+                        width: 100px;
+                        text-align: center;
+                        font-family: 'Averia Serif Libre', "Helvetica Neue", Helvetica, sans-serif;
+                        padding: 8px 10px;
+                    }
+                }
+            }
+            .comments {
+                width: percentage(750px/1115px);
+                margin: 40px auto;
+
+                .item {
+                    border-top: solid 1px #302c28;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+    .latest-updates {
+        background: url('assets/images/backgrounds/bg-paper-half.png') no-repeat;
+        background-position: center top;
+        background-size: cover;
+        padding: 40px 0 80px;
+        position: relative;
+        z-index: 2;
+
+        .container {
+            text-align: center;
+
+            .title {
+                background: url('assets/images/common/chronicles-breaker.png') center top no-repeat;
+                font-size: 1.875em;
+                color: #0e0a06;
+                padding-top: 80px;
+                text-transform: uppercase;
+            }
+        }
+
+        .banners {
+            padding: 0 10px;
+
+            .banner {
+                margin-right: 20px;
+                width: percentage(208px/1124px);
+                position: relative;
+                padding: 0 0 40px;
+                border: 0;
+                background: transparent;
+                font-size: 1em;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:hover {
+                    p {
+                        text-decoration: underline;
+                    }
+                }
+
+                &.trade {
+                    .inner {
+                        background-color: #685735;
+
+                        &:before {
+                            background: url('assets/images/common/tribe-banner-top-trade.png') left top repeat-x;
+                        }
+                        &:after {
+                            background: url('assets/images/common/tribe-banner-bottom-trade.png') left bottom repeat-x;
+                            background-size: contain;
+                        }
+                    }
+                }
+
+                &.forest {
+                    .inner {
+                        background-color: #21944d;
+
+                        &:before {
+                            background: url('assets/images/common/tribe-banner-top-forest.png') left top repeat-x;
+                        }
+                        &:after {
+                            background: url('assets/images/common/tribe-banner-bottom-forest.png') left bottom repeat-x;
+                            background-size: contain;
+                        }
+                    }
+                }
+
+                &.fishing {
+                    .inner {
+                        background-color: #732c91;
+
+                        &:before {
+                            background: url('assets/images/common/tribe-banner-top-fishing.png') left top repeat-x;
+                        }
+                        &:after {
+                            background: url('assets/images/common/tribe-banner-bottom-fishing.png') left bottom repeat-x;
+                            background-size: contain;
+                        }
+                    }
+                }
+
+                &.farm {
+                    .inner {
+                        background-color: #187cc3;
+
+                        &:before {
+                            background: url('assets/images/common/tribe-banner-top-farm.png') left top repeat-x;
+                        }
+                        &:after {
+                            background: url('assets/images/common/tribe-banner-bottom-farm.png') left bottom repeat-x;
+                            background-size: contain;
+                        }
+                    }
+                }
+
+                &.desert {
+                    .inner {
+                        background-color: #d0a907;
+
+                        &:before {
+                            background: url('assets/images/common/tribe-banner-top-desert.png') left top repeat-x;
+                        }
+                        &:after {
+                            background: url('assets/images/common/tribe-banner-bottom-desert.png') left bottom repeat-x;
+                            background-size: contain;
+                        }
+                    }
+                }
+
+                .hover {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 0;
+                    opacity: 0.4;
+                    transition: opacity 0.5s ease;
+                }
+
+                .inner {
+                    position: relative;
+                    background-image: url("assets/images/backgrounds/bg-banner-texture.png");
+                    background-blend-mode: multiply;
+                    padding: 30px 15px 50px;
+                    min-height: 300px;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 15px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                    }
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        position: absolute;
+                        left: 0;
+                        bottom: -30px;
+                    }
+                    >*:not(.hover) {
+                        position: relative;
+                        z-index: 1;
+                    }
+                    .emblem {
+                        display: block;
+                        margin: 20px auto;
+                    }
+                    .writeup {
+                        position: absolute;
+                        bottom: 10px;
+                        height: 40%;
+                        left: 0;
+                        padding: 10px;
+                        p {
+                            margin: 0;
+                            color: #fff;
+                            text-align: left;
+                            font-family: 'Averia Serif Libre', sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+app-wikia-table-of-contents {
+    .openTableOfContents {
+        position: fixed;
+        bottom: 40px;
+        z-index: 99999;
+        left: 40px;
+    }
+
+    .table-of-contents {
+        background: #000;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        top: 0;
+        left: 0;
+        position: absolute;
+        max-height: 100%;
+        overflow-y: scroll;
+        opacity: 0;
+        transition: all ease 0.5s;
+
+        &.show {
+            opacity: 1;
+            z-index: 9999;
+        }
+
+        .banner {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .title {
+            font-size: 1.5em;
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+        .menu {
+            margin-top: -50px;
+        }
+        ul {
+            padding: 0;
+            margin-bottom: 40px;
+            li {
+                list-style-type: none;
+                margin-bottom: 10px;
+
+                &.active {
+                    a {
+                        color: #da9c2a;
+                    }
+                }
+
+                a {
+                    color: #d9c8b6;
+
+                    &:hover {
+                        color: #da9c2a;
+                    }
+                }
+            }
+        }
+    }
+}
