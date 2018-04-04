@@ -231,7 +231,8 @@ body {
 .sidebar-body {
     overflow-y: auto;
     .babaylan {
-        width: 130px;
+        //width: 130px;
+        max-width: 100%;
     }
     .bulleted-list {
         li {
@@ -256,10 +257,14 @@ body {
         font-size: 12px;
     }
     .details {
+        width: 70%;
         display: inline-block;
         vertical-align: middle;
         margin-left: 10px;
         padding-right: 10px;
+    }
+    .figure {
+        width: 40%;
     }
 }
 
