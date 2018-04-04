@@ -11,7 +11,7 @@
     // Resize
     resize: true,
 
-    autoplay: true,
+    // autoplay: false,
 
     isMobile: window.matchMedia('(max-width: 768px)').matches,
 
@@ -24,6 +24,10 @@
       {
         src: 'assets/images/backgrounds/video/desert/desert-evening.mp4',
         type: 'video/mp4'
+      },
+      {
+        src: 'night.webm',
+        type: 'video/webm;codecs="vp8, vorbis"'
       }
     ],
 
