@@ -60,6 +60,7 @@ import { InnerFarmService } from './services/wikia-inner/inner-farm.service';
 import { InnerForestService } from './services/wikia-inner/inner-forest.service';
 import { WikiaRegionService } from './services/wikia-region.service';
 import { TestComponent } from './components/test/test.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,8 @@ import { TestComponent } from './components/test/test.component';
     DashboardComponent,
     ForgotPasswordComponent,
     WikiaTableOfContentsComponent,
-    TestComponent
+    TestComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -124,6 +126,7 @@ import { TestComponent } from './components/test/test.component';
       { path: 'wikia/inner/farm', component: InnerFarmComponent, pathMatch: 'full'},
       { path: 'challenges', component: ChallengesComponent, pathMatch: 'full'},
       { path: 'test', component: TestComponent, pathMatch: 'full'},
+      { path: 'loader', component: LoaderComponent, pathMatch: 'full'},
     ], { preloadingStrategy: PreloadAllModules }),
     TransferHttpCacheModule,
     HttpClientModule,

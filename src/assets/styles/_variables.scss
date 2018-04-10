@@ -204,6 +204,18 @@ $sansinukob-color: #372918;
   animation-name: pulse2;
 }
 
+@-webkit-keyframes pulse-shadow {
+  0% { -webkit-box-shadow: 0 0 14px rgba(0,0,0,0.2); }
+  50% { -webkit-box-shadow: 0 0 14px rgba(0,0,0,0.99); }
+  100% { -webkit-box-shadow: 0 0 14px rgba(0,0,0,0.2); }
+}
+
+@keyframes pulse-shadow {
+  0% { box-shadow: 0 0 14px rgba(0,0,0,0.2); }
+  50% { box-shadow: 0 0 14px rgba(0,0,0,0.99); }
+  100% { box-shadow: 0 0 14px rgba(0,0,0,0.2); }
+}
+
 @-webkit-keyframes rotateIn {
   from {
     -webkit-transform-origin: center;

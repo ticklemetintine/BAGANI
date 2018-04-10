@@ -1,0 +1,259 @@
+.loader-container {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
+    left: 0; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    outline: 0;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.85);
+    -webkit-overflow-scrolling: auto;
+    overflow: auto;
+    &.relative {
+        position: relative;
+        min-height: 400px;
+        width: 100%; 
+        background-color: rgba(0, 0, 0, 0.60);
+        z-index: 99;
+    }
+    .loader-inner {
+        @include centered-full(); 
+        width: 220px;
+        height: 220px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 220px;
+            height: 220px;
+            @include borderradius(50%);
+        }
+        .icon-bagani {
+            font-size: 2em;
+            //position: absolute;
+            color: $white;
+            //bottom: 0;
+            //display: none;
+            &.icon-logo {
+                display: block;
+                font-size: 5.8em;
+                //top: 0;
+                //@include centered-horizontal(); 
+                @include centered-full(); 
+                color: $white;
+                -webkit-animation-duration: 1.5s;
+                -webkit-animation-name: colorChange;
+                -webkit-animation-direction: alternate;
+                -webkit-animation-iteration-count: infinite;
+                animation-duration: 1.5s;
+                animation-name: colorChange;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                &:after {
+                    @include centered-full();
+                    content: "";
+                    @include borderradius(50%);
+                    -webkit-animation: pulse-shadow 3s infinite ease-in-out;
+                    -o-animation: pulse-shadow 3s infinite ease-in-out;
+                    -ms-animation: pulse-shadow 3s infinite ease-in-out; 
+                    -moz-animation: pulse-shadow 3s infinite ease-in-out; 
+                    animation: pulse-shadow 3s infinite ease-in-out;
+                }
+            }
+        }
+        .icons-five {
+            //@include centered-full();
+            position: absolute;
+            bottom: 10%;
+            width: 100%;
+            text-align: center;
+            .icon-bagani {
+                -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
+                animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
+            }
+            &>span {
+                &:nth-child(1){
+                    -webkit-animation-delay: -0.5s;
+                    animation-delay: -0.5s;
+                }
+                &:nth-child(2) {
+                    -webkit-animation-delay: -0.4s;
+                    animation-delay: -0.4s;
+                }
+                &:nth-child(3) {
+                    -webkit-animation-delay: -0.3s;
+                    animation-delay: -0.3s;
+                }
+                &:nth-child(4) {
+                    -webkit-animation-delay: -0.2s;
+                    animation-delay: -0.2s;
+                }
+                &:nth-child(5) {
+                    -webkit-animation-delay: -0.1s;
+                    animation-delay: -0.1s;
+                }
+            }
+        }
+        .icon-desert-logo {
+            color: #685737;
+        }
+        .icon-farm-logo {
+            color: #217dc0;
+        }
+        .icon-fishing-logo {
+            color: #72318f;
+        }
+        .icon-forest-logo {
+            color: #289350;
+        }
+        .icon-trade-logo {
+            color: #cfa827;
+        }
+        // .icon-desert-logo {
+        //     top: 3%;
+        //     @include centered-horizontal();
+        // }
+        // .icon-farm-logo {
+        //     top: 30%;
+        //     right: 3%;
+        // }
+        // .icon-fishing-logo {
+        //     top: 30%;
+        //     left: 3%;
+        // }
+        // .icon-forest-logo {
+        //     bottom: 6%;
+        //     right: 21%;
+        // }
+        // .icon-trade-logo {
+        //     bottom: 5%;
+        //     left: 21%;
+        // }
+        &>div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .fa {
+            color: $white;
+        }
+    }
+}
+
+
+@-webkit-keyframes sk-circleFadeDelay {
+  0%, 39%, 100% {
+    opacity: 0; }
+  40% {
+    opacity: 1; } }
+
+@keyframes sk-circleFadeDelay {
+  0%, 39%, 100% {
+    opacity: 0; }
+  40% {
+    opacity: 1; } }
+
+@-webkit-keyframes colorChange {
+  0% { 
+    color: #fff;
+  }
+  100% { 
+    color: #ffc400;
+  }
+}
+
+// @-webkit-keyframes glow-text {
+//   0% { 
+//     color: #685737;
+//   }
+//   25% { 
+//     color: #217dc0;
+//   }
+//   50% { 
+//     color: #72318f;
+//   }
+//   75% { 
+//     color: #289350;
+//   }
+//   100% { 
+//     color: #cfa827;
+//   }
+//   //100% { text-shadow: 0 0 2em #da9c2a; }
+// }    
+
+// @-webkit-keyframes glow-text {
+//   0% { 
+//     //text-shadow: 0 0 0.2em #000;
+//     //font-size: 4em;
+//     color: #da9c2a;
+//   }
+//   100% { 
+//     //text-shadow: 0 0 1.5em #da9c2a; 
+//     //font-size: 6em;
+//     color: #fff;
+//   }
+//   //100% { text-shadow: 0 0 2em #da9c2a; }
+// }
+
+// .bouncer > span {
+//     // -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+//     // animation: bouncedelay 1.4s infinite ease-in-out;
+//     // -webkit-animation-fill-mode: both;
+//     // animation-fill-mode:both;
+//     width: 18px;
+//     height: 18px;
+//     display: inline-block;
+//     -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+//     animation: bouncedelay 1.4s infinite ease-in-out;
+//     -webkit-animation-fill-mode: both;
+//     animation-fill-mode: both;
+//     &:nth-child(1){
+//         -webkit-animation-delay: -0.80s;
+//         animation-delay: -0.80s
+//     }
+//     &:nth-child(2) {
+//         -webkit-animation-delay: -0.64s;
+//         animation-delay: -0.64s
+//     }
+//     &:nth-child(3) {
+//         -webkit-animation-delay: -0.48s;
+//         animation-delay: -0.48s
+//     }
+//     &:nth-child(4) {
+//         -webkit-animation-delay: -0.32s;
+//         animation-delay: -0.32s
+//     }
+//     &:nth-child(5) {
+//         -webkit-animation-delay: -0.16s;
+//         animation-delay: -0.16s
+//     }
+// }
+
+@-webkit-keyframes bouncedelay {
+    0%,80%,100% {
+        transform:scale(0.0);
+        -webkit-transform:scale(0.0); 
+    }
+    40% {
+        -webkit-transform:scale(1.0);
+    }
+}
+@keyframes bouncedelay { 
+    0%,80%,100% {
+        transform:scale(0.0);
+        transform:scale(1.0);
+        -webkit-transform:scale(0.0);
+    }
+    40% {
+        transform:scale(1.0);
+        -webkit-transform:scale(1.0);
+    }
+}
+
