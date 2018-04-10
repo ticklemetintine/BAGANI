@@ -37,10 +37,11 @@
                             </div>
                         </div>
                         <div class="right" *ngIf="journal.challenges.length < 1">
-                            <a [href]="journal.link" class="btn btn-claim">GO</a>
+                            <a [href]="journal.link" class="btn btn-claim" *ngIf="journal.ongoing == true">GO</a>
                             <div class="time-left">
-                                <p class="time">{{journalTime}}</p>
-                                <p>Time Left</p>
+                                <p *ngIf="journal.ongoing == false">Next challenge</p>
+                                <p class="time">{{journal.journalTime}}</p>
+                                <p *ngIf="journal.ongoing == true">Time Left</p>
                             </div>
                         </div>
                     </div>
