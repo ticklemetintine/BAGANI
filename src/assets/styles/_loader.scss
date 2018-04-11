@@ -274,35 +274,71 @@ ul.fireflies{
         -moz-box-shadow: 0px 0px 17px 2px wheat;
         -moz-box-shadow: 0px 0px 17px 2px wheat;
         animation: 
-            leftright 24s infinite cubic-bezier(.39,.0,.63,1),
+            leftright 14s infinite cubic-bezier(.39,.0,.63,1),
             updown 8s infinite 1.25s cubic-bezier(.39,.0,.63,1);
         -webkit-animation: 
-            leftright 24s infinite cubic-bezier(.39,.0,.63,1),
+            leftright 14s infinite cubic-bezier(.39,.0,.63,1),
             updown 8s infinite 1.25s cubic-bezier(.39,.0,.63,1);
         -moz-animation: 
-            leftright 24s infinite cubic-bezier(.39,.0,.63,1),
+            leftright 14s infinite cubic-bezier(.39,.0,.63,1),
             updown 8s infinite 1.25s cubic-bezier(.39,.0,.63,1);     
     }
     li:nth-of-type(2){
         animation-delay:1s;
         animation-duration:17s, 8s;
         animation-fill-mode:backwards, backwards;
+
+        -webkit-animation-delay:1s;
+        -webkit-animation-duration:17s, 8s;
+        -webkit-animation-fill-mode:backwards, backwards;
+
+        -moz-animation-delay:1s;
+        -moz-animation-duration:17s, 8s;
+        -moz-animation-fill-mode:backwards, backwards;
     }
     li:nth-of-type(3){
         animation-delay:0.5s;
         animation-duration:14s, 7s;
         animation-fill-mode:backwards, backwards;
+
+        -webkit-animation-delay:0.5s;
+        -webkit-animation-duration:14s, 7s;
+        -webkit-animation-fill-mode:backwards, backwards;
+
+        -moz-animation-delay:0.5s;
+        -moz-animation-duration:14s, 7s;
+        -moz-animation-fill-mode:backwards, backwards;
     }
     li:nth-of-type(4){
         animation-delay:2s;
         animation-duration:12s, 13s;
+
+        -webkit-animation-delay:2s;
+        -webkit-animation-duration:12s, 13s;
+
+        -moz-animation-delay:2s;
+        -moz-animation-duration:12s, 13s;
     }
     li:nth-of-type(5){
         animation-fill-mode:backwards, backwards;
         animation-duration:10s, 15s;
+
+        -webkit-animation-fill-mode:backwards, backwards;
+        -webkit-animation-duration:10s, 15s;
+
+        -moz-animation-fill-mode:backwards, backwards;
+        -moz-animation-duration:10s, 15s;
     }
 }
 
+@-webkit-keyframes leftright {
+  0%, 100%{left:20%;}
+    16.666% {left:90%;}
+    33.333% {left:10%;}
+    50%         {left:50%;}
+  66.666%   {left:70%;}
+    83.333% {left:40%;}
+}
 
 @keyframes leftright {
   0%, 100%{left:20%;}
@@ -311,6 +347,17 @@ ul.fireflies{
     50%         {left:50%;}
   66.666%   {left:70%;}
     83.333% {left:40%;}
+}
+
+
+@-webkit-keyframes updown {
+  0%, 100% { 
+    top: 45%;
+    width: 5px;
+    height: 5px}
+    25% { top:70%; }
+    50%{ top:50%;width:10px;height:10px; }
+    75%{ top:70%;width:2px;height:2px; }
 }
 
 @keyframes updown {
