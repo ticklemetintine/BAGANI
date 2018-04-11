@@ -422,11 +422,13 @@ app-dashboard {
                             &.slick-prev {
                                 background: url('assets/images/common/slider-arrow-prev.png') no-repeat;
                                 background-size: contain;
+                                background-position: right center;
                                 left: -52px;
                                 z-index: 1;
                             }
                             &.slick-next {
                                 background: url('assets/images/common/slider-arrow-next.png') no-repeat;
+                                background-position: left center;
                                 background-size: contain;
                                 right: -52px;
                             }
