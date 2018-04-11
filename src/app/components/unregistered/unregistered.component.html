@@ -95,7 +95,8 @@
                         <a [href]="update.link" class="banner {{update.tribe}}" ngxSlickItem *ngFor="let update of updates">
                             <div class="inner">
                                 <img [src]="update.thumbnail" alt="hover-image" class="hover" *ngIf="update.thumbnail">
-                                <img [src]="update.emblem" alt="emblem-trade" class="emblem">
+                                <span class="icon-bagani emblem icon-{{update.tribe}}-logo"></span>
+                                <!-- <img [src]="update.emblem" alt="emblem-trade" class="emblem"> -->
                                 <div class="writeup">
                                     <p>{{update.chapterTitle}} </p>
                                     <p>{{update.desc}}</p>

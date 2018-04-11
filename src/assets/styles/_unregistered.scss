@@ -408,159 +408,6 @@ app-dashboard {
 
                 &.latest-updates {
                     padding-bottom: 80px;
-
-                    .banners {
-                        padding: 0 10px;
-
-                        .banner {
-                            margin-right: 20px;
-                            width: percentage(208px/1124px);
-                            position: relative;
-                            padding: 0 0 40px;
-                            border: 0;
-                            background: transparent;
-                            font-size: 1em;
-
-                            &:last-child {
-                                margin-right: 0;
-                            }
-                            &:hover {
-                                p {
-                                    text-decoration: underline;
-                                }
-                            }
-
-                            &.trade {
-                                .inner {
-                                    background-color: #685735;
-
-                                    &:before {
-                                        background: url('assets/images/common/tribe-banner-top-trade.png') center top repeat-x;
-                                    }
-                                    &:after {
-                                        background: url('assets/images/common/tribe-banner-bottom-trade.png') center bottom repeat-x;
-                                        background-size: contain;
-                                    }
-                                }
-                            }
-
-                            &.forest {
-                                .inner {
-                                    background-color: #21944d;
-
-                                    &:before {
-                                        background: url('assets/images/common/tribe-banner-top-forest.png') center top repeat-x;
-                                    }
-                                    &:after {
-                                        background: url('assets/images/common/tribe-banner-bottom-forest.png') center bottom repeat-x;
-                                        background-size: contain;
-                                    }
-                                }
-                            }
-
-                            &.fishing {
-                                .inner {
-                                    background-color: #732c91;
-
-                                    &:before {
-                                        background: url('assets/images/common/tribe-banner-top-fishing.png') center top repeat-x;
-                                    }
-                                    &:after {
-                                        background: url('assets/images/common/tribe-banner-bottom-fishing.png') center bottom repeat-x;
-                                        background-size: contain;
-                                    }
-                                }
-                            }
-
-                            &.farm {
-                                .inner {
-                                    background-color: #187cc3;
-
-                                    &:before {
-                                        background: url('assets/images/common/tribe-banner-top-farm.png') center top repeat-x;
-                                    }
-                                    &:after {
-                                        background: url('assets/images/common/tribe-banner-bottom-farm.png') center bottom repeat-x;
-                                        background-size: contain;
-                                    }
-                                }
-                            }
-
-                            &.desert {
-                                .inner {
-                                    background-color: #d0a907;
-
-                                    &:before {
-                                        background: url('assets/images/common/tribe-banner-top-desert.png') center top repeat-x;
-                                    }
-                                    &:after {
-                                        background: url('assets/images/common/tribe-banner-bottom-desert.png') center bottom repeat-x;
-                                        background-size: contain;
-                                    }
-                                }
-                            }
-
-                            .hover {
-                                width: 100%;
-                                height: 100%;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                z-index: 0;
-                                opacity: 0.4;
-                                transition: opacity 0.5s ease;
-                            }
-
-                            .inner {
-                                position: relative;
-                                background-image: url("assets/images/backgrounds/bg-banner-texture.png");
-                                background-blend-mode: multiply;
-                                padding: 30px 15px 50px;
-                                min-height: 300px;
-
-                                &:before {
-                                    content: '';
-                                    display: block;
-                                    width: 100%;
-                                    height: 15px;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    z-index: 1;
-                                }
-                                &:after {
-                                    content: '';
-                                    display: block;
-                                    width: 100%;
-                                    height: 50px;
-                                    position: absolute;
-                                    left: 0;
-                                    bottom: -30px;
-                                }
-                                >*:not(.hover) {
-                                    position: relative;
-                                    z-index: 1;
-                                }
-                                .emblem {
-                                    display: block;
-                                    margin: 20px auto;
-                                }
-                                .writeup {
-                                    position: absolute;
-                                    bottom: 10px;
-                                    height: 40%;
-                                    left: 0;
-                                    padding: 10px;
-                                    p {
-                                        margin: 0;
-                                        color: #fff;
-                                        text-align: left;
-                                        font-family: 'Averia Serif Libre', sans-serif;
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
                 &.featured-artwork {
                     .title {
@@ -575,7 +422,7 @@ app-dashboard {
                             &.slick-prev {
                                 background: url('assets/images/common/slider-arrow-prev.png') no-repeat;
                                 background-size: contain;
-                                left: -38px;
+                                left: -52px;
                                 z-index: 1;
                             }
                             &.slick-next {
@@ -593,6 +440,7 @@ app-dashboard {
                         }
                         .slide {
                             position: relative;
+                            background-color: #000;
                             img {
                                 width: 100%;
                                 display: block;
