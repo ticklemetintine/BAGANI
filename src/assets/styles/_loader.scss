@@ -10,7 +10,7 @@
     bottom: 0;
     outline: 0;
     background-color: #000;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.95);
     -webkit-overflow-scrolling: auto;
     overflow: auto;
     &.relative {
@@ -257,5 +257,69 @@
         transform:scale(1.0);
         -webkit-transform:scale(1.0);
     }
+}
+
+ul.fireflies{
+    list-style:none;
+    li {
+        width: 1px; 
+        top: 50%;
+        left: 45%;
+        height: 1px;
+        position:absolute;
+        border-radius: 50%;
+        background-color: #ffbc00;
+        box-shadow: 0px 0px 17px 2px wheat;
+        -webkit-box-shadow: 0px 0px 17px 2px wheat;
+        -moz-box-shadow: 0px 0px 17px 2px wheat;
+        -moz-box-shadow: 0px 0px 17px 2px wheat;
+        animation: 
+            leftright 24s infinite cubic-bezier(.39,.0,.63,1),
+            updown 8s infinite 1.25s cubic-bezier(.39,.0,.63,1);
+        -webkit-animation: 
+            leftright 24s infinite cubic-bezier(.39,.0,.63,1),
+            updown 8s infinite 1.25s cubic-bezier(.39,.0,.63,1);
+        -moz-animation: 
+            leftright 24s infinite cubic-bezier(.39,.0,.63,1),
+            updown 8s infinite 1.25s cubic-bezier(.39,.0,.63,1);     
+    }
+    li:nth-of-type(2){
+        animation-delay:1s;
+        animation-duration:17s, 8s;
+        animation-fill-mode:backwards, backwards;
+    }
+    li:nth-of-type(3){
+        animation-delay:0.5s;
+        animation-duration:14s, 7s;
+        animation-fill-mode:backwards, backwards;
+    }
+    li:nth-of-type(4){
+        animation-delay:2s;
+        animation-duration:12s, 13s;
+    }
+    li:nth-of-type(5){
+        animation-fill-mode:backwards, backwards;
+        animation-duration:10s, 15s;
+    }
+}
+
+
+@keyframes leftright {
+  0%, 100%{left:20%;}
+    16.666% {left:90%;}
+    33.333% {left:10%;}
+    50%         {left:50%;}
+  66.666%   {left:70%;}
+    83.333% {left:40%;}
+}
+
+@keyframes updown {
+  0%, 100% { 
+    top: 45%;
+    width: 5px;
+    height: 5px}
+    25% { top:70%; }
+    50%{ top:50%;width:10px;height:10px; }
+    75%{ top:70%;width:2px;height:2px; }
 }
 
