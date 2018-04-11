@@ -111,23 +111,23 @@
                     }
                     &.latest-updates {
                         .banners {
-                            .banner {
-                                .inner {
-                                    padding: 30px 5px 0;
-                                    min-height: 200px;
+                            // .banner {
+                            //     .inner {
+                            //         padding: 30px 5px 0;
+                            //         min-height: 200px;
 
-                                    .emblem {
-                                        margin: 0 auto;
-                                    }
-                                    .writeup {
-                                        position: static;
-                                        padding: 10px 0;
-                                        p {
-                                            font-size: 0.875em;
-                                        }
-                                    }
-                                }
-                            }
+                            //         .emblem {
+                            //             margin: 0 auto;
+                            //         }
+                            //         .writeup {
+                            //             position: static;
+                            //             padding: 10px 0;
+                            //             p {
+                            //                 font-size: 0.875em;
+                            //             }
+                            //         }
+                            //     }
+                            // }
                         }
                     }
                 }
@@ -317,23 +317,23 @@
             .container {
                 max-width: 100%;
             }
-            .banners {
-                padding: 0 10px;
-                .banner {
-                    margin-right: 10px;
+            // .banners {
+            //     padding: 0 10px;
+            //     .banner {
+            //         margin-right: 10px;
 
-                    .inner {
-                        min-height: 200px;
-                        padding: 30px 5px 0;
+            //         .inner {
+            //             min-height: 200px;
+            //             padding: 30px 5px 0;
 
-                        .writeup {
-                            position: static;
-                            font-size: 0.875em;
-                            padding: 10px 0;
-                        }
-                    }
-                }
-            }
+            //             .writeup {
+            //                 //position: static;
+            //                 font-size: 0.875em;
+            //                 padding: 10px 0;
+            //             }
+            //         }
+            //     }
+            // }
         }
     }
     app-dashboard {

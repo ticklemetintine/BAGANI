@@ -334,6 +334,9 @@ app-dashboard {
                     margin: 0;
                 }
             }
+            &:hover {
+                opacity: 0.85;
+            }
         }
 
         .slick-dots {
@@ -443,6 +446,7 @@ app-dashboard {
                         .slide {
                             position: relative;
                             background-color: #000;
+                            cursor: pointer;
                             img {
                                 width: 100%;
                                 display: block;
@@ -466,6 +470,9 @@ app-dashboard {
                                     font-size: 1.125em;
                                     margin: 0;
                                 }
+                            }
+                            &:hover {
+                                opacity: 0.85;
                             }
                         }
                     }

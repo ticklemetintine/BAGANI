@@ -324,38 +324,8 @@
                     }
                 }
                 .breaker {
-                    background-size: contain;
+                    background-size: 80%;
                     &.latest-updates {
-                        .banners {
-                            padding: 0;
-                            .banner {
-                                margin-right: 0;
-                                padding: 20px 5px 40px;
-                                .inner {
-                                    height: 520px;
-                                    background-size: cover;
-
-                                    &:before,
-                                    &:after {
-                                        background-repeat: repeat !important;
-                                    }
-
-                                    .emblem {
-                                        height: 120px;
-                                    }
-                                    .writeup {
-                                        position: absolute;
-                                        width: 100%;
-                                        padding: 40px 20px;
-                                        bottom: 50px;
-                                        p {
-                                            font-size: 2.125em;
-                                            line-height: 1.2;
-                                        }
-                                    }
-                                }
-                            }
-                        }
                     }
                     &.featured-artwork {
                         .content {
@@ -779,6 +749,32 @@
                                 padding: 10px;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    .banners {
+        padding: 0;
+        .banner {
+            padding: 20px 5px 40px;
+            .inner {
+                height: 280px;
+                background-size: cover;
+                &:before,
+                &:after {
+                    background-repeat: repeat !important;
+                }                
+                .writeup {
+                    position: absolute;
+                    height: auto;
+                    width: 100%;
+                    padding: 10px 20px;
+                    bottom: 50px;
+                    p {
+                        font-size: 1.1em;
+                        line-height: 1.2;
                     }
                 }
             }
