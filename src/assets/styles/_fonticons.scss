@@ -32,7 +32,8 @@
     content: "\e901";
 }
 
-.icon-fishing-logo:before {
+.icon-fishing-logo:before,
+.icon-sea-logo:before {
     content: "\e902";
 }
 
@@ -138,19 +139,23 @@ $y) {
         background-position: -825px 0;
     }
 
-    &.fishing-citizen-icon-gray {
+    &.fishing-citizen-icon-gray,
+    &.sea-citizen-icon-gray {
         background-position: -900px 0;
     }
 
-    &.fishing-citizen-icon {
+    &.fishing-citizen-icon,
+    &.sea-citizen-icon {
         background-position: -975px 0;
     }
 
-    &.fishing-scholar-icon-gray {
+    &.fishing-scholar-icon-gray,
+    &.sea-scholar-icon-gray {
         background-position: -1050px 0;
     }
 
-    &.fishing-scholar-icon {
+    &.fishing-scholar-icon,
+    &.sea-scholar-icon {
         background-position: -1125px 0;
     }
 
@@ -270,7 +275,7 @@ $y) {
   &.plate-farm {
     background-position: 0 0;
   }
-  &.plate-fishing {
+  &.plate-fishing, &.plate-sea {
     background-position: -150px 0;
   }
   &.plate-trade {
@@ -400,19 +405,23 @@ $y) {
             background-position: -440px 0;
         }
 
-        &.fishing-citizen-icon-gray {
+        &.fishing-citizen-icon-gray,
+        &.sea-citizen-icon-gray {
             background-position: -480px 0;
         }
 
-        &.fishing-citizen-icon {
+        &.fishing-citizen-icon,
+        &.sea-citizen-icon {
             background-position: -520px 0;
         }
 
-        &.fishing-scholar-icon-gray {
+        &.fishing-scholar-icon-gray,
+        &.sea-scholar-icon-gray {
             background-position: -560px 0;
         }
 
-        &.fishing-scholar-icon {
+        &.fishing-scholar-icon,
+        &.sea-scholar-icon {
             background-position: -600px 0;
         }
 

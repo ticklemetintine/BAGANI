@@ -97,12 +97,12 @@ export class SidebarComponent implements OnInit {
 
                   //take out milliseconds
                   difference_ms = difference_ms / 1000;
-                  const seconds = Math.floor(difference_ms % 60);
+                  var seconds = Math.floor(difference_ms % 60);
                   difference_ms = difference_ms / 60;
-                  const minutes = Math.floor(difference_ms % 60);
+                  var minutes = Math.floor(difference_ms % 60);
                   difference_ms = difference_ms / 60;
-                  const hours = Math.floor(difference_ms % 24);
-                  const days = Math.floor(difference_ms / 24);
+                  var hours = Math.floor(difference_ms % 24);
+                  var days = Math.floor(difference_ms / 24);
                   this.journalEntries[index].ongoing = true;
                 }
 
