@@ -108,9 +108,8 @@ $(document).ready(function(e) {
 
     //Lightbox close button
     $(document).on('click', '.sidebar-chat .tab', function(e) {
-        event.preventDefault();
+        e.preventDefault();
         var tabTarget = $(this).data("target");
-        //$(this).toggleClass();
         $(".sidebar-chat .tab").removeClass('active');
         $(this).toggleClass('active');
         $(".chat-convo").removeClass('active');
@@ -126,7 +125,6 @@ $(document).ready(function(e) {
     var allCollapsible = $('.collapsible-item .collapsible-content');
     $(document).on('click', '.collapsible-wrapper .collapsible-item .collapsible-header', function(e) {
         if ($(this).parent().parent().hasClass('show')) {
-            //allCollapsible.slideUp();
             $(this).parent().parent().find("li .collapsible-content").slideUp(350);
             $(this).parent().parent().removeClass('show');
         } else {
