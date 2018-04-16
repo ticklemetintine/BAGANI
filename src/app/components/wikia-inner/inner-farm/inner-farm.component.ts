@@ -14,8 +14,8 @@ export class InnerFarmComponent implements OnInit {
     today: Date;
     hour: number;
     timeClass: string;
-    updates:any = [];
-    innerFarmData:any = [];
+    updates: any = [];
+    innerFarmData: any = [];
     userDetails: any = [];
 
     constructor(

@@ -14,8 +14,8 @@ export class InnerTradeComponent implements OnInit {
     today: Date;
     hour: number;
     timeClass: string;
-    updates:any = [];
-    innerTradeData:any = [];
+    updates: any = [];
+    innerTradeData: any = [];
     userDetails: any = [];
 
     constructor(

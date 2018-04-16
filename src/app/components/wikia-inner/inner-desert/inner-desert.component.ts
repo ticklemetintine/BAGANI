@@ -14,8 +14,8 @@ export class InnerDesertComponent implements OnInit {
     today: Date;
     hour: number;
     timeClass: string;
-    updates:any = [];
-    innerDesertData:any = [];
+    updates: any = [];
+    innerDesertData: any = [];
     userDetails: any = [];
 
     constructor(

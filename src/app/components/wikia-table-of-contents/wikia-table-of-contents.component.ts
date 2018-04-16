@@ -19,9 +19,9 @@ import { WikiaTableOfContentsService } from '../../services/wikia-table-of-conte
     ]
 })
 export class WikiaTableOfContentsComponent implements OnInit {
-  showTableOfContents:boolean = false;
+  showTableOfContents = false;
   userDetails: any = [];
-  wikiaMenu:any = [];
+  wikiaMenu: any = [];
 
   constructor(
     private _getUserService: UserService,
@@ -40,7 +40,7 @@ export class WikiaTableOfContentsComponent implements OnInit {
             }
         );
   }
-  
+
   getWikiaTableOfContentsComponent() {
         this._getWikiaTableOfContentsComponent.GetMenu().subscribe(
             (data) => {

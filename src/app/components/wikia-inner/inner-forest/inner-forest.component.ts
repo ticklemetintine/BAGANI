@@ -14,8 +14,8 @@ export class InnerForestComponent implements OnInit {
     today: Date;
     hour: number;
     timeClass: string;
-    updates:any = [];
-    innerForestData:any = [];
+    updates: any = [];
+    innerForestData: any = [];
     userDetails: any = [];
 
     constructor(

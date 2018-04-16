@@ -14,8 +14,8 @@ export class InnerFishingComponent implements OnInit {
     today: Date;
     hour: number;
     timeClass: string;
-    updates:any = [];
-    innerFishingData:any = [];
+    updates: any = [];
+    innerFishingData: any = [];
     userDetails: any = [];
 
     constructor(

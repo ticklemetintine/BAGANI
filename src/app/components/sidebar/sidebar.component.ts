@@ -10,19 +10,19 @@ import { SidebarHelpService } from '../../services/sidebar-help.service';
   styles: []
 })
 export class SidebarComponent implements OnInit {
-  public journalEntries:any = [];
-  public journalHeading:string;
-  public journalTime:string;
-  public doneItems:number;
-  public today:any = Date.now();
-  public start:any;
-  public end:any;
-  public remaining:any;
-  public status:string;
-  public badgesData:any = [];
-  public currentBadgeView:any = [];
+  public journalEntries: any = [];
+  public journalHeading: string;
+  public journalTime: string;
+  public doneItems: number;
+  public today: any = Date.now();
+  public start: any;
+  public end: any;
+  public remaining: any;
+  public status: string;
+  public badgesData: any = [];
+  public currentBadgeView: any = [];
   public userDetails: any = [];
-  public helpData:string;
+  public helpData: string;
 
   constructor(
   	private _getJournalService: JournalService,
@@ -50,71 +50,71 @@ export class SidebarComponent implements OnInit {
     this._getJournalService.GetJournal().subscribe(
         (data) => {
             this.journalEntries = data.journal;
-            this.journalHeading = data.journalHeading;                 
+            this.journalHeading = data.journalHeading;
 
             this.journalEntries.forEach((value, index) => {
-                var start_date = new Date(value.startDateTime).getHours() + 8;
-                var end_date = new Date(value.endDateTime);
+                const start_date = new Date(value.startDateTime).getHours() + 8;
+                const end_date = new Date(value.endDateTime);
 
                 console.log(new Date());
                 console.log(new Date(value.startDateTime));
                 //CHECK IF CHALLENGE IS OVER
-                if(this.today > end_date && end_date) {
+                if (this.today > end_date && end_date) {
                   this.journalEntries.splice(index, 1);
                 }
             });
 
-            setInterval(()=>{    
+            setInterval(() => {
               this.journalEntries.forEach((value, index) => {
-                var one_day=1000*60*60*(24+8);
+                const one_day = 1000 * 60 * 60 * (24 + 8);
 
-                var date_now = new Date().getTime();
-                var start_date = new Date(value.startDateTime);
-                var end_date = new Date(value.endDateTime);
+                const date_now = new Date().getTime();
+                const start_date = new Date(value.startDateTime);
+                const end_date = new Date(value.endDateTime);
 
-                var date1_ms = new Date(value.startDateTime).getTime();
-                var date2_ms = new Date(value.endDateTime).getTime();
+                const date1_ms = new Date(value.startDateTime).getTime();
+                const date2_ms = new Date(value.endDateTime).getTime();
 
                 //check if challenge has not been started
-                if(this.today < start_date && start_date && this.today < end_date && end_date) {
+                if (this.today < start_date && start_date && this.today < end_date && end_date) {
                   // Calculate the difference in milliseconds
-                  var difference_ms = date1_ms - date_now;
+                  let difference_ms = date1_ms - date_now;
 
                   //take out milliseconds
-                  difference_ms = difference_ms/1000;
-                  var seconds = Math.floor(difference_ms % 60);
-                  difference_ms = difference_ms/60; 
-                  var minutes = Math.floor(difference_ms % 60);
-                  difference_ms = difference_ms/60; 
-                  var hours = Math.floor(difference_ms % 24);  
-                  var days = Math.floor(difference_ms/24);
+                  difference_ms = difference_ms / 1000;
+                  const seconds = Math.floor(difference_ms % 60);
+                  difference_ms = difference_ms / 60;
+                  const minutes = Math.floor(difference_ms % 60);
+                  difference_ms = difference_ms / 60;
+                  const hours = Math.floor(difference_ms % 24);
+                  const days = Math.floor(difference_ms / 24);
                   this.journalEntries[index].ongoing = false;
 
-                } else { 
+                } else {
                   // for ongoing challenge
                   // Calculate the difference in milliseconds
-                  var difference_ms = date2_ms-28800000 - date_now;
+                  let difference_ms = date2_ms - 28800000 - date_now;
 
                   //take out milliseconds
-                  difference_ms = difference_ms/1000;
-                  var seconds = Math.floor(difference_ms % 60);
-                  difference_ms = difference_ms/60; 
-                  var minutes = Math.floor(difference_ms % 60);
-                  difference_ms = difference_ms/60; 
-                  var hours = Math.floor(difference_ms % 24);  
-                  var days = Math.floor(difference_ms/24);
+                  difference_ms = difference_ms / 1000;
+                  const seconds = Math.floor(difference_ms % 60);
+                  difference_ms = difference_ms / 60;
+                  const minutes = Math.floor(difference_ms % 60);
+                  difference_ms = difference_ms / 60;
+                  const hours = Math.floor(difference_ms % 24);
+                  const days = Math.floor(difference_ms / 24);
                   this.journalEntries[index].ongoing = true;
                 }
-                
+
                 this.journalEntries[index].journalTime = hours + ':' + minutes + ':' + seconds;
-              }); 
-              
+              });
+
             }, 1000);
         }
     );
   }
   // getTimeLeft() {
-  //   // setTimeout(()=>{    
+  //   // setTimeout(()=>{
   //     //this.helpData = new Date(); // Updates view
   //     this._getHelpService.GetHelp().subscribe(
   //         (data) => {
@@ -126,8 +126,8 @@ export class SidebarComponent implements OnInit {
 
   countStatus(challenges) {
   	this.doneItems = 0;
-  	for (let challenge of challenges) {
-  		if(challenge.status == 'done') {
+  	for (const challenge of challenges) {
+  		if (challenge.status == 'done') {
   			this.doneItems++;
   		}
 	}
@@ -138,12 +138,12 @@ export class SidebarComponent implements OnInit {
 
   getProgress(challenges, totalChallenges) {
   	this.doneItems = 0;
-  	for (let challenge of challenges) {
-  		if(challenge.status == 'done') {
+  	for (const challenge of challenges) {
+  		if (challenge.status == 'done') {
   			this.doneItems++;
   		}
 	}
-  	return (this.doneItems/totalChallenges)*100;
+  	return (this.doneItems / totalChallenges) * 100;
   }
   getBadgesData() {
     this._getBadgesService.GetBadges().subscribe(
@@ -162,6 +162,6 @@ export class SidebarComponent implements OnInit {
   }
   currentBadge(badge) {
     this.currentBadgeView = badge;
-  }	
+  }
 
 }

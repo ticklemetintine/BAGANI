@@ -10,4 +10,4 @@ export class WikiaRegionService {
         return this.http.get('assets/data/wikia-region.json');
     }
 }
- 
+

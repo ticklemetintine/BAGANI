@@ -8,7 +8,7 @@ import {Subscription} from 'rxjs';
 	templateUrl: './app.component.html',
 })
 export class AppComponent {
-	loading:string = "loading";
+	loading = 'loading';
 
 	constructor(
 		private router: Router,
@@ -24,9 +24,9 @@ export class AppComponent {
 	}
 	ngAfterContentInit() {
 	    setTimeout(() => {
-	    	this.loading = "loaded";
+	    	this.loading = 'loaded';
 			console.log(this.loading);
-	        
+
 	    }, 1000);
 	}
 }

@@ -10,4 +10,4 @@ export class WikiaTableOfContentsService {
         return this.http.get('assets/data/wikia-table-of-contents.json');
     }
 }
- 
+
