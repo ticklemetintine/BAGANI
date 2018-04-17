@@ -607,6 +607,7 @@ body {
         text-align: center;
         img {
             @include centered-full();
+            max-width: 100%;
         }
     }
     &.owner {
